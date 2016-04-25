@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<LINK REL="stylesheet" HREF="/UI_css/UI_web_defaultapp.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<TITLE>Admissions Login New User; Admissions Login</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+window.onunload = function() {submitcount=0;}
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+<H1>University of Illinois</H1></DIV><DIV class="headerlinksdiv">
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+&nbsp;
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<SPAN class="pageheaderlinks">
+<A HREF="/UI_help/UI_Web_For_Admissions_Help.htm" accesskey="H" onClick="popup = window.open('/UI_help/UI_Web_For_Admissions_Help.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="bwskalog.p_displogoutnon" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Admissions Login - New User</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<DIV class="staticheaders">
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" CLASS="headerImg" TITLE=""  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+
+<FORM ACTION="/BANPROD2/bwskalog.P_ProcLoginNon" METHOD="post" AUTOCOMPLETE="OFF">
+<DIV class="infotextdiv"><TABLE  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><TR><TD CLASS="indefault"><SPAN class="infotext"> Create a <b>Login ID</b> and <b>Password/PIN</b> below.  Login ID's must be 1 to 9 characters and may consist of letters, numbers, and underscores. Foreign characters are not allowed. <BR> <BR>
+<b><u>Record your Login ID and Password.</u></b> You will need this information in order to return to the application system.
+<br><br>
+To protect your privacy, <b>please do not share or allow anyone else to use your Login ID and Password.</b> Doing so may result in complications with records and delay the review of your application.
+</SPAN></TD></TR></TABLE><P></DIV>
+<SPAN class="infotext">Your password can be up to 15 alphanumeric characters.</SPAN>
+<SPAN class="infotext">Minimum 6 alphanumeric characters are required.</SPAN>
+<SPAN class="infotext">Enter your password again to verify it and then select Login. Your Login ID and password will be saved.</SPAN>
+<TABLE  CLASS="dataentrytable" SUMMARY= 'This table contains the Login <ABBR title="Identifier">ID</ABBR> and Password entered by a new user.'>
+<TR>
+<TD CLASS="delabel" scope="row" abbr="Identifier"><LABEL for=login_id><SPAN class="fieldlabeltext">Create a Login <ABBR title="Identifier">ID</ABBR>:</SPAN></LABEL></TD>
+<TD CLASS="dedefault"><INPUT TYPE="text" NAME="newid" SIZE="10" MAXLENGTH="9" ID="login_id"></TD>
+</TR>
+<TR>
+<TD CLASS="delabel" scope="row" abbr=Password'><LABEL for=pin_id><SPAN class="fieldlabeltext">Create a Password:</SPAN></LABEL></TD>
+<TD CLASS="dedefault">
+<INPUT TYPE="password" NAME="newpin" SIZE="12" MAXLENGTH="99" ID="pin_id">
+</TD>
+</TR>
+<TR>
+<TD CLASS="delabel" scope="row" abbr="Verify"><LABEL for=verify_pin_id><SPAN class="fieldlabeltext">Verify Password:</SPAN></LABEL></TD>
+<TD CLASS="dedefault">
+<INPUT TYPE="password" NAME="verifypin" SIZE="12" MAXLENGTH="99" ID="verify_pin_id">
+</TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="submit" NAME="submit_btn" VALUE="Login">
+<INPUT TYPE="hidden" NAME="in_id" VALUE="">
+<INPUT TYPE="hidden" NAME="pin" VALUE="">
+<INPUT TYPE="hidden" NAME="webpageid" VALUE="2GI">
+</FORM>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class="bgtabon" width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" CLASS="headerImg" TITLE=""  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+<A HREF="http://admissions.uic.edu/" onMouseOver="window.status='UIC Admissions';  return true" onMouseOut="window.status='';  return true"onFocus="window.status='UIC Admissions';  return true" onBlur="window.status='';  return true">UIC Admissions</A>
+<p>&nbsp;
+</DIV>
+<DIV class="footerbeforediv">
+
+</DIV>
+<DIV class="footerafterdiv">
+
+</DIV>
+<DIV class="globalafterdiv">
+
+</DIV>
+<DIV class="globalfooterdiv">
+
+</DIV>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.7.1 ui_9063_bws80701</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+<div class="banner_copyright"> <br><h5>© 2016 Ellucian Company L.P. and its affiliates.<br></h5></div>
+</BODY>
+</HTML>

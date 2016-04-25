@@ -1,0 +1,50 @@
+[
+  {
+    "dom": "<input class=\"form-control\" id=\"ctl00_contentmain_nu_tbemail\" maxlength=\"100\" name=\"ctl00$contentmain$nu$tbemail\" type=\"text\"/>", 
+    "feature": "required invalid email address login email address id ctl00 contentmain nu tbemail type text name ctl00 contentmain nu tbemail maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"ctl00_contentmain_nu_tbfirstname\" maxlength=\"75\" name=\"ctl00$contentmain$nu$tbfirstname\" type=\"text\"/>", 
+    "feature": "required first name type text id ctl00 contentmain nu tbfirstname name ctl00 contentmain nu tbfirstname maxlength 75", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"ctl00_contentmain_nu_tblastname\" maxlength=\"75\" name=\"ctl00$contentmain$nu$tblastname\" type=\"text\"/>", 
+    "feature": "required last name id ctl00 contentmain nu tblastname type text name ctl00 contentmain nu tblastname maxlength 75", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"form-control\" id=\"ctl00_contentmain_nu_password1_tbpassword\" maxlength=\"30\" name=\"ctl00$contentmain$nu$password1$tbpassword\" type=\"password\"/>", 
+    "feature": "required password does not meet the requirements password name ctl00 contentmain nu password1 tbpassword type password id ctl00 contentmain nu password1 tbpassword maxlength 30", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"form-control\" id=\"ctl00_contentmain_nu_password1_tbpasswordconfirm\" maxlength=\"30\" name=\"ctl00$contentmain$nu$password1$tbpasswordconfirm\" type=\"password\"/>", 
+    "feature": "passwords do not match confirm password name ctl00 contentmain nu password1 tbpasswordconfirm type password id ctl00 contentmain nu password1 tbpasswordconfirm maxlength 30", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

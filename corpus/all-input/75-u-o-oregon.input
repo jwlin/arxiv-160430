@@ -1,0 +1,31 @@
+[
+  {
+    "dom": "<input id=\"login_id\" maxlength=\"9\" name=\"newid\" size=\"10\" type=\"text\"/>", 
+    "feature": "create a login id create a login id type text id login id name newid maxlength 9", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["login"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"pin_id\" maxlength=\"99\" name=\"newpin\" size=\"12\" type=\"password\"/>", 
+    "feature": "create a pin create a pin type password id pin id name newpin maxlength 99", 
+    "rule": {
+      "id": ["pin"], 
+      "name": ["pin"], 
+      "type": ["password"]
+    }, 
+    "type": "short_pwd"
+  }, 
+  {
+    "dom": "<input id=\"verify_pin_id\" maxlength=\"99\" name=\"verifypin\" size=\"12\" type=\"password\"/>", 
+    "feature": "verify pin verify pin type password id verify pin id name verifypin maxlength 99", 
+    "rule": {
+      "id": ["pin"], 
+      "name": ["pin"], 
+      "type": ["password"]
+    }, 
+    "type": "short_pwd"
+  }
+]

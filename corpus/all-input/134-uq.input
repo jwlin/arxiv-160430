@@ -1,0 +1,89 @@
+[
+  {
+    "dom": "<input class=\"form-control fl-input js-loginemail\" id=\"field-loginemail\" name=\"_username\" placeholder=\"email (required)\" type=\"text\" value=\"\"/>", 
+    "feature": "email required name username placeholder email required type text id field loginemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-firstname\" id=\"field-firstname\" name=\"firstname\" placeholder=\"first given name\" type=\"text\" value=\"\"/>", 
+    "feature": "first given name name firstname placeholder first given name type text id field firstname", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-middlename\" id=\"field-middlename\" name=\"middlename\" placeholder=\"other given name(s)\" type=\"text\" value=\"\"/>", 
+    "feature": "other given name s name middlename placeholder other given name s type text id field middlename", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-lastname\" id=\"field-lastname\" name=\"lastname\" placeholder=\"family name(s) (required)\" type=\"text\" value=\"\"/>", 
+    "feature": "family name s required name lastname placeholder family name s required type text id field lastname", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-email\" id=\"field-email\" name=\"email\" placeholder=\"email address (required)\" type=\"email\" value=\"\"/>", 
+    "feature": "email address required name email placeholder email address required type email id field email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-confirmemail\" id=\"field-confirmemail\" name=\"confirmemail\" placeholder=\"confirm email address (required)\" type=\"email\" value=\"\"/>", 
+    "feature": "confirm email address required name confirmemail placeholder confirm email address required type email id field confirmemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-loginpassword\" id=\"field-loginpassword\" name=\"_password\" placeholder=\"password (required)\" type=\"password\"/>", 
+    "feature": "password required placeholder password required type password id field loginpassword name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-password\" id=\"field-password\" name=\"password\" placeholder=\"password (required)\" type=\"password\"/>", 
+    "feature": "password required placeholder password required type password id field password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"form-control fl-input js-confirmpassword\" id=\"field-confirmpassword\" name=\"confirmpassword\" placeholder=\"confirm password (required)\" type=\"password\"/>", 
+    "feature": "confirm password required placeholder confirm password required type password id field confirmpassword name confirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

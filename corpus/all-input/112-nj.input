@@ -1,0 +1,41 @@
+[
+  {
+    "dom": "<input autocomplete=\"off\" class=\"formtext\" id=\"email\" name=\"data[email]\" placeholder=\"email address\" type=\"text\" validate=\"required:true,email:true,remote:'/reg/checkemail'\" value=\"\"/>", 
+    "feature": "register already a member login here name data email placeholder email address id email type text", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input_text\" id=\"code\" maxlength=\"30\" name=\"code\" placeholder=\"verification code\" style=\"float:left; margin-right:5px;\" type=\"text\" validate=\"required:true,remote:'/reg/checkcode'\" value=\"\"/>", 
+    "feature": "register already a member login here name code placeholder verification code id code type text maxlength 30", 
+    "rule": {
+      "id": ["code"], 
+      "name": ["code"]
+    }, 
+    "type": "captcha"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"formtext\" id=\"submitemail\" isrequired=\"true\" placeholder=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "type text id submitemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"formtext\" id=\"cu_passowrd\" name=\"data[password]\" placeholder=\"password\" type=\"password\" validate=\"required:true,minlength:6\" value=\"\"/>", 
+    "feature": "register already a member login here name data password placeholder password type password id cu passowrd", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

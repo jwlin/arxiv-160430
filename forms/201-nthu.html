@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link media="screen, projection" rel="stylesheet" type="text/css" href="/InternationalDegreeStudent/public/css/default/reset.css"/>
+<link media="screen, projection" rel="stylesheet" type="text/css" href="/InternationalDegreeStudent/public/css/default/base-min.css"/>
+<link media="screen, projection" rel="stylesheet" type="text/css" href="/InternationalDegreeStudent/public/css/default/application-eng.css"/>
+<link media="screen, projection" rel="stylesheet" type="text/css" href="/InternationalDegreeStudent/public/js/jquery/css/flick/jquery-ui-1.7.2.custom.css">
+<title>National Tsing Hua University Online Application for International Students</title>
+<script type="text/javascript" src="/InternationalDegreeStudent/public/js/jquery/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/InternationalDegreeStudent/public/js/jquery/jquery-ui-1.7.2.min.js"></script>
+<script type="text/javascript" src="/InternationalDegreeStudent/public/js/jquery/jquery.cokie.min.js"></script>
+<script language="javascript">
+<!--
+var DataChanged = false;
+var ReloadURL = '';
+$(document).ready(function() {
+
+	 
+	
+	// 護照期限選擇
+	$('input[datepicker="1"]').datepicker({
+		changeMonth		: true,
+		changeYear		: true,
+		dayNames				: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		dayNamesMin			: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+		dayNamesShort		: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+		dateFormat			: 'yy-mm-dd',
+		monthNames			: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		monthNamesShort	: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		nextText				: 'Next Month',
+		prevText				: 'Last Month',
+		yearRange: '-20:+10'
+	});	
+	
+		
+	// 下一步
+		
+	});
+
+// 移動到指定頁面
+function jmGoto(url) {
+	if (DataChanged && !confirm('Data is modified, Cancle?')) {
+		return;
+	} 
+	location.href = url;	
+}
+
+function jmRefresh()
+{
+	 window.location.reload();
+}
+
+//-->
+</script>
+</head>
+<style>
+.htmlBlock { 
+	cursor:pointer;
+}
+</style>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div class="branding">
+       <h1>National Tsing Hua University Online Application for International Students</h1>    </div>
+    <div class="nav clearfix">
+    <!-- 選單列 -->    
+          
+    <!-- 選單列 結束 -->
+    </div>
+  </div>
+  <div id="content">
+    <!-- 主要內容 -->
+    <!--  !-->
+<script language="javascript">
+$(function() {
+	
+		
+	$('#email').focus();
+	
+	$('#frm').submit(function() {
+		var email 	  = $('#email'),
+		    email_cfm = $('#email_cfm'),
+			pd 		  = $('#password'),
+			pd_cfm 	  = $('#password_cfm'),
+			auth	  = $('#authKey');
+		
+		if ($.trim(email.val()) == '') {
+			alert('Please Enter your Email');
+			email.focus();
+			return false;
+		} else if ($.trim(email_cfm.val()) == '') {
+			alert('Please Enter your Email Comfirm');
+			email_cfm.focus();
+			return false;
+		} else if (email.val() !== email_cfm.val()) {
+			alert('Email and Email confirm are different');
+			email.focus();
+			email.select();
+			return false;
+		} else if ($.trim(pd.val()) == '') {
+			alert('Please Enter password');
+			pd.focus();
+			return false;
+		} else if ($.trim(pd_cfm.val()) == '') {
+			alert('Please Enter Password Comfirm');
+			pd_cfm.focus();
+			return false;
+		} else if (pd.val() !== pd_cfm.val()) {
+			alert('Password and password confirm are different');
+			pd.focus();
+			pd.select();
+			return false;
+		} else if ($.trim(auth.val()) == '') {
+			alert('Please Enter Verification Code ');
+			auth.focus();
+			return false;
+		}
+	})
+	
+});
+</script>
+<style>
+.field label {
+	width:150px;
+}
+</style>
+<div id="wrapper">
+    <div id="content">
+        <div class="description">
+        	<span><p>
+	Log in using your e-mail and password to start your online application. <br />
+	You will need your email and password to access or modify your information.</p></span>        </div>
+        <div class="section">
+            <div class="bd">
+                <form id="frm" name="frm" method="post" action="/InternationalDegreeStudent/student/register.do">
+                	<input type="hidden" name="simulation_key" value="0">    
+                    <div class="field clearfix">
+                       <!--<label>E-mail</label>-->
+                       <label>Email</label>                        <input name="email" type="text" class="text" id="email" value="" size="50" maxlength="255" />
+                    </div>
+                    <div class="field clearfix">
+                       <!--<label>E-mail</label>-->
+                       <label>Email Confirm</label>                        <input name="email_cfm" type="text" class="text" id="email_cfm" size="50" maxlength="255" />
+                       <span class="more"></span>                    </div>
+                    
+                    
+                    <div class="field clearfix">
+                         <!--<label>Password</label>-->
+                       <label>Password</label>                        <input type="password" class="text" name="password" id="password"/>
+                    </div>
+                    <div class="field clearfix">
+                        <!--<label>Password Confirm</label>-->
+                         <label>Password Confirm</label>                        <div>
+                            <input type="password" class="text" name="password_cfm" id="password_cfm"/>
+                         <span class="more"><p class="more" style="color: rgb(51,51,51)">
+	Your password can be 6-12 characters a-z or 0-9 and cannot contain any spaces.</p>
+<p class="more" style="color: rgb(51,51,51)">
+	Enter the same password in password confirm box to make sure you typed it correctly.</p></span>                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <!--<label>Verification Code</label>-->
+                        <label>Verification Code</label>                        <div>
+                            <input type="text" class="text" size="6" name="authKey" id="authKey"/>
+                            <iframe src="/InternationalDegreeStudent/image.auth/image" width="80" height="30" frameborder="0" scrolling="no" id="famImageAuth" style="position:relative;"></iframe>
+                            <input type="button" class="button purple" value="Renew" onclick="$('#famImageAuth').attr('src', '/InternationalDegreeStudent/image.auth/image');" style="position:relative; margin-left:3px;" />
+                            <!--<img src="http://nthuforeign.ui.dev.com.tw/images/default/auth.jpg" alt="" />-->
+                            <span class="more"><p>
+	Please input 4 - digit verification code</p></span>                        </div>
+                    </div>
+                    <div class="buttonarea">
+                        <input type="submit" class="button purple" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  !-->    <!-- 主要內容 結束 -->    
+  </div>
+</div>
+    <div id="htmlBlockDialog" title="編輯欄位區塊">
+        	<iframe src="" name="htmlBlockIframe" id="htmlBlockIframe" width="100%" height="100%" scrolling="no" style="border:none" frameborder="0"></iframe>
+    </div>
+        <script language="JavaScript">
+        $(function () {
+		
+        	$('#htmlBlockDialog').dialog({
+					width       : 600,
+					autoOpen	: false, 
+					modal	    : true, 
+					resizable	: false,
+					buttons		: {
+					'取消'		:	function () {
+						$(this).dialog('close');
+					},
+					'儲存'		:	function () {
+						document.getElementById('htmlBlockIframe').contentWindow.jmSubmit();
+					}
+				}
+			});
+       	});
+
+       	function JdEditHtmlBlock(id , fieldStatus) {
+       		$('#htmlBlockIframe').attr('src', '/InternationalDegreeStudent/workbench/html.block/edit/locale/en/field_status/'+fieldStatus+'/id/'+id);
+			if(fieldStatus == 1){
+				form_height = 600;
+			}else{
+				form_height = 200;
+			}
+			$('#htmlBlockDialog').dialog('option', 'height', form_height).dialog('open');
+       	}
+       	
+       	function JdAppendHtmlBlock(id , fieldStatus) {
+       		$('#htmlBlockIframe').attr('src', '/InternationalDegreeStudent/workbench/html.block/append/locale/en/field_status/'+fieldStatus+'/id/'+id);
+       		if(fieldStatus == 1){
+				form_height = 600;
+			}else{
+				form_height = 200;
+			}
+			$('#htmlBlockDialog').dialog('option', 'height', form_height).dialog('open');
+       	}
+     
+        </script>
+</body>
+</html>

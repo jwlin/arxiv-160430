@@ -1,0 +1,7 @@
+user name name username placeholder user name id username type text
+email name email placeholder email id email type text
+first given name name firstname placeholder first name id firstname type text
+middle name name middlename placeholder middle name id middlename type text
+last family name name lastname placeholder last name id lastname type text
+password name password placeholder password id password type password
+password name confirmpassword placeholder confirm password type password id confirmpassword

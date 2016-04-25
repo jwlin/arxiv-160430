@@ -1,0 +1,50 @@
+[
+  {
+    "dom": "<input class=\"text-box single-line\" data-val=\"true\" data-val-email=\"the email address field is not a valid e-mail address.\" data-val-length=\"the field email address must be a string with a maximum length of 70.\" data-val-length-max=\"70\" data-val-required=\"the email address field is required.\" id=\"emailaddress\" name=\"emailaddress\" type=\"text\" value=\"\"/>", 
+    "feature": "email address name emailaddress id emailaddress type text", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"text-box single-line\" data-val=\"true\" data-val-length=\"the field full name must be a string with a maximum length of 70.\" data-val-length-max=\"70\" data-val-regex=\"name must not contain numeric character(s).\" data-val-regex-pattern=\"^(\\d)+$\" data-val-required=\"the full name field is required.\" id=\"fullname\" name=\"fullname\" type=\"text\" value=\"\"/>", 
+    "feature": "full name name fullname id fullname type text", 
+    "rule": {
+      "id": ["full"], 
+      "name": ["full"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input class=\"date\" data-val=\"true\" data-val-required=\"the date of birth (dd/mm/yyyy) field is required.\" id=\"dateofbirth\" name=\"dateofbirth\" type=\"text\" value=\"\"/>", 
+    "feature": "date of birth dd mm yyyy name dateofbirth id dateofbirth type text", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-dd/mm/yyyy"
+  }, 
+  {
+    "dom": "<input class=\"text-box single-line password\" data-val=\"true\" data-val-length=\"the field password (minimum 6 characters) must be a string with a minimum length of 6 and a maximum length of 100.\" data-val-length-max=\"100\" data-val-length-min=\"6\" data-val-required=\"the password (minimum 6 characters) field is required.\" id=\"password\" name=\"password\" type=\"password\" value=\"\"/>", 
+    "feature": "password minimum 6 characters name password id password type password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"text-box single-line password\" data-val=\"true\" data-val-equalto=\"same passwords must be entered.\" data-val-equalto-other=\"*.password\" id=\"confirmpassword\" name=\"confirmpassword\" type=\"password\" value=\"\"/>", 
+    "feature": "confirm password minimum 6 characters name confirmpassword type password id confirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

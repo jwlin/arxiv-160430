@@ -1,0 +1,251 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<title>Application System for International Students of Tsinghua University - Register</title>
+
+
+
+
+
+<script type="text/javascript" src="/app/script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/app/script/jquery-ui-1.10.0.custom.js"></script>
+<script type="text/javascript" src="/app/script/jquery.cookie.pack.js"></script>
+<script type="text/javascript" src="/app/script/jquery.sha256.min.js"></script>
+<script type="text/javascript" src="/app/script/jquery-migrate-1.1.0.min.js"></script>
+<script type="text/javascript" src="/app/script/json2.js"></script>
+<script type="text/javascript" src="/app/script/form/form-common.3.0.4.js"></script>
+<link rel="stylesheet" href="/app/styles/index.css" type="text/css" />
+<style type="text/css">
+body {
+	font-family : Arial, Tahoma, Helvetica, Verdana ;
+}
+</style>
+<style type="text/css">
+body, div {
+	margin:auto;
+	position:relative;
+	font-family:Helvetica;
+	font-size:10pt;
+	color:#333333;
+}
+
+div.form {
+	width:500px;
+	padding-top:20px;
+}
+input {
+	font-family:Helvetica;
+	font-size:10pt;
+	vertical-align:middle;
+}
+	
+</style>
+
+<script type="text/javascript">
+var register = function() {
+	var emailPattern = new RegExp("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,}){1}$");
+	var passwordPattern = new RegExp("^[A-Za-z0-9~!@#\$%\\^\\&\\*\\(\\)\\-_\\+=\\[\\]\\{\\}\\\\|;:\\\'\\\"<>,\\.\\?/]{6,16}$");
+	if(!emailPattern.test($("#username").val())) {
+		alert("Username is not a valid email address.");
+		return false;
+	}
+	if($("#password").val() != $("#password_confirm").val()) {
+		alert("Password is not confirmed. (The confirmed password differs.)");
+		return false;
+	}
+	if(!passwordPattern.test($("#password").val())) {
+		alert("Password does not meet the requirement.");
+		return false;
+	}
+		
+	$("#register_form")[0].submit();
+	return true;
+}
+</script>
+
+</head>
+
+<body>
+<script type="text/javascript">
+$(function(){
+	$("#kaptchaImage").click(function(){
+		$(this).attr('src', '/app/kaptcha.jpg?preventCache=' + new Date().getTime());
+	});
+	$("#kaptchaImage").attr('src', '/app/kaptcha.jpg?preventCache=' + new Date().getTime());
+});
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var changeLocale = function(locale) {
+	var url = window.location.href;
+	if(url.indexOf("?") != -1) {
+		if(url.indexOf("_locale") != -1) {
+			url = url.replace(/_locale=[a-zA-Z_]{5}/, "_locale=" + locale);
+		}
+		else {
+			url = url + "&_locale=" + locale;
+		}
+	}
+	else {
+		url = url + "?_locale=" + locale;
+	}
+	window.location.href = url;
+};
+$(function(){
+	$("a.list").each(function(){
+		$(this)[0].href = '/app/application/list.html?preventCache=' + new Date().getTime();
+	});
+	$("a.apply").each(function(){
+		$(this)[0].href = '/app/application/apply.html?preventCache=' + new Date().getTime();
+	});
+	$("a.login").each(function(){
+		$(this)[0].href = '/app/account/login.html?preventCache=' + new Date().getTime();
+	});
+	$("a.logout").each(function(){
+		$(this)[0].href = '/app/account/logout.html?preventCache=' + new Date().getTime();
+	});
+	$("a.activate").each(function(){
+		$(this)[0].href = '/app/account/activate.html?preventCache=' + new Date().getTime();
+	});
+	$("a.register").each(function(){
+		$(this)[0].href = '/app/account/register.html?preventCache=' + new Date().getTime();
+	});
+	$("a.retrievePassword").each(function(){
+		$(this)[0].href = '/app/account/retrievePassword.html?preventCache=' + new Date().getTime();
+	});
+	$("a.changePassword").each(function(){
+		$(this)[0].href = '/app/account/changePassword.html?preventCache=' + new Date().getTime();
+	});
+	$("a.retrievePassword").each(function(){
+		$(this)[0].href = '/app/account/retrievePassword.html?preventCache=' + new Date().getTime();
+	});
+	$("a.resendActivation").each(function(){
+		$(this)[0].href = '/app/account/resendActivation.html?preventCache=' + new Date().getTime();
+	});
+});
+</script>
+
+<div id="mainpage" style="width:980px;margin:auto;position:relative;">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="topMenuTable">
+		<tr>
+			<td colspan="3"><img src="/app/images/top-view.jpg" alt="Foreign Student Affairs Office, Tsinghua University" width="980" height="100" /></td>
+		</tr>
+		<tr>
+			<td class="enfont menubar">		
+			<div>
+				<table border="0" cellspacing="0" cellpadding="0" class="enfont menubar">
+					<tr>			
+						<td><span class="menupointer cnfont" onclick="changeLocale('zh_CN');">中文 </span></td>
+						<td><span class="menupointer enfont"> | </span></td>
+						<td><span class="menupointer enfont" onclick="changeLocale('en_US');"> ENGLISH</span></td>
+					</tr>
+				</table>
+			</div>
+			</td>
+			
+			<td class="enfont menubar" style="text-align:right">
+			
+			
+			
+				<table border="0" cellspacing="5" cellpadding="0"  style="text-align:center;float:right;" class="enfont menubar"><tr>
+				<td><a class="login">Login</a></td><td> | </td>
+				<td><a class="register">Register</a></td><td> | </td>
+				<td><a class="retrievePassword">Reset Password</a></td>
+				</tr></table>
+			
+			
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">	
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<div id="maincontent">
+<div class="form">
+<div style="color:red;text-align:center;">
+
+</div>
+<form action="register.html" method="post" onsubmit="return false;" id="register_form">
+	<input type="hidden" name="method" value="register"/>
+	<table width="100%" border="0" cellspacing="0" cellpadding="10">
+	<colgroup>
+		<col width="150"/>
+		<col width="350"/>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td colspan="3"  class="enfont" style="text-align:center;font-weight:bold;">
+				Register
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">Username</td>
+			<td><input name="username" type="text" id="username" size="30" maxlength="256" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="enfont" style="font-size:8pt">Please use your email address as your username.</td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Password</td>
+			<td><input name="password" type="password" id="password" size="30" maxlength="16" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="enfont" style="font-size:8pt">Password may consists of English characters, numbers and symbols, contains 6-16 characters.</td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Confirm Password</td>
+			<td><input name="password_confirm" type="password" id="password_confirm" size="30" maxlength="16" /></td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Security Code</td>
+			<td><input name="securityCode" type="text" id="security_code" size="6" maxlength="6" />
+			<img id="kaptchaImage" width="120" height="30" style="vertical-align:middle"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="enfont" style="font-size:8pt">Click to change the security code.</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center"><input type="button" value="REGISTER" onclick="register()"/></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center">
+			<div style="margin:10px;">To avoid malicious fake sign-up actions, some limit is applied. No more than 10 account sign-ups are allowed in 24 hours. Fake accounts will be suspended and the client IP address may be banned for access.</div>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</form>
+</div>
+
+				</div>
+			</td>
+		</tr>
+		<tr>
+		<td colspan="3">
+		<div class="footer">
+			Copyright Tsinghua University, All rights reserved.
+		</div>
+		</td>
+		</tr>
+	</table>
+</div>
+</html>

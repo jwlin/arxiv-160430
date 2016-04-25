@@ -1,0 +1,59 @@
+[
+  {
+    "dom": "<input id=\"firstname\" name=\"firstname\" type=\"text\" value=\"\"/>", 
+    "feature": "first name last name choose a username email address choose password re enter password type text id firstname name firstname", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"lastname\" name=\"lastname\" type=\"text\" value=\"\"/>", 
+    "feature": "last name first name choose a username email address choose password re enter password type text id lastname name lastname", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"username\" name=\"username\" type=\"text\" value=\"\"/>", 
+    "feature": "choose a username last name first name email address choose password re enter password type text id username name username", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"email\" name=\"email\" type=\"text\" value=\"\"/>", 
+    "feature": "email address choose a username last name first name choose password re enter password type text id email name email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"password\" name=\"password\" type=\"password\" value=\"\"/>", 
+    "feature": "choose password email address choose a username last name first name re enter password type password id password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"password2\" name=\"password2\" type=\"password\" value=\"\"/>", 
+    "feature": "re enter password choose password email address choose a username last name first name type password id password2 name password2", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

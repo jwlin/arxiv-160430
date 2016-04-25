@@ -1,0 +1,59 @@
+[
+  {
+    "dom": "<input maxlength=\"128\" name=\"txtr1\" onchange=\"nchanges++;\" size=\"27\" type=\"text\" value=\"\"/>", 
+    "feature": "city of birth name txtr1 type text maxlength 128", 
+    "rule": {
+      "id": ["txtr1"], 
+      "name": ["txtr1"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input maxlength=\"64\" name=\"txtemailsentto\" onblur=\"trimtext(cform2.txtemailsentto);\" onchange=\"nchanges++;\" size=\"27\" type=\"text\" value=\"\"/>", 
+    "feature": "e mails sent to name txtemailsentto type text maxlength 64", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"64\" name=\"txtusername\" onblur=\"trimtext(cform.txtusername)\" size=\"27\" type=\"text\" value=\"\"/>", 
+    "feature": "e mail address name txtusername type text maxlength 64", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input maxlength=\"32\" name=\"txtpassword\" onchange=\"nchanges++;\" size=\"27\" type=\"password\" value=\"\"/>", 
+    "feature": "password name txtpassword type password maxlength 32", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input maxlength=\"32\" name=\"txtpasswordagain\" onchange=\"nchanges++;\" size=\"27\" type=\"password\" value=\"\"/>", 
+    "feature": "verify password name txtpasswordagain type password maxlength 32", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input maxlength=\"32\" name=\"txtpassword\" size=\"27\" type=\"password\"/>", 
+    "feature": "password type password name txtpassword maxlength 32", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

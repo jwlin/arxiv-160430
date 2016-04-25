@@ -1,0 +1,69 @@
+[
+  {
+    "dom": "<input maxlength=\"35\" name=\"first_name\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name first name maxlength 35", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input maxlength=\"35\" name=\"last_name\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name last name maxlength 35", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input maxlength=\"35\" name=\"email\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name email maxlength 35", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"35\" name=\"check_email\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name check email maxlength 35", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"25\" name=\"login_name\" size=\"45\" type=\"text\"/>", 
+    "feature": "type text name login name maxlength 25", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["login"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input maxlength=\"25\" name=\"password\" size=\"45\" type=\"password\"/>", 
+    "feature": "type password name password maxlength 25", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input maxlength=\"25\" name=\"check_password\" onblur=\"javascript: checkpassword();\" size=\"45\" type=\"password\"/>", 
+    "feature": "type password name check password maxlength 25", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

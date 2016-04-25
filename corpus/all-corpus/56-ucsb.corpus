@@ -1,0 +1,9 @@
+email required email address type text id ctl00 cphcontent tbexistingemail name ctl00 cphcontent tbexistingemail
+ucsb net id required ucsb net id type text id ctl00 cphcontent tbucsbnetid name ctl00 cphcontent tbucsbnetid
+first name required first name id ctl00 cphcontent tbfirstname type text name ctl00 cphcontent tbfirstname
+last name required last name id ctl00 cphcontent tblastname type text name ctl00 cphcontent tblastname
+email required email format invalid email address id ctl00 cphcontent tbnewemail type text name ctl00 cphcontent tbnewemail
+password required password type password id ctl00 cphcontent tbexistingpassword name ctl00 cphcontent tbexistingpassword
+password required password type password id ctl00 cphcontent tbnetidpassword name ctl00 cphcontent tbnetidpassword
+password required password must be at least 8 characters password minimum 8 characters id ctl00 cphcontent tbnewpassword type password name ctl00 cphcontent tbnewpassword
+confirm password required passwords do not match confirm password id ctl00 cphcontent tbconfirmpassword type password name ctl00 cphcontent tbconfirmpassword

@@ -1,0 +1,58 @@
+ first given name middle name last family name other names used name fname type text id fname maxlength 25
+ middle name first given name last family name other names used type text name mname id mname maxlength 25
+ last family name middle name first given name other names used name lname type text id lname maxlength 25
+ other names used last family name middle name first given name name oname type text id oname maxlength 100
+issued by the univ of nebraska or a nebraska state college issued by the united states government id number type id number again to confirm accuracy nuid number issued by the univ of nebraska or a nebraska state college us social security number issued by the united states government neither i do not have an nuid or ssn type text id nuid name nuid
+issued by the univ of nebraska or a nebraska state college issued by the united states government type id number again to confirm accuracy id number nuid number issued by the univ of nebraska or a nebraska state college us social security number issued by the united states government neither i do not have an nuid or ssn type text id nuid v name nuid v
+ day month year name birthdd type text id birthdd maxlength 2
+ year day month name birthyy type text id birthyyyy maxlength 4
+birth city country of citizenship birth country type of visa expected name birthcity type text id birthcity maxlength 30
+ email address phone number name email type text id email maxlength 50
+ phone number email address type text name phone id phone maxlength 13
+ line 1 line 2 city country zip postal code if us if non us name cstreet type text id cstreet maxlength 30
+ line 2 line 1 city country zip postal code if us if non us name cstreet2 type text id cstreet2 maxlength 30
+ city line 2 line 1 country zip postal code if us if non us name ccity type text id ccity maxlength 25
+ if non us if us name nonstate type text id nonstate maxlength 20
+ zip postal code country city line 2 line 1 if us if non us name czip type text id czip maxlength 10
+ mm yyyy mm yyyy mm yyyy start of ne residence mm yyyy employer location position start date mm yyyy end date mm yyyy name neresmm type text id neresmm maxlength 7
+ mm yyyy mm yyyy employer location position start date mm yyyy end date mm yyyy name employer type text id nebresi3 maxlength 30
+ mm yyyy mm yyyy location employer position start date mm yyyy end date mm yyyy name employloc type text id nebresi4 maxlength 30
+ mm yyyy mm yyyy position location employer start date mm yyyy end date mm yyyy name jobtitle type text id nebresi5 maxlength 30
+ mm yyyy mm yyyy start date mm yyyy position location employer end date mm yyyy name jobfrommonth type text id jobfrom maxlength 7
+ mm yyyy mm yyyy end date mm yyyy start date mm yyyy position location employer name jobtomonth type text id jobto maxlength 7
+ name of school 1 city state country from mm yyyy to mm yyyy name collegename1 type text id collegename1 maxlength 32
+ city name of school 1 state country from mm yyyy to mm yyyy name loc1 type text id loc1 maxlength 32
+ from mm yyyy to mm yyyy name start1 type text id start1 maxlength 7
+ to mm yyyy from mm yyyy name finish1 type text id finish1 maxlength 7
+ date degree name grad1a type text id grad1a maxlength 7
+date degree name grad1b type text id grad1b maxlength 7
+date degree name grad1c type text id grad1c maxlength 7
+ mm yyyy mm yyyy name of school 2 city state country from mm yyyy to mm yyyy name collegename2 type text id collegename2 maxlength 32
+ mm yyyy mm yyyy city name of school 2 state country from mm yyyy to mm yyyy name loc2 type text id loc2 maxlength 32
+ mm yyyy mm yyyy from mm yyyy to mm yyyy name start2 type text id start2 maxlength 7
+ mm yyyy mm yyyy to mm yyyy from mm yyyy name finish2 type text id finish2 maxlength 7
+date degree name grad2a type text id grad2a maxlength 7
+date degree name grad2b type text id grad2b maxlength 7
+date degree name grad2c type text id grad2c maxlength 7
+name of school 3 city state country from to name collegename3 type text id collegename3 maxlength 32
+city name of school 3 state country from to name loc3 type text id loc3 maxlength 32
+from to name start3 type text id start3 maxlength 7
+to from name finish3 type text id finish3 maxlength 7
+date degree name grad3a type text id grad3a maxlength 7
+date degree name grad3b type text id grad3b maxlength 7
+date degree name grad3c type text id grad3c maxlength 7
+name of school 4 city state country from to name collegename4 type text id collegename4 maxlength 32
+city name of school 4 state country from to name loc4 type text id loc4 maxlength 32
+from to name start4 type text id start4 maxlength 7
+to from name finish4 type text id finish4 maxlength 7
+date degree name grad4a type text id grad4a maxlength 7
+date degree name grad4b type text id grad4b maxlength 7
+date degree name grad4c type text id grad4c maxlength 7
+name of school 5 city state country from to name collegename5 type text id collegename5 maxlength 32
+city name of school 5 state country from to name loc5 type text id loc5 maxlength 32
+from to name start5 type text id start5 maxlength 7
+to from name finish5 type text id finish5 maxlength 7
+date degree name grad5a type text id grad5a maxlength 7
+date degree name grad5b type text id grad5b maxlength 7
+date degree name grad5c type text id grad5c maxlength 7
+if you have been given a no fee authorization code enter that code here i don t have to pay the fee type text name promo code id promo code

@@ -1,0 +1,130 @@
+<link href="../Script/CSSDoc.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Account Creation</title><body leftmargin="0" topmargin="0">
+<script LANGUAGE="JavaScript" src="../Script/library.js"></script>
+<script LANGUAGE="JavaScript" src="../Script/user.js"></script>
+<div align=center><img src="../../html/top4-1a.gif" height="80" width="560"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><form name="form1" method="post" action="../CreateUserScreen/insert" onSubmit="return validate(this)">
+        <p align="center"><font color="666666" class="Title">Registration</font></p>
+  <div align="center">
+    <table width="700" border="1" cellspacing="0" cellpadding="15">
+      <tr> 
+        <td> 
+                <p><a href="../CreateUserScreen/loginForm">Please click here if you have registered 
+                  before</a>.</p>
+                <p>The name provided below must be identical 
+                  to your official identity document in your home country.<br>
+                </p>
+                <table width="600" border="0" cellspacing="0" cellpadding="4">
+                  <tr>
+                    <td width="200"><b>Title:<font color="red">*</font></b></td>
+                    <td width="382">
+                      <select name="pTITLE">
+                        <option value="">&lt;-- Please Select --&gt;</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Prof.">Prof.</option>
+                        <option value="Dr.">Dr.</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="200"><b>Surname:<font color="red">*</font></b></td>
+                    <td width="382"> 
+                      <input type="text" name="pSURNAME" size="30" maxlength="30" value="">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="200"><b>Middlename:</b></td>
+                    <td width="382"> 
+                      <input type="text" name="pMI_NAME" size="30" maxlength="30" value="">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b>Given names:<font color="red">*</font></b></td>
+                    <td> 
+                      <input type="text" name="pOTHERNAME" size="30" maxlength="30" value="">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b>Email address:<font color="red">*</font></b></td>
+                    <td> 
+                      <input type="text" name="pEMAIL" size="30" maxlength="30" value="">
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b>Re-type email address:<font color="red">*</font></b></td>
+                    <td> 
+                      <input type="text" name="pEMAIL2" size="30" maxlength="30" value="">
+                    </td>
+                  </tr>
+                </table>
+          
+        </td>
+      </tr>
+    </table>
+    <br>
+    <table width="700" border="1" cellspacing="0" cellpadding="15">
+      <tr> 
+        <td> 
+                <p>Please create an account for your application to faciliate 
+                  your logging onto the system again in the future. You will need 
+                  to provide your username and password every time you wish to access your application. 
+                  Please note that your username and password should consist of 
+                  alphabets and numeric characters only without any spaces, and 
+                  your password is <font color="red">case-sensitive</font>.</p>
+                <table width="600" border="0" cellspacing="0" cellpadding="4">
+                  <tr> 
+                    <td width="200"><b>Username:<font color="red">*</font></b> <i>(6-20 characters)</i></td>
+                    <td width="382"> 
+                      <input type="text" name="pUSERNAME" size="20" maxlength="20" value="" onchange="this.value=this.value.toLowerCase()">
+                    </td>
+            </tr>
+            <tr> 
+                    <td><b>Password:<font color="red">*</font></b> <i>(6-20 characters)</i></td>
+              <td> 
+                <input type="password" name="pPASSWORD" size="20" maxlength="20" value="">
+                    </td>
+            </tr>
+            <tr> 
+              <td><b>Re-type password:<font color="red">*</font></b></td>
+              <td> 
+                <input type="password" name="pPASSWORD2" maxlength="20" size="20" value="">
+              </td>
+            </tr>
+          </table>
+          
+                <p><b>IMPORTANT:</b> Please complete and submit your application 
+                  within<font color="red"> <b>4 weeks</b> </font>from the date 
+                  of the creation of your account. If you do not submit your application 
+                  by that time, all records you have entered into the system will 
+                  be deleted.</p>
+			    <p><font color="red">*</font> Required fields</p>
+        </td>
+      </tr>
+    </table>
+   <br>
+   <table width="700" border="1" cellspacing="0" cellpadding="15">
+      <tr> 
+              <td> 
+                <p>
+<input type="checkbox" name="pPRIVACY" value="on">
+                  I agree to the <a href=http://www.hku.hk/gradsch/rola/privacy.htm target="newpopup">Personal Information Collection Statement</A>.</p>
+                </td>
+      </tr>
+    </table>
+		
+	<p> 
+      <input type="submit" name="Submit" value="Save &amp; Continue">
+      <input type="reset" name="Submit2" value="Reset">
+      <br>
+          </p>
+  </div>
+</form>
+</td>
+  </tr>
+</table></body>

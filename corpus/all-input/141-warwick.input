@@ -1,0 +1,58 @@
+[
+  {
+    "dom": "<input class=\"swift-text-required\" id=\"txtusername\" maxlength=\"100\" name=\"txtusername\" onblur=\"swift_field_blur(this,'txtusername');\" onchange=\"try{this_checked=swift_checktext(this,null);swift_form_refill('txtusername');}catch (ex){alert('client script error in txtusername.onchange : ' + ex);}\" onfocus=\"swift_field_focus(this,'txtusername');\" onmouseout=\"swift_field_mouse_out(this,'txtusername');\" onmouseover=\"swift_field_mouse_over(this,'txtusername');\" style=\"width:100%;z-index:0;\" tabindex=\"1\" type=\"text\" value=\"\"/>", 
+    "feature": "dd mm yyyy security question date of birth please enter a current email address and choose a password note the password must be at least 8 characters in length please note your account will expire after 12 months of inactivity you may re register at any time confirm password password email address swiftalertshow swiftvalidationok validation1 register cancel swiftvalidationaction txtuserstatus swiftalertshow swiftvalidationok companyid name txtusername type text id txtusername maxlength 100", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input class=\"swift-text\" id=\"swiftvalidationaction\" maxlength=\"250\" name=\"swiftvalidationaction\" onblur=\"swift_field_blur(this,'swiftvalidationaction');\" onchange=\"try{this_checked=swift_checktext(this,null);}catch (ex){alert('client script error in swiftvalidationaction.onchange : ' + ex);}\" onfocus=\"swift_field_focus(this,'swiftvalidationaction');\" onmouseout=\"swift_field_mouse_out(this,'swiftvalidationaction');\" onmouseover=\"swift_field_mouse_over(this,'swiftvalidationaction');\" style=\"width:100%;z-index:0;\" tabindex=\"4\" type=\"text\" value=\"validation1\"/>", 
+    "feature": "dd mm yyyy security question date of birth please enter a current email address and choose a password note the password must be at least 8 characters in length please note your account will expire after 12 months of inactivity you may re register at any time confirm password password email address swiftalertshow swiftvalidationok validation1 register cancel swiftvalidationaction txtuserstatus swiftalertshow swiftvalidationok companyid name swiftvalidationaction value validation1 type text id swiftvalidationaction maxlength 250", 
+    "rule": {
+      "id": ["validationaction"], 
+      "name": ["validationaction"]
+    }, 
+    "type": "validation_action"
+  }, 
+  {
+    "dom": "<input class=\"swift-text\" id=\"txtuserstatus\" maxlength=\"1\" name=\"txtuserstatus\" onblur=\"swift_field_blur(this,'txtuserstatus');\" onchange=\"try{this_checked=swift_checktext(this,null);}catch (ex){alert('client script error in txtuserstatus.onchange : ' + ex);}\" onfocus=\"swift_field_focus(this,'txtuserstatus');\" onmouseout=\"swift_field_mouse_out(this,'txtuserstatus');\" onmouseover=\"swift_field_mouse_over(this,'txtuserstatus');\" style=\"width:100%;z-index:0;\" tabindex=\"5\" type=\"text\" value=\"\"/>", 
+    "feature": "dd mm yyyy security question date of birth please enter a current email address and choose a password note the password must be at least 8 characters in length please note your account will expire after 12 months of inactivity you may re register at any time confirm password password email address swiftalertshow swiftvalidationok validation1 register cancel txtuserstatus swiftvalidationaction swiftalertshow swiftvalidationok companyid name txtuserstatus type text id txtuserstatus maxlength 1", 
+    "rule": {
+      "id": ["userstatus"], 
+      "name": ["userstatus"]
+    }, 
+    "type": "user_status"
+  }, 
+  {
+    "dom": "<input id=\"swift_dms_address\" type=\"text\"/>", 
+    "feature": "type text id swift dms address", 
+    "rule": {
+      "id": ["dms_address"], 
+      "name": ["dms_address"]
+    }, 
+    "type": "unknown_hidden"
+  }, 
+  {
+    "dom": "<input class=\"swift-text-required\" id=\"txtpassword\" maxlength=\"100\" name=\"txtpassword\" onblur=\"swift_field_blur(this,'txtpassword');\" onchange=\"try{this_checked=swift_checktext(this,null);swift_form_refill('txtpassword');}catch (ex){alert('client script error in txtpassword.onchange : ' + ex);}\" onfocus=\"swift_field_focus(this,'txtpassword');\" onmouseout=\"swift_field_mouse_out(this,'txtpassword');\" onmouseover=\"swift_field_mouse_over(this,'txtpassword');\" style=\"width:100%;z-index:0;\" tabindex=\"2\" type=\"password\" value=\"\"/>", 
+    "feature": "dd mm yyyy security question date of birth please enter a current email address and choose a password note the password must be at least 8 characters in length please note your account will expire after 12 months of inactivity you may re register at any time confirm password password email address swiftalertshow swiftvalidationok validation1 register cancel swiftvalidationaction txtuserstatus swiftalertshow swiftvalidationok companyid name txtpassword type password id txtpassword maxlength 100", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"swift-text-required\" id=\"txtconfirmpassword\" maxlength=\"100\" name=\"txtconfirmpassword\" onblur=\"swift_field_blur(this,'txtconfirmpassword');\" onchange=\"try{this_checked=swift_checktext(this,null);swift_form_refill('txtconfirmpassword');}catch (ex){alert('client script error in txtconfirmpassword.onchange : ' + ex);}\" onfocus=\"swift_field_focus(this,'txtconfirmpassword');\" onmouseout=\"swift_field_mouse_out(this,'txtconfirmpassword');\" onmouseover=\"swift_field_mouse_over(this,'txtconfirmpassword');\" style=\"width:100%;z-index:0;\" tabindex=\"3\" type=\"password\" value=\"\"/>", 
+    "feature": "dd mm yyyy security question date of birth please enter a current email address and choose a password note the password must be at least 8 characters in length please note your account will expire after 12 months of inactivity you may re register at any time confirm password password email address swiftalertshow swiftvalidationok validation1 register cancel swiftvalidationaction txtuserstatus swiftalertshow swiftvalidationok companyid name txtconfirmpassword type password id txtconfirmpassword maxlength 100", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

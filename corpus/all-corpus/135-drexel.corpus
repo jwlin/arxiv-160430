@@ -1,0 +1,24 @@
+ legal first name required id applicantinformation txtfirstname type text name applicantinformation txtfirstname maxlength 60
+ legal last name required id applicantinformation txtlastname type text name applicantinformation txtlastname maxlength 60
+middle initial id applicantinformation txtinitial type text name applicantinformation txtinitial maxlength 1
+other name records may be under id applicantinformation txtalias type text name applicantinformation txtalias maxlength 60
+required id applicantinformation txtxpaddress1 type text name applicantinformation txtxpaddress1 maxlength 75
+address line 2 id applicantinformation txtxpaddress2 type text name applicantinformation txtxpaddress2 maxlength 75
+required id applicantinformation txtxpcity type text name applicantinformation txtxpcity maxlength 75
+required format required id applicantinformation txtxpzip type text name applicantinformation txtxpzip
+required id applicantinformation txtxpintstate type text name applicantinformation txtxpintstate maxlength 35
+zip postal code id applicantinformation txtxpintzip type text name applicantinformation txtxpintzip maxlength 14
+required id applicantinformation txtxladdress1 type text name applicantinformation txtxladdress1 maxlength 75
+address line 2 id applicantinformation txtxladdress2 type text name applicantinformation txtxladdress2 maxlength 75
+required id applicantinformation txtxlcity type text name applicantinformation txtxlcity maxlength 75
+required format required id applicantinformation txtxlzip type text name applicantinformation txtxlzip
+required id applicantinformation txtxlintstate type text name applicantinformation txtxlintstate maxlength 35
+zip postal code id applicantinformation txtxlintzip type text name applicantinformation txtxlintzip maxlength 14
+home mobile other id applicantinformation txtphone type text name applicantinformation txtphone maxlength 16
+ format required international phone numbers cannot contain letters home mobile other id applicantinformation txtxlphone type text name applicantinformation txtxlphone maxlength 16
+international phone numbers cannot contain letters home mobile other id applicantinformation txtintphone type text name applicantinformation txtintphone maxlength 26
+required invalid email id applicantinformation txtemail type text name applicantinformation txtemail maxlength 128
+please confirm your email address must match above email id applicantinformation txtconfirmemail type text name applicantinformation txtconfirmemail maxlength 128
+ required for financial aid processing required invalid ssn id citizenshipsection txtssn type text name citizenshipsection txtssn maxlength 20
+required a format if your number is 8 digits begin with a followed by a zero id citizenshipsection txtaliennumber type text name citizenshipsection txtaliennumber maxlength 20
+ required for financial aid processing required invalid ssn id citizenshipsection txtalienssn type text name citizenshipsection txtalienssn maxlength 20

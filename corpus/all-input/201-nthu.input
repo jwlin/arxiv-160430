@@ -1,0 +1,51 @@
+[
+  {
+    "dom": "<input class=\"text\" id=\"email\" maxlength=\"255\" name=\"email\" size=\"50\" type=\"text\" value=\"\"/>", 
+    "feature": "email name email id email type text maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"text\" id=\"email_cfm\" maxlength=\"255\" name=\"email_cfm\" size=\"50\" type=\"text\"/>", 
+    "feature": "email confirm name email cfm id email cfm type text maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"text\" id=\"authkey\" name=\"authkey\" size=\"6\" type=\"text\"/>", 
+    "feature": "please input 4 digit verification code id authkey type text name authkey", 
+    "rule": {
+      "id": ["authkey"], 
+      "name": ["authkey"]
+    }, 
+    "type": "captcha"
+  }, 
+  {
+    "dom": "<input class=\"text\" id=\"password\" name=\"password\" type=\"password\"/>", 
+    "feature": "password type password name password id password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"text\" id=\"password_cfm\" name=\"password_cfm\" type=\"password\"/>", 
+    "feature": "your password can be 6 12 characters a z or 0 9 and cannot contain any spaces enter the same password in password confirm box to make sure you typed it correctly type password name password cfm id password cfm", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

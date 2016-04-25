@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<LINK REL="stylesheet" HREF="/css/web_admitapp.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<TITLE>Admissions Application Login - New User</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+window.onunload = function() {submitcount=0;}
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no ');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="uo_pageheaderdiv1">
+<IMG SRC="/gifs/dis_head_900.gif" ALIGN="bottom" ALT="Duckweb Information System" TITLE="Duckweb Information System"  NAME="Duckweb Title (foreground)" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=70 WIDTH=900 class="uo_header_img">
+</div>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+&nbsp;
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext">
+<SPAN class="pageheaderlinks">
+<A HREF="/pls/prod/twbkfrmt.P_DispHelp?pagename_in=bwskalog.P_DispLoginNew" accesskey="H" onClick="popup = window.open('/pls/prod/twbkfrmt.P_DispHelp?pagename_in=bwskalog.P_DispLoginNew', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="bwskalog.p_displogoutnon" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Admissions Login - New User</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext">
+<DIV class="staticheaders">
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 ></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<DIV class="infotextdiv"><TABLE  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><TR><TD CLASS="indefault"><SPAN class="infotext"> <BR></SPAN></TD></TR></TABLE><P></DIV>
+<FORM ACTION="/pls/prod/bwskalog.P_ProcLoginNon" METHOD="post" AUTOCOMPLETE="OFF">
+<DIV class="infotextdiv"><TABLE  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><TR><TD CLASS="indefault"><IMG SRC="/gifs/info.gif" ALT="INFO" TITLE="INFO"  NAME="UO Info" HSPACE=0 VSPACE=0 BORDER=0 ></TD><TD CLASS="indefault"><SPAN class="infotext"> Please create your login ID and PIN:  <p><li>Your login ID may be up to 9 characters in length 
+<li>You may use any combination of letters and numbers
+<li>Your login ID is case sensitive
+<li>Do <u>not</u> use any <b>spaces</b>
+<li>Do <u>not</u> use any <b>special characters</b> e.g. *, #, @, $, %, ?, /
+<li>Do <u>not</u> use <b>your first name</b> as a login ID 
+<p>
+<li>Your PIN must be six alphanumeric characters  <li>Do <u>not</u> use <b>123456</b> or <b>654321</b> as a PIN<p>
+
+Be sure to make a note of your login ID and PIN so you can return to your application at a later date.
+</SPAN></TD></TR></TABLE><P></DIV>
+<SPAN class="infotext"> <BR></SPAN>
+<SPAN class="infotext"> <BR></SPAN>
+<SPAN class="infotext"> <BR></SPAN>
+<TABLE  CLASS="dataentrytable" SUMMARY= 'This table contains the Login <ABBR title="Identifier">ID</ABBR> and <ACRONYM title="Personal Identification Number">PIN</ACRONYM> entered by a new user.'>
+<TR>
+<TD CLASS="delabel" scope="row" abbr="Identifier"><LABEL for=login_id><SPAN class="fieldlabeltext">Create a Login <ABBR title="Identifier">ID</ABBR>:</SPAN></LABEL></TD>
+<TD CLASS="dedefault"><INPUT TYPE="text" NAME="newid" SIZE="10" MAXLENGTH="9" ID="login_id"></TD>
+</TR>
+<TR>
+<TD CLASS="delabel" scope="row" abbr='<ACRONYM title="Personal Identification Number">PIN</ACRONYM>'><LABEL for=pin_id><SPAN class="fieldlabeltext">Create a <ACRONYM title="Personal Identification Number">PIN</ACRONYM>:</SPAN></LABEL></TD>
+<TD CLASS="dedefault">
+<INPUT TYPE="password" NAME="newpin" SIZE="12" MAXLENGTH="99" ID="pin_id">
+</TD>
+</TR>
+<TR>
+<TD CLASS="delabel" scope="row" abbr="Verify"><LABEL for=verify_pin_id><SPAN class="fieldlabeltext">Verify <ACRONYM title="Personal Identification Number">PIN</ACRONYM>:</SPAN></LABEL></TD>
+<TD CLASS="dedefault">
+<INPUT TYPE="password" NAME="verifypin" SIZE="12" MAXLENGTH="99" ID="verify_pin_id">
+</TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE="submit" NAME="submit_btn" VALUE="Login">
+<INPUT TYPE="hidden" NAME="in_id" VALUE="">
+<INPUT TYPE="hidden" NAME="pin" VALUE="">
+</FORM>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class="bgtabon" width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 ></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+<A HREF="http://admissions.uoregon.edu" onMouseOver="window.status='Return to Admissions Homepage';  return true" onMouseOut="window.status='';  return true"onFocus="window.status='Return to Admissions Homepage';  return true" onBlur="window.status='';  return true">Return to Admissions Homepage</A>
+<p>&nbsp;
+</DIV>
+<DIV class="footerbeforediv">
+
+</DIV>
+<DIV class="footerlinksdiv">
+<SPAN class="pagefooterlinks">
+<MAP NAME="Admissions_Application_Login_-_New_User_Links_F" title="Admissions Application Login - New User Links">
+<p>
+<A HREF="#skip_Admissions_Application_Login_-_New_User_Links_F" onMouseover="window.status='Skip Admissions Application Login - New User Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Admissions Application Login - New User Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Admissions Application Login - New User Links</A>
+<P>[ <A HREF="bwskalog.p_disploginnon">Admissions Application Login Page</A>
+ ]
+</MAP>
+</SPAN>
+<a name="skip_Admissions_Application_Login_-_New_User_Links_F"></a>
+</DIV>
+<DIV class="footerafterdiv">
+
+</DIV>
+<DIV class="globalafterdiv">
+
+</DIV>
+<DIV class="globalfooterdiv">
+
+</DIV>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.7.1.1</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+<div class="banner_copyright"> <br><h5>© 2016 Ellucian Company L.P. and its affiliates.<br></h5></div>
+</BODY>
+</HTML>

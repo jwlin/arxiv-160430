@@ -1,0 +1,376 @@
+<!DOCTYPE html system "about:legacy-compat">
+<html>
+	<head>
+				<meta content="text/html; charset=utf-8" http-equiv="content-Type"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Expires" content="0"><meta http-equiv="imagetoolbar" content="no">
+		<link href="favicon.ico" rel="Shortcut Icon" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>上海交通大学::留学生发展中心::留学生在线报名-ShangHai JiaoTong University::ISC::Apply</title>
+
+		<style>
+#tbl{border-collpase:collpase;width:303px;}
+#tbl td{font-size:13px;width:100px;white-space:nowrap;padding:8px 5px;vertical-align:middle;}
+#tbl td input{border:solid 1px #666;width:175px;height:26px;padding:2px 0 0 3px}
+#tbl td.fld{width:99px;text-align:right;font-size:12px}
+		</style>
+	</head>
+<body>
+<div id="header">
+	<div class="header">
+		<span class="txt-zn">留学生在线申请</span><br/>
+		<span class="txt-en">Foreign Students Apply</span>
+	</div>
+	<div class="top-link">
+		<a href="http://isc.sjtu.edu.cn/EN/content.aspx?info_lb=31&flag=5" target="_blank">Contact Us</a>
+	</div>
+</div>
+<div id="top-line"></div>
+
+<div id="main">
+	<div id="pad_txt_pwd" style="width:305px;padding:60px 0 0 100px;display:none;float:left;">
+		<div style="width:350px;height:19px;margin:0 0 17px 0;padding:2px 0 8px 0;border:0;border-bottom:2px solid #009bdb;text-align:right"><img id="img_ttl" src="images\w3\t_m3.gif" border="0"></div>
+		<table id="tbl">
+			<tr>
+				<td class="fld"><div class="zh">电子邮件</div><div class="en">e-mail</div></td>
+				<td><input id="fetch_email" name="fetch_email" type="text" style="width:208px;" class="validate[required,funcCall[ckMail]]"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:right">
+					<a id="btn_back" class="btn_w" style="background-image:url(images/w3/b_back1.gif);background-repeat:no-repeat;background-position:20px 5px;width:126px" href="javascript:switchPad('login');void(0);">&nbsp;</a> &nbsp;
+					<a id="btn_submit" class="btn_b" style="background-image:url(images/w3/b_submit.gif);background-repeat:no-repeat;background-position:20px 5px;width:132px" href="javascript:doSubmit();void(0);">&nbsp;</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="pad_txt_validate" style="width:305px;padding:60px 0 0 100px;display:none;float:left;">
+	<div style="width:350px;height:19px;margin:0 0 17px 0;padding:2px 0 8px 0;border:0;border-bottom:2px solid #009bdb;text-align:right"><img id="img_ttl" src="images\w3\t_m4.gif" border="0"></div>
+		<table id="tbl">
+			<tr>
+				<td class="fld"><div class="zh">电子邮件</div><div class="en">e-mail</div></td>
+				<td><input id="validate_email" name="validate_email" type="text" style="width:208px;" class="validate[required,funcCall[ckMail]]"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:right">
+					<a id="btn_back" class="btn_w" style="background-image:url(images/w3/b_back1.gif);background-repeat:no-repeat;background-position:20px 5px;width:126px" href="javascript:switchPad('login');void(0);">&nbsp;</a> &nbsp;
+					<a id="btn_submit" class="btn_b" style="background-image:url(images/w3/b_submit.gif);background-repeat:no-repeat;background-position:20px 5px;width:132px" href="javascript:doSubmit();void(0);">&nbsp;</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="main" style="padding:0 0 0 100px;">		
+		<div id="tbl_bg" style="float:left;width:305px;height:400px;background:url(images/w3/login.png) no-repeat 0px 30px;padding:30px 0 0 0">
+			<form id="fm" onsubmit="return false;">
+				<div style="width:310px;height:400px;padding:4px 0 0 2px;">		
+					<table id="tbl" cellspacing="1" cellpadding="0">					
+						<tr>
+							<td colspan="2" onClick="switchPad('regist');" style="text-align:center;width:140px;height:30px;cursor:pointer;"><span>注册 Register</span></td>
+							<td colspan="2" onClick="switchPad('login');" style="text-align:center;width:140px;height:30px;cursor:pointer;"><span>登录 Sign In</span></td>
+						</tr>
+						<tr>
+							<td class="fld"><div class="zh">电子邮件</div><div class="en">e-mail</div></td>
+							<td colspan="3"><input id="account" name="account" type="text" class="validate[required,funcCall[ckMail]]"/></td>
+						</tr>
+						<tr id="pad_pwd">
+							<td class="fld"><div class="zh">密码</div><div class="en">Password</div></td>
+							<td colspan="3" ><input id="password" name="password" type="password" class="validate[required, funcCall[ckPassword]]"/></td>
+						</tr>
+						<tr id="pad_re_pwd" style="display:none">
+							<td class="fld"><div class="zh">确认密码</div><div class="en">Confirm password</div></td>
+							<td colspan="3" ><input id="confirm_password" name="confirm_password" type="password" class="validate[required, funcCall[ckRePassword]]"/></td>
+						</tr>						
+						<tr>
+							<td class="fld"><div class="zh">验证码</div><div class="en">Verification code</div></td>
+							<td colspan="3" ><input id="verification_code" name="verification_code" type="text" style="width:100px;"/>
+								<img src="img.asp?k=UbpEFWGsRF22o7pBzywq6RVTpvnUf0GBI48Sfgkv21UZyiex45%2Bsay9iw7KKXic9&t=2016/3/12%2022%3A53%3A35" border="0" id="vc" style="height:30px;width:70px;" onClick="chCode()" align="absmiddle" /><input type="hidden" id="token" name="token" value="UbpEFWGsRF22o7pBzywq6RVTpvnUf0GBI48Sfgkv21UZyiex45+say9iw7KKXic9" />	
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4"></td>
+						</tr>
+						<tr id="btn_login">
+							<td colspan="4" style="padding-left:80px;"><div class="buttonview_new" style="text-align:center;" onClick="javascript:doSubmit();void(0);">登录/Login</div></td>
+						</tr>
+						<tr id="btn_regist" style="display:none;">
+							<td colspan="4" style="padding-left:80px;"><div class="buttonview_new" style="text-align:center;" onClick="javascript:doSubmit();void(0);">注册/Register</div></td>
+						</tr>
+						<tr>
+							<td colspan="4" style="padding-left:10px;"><a href="javascript:switchPad('fetch');void(0);" class="lnk">找回密码 retrieve your passord</a></td>
+						</tr>
+						<tr>
+							<td colspan="4" style="padding-left:10px;"><a href="javascript:switchPad('validate');void(0);" class="lnk">发送验证邮件 send e-mail verification</a></td>
+						</tr>
+						<tr>
+							<td colspan="4" style="padding-left:10px;"><a href="http://apply.sjtu.edu.cn/sjtu-os" target="_blank"><span style="color:red;">用学号登陆 student number login</span></a></td>
+						</tr>
+					</table>			
+				</div>
+			</form>
+		</div>
+		<a href="http://isc.sjtu.edu.cn"><div style="float:left;padding:0 20px;width:550px;height:440px;background:url(images/w3/t3.jpg) no-repeat 30px 0"></div></a>
+		<div class="clr"></div>
+		请在注册账号时，不要使用Gmail邮箱，尽量不使用Hotmail、Live和Outlook邮箱，以免无法收到招生系统的邮件。<br/>
+		Please do not use Gmail's mailbox when register. If you use Hotmail，Live and Outlook mailbox for registration, and can not receive the validate email sent by our system, please register by other mailbox.<br/><br/>
+		为了获得更好的浏览效果，建议您使用IE7.0及以上版本浏览器或谷歌Chrome浏览器登陆本站点<br/>
+		For better browsing effects. Please use ie7.0 or above or google Chrome to surf this website.<br/><br/>
+		申请指南/Application Instructions:<img src="images/Down.gif"><a href="Application Instructions-3-19.pdf" target="_blank">下载/Download</a><br/><br/>
+		<span style="color:red">申请密西根学院请点击/Apply JI-SJTU</span>：<a href="https://apply.commonapp.org/Login?ma=699"><input type="button" class="buttonview_new" style="text-align:center;" value="申请/Apply"></a><br/>
+		<input type="image" src="images/ji-sjtu.png">
+	<iframe name="hf" id="hf" width="700" height="200" style="display:none;" src=""></iframe>
+	</div>
+	</div>
+<div id="bottom">
+	<span class="copyright">
+		<a href="http://isc.sjtu.edu.cn" target="_blank">Study@SJTU</a> | 
+		<a href="http://en.sjtu.edu.cn" target="_blank">SJTU Homepage</a> | 
+		<a href="http://en.sjtu.edu.cn/about-sjtu/life-sjtu/accommodation/" target="_blank">Life@SJTU</a> | 
+		<a href="http://global.sjtu.edu.cn" target="_blank">Global SJTU</a> | 
+		<a href="http://en.study-shanghai.org/" target="_blank">Study in Shanghai</a> | 
+		<a href="http://www.csc.edu.cn/laihua/index.aspx" target="_blank">Study in China</a> | 
+		<a href="http://www.exploreshanghai.com/metro/" target="_blank" >Metro Map of Shanghai</a></span><br/>
+	<span class="copyright">&copy;版权所有 上海交通大学 留学生发展中心</span>
+</div><script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
+
+<script type="text/javascript">
+var aImg = [];
+for(var i = 0; i<4; i++){aImg[i] = new Image();aImg[i].src = "images/w3/t_m" + (i+1) + ".gif";}
+var sCur = "login";
+
+function ckMail(field, rules, i, options){
+	var s = adjVal(field.val());
+	if(sCur=='login'){
+		if(s.indexOf("@") != -1){
+			s = s.toLowerCase();
+			var re = /^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$/;
+			if(!re.test(s)) return '* 电子邮件格式不正确 (Invalid e-mail address)';
+		}
+		else s = s.toUpperCase();
+		field.val(s);
+		re = /^[\S]{1,100}$/i;
+		if(!re.test(s)) return '* 最长100个非空字符 (Maximum length is 100 nonblank chars)';
+	}
+	else{
+		s = s.toLowerCase();
+		field.val(s);
+		var re = /^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$/;
+		if(!re.test(s)) return '* 电子邮件格式不正确 (Invalid e-mail address)';
+		re = /^[\S]{1,100}$/i;
+		if(!re.test(s)) return '* 最长100个非空字符 (Maximum length is 100 nonblank chars)';
+	}
+	return ;
+}
+function ckPassword(field, rules, i, options){
+	var v = $.trim(field.val());
+	field.val(v);
+	var re = /^[\s\S]{6,16}$/;
+	if(!re.test(v)) return "* 密码应在6-16个字符之间 (The length of password is between 6 to 16 chars)";
+	return ;
+}
+function ckRePassword(field, rules, i, options){
+	if($("#password").val()=="") return ;
+	var v = $.trim(field.val());
+	field.val(v);
+	if(v != $("#password").val()) return "* 请输入与上面相同的密码 (This value should be equal to the field value above)"
+	return ;
+}
+function adjVal(s){
+	return dbc2sbc($.trim(s));
+}
+function doSubmit(){
+	switch(sCur){
+		case 'login':
+			doLogin();
+			break;
+		case 'regist':
+			doRegist();
+			break;
+		case 'fetch':
+			doFetch();
+			break;
+		case 'validate':
+			doValidate();
+			break;	
+	}
+}
+function chCode(){$("codekey").value='';hf.location.replace("get_token.asp");}
+function doLogin(){
+	var b = $("#fm").validationEngine('validate');
+	if(!b) return false;
+	showMask();
+	$.ajax({
+		url:'c.asp?action=student_login',
+		cache:false,
+		type:'POST',
+		data:{account:$('#account').val(),password:$('#password').val(),code:$('#verification_code').val(),token:$('#token').val()},
+		error:function(xhr, status, err){
+			showErr(err);
+			hideMask();
+		},	
+		success:function(data, status, err){
+			var obj = eval("("+data+")");		
+			hideMask();
+			switch(obj.state){
+				case '0':
+					location.replace('c.asp?action=student_main_en');
+					break;
+				case '1':
+					showErr("请30秒后再登录。<br>Please sign in after 30 seconds.");
+					break;
+				case '3':
+					showErr("账户不存在或未邮箱验证。<br>Your account does not exist or it is not validated.");
+					break;
+				default:
+					chCode();
+					showErr(obj.msg);
+			}
+		}
+	});
+}
+function doRegist(){
+	var iden = $("input[name='identity_no']:checked").val();
+	var b = $("#fm").validationEngine('validate');
+	if(!b) return false;
+	showMask();
+	$.ajax({
+		url:'c.asp?action=student_regist',
+		cache:false,
+		type:'POST',
+		data:{account:$('#account').val(),password:$('#password').val(),identity_no:iden,code:$('#verification_code').val(),token:$('#token').val()},
+		error:function(xhr, status, err){
+			showErr(err);
+			hideMask();
+		},
+		success:function(data, status, err){
+			var obj = eval("(" + data + ")");
+			hideMask();
+			switch(obj.state){
+				case '0':
+					showInfo("注册成功，稍后请接收电子邮件，访问其中的网址链接，验证电子邮件地址。<br>Resgistered successfully. Please recieve your e-mail and visit the page linked in the mail to validate the e-mail address.");
+					break;
+				case '1':
+					showErr("请30秒后再注册。<br>Please register after 30 seconds.");
+					break;
+				default:
+					chCode();
+					showErr(obj.msg);
+			}
+		}
+	});
+}
+function doValidate(){
+	var b = $("#fm").validationEngine('validate');
+	if(!b) return false;
+	showMask();
+	$.ajax({
+		url:'c.asp?action=student_revalidate',
+		cache:false,
+		type:'POST',
+		data:{account:$("#validate_email").val()},
+		error:function(xhr, status, err){
+			showErr(err);
+			hideMask();
+		},
+		success:function(data, status, err){
+			var obj = eval("(" + data + ")");
+			hideMask();
+			switch(obj.state){
+				case '0':
+					showInfo("成功发送，稍后请接收电子邮件，并验证。<br>Retreived successfully. Please recieve your mail to validate.");
+					break;
+				case '1':
+					showErr("不能连续找回密码，请30秒后再试。<br>Please try again after 30 seconds.");
+					break;
+				default:
+					showErr(obj.msg);
+			}
+		}
+	});
+}
+function doFetch(){
+	var b = $("#fm").validationEngine('validate');
+	if(!b) return false;
+	showMask();
+	$.ajax({
+		url:'c.asp?action=student_pwdreset',
+		cache:false,
+		type:'POST',
+		data:{account:$("#fetch_email").val()},
+		error:function(xhr, status, err){
+			showErr(err);
+			hideMask();
+		},
+		success:function(data, status, err){
+			var obj = eval("(" + data + ")");
+			hideMask();
+			switch(obj.state){
+				case '0':
+					showInfo("成功找回，稍后请接收电子邮件，获取登录密码。<br>Retreived successfully. Please recieve your mail to get your password.");
+					break;
+				case '1':
+					showErr("不能连续发送，请30秒后再试。<br>Please try again after 30 seconds.");
+					break;
+				default:
+					showErr(obj.msg);
+			}
+		}
+	});
+}
+function switchPad(s){
+	sCur = s;
+	switch(s){
+		case 'login':
+			$("#tbl_bg").css("background-image", "url(images/w3/login.png)");
+			$("#tbl_bg").show();
+			$('#pad_pwd').show(); $('#pad_re_pwd').hide(); $('#btn_login').show(); $('#btn_regist').hide(); $('#pad_txt_pwd').hide(); $('#pad_txt_validate').hide();
+			break;
+		case 'regist':
+			$("#tbl_bg").css("background-image", "url(images/w3/login_regist.png)");
+			$("#tbl_bg").show();
+			$('#pad_pwd').show(); $('#pad_re_pwd').show(); $('#btn_login').hide(); $('#btn_regist').show(); $('#pad_txt_pwd').hide(); $('#pad_txt_validate').hide();
+			break;
+		case 'fetch':
+			$("#tbl_bg").hide();
+			$("#fetch_email").attr("value",$("#account").val());
+			$('#pad_pwd').hide(); $('#pad_re_pwd').hide(); $('#pad_txt_pwd').show(); $('#pad_txt_validate').hide();
+			break;
+		case 'validate':
+			$("#tbl_bg").hide();
+			$("#validate_email").attr("value",$("#account").val());
+			$('#pad_pwd').hide(); $('#pad_re_pwd').hide(); $('#pad_txt_pwd').hide(); $('#pad_txt_validate').show();
+			break;
+		}
+}
+function showMask(){
+	$('#btn_submit').attr('disabled', true);
+	if(sCur=='fetch'){
+		$('#pad_txt_pwd').mask("Loading...");
+	}
+	if(sCur=='validate'){
+		$('#pad_txt_validate').mask("Loading...");
+	}
+	$('#fm').mask("Loading...");
+}
+function hideMask(){
+	$('#btn_submit').attr('disabled', false);
+	if($('#pad_txt_pwd').isMasked()) $('#pad_txt_pwd').unmask();
+	if($('#pad_txt_validate').isMasked()) $('#pad_txt_validate').unmask();
+	if($('#fm').isMasked()) $('#fm').unmask();
+}
+$(function(){
+//	switchTab('login');
+//	$("#img_code").attr("src", "img.asp?k=" + sTokenURL + "&t=" + escape(new Date()));
+//	$('#pad_code').show();
+/*	$('#code').on('keydown',function(e){
+		var n = e.which;
+		return !e.shiftKey && ((n >= 48 && n <= 57) || n==8 || n==37 || n==39 || n==46);
+	});
+*/
+	$("#fm").validationEngine({
+		promptPosition:'topRight',
+		autoHidePrompt:true,
+		autoHideDelay:4000
+	});
+});
+</script>
+
+	</body>
+</html>

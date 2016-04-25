@@ -1,0 +1,618 @@
+<html dir='ltr' lang='en'>
+<!-- Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved. -->
+<!-- CHROME/48.0/WINNT; ToolsRel=8.53.13; User=NYU_GUEST; DB=CSPROD/ORACLE; AppServ=//psiscsa04l.cfs.its.nyu.edu:9040; -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language='JavaScript'>
+var  totalTimeoutMilliseconds = 2073600000; 
+var  warningTimeoutMilliseconds = 2073600000; 
+var timeOutURL = 'https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/?cmd=expire';
+var timeoutWarningPageURL = 'https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/s/WEBLIB_TIMEOUT.PT_TIMEOUTWARNING.FieldFormula.IScript_TIMEOUTWARNING';
+</script> 
+
+<link id=PSSTYLEREQ_1_css rel='stylesheet' type='text/css' href='/cs/csprod/cache/853/PSSTYLEREQ_1.css' />
+<link id=NYU_AAWS_STYLESHEET_5_css rel='stylesheet' type='text/css' href='/cs/csprod/cache/853/NYU_AAWS_STYLESHEET_5.css' />
+<title id='PSPAGETITLE'>NYU AAWS Login</title>
+<script language='JavaScript'>
+var winParent = null;
+var modalID = null;
+var modalZoomName = null;
+var baseKey_win0 = "\x1b";
+var altKey_win0 = "05678\xbc\xbe\xbf\xde";
+var ctrlKey_win0 = "JK";
+var saveWarningKeys_win0 = "";
+var bAccessibility_win0 =false;
+var bDoModal_win0 = false;
+var bJSModal_win0 = false;
+var bPromptPage_win0 = false;
+var bTabOverTB_win0 = false;
+var bTabOverPg_win0 = false;
+var bTabOverNonPS_win0 = false;
+var strCurrUrl='https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/c/NYU_AWS_SS.NYU_AAWS_LOGIN.GBL?APP_TYPE=POLYGR1&&PAGE=NYU_AAWS_LOGIN';
+var bIncInNavigation='F';
+var szCrefID='yyy';
+var szCrefReged='F';
+var szCrefVisible='F';
+var szCrefLabel='zzz';
+var szCalendarType = 'G';
+var bMenuSrchPage = false;
+var bWSRP=0;var szMenuSrchText = "-999999-";
+var modalCloseUrl = '/cs/csprod/cache/853/PT_PORTAL_IC_CLOSE_1.gif';
+var modalCloseAlt = 'Close';
+var modalResizeUrl= '/cs/csprod/cache/853/PT_RESIZE_IMG_1.gif';
+var modalResizeAlt = 'Drag to resize';
+var modalMoveAlt = 'Drag to move';
+</script>
+<script LANGUAGE='JavaScript'>
+try {
+document.domain = "nyu.edu";
+}
+catch(err) {;}
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_COMMON_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_AJAX_NET_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_SAVEWARNINGSCRIPT_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_PAGESCRIPT_win0_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_EDITSCRIPT_win0_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_POPUPSCRIPT_win0_MIN_1.js'>
+</script>
+<script language='JavaScript' type='text/javascript' src='/cs/csprod/cache/853/PT_GRIDSCRIPT_win0_MIN_1.js'>
+</script>
+<script language='JavaScript'>
+var nResubmit=0;
+var nLastAction=0;
+var loader=null;
+if (typeof(bCleanHtml) == 'undefined')
+	var bCleanHtml = false;
+setupTimeout2();
+var postUrl_win0='https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/c/NYU_AWS_SS.NYU_AAWS_LOGIN.GBL';
+function aAction_win0(form, name, params, bAjax, bPrompt)
+{
+setupTimeout2();
+if ((name != '#ICSave'))
+processing_win0(1,3000);
+aAction0_win0(form, name, params, bAjax, bPrompt);
+}
+function submitAction_win0(form, name)
+{
+setupTimeout2();
+if (!ptCommonObj2.isICQryDownload(form, name))
+ { processing_win0(1,3000); }
+preSubmitProcess_win0(form, name);
+var spellcheckpos = name.indexOf('$spellcheck');
+if ((spellcheckpos != -1) && (name.indexOf('#KEYA5') != -1))
+	form.ICAction.value = name.substring(0,spellcheckpos);
+else 
+	form.ICAction.value=name;
+var actionName = form.ICAction.value;
+form.ICXPos.value=ptCommonObj2.getScrollX();
+form.ICYPos.value=ptCommonObj2.getScrollY();
+if (!ptCommonObj2.isAJAXReq(form, name) && !ptCommonObj2.isPromptReq(name)){
+if (nLastAction == 1 && nResubmit > 0) return;
+form.ICResubmit.value=nResubmit;
+form.submit();
+if (!ptCommonObj2.isICQryDownload(form, name))
+	nResubmit++;
+}
+else if (ptCommonObj2.isPromptReq(name))
+	pAction_win0(form, name, arguments[2]);
+else
+	aAction_win0(form, actionName);}
+</script>
+<script language='javascript'>
+var pt_calHeadstyle=" class='PTCALHEAD' "
+var pt_calWeekHeadstyle=" class='PTCALWEEKHEAD' "
+function dateitemrefs()
+{
+this.pt_dateheader = "/cs/csprod/cache/853/PT_PORTAL_IC_CLOSE_1.gif";
+this.pt_datering = "/cs/csprod/cache/853/PT_CURRENT_DATE_1.gif";
+this.pt_datesel = "/cs/csprod/cache/853/PT_SELECTED_DATE_1.gif";
+this.pt_nextmonth = "/cs/csprod/cache/853/PT_RIGHT_SCROLL_1.gif";
+this.pt_prevmonth= "/cs/csprod/cache/853/PT_LEFT_SCROLL_1.gif";
+this.pt_daystitle_hijri = "/cs/csprod/cache/853/PT_DATE_TITLE_S6_1.GIF";
+this.pt_daystitle_thai = "/cs/csprod/cache/853/PT_DATE_TITLE_S0_1.GIF";
+this.pt_daystitle_s0 = "/cs/csprod/cache/853/PT_DATE_TITLE_S0_1.GIF";
+this.pt_daystitle_m1 = "/cs/csprod/cache/853/PT_DATE_TITLE_M1_1.GIF";
+this.pt_daystitle_t2 = "/cs/csprod/cache/853/PT_DATE_TITLE_T2_1.GIF";
+this.pt_daystitle_w3 = "/cs/csprod/cache/853/PT_DATE_TITLE_W3_1.GIF";
+this.pt_daystitle_t4 = "/cs/csprod/cache/853/PT_DATE_TITLE_T4_1.GIF";
+this.pt_daystitle_f5 = "/cs/csprod/cache/853/PT_DATE_TITLE_F5_1.gif";
+this.pt_daystitle_s6 = "/cs/csprod/cache/853/PT_DATE_TITLE_S6_1.GIF";
+}
+ 
+function LoadCalendar()
+{
+var dateitems = new dateitemrefs();
+loadImages(dateitems);
+}
+function DatePrompt_win0(dtfield,promptfield,yrfmt,bsubmit)
+{
+setupTimeout2();
+openDate_win0(dtfield, promptfield, "YMD/"+yrfmt,bsubmit,"G",0);
+}
+</script>
+<script language='JavaScript'  ptdefer='defer'>
+if (typeof ptStyleSheet == "undefined") {
+ptStyleSheet = 'NYU_AAWS_STYLESHEET';
+}
+function onLoadExt_win0() {
+modalZoomName = null;
+var pt_pageinfo = document.getElementById('pt_pageinfo_win0');
+if (pt_pageinfo) {
+pt_pageinfo.setAttribute('Page', 'NYU_AAWS_LOGIN');
+pt_pageinfo.setAttribute('Component', 'NYU_AAWS_LOGIN');
+pt_pageinfo.setAttribute('Menu', 'NYU_AWS_SS');
+}
+
+ g_bAccessibilityMode=false; 
+UpdateBreadCrumbs();
+runOnloadScript_win0(false,false,false,false,false,false,false,false,false,true,false,false,false,true,false,2,'ICFocus',false,false);
+if (typeof(HelppopupObj_win0) != 'undefined' && HelppopupObj_win0 != null)
+ HelppopupObj_win0.StopPopup();
+
+doModalOnLoad_win0(false, false);
+ResetGlyph_win0();
+self.scroll(0,0);
+objToBeFocus = null;
+if (typeof oWin == 'undefined') setEventHandlers_win0('ICFirstAnchor_win0', 'ICLastAnchor_win0', false);
+ else
+ oWin.setEventHandlers_win0('ICFirstAnchor_win0', 'ICLastAnchor_win0', false);
+setFocus_win0('NYU_AWS_DERIVED_NYU_AWS_HTML3',-1);
+processing_win0(0,3000);
+ptConsole2.enable();
+
+GenerateABN();
+GenerateFakeBC();
+bcUpdateForPTF();if (typeof(myAppsWindowOpenJS) != 'undefined' && myAppsWindowOpenJS != null && myAppsWindowOpenJS != '')
+ {
+try {eval(myAppsWindowOpenJS);} catch(e) {}
+  myAppsWindowOpenJS=null;
+}
+ResetGlyph_win0();setPageletInfoInCtxmenu_win0('false');}
+try{ptEvent.load(onLoadExt_win0);}catch(e){}
+</script></head>
+<body tabindex='-1'  class='PSPAGE' >
+<DIV id='pt_pageinfo_win0' Page='' Component='' Menu=''></DIV>
+<div id='pt_modalMaskCover'>&nbsp;</div><div id='pt_modalMask'>&nbsp;</div><div id='pt_console'></div><div id='pt_typeahead0'><span id='pt_typeahead' class='spanTextDropdown'>&nbsp;</span></div><div id='WAIT_win0' style='display:none;position:absolute;right:0;'><img id='processing' align='left' src='/cs/csprod/cache/853/PT_PROCESSING_1.gif' alt='Processing... please wait' title='Processing... please wait' /></div>
+ <div id='SAVED_win0' style='display:none;position:absolute;right:0;'><table border='0' cellpadding='0' cellspacing='0'><tr><td><img src='/cs/csprod/cache/853/PTPORTAL_POPBOX_LEFT_1.gif' width='7' height='39' border='0' alt=''/></td><td id='saveWait_win0' width='35' align='center' valign='middle' background='/cs/csprod/cache/853/PTPORTAL_POPBOX_CENTER_1.gif'><img src='/cs/csprod/cache/853/PT_LOADER_1.gif' width='24' height='24' alt=''/></td><td nowrap='nowrap' background='/cs/csprod/cache/853/PTPORTAL_POPBOX_CENTER_1.gif'><span id='ptStatusText_win0' dir='ltr' class='PSPROCESSING'>&nbsp;</span></td><td><img src='/cs/csprod/cache/853/PTPORTAL_POPBOX_RIGHT_1.gif' width='6' height='39' alt=''/></td><td>&nbsp;</td></tr></table></div><a name='ICFirstAnchor_win0'></a>
+<form name='win0' method='post' action="https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/c/NYU_AWS_SS.NYU_AAWS_LOGIN.GBL"  autocomplete='off' class='PSForm'>
+<DIV id='win0divPSHIDDENFIELDS' style='display:none'><input type='hidden' name='ICType' id='ICType' value='Panel' />
+<input type='hidden' name='ICElementNum' id='ICElementNum' value='0' />
+<input type='hidden' name='ICStateNum' id='ICStateNum' value='2' />
+<input type='hidden' name='ICAction' id='ICAction' value='None' />
+<input type='hidden' name='ICXPos' id='ICXPos' value='0' />
+<input type='hidden' name='ICYPos' id='ICYPos' value='0' />
+<input type='hidden' name='ResponsetoDiffFrame' id='ResponsetoDiffFrame' value='-1' />
+<input type='hidden' name='TargetFrameName' id='TargetFrameName' value='None' />
+<input type='hidden' name='FacetPath' id='FacetPath' value='None' />
+<input type='hidden' name='ICFocus' id='ICFocus' value='' />
+<input type='hidden' name='ICSaveWarningFilter' id='ICSaveWarningFilter' value='0' />
+<input type='hidden' name='ICChanged' id='ICChanged' value='-1' />
+<input type='hidden' name='ICResubmit' id='ICResubmit' value='0' />
+<input type='hidden' name='ICSID' id='ICSID' value='lTp+7d2z/4JtZU1cIXmQ987Tz1p8vt6B0wvAtY/1wSM=' />
+<input type='hidden' name='ICActionPrompt' id='ICActionPrompt' value='false' />
+<input type='hidden' name='ICFind' id='ICFind' value='' />
+<input type='hidden' name='ICAddCount' id='ICAddCount' value='' />
+<input type='hidden' name='ICAPPCLSDATA' id='ICAPPCLSDATA' value='' />
+</DIV><DIV id='win0divPAGEBAR'></DIV><DIV id='win0divPSPANELTABS'></DIV><DIV id='win0divPAGECONTAINER'><table class='PSPAGECONTAINER' ><tr><td>
+<DIV id='win0divPSPAGECONTAINER'><table  border='0' id='ACE_width' cellpadding='0' cellspacing='0' class='PSPAGECONTAINER' cols='5' width='1287'>
+<tr>
+<td width='4' height='4'></td>
+<td width='708'></td>
+<td width='8'></td>
+<td width='564'></td>
+<td width='3'></td>
+</tr>
+<tr>
+<td height='19'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_HTMLAREA1'><div style="width:1280px; " >
+<!-- Begin HTML Area Name Undisclosed -->
+<img src="/cs/csprod/cache/853/NYU_AAWS_GRAD_POLY_IMG_75339.JPG" width="650" height="130" alt="Polytechnic School of Engineering - Graduate" hspace="1">
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+<tr>
+<td height='1'></td>
+<td rowspan='2'  valign='top' align='left'>
+<DIV id='win0div$ICField61'><table cellpadding='2' cellspacing='0' cols='1'  class='PABACKGROUNDINVISIBLEWBO'  width='707'>
+<tr><td width='705'>
+<table  border='0' id='ACE_$ICField61' cellpadding='0' cellspacing='0' cols='7' width='705' class='PABACKGROUNDINVISIBLE' style='border-style:none' >
+<tr>
+<td width='7' height='3'></td>
+<td width='4'></td>
+<td width='336'></td>
+<td width='8'></td>
+<td width='256'></td>
+<td width='84'></td>
+<td width='10'></td>
+</tr>
+<tr>
+<td height='8' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0div$ICField48'><table cellpadding='2' cellspacing='0' cols='1'  class='PSFRAMENBOWBO'  width='600'>
+<tr><td width='598' height='6'>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='5' colspan='7'></td>
+</tr>
+<tr>
+<td height='71'></td>
+<td colspan='5'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_WRK_NYU_AWS_HTML99'><div style="width:688px; " >
+<!-- Begin HTML Area Name Undisclosed -->
+<p>
+<b>Welcome to New York University’s Online Admissions Application System!</b> <br> <br>
+Please log-in or create a new user account below.<br><br>
+Notes:</p>
+<ul>
+<li><b><em>Please do not use any existing NYU University ID (N#), NYU NetID, or NYU email for this application </em></b>
+        <ul style="font-family:Verdana,sans-serif;font-size:11pt">
+                <li>This Application User ID will only be used to access your online admissions application</li>
+                <li>You will be able to provide an NYU email address for correspondence later in the application process.</li>
+        </ul>
+        </li>
+<li><b>Passwords</b> must be 8 characters long and contain at least one special character (!,@,#,$, etc) and one number (0-9).
+        <ul>
+                <li>If you get a message stating that the user could not be authenticated, this means that you have provided an incorrect User ID and/or password. Recall that passwords are case sensitive.</li>
+        </ul>
+        </li>
+<li><b> If you are unable to login,</b> please use the ‘Forgot your User ID?’ and ‘Forgot your password?’ buttons.
+        <ul>
+                <li>If you attempt to retrieve your User ID or reset the password and the system is not able to locate your email address, this means that the system has temporarily locked out your account for security reasons. In this case, do not attempt to login but reset the password using the ‘Forgot your password?’ functionality on the login page after 5 minutes.</li>
+        </ul>
+        </li>
+</ul>
+</p>
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+<tr>
+<td height='8' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0div$ICField34'><table cellpadding='2' cellspacing='0' cols='1'  class='PSFRAMENBOWBO'  width='600'>
+<tr><td width='598' height='6'>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='5' colspan='7'></td>
+</tr>
+<tr>
+<td height='15'></td>
+<td colspan='5'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_HTMLAREA2'><div style="width:688px; " >
+<!-- Begin HTML Area Name Undisclosed -->
+<p>
+If paying the application fee poses a financial hardship for you, we don’t want that to stop you from applying.   To request a fee waiver, e-mail  <a href="mailto:engineering.gradinfo@nyu.edu">engineering.gradinfo@nyu.edu</a>  stating that you would like to request your fee be waived. No other documentation is required.
+</p>
+<p>
+For technical issues, contact the IT Service Desk in a number of ways: <br> <br>
+- <b>For help by telephone</b>, call 1-212-998-3333 to speak with IT Service Desk staff 24 hours a day, seven days a week. <br>
+- <b>For help online</b>,visit <a href="http://www.nyu.edu/its/askits/helpdesk/"target="_blank">http://www.nyu.edu/its/askits/helpdesk/ </a> <br>
+- <b>For in-person help</b>, visit the IT Service Desk at 10 Astor Place, 4th floor, Monday through Friday, 9:00am to 6:00pm ET.
+</p>
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+<tr>
+<td height='8' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0div$ICField56'><table cellpadding='2' cellspacing='0' cols='1'  class='PSFRAMENBOWBO'  width='600'>
+<tr><td width='598' height='6'>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='10' colspan='7'></td>
+</tr>
+<tr>
+<td height='360'></td>
+<td colspan='2'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_GROUPBOX1'><table cellpadding='2' cellspacing='0' cols='1'  class='PSGROUPBOXWBO'  width='339'>
+<tr><td class='NYU_AAWS_GROUPBOX'  align='left'><DIV id='win0divNYU_AWS_DERIVED_GROUPBOX1GP'><a class='PSHYPERLINK' name='NYU_AWS_DERIVED_GROUPBOX1' id='NYU_AWS_DERIVED_GROUPBOX1' tabindex='21' href="javascript:submitAction_win0(document.win0,'NYU_AWS_DERIVED_GROUPBOX1');"><img src='/cs/csprod/cache/853/PT_COLLAPSE_1.GIF' alt='Collapse section New User' title='Collapse section' border='0' /></a>&nbsp;New User&nbsp;</DIV></td></tr>
+<tr><td width='337'>
+<table  border='0' id='ACE_NYU_AWS_DERIVED_GROUPBOX1' cellpadding='0' cellspacing='0' cols='5' width='337' class='PSGROUPBOX' style='border-style:none' >
+<tr>
+<td width='7' height='18'></td>
+<td width='4'></td>
+<td width='104'></td>
+<td width='88'></td>
+<td width='134'></td>
+</tr>
+<tr>
+<td height='14'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_OPRIDlbl'><label for='SCC_NUR_WRK_OPRID' id='SCC_NUR_WRK_OPRID_LBL' class='NYU_AAWS_FIELD_LABEL' >User ID:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='38'></td>
+<td colspan='4' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_OPRID'><input type='text' name='SCC_NUR_WRK_OPRID' id='SCC_NUR_WRK_OPRID' tabindex='22' value=""  class='NYU_AAWS_FIELD' style='width:324px; ' maxlength='30'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_PASSWORDlbl'><label for='SCC_NUR_WRK_PASSWORD' id='SCC_NUR_WRK_PASSWORD_LBL' class='NYU_AAWS_FIELD_LABEL' >Password:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='34'></td>
+<td colspan='4' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_PASSWORD'><input type='password' name='SCC_NUR_WRK_PASSWORD' id='SCC_NUR_WRK_PASSWORD' tabindex='23' value=""  class='NYU_AAWS_FIELD' style='width:324px; ' maxlength='254'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_PASSWORD_CONFIRMlbl'><label for='SCC_NUR_WRK_PASSWORD_CONFIRM' id='SCC_NUR_WRK_PASSWORD_CONFIRM_LBL' class='NYU_AAWS_FIELD_LABEL' >Confirm Password:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='38'></td>
+<td colspan='4' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_PASSWORD_CONFIRM'><input type='password' name='SCC_NUR_WRK_PASSWORD_CONFIRM' id='SCC_NUR_WRK_PASSWORD_CONFIRM' tabindex='24' value=""  class='NYU_AAWS_FIELD' style='width:324px; ' maxlength='254'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_EMAIL_ADDRlbl'><label for='SCC_NUR_WRK_EMAIL_ADDR' id='SCC_NUR_WRK_EMAIL_ADDR_LBL' class='NYU_AAWS_FIELD_LABEL' >Email Address:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='38'></td>
+<td colspan='4' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_EMAIL_ADDR'><input type='text' name='SCC_NUR_WRK_EMAIL_ADDR' id='SCC_NUR_WRK_EMAIL_ADDR' tabindex='25' value=""  class='NYU_AAWS_FIELD' style='width:324px; ' maxlength='70'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_FIRST_NAMElbl'><label for='SCC_NUR_WRK_FIRST_NAME' id='SCC_NUR_WRK_FIRST_NAME_LBL' class='NYU_AAWS_FIELD_LABEL' >First Name:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='34' colspan='2'></td>
+<td colspan='3' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_FIRST_NAME'><input type='text' name='SCC_NUR_WRK_FIRST_NAME' id='SCC_NUR_WRK_FIRST_NAME' tabindex='26' value=""  class='NYU_AAWS_FIELD' style='width:320px; ' maxlength='30'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_LAST_NAMElbl'><label for='SCC_NUR_WRK_LAST_NAME' id='SCC_NUR_WRK_LAST_NAME_LBL' class='NYU_AAWS_FIELD_LABEL' >Last Name:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='31' colspan='2'></td>
+<td colspan='3' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_WRK_LAST_NAME'><input type='text' name='SCC_NUR_WRK_LAST_NAME' id='SCC_NUR_WRK_LAST_NAME' tabindex='27' value=""  class='NYU_AAWS_FIELD' style='width:320px; ' maxlength='30'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='22' colspan='3'></td>
+<td  valign='top' align='left'>
+<DIV id='win0div$ICField15'><table cellpadding='2' cellspacing='0' cols='1'  class='PSFRAMENBOWBO'  width='87'>
+<tr><td width='85'>
+<table  border='0' id='ACE_$ICField15' cellpadding='0' cellspacing='0' cols='2' width='85' class='PSFRAMENBO' style='border-style:none' >
+<tr>
+<td width='3' height='6'></td>
+<td width='82'></td>
+</tr>
+<tr>
+<td height='16'></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_CONTINUE_PB'><span id='NYU_AWS_DERIVED_CONTINUE_PB$span'  class='NYU_AAWS_BUTTON' ><a name='NYU_AWS_DERIVED_CONTINUE_PB' id='NYU_AWS_DERIVED_CONTINUE_PB' ptlinktgt='pt_peoplecode' tabindex='28' href="javascript:submitAction_win0(document.win0,'NYU_AWS_DERIVED_CONTINUE_PB');"  class='NYU_AAWS_BUTTON' >Continue</a></span>
+</DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+<td rowspan='3'></td>
+<td colspan='2' rowspan='2'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_GROUPBOX2'><table cellpadding='2' cellspacing='0' cols='1'  class='PSGROUPBOXWBO'  width='339'>
+<tr><td class='NYU_AAWS_GROUPBOX'  align='left'><DIV id='win0divNYU_AWS_DERIVED_GROUPBOX2GP'><a class='PSHYPERLINK' name='NYU_AWS_DERIVED_GROUPBOX2' id='NYU_AWS_DERIVED_GROUPBOX2' tabindex='29' href="javascript:submitAction_win0(document.win0,'NYU_AWS_DERIVED_GROUPBOX2');"><img src='/cs/csprod/cache/853/PT_COLLAPSE_1.GIF' alt='Collapse section Returning User' title='Collapse section' border='0' /></a>&nbsp;Returning User&nbsp;</DIV></td></tr>
+<tr><td width='337'>
+<table  border='0' id='ACE_NYU_AWS_DERIVED_GROUPBOX2' cellpadding='0' cellspacing='0' cols='8' width='337' class='PSGROUPBOX' style='border-style:none' >
+<tr>
+<td width='7' height='12'></td>
+<td width='4'></td>
+<td width='8'></td>
+<td width='40'></td>
+<td width='12'></td>
+<td width='84'></td>
+<td width='172'></td>
+<td width='10'></td>
+</tr>
+<tr>
+<td height='94'></td>
+<td colspan='6'  valign='top' align='left'>
+<DIV id='win0div$ICField49'><span  class='NYU_AAWS_TEXT' >If you have already created an account with this system, enter your Application User ID and password below.</span>
+</DIV></td>
+</tr>
+<tr>
+<td height='14' colspan='2'></td>
+<td colspan='6'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_OPRIDlbl'><label for='NYU_AWS_DERIVED_OPRID' id='NYU_AWS_DERIVED_OPRID_LBL' class='NYU_AAWS_FIELD_LABEL' >User ID:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='42' colspan='2'></td>
+<td colspan='6' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_OPRID'><input type='text' name='NYU_AWS_DERIVED_OPRID' id='NYU_AWS_DERIVED_OPRID' tabindex='30' value=""  class='NYU_AAWS_FIELD' style='width:320px; ' maxlength='30'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='14' colspan='2'></td>
+<td colspan='6'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_PASSWORDlbl'><label for='NYU_AWS_DERIVED_PASSWORD' id='NYU_AWS_DERIVED_PASSWORD_LBL' class='NYU_AAWS_FIELD_LABEL' >Password:</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='51' colspan='2'></td>
+<td colspan='6' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_PASSWORD'><input type='password' name='NYU_AWS_DERIVED_PASSWORD' id='NYU_AWS_DERIVED_PASSWORD' tabindex='31' value=""  class='NYU_AAWS_FIELD' style='width:320px; ' maxlength='254'  />
+</DIV></td>
+</tr>
+<tr>
+<td height='24' colspan='4'></td>
+<td colspan='2'  valign='top' align='left'>
+<DIV id='win0div$ICField20'><table cellpadding='2' cellspacing='0' cols='1'  class='PSFRAMENBOWBO'  width='95'>
+<tr><td width='93'>
+<table  border='0' id='ACE_$ICField20' cellpadding='0' cellspacing='0' cols='2' width='93' class='PSFRAMENBO' style='border-style:none' >
+<tr>
+<td width='11' height='6'></td>
+<td width='82'></td>
+</tr>
+<tr>
+<td height='16'></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_SIGN_ON'><span id='NYU_AWS_DERIVED_SIGN_ON$span'  class='NYU_AAWS_BUTTON'  title='Sign On' ><a name='NYU_AWS_DERIVED_SIGN_ON' id='NYU_AWS_DERIVED_SIGN_ON' ptlinktgt='pt_peoplecode' tabindex='32' href="javascript:submitAction_win0(document.win0,'NYU_AWS_DERIVED_SIGN_ON');"  class='NYU_AAWS_BUTTON' >Sign In</a></span>
+</DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='9' colspan='8'></td>
+</tr>
+<tr>
+<td height='24' colspan='2'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0div$ICField63'><table cellpadding='0' cellspacing='0' cols='1' class='PSFRAMENBO'  width='60'>
+<tr><td width='60' height='24'>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='10' colspan='8'></td>
+</tr>
+<tr>
+<td height='28' colspan='3'></td>
+<td colspan='5' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_DERIVED_SCC_NUR_USRID_FRGT'><span id='SCC_NUR_DERIVED_SCC_NUR_USRID_FRGT$span'  class='NYU_AAWS_LINK' ><a name='SCC_NUR_DERIVED_SCC_NUR_USRID_FRGT' id='SCC_NUR_DERIVED_SCC_NUR_USRID_FRGT' ptlinktgt='pt_peoplecode' tabindex='34' href="javascript:submitAction_win0(document.win0,'SCC_NUR_DERIVED_SCC_NUR_USRID_FRGT');"  class='NYU_AAWS_LINK' >Forgot your User ID?</a></span>
+</DIV></td>
+</tr>
+<tr>
+<td height='19' colspan='3'></td>
+<td colspan='5' nowrap='nowrap'  valign='top' align='left'>
+<DIV id='win0divSCC_NUR_DERIVED_SCC_NUR_PSSWD_FRGT'><span id='SCC_NUR_DERIVED_SCC_NUR_PSSWD_FRGT$span'  class='NYU_AAWS_LINK' ><a name='SCC_NUR_DERIVED_SCC_NUR_PSSWD_FRGT' id='SCC_NUR_DERIVED_SCC_NUR_PSSWD_FRGT' ptlinktgt='pt_peoplecode' tabindex='35' href="javascript:submitAction_win0(document.win0,'SCC_NUR_DERIVED_SCC_NUR_PSSWD_FRGT');"  class='NYU_AAWS_LINK' >Forgot your password?</a></span>
+</DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='10' colspan='3'></td>
+</tr>
+<tr>
+<td height='10' colspan='3'></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='591'></td>
+<td rowspan='2'></td>
+<td colspan='2' rowspan='2'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_NYU_AWS_HTML3'><div style="width:567px; " >
+<!-- Begin HTML Area Name Undisclosed -->
+
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+<tr>
+<td height='9' colspan='2'></td>
+</tr>
+<tr>
+<td height='20'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV id='win0divNYU_AWS_DERIVED_NYU_AWS_HTML4'><div style="width:1280px; " >
+<!-- Begin HTML Area Name Undisclosed -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {font-family:Verdana; font-size: 11pt; }
+ul {font-family:Verdana; font-size: 11pt; }
+li {font-family:Verdana; font-size: 11pt; }
+a {font-family:Verdana; font-size: 11pt; color: d11255;}
+p.center {font-family:Verdana; font-size: 11pt; text-align: center}
+</style>
+</head>
+<body>
+</body>
+</html>
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+</table>
+</DIV></td></tr>
+</table>
+</DIV><div id='DetachDiv' height=0 width=0 frameborder=0></div>
+</form>
+<a name='ICLastAnchor_win0'></a>
+<div id='popupDragFrame' class='popupDragFrame'>&nbsp;</div>
+<!-- Mouse-over popup Begin -->
+<table id='win0MOpopupContainer' width='20' border='0' cellpadding='0' cellspacing='0' style='display:none; position:absolute; top:0; left:0;' onMouseOver="MOpopupObj_win0.StartPopup('win0MOpopupContainer', '');" onMouseOut="MOpopupObj_win0.StopPopup();"><tr>
+<td id='win0MOpopupInner' height='25' width='20' align='left' valign='top' class='MOBGImage'>
+<div id='win0MOdivpopupFrame' tabindex='-1' onclick='MOpopupObj_win0.SetFocusFlag(false);' style='overflow:auto; width:20px; height: 60px; padding:8px; box-shadow:0 0 5px #000000; background-color:white; border: 1px solid #666666;'>test</div></td>
+</tr>
+</table>
+<!-- Mouse-over popup End  -->
+
+<!-- Embedded Help popup Begin -->
+<div id='HelppopupDiv_win0' style='display:none; position:absolute; top:0; left:0'>t</div>
+<div id='HelpDragFrame_win0' class='popupDragFrame'>&nbsp;</div><table id='HelppopupContainer_win0' width='20' border='0' cellpadding='0' cellspacing='0' style='opacity:1; display:none; position:absolute; top:0; left:0' >
+<tr>
+<td id='HelppopupInner_win0' class='HelppopupInner' align='left' valign='top' style='position:absolute;z-Index:302;'>
+<div id='HelppopupTitleBar_win0' class='PTPOPUP_HEADER HelppopupTitleBar' style='width:341px'><div id='HelppopupTitleBarLeftImage'></div><div id='HelppopupTitleBarMiddle_win0' style='width:333px' class='HelppopupTitleBarMiddle' dir='ltr'>
+<table>
+<td id='HelppopupTitle_win0' style='width:290px; cursor: move;'><span class='PTPOPUP_TITLE'>Help</span></td>
+<td style='width:45px'><img id='#HELPPOPUPCLOSE' style='cursor:pointer' title='Close' alt='Close' align='right' onclick='HelppopupObj_win0.StopPopup("win0");' src='/cs/csprod/cache/853/PT_PORTAL_IC_CLOSE_1.gif'/></td>
+</table>
+</div><div id='HelppopupTitleBarRightImage'></div></div><div id='HelpdivpopupFrame_win0' class='MOBGImage HelpdivpopupFrame' tabindex='-1' onclick='HelppopupObj_win0.SetFocusFlag(false);' style='border: 1px #bcbaba solid; padding:12px; overflow:auto;'>test</div><div id='HelppopupShadow' class='popupShadow' style='position:absolute;z-index:-1;'><div id='HelppopupShadowTopRightCorner' class='popupShadowTopRightCorner' style='height:10px;'>&nbsp;</div><div id='HelppopupShadowTop' class='popupShadowTop' >&nbsp;</div><div id='HelppopupShadowBottom' class='popupShadowBottom' style='height:10px'><div id='HelppopupShadowBottomLeftCorner' class='popupShadowBottomLeftCorner' style='height:10px;width:10px'>&nbsp;</div><div id='HelppopupShadowBottomMiddle' class='popupShadowBottomMiddle' style='height:10px;'>&nbsp;</div><div id='HelppopupShadowBottomRightCorner' class='popupShadowBottomRightCorner' style='height:10px;width:10px'>&nbsp;</div></div></div></td>
+</tr>
+</table>
+<!-- Embedded Help popup End  -->
+<div id='pt_fakeBC' style='display:none'><ul><li class="pthnavhiearchysep pthbcdispiblock">&nbsp;</li>
+<li class="pthnavbarcref ptabncrefbc ptfakercfbc pthbcdispiblock" id="pthnavbccref_PT_FAKE_NYU_AAWS_LOGIN_GBL" ><a class=abnanchor href="https://sis.nyu.edu/psc/csprod/EMPLOYEE/HRMS/c/NYU_AWS_SS.NYU_AAWS_LOGIN.GBL?APP_TYPE=POLYGR1&amp;" role="menuitem" target="TargetContent">Login</a><div class="pthnavcrefimg">&nbsp;</div></li></ul></div><div id='ptus_universalSrch' style='display:none;'><span>Default Local Node:</span><input type='text' readonly='readonly' name='ptus_defaultlocalnode' id='ptus_defaultlocalnode' value='WSQ_CAMPUS' /><br /><span>DbName:</span><input type='text' readonly='readonly' name='ptus_dbname' id='ptus_dbname' value='CSPROD' /><br /><span>Portal:</span><input type='text' readonly='readonly' name='ptus_portal' id='ptus_portal' value='EMPLOYEE' /><br /><span>Node:</span><input type='text' readonly='readonly' name='ptus_node' id='ptus_node' value='HRMS' /><br /><span>WorkCenter Id:</span><input type='text' readonly='readonly' name='ptus_workcenterid' id='ptus_workcenterid' value='' /><br /><span>Url:</span><input type='text' readonly='readonly' name='ptus_componenturl' id='ptus_componenturl' value='https://sis.nyu.edu/psp/csprod/EMPLOYEE/HRMS/c/NYU_AWS_SS.NYU_AAWS_LOGIN.GBL' /><br /></div></body>
+<script language='JavaScript'>
+var bCleanHtml = false;
+var bDefer = false;
+document.hiddenFldArr_win0 =new Array('ICType','ICElementNum','ICStateNum','ICAction','ICXPos','ICYPos','ResponsetoDiffFrame','TargetFrameName','FacetPath','ICFocus','ICSaveWarningFilter','ICChanged','ICResubmit','ICSID','ICActionPrompt','ICFind','ICAddCount','ICAPPCLSDATA');
+document.chgFldArr_win0 = new Array();
+var bCDATA = false;
+var bLoadCompleted = true;
+</script></html>

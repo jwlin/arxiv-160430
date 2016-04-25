@@ -1,0 +1,3 @@
+create a login id create a login id type text id login id name newid maxlength 9
+create a password create a password type password id pin id name newpin maxlength 99
+verify password verify password type password id verify pin id name verifypin maxlength 99

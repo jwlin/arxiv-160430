@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" xmlns:template="http://www.xmlforasp.net/templates">
+<head>
+<!--template version 3.0 -->
+<!-- ================== BEGIN HEADER ================= -->
+<script language="javascript">
+    function SetCustomLocale()
+    {
+         return '';
+    }
+</script>
+
+
+<!--<link rel="icon" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/favicon.ico" type="image/x-icon"/> -->
+
+
+
+
+<title>Online Application Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="ROBOTS" content="noindex,nofollow">
+<meta name="ROBOTS" content="NOARCHIVE">
+<link rel="stylesheet" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/stylesheet.css">
+<link rel="stylesheet" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/bootstrap.css">    
+<link rel="stylesheet" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/style.css">		
+<script language="JavaScript" src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/common.js"></script><style type="text/css"></style>
+<script language="JavaScript" src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/validation.js"></script>
+<script language="JavaScript" src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/validationConsts.js"></script>		
+<script src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/fl_JS/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+<script src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/jquery.min.js" type="text/javascript"></script>	
+<script src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/jquery.validate.js" type="text/javascript"></script>	
+<script language="javaScript">
+	// Check which browser is being used
+
+	var sessionid = "9F7A539-280F-4F93-8517-2CB26B8E427";
+	var ConfirmHtml;	
+	function PreSubmit()
+	{				
+		var objFName = $('#aycreateFN')[0];				
+		var ObjLName = $('#aycreateLN')[0];
+		var ObjBirthDt = $('#aycreateDOB')[0];
+		var ObjEmail = $('#aycreateEMail')[0];
+		var ObjConfirmEmail = $('#aycreateConfirmEMail')[0];
+		var ObjZip = $('#aycreatePC')[0];
+		var ObjUserId = $('#aycreateUserName')[0];
+		var ObjPassword = $('#aycreatePassword')[0];
+		var ObjConfirmPassword = $('#aycreateConfirmPassword')[0];
+		var lngadminid ;
+		lngadminid = 1;				
+		gErrString = '';				
+		validateWithoutDoubleDashes(objFName.value,"First Name","");				
+		validateWithoutDoubleDashes(ObjLName.value,"Last Name","");
+		if (lngadminid == 1) 
+		{			
+			ValidateemailCheck(trim(ObjEmail.value), "Email Address", "email");			
+			ValidateemailCheck(trim(ObjConfirmEmail.value), "Confirmation Email Address", "email");		
+			if (ObjEmail.value.length >= 120)
+			{
+				addError("Your email address is longer than allowed in the database.  Please verify that you have entered a single address and that it has been entered correctly.  If your email address is greater than 120 characters, please send a message to technical support, and we will provide further assistance.","Email Address","");
+			}
+			if(trim(ObjEmail.value) != trim(ObjConfirmEmail.value))
+			{
+				addError("The confirmation email address and the email address do not match.","Confirmation Email/Email Address","");		
+			}
+		}
+		
+	
+       if (validateDate("", ObjBirthDt.value,"Birth date"))
+       {
+           Validatefuturedate(ObjBirthDt.value,"Birth date","");
+           validateSQLSmallDateTimeDateRange(ObjBirthDt.value, "Birth date", "Birth date", "MM/DD/YYYY");
+       }
+       
+		validateIsAlphaNumericSpace(ObjZip.value,"Zip/Postal Code","");
+		validateWithoutDoubleDashes(ObjUserId.value,"User Name","")
+		validateRequiredStringLength(ObjUserId.value, 5, 50, "User Name", "User Name");
+		if((ObjPassword.value.length < strMinLength) || (ObjPassword.value.length > strMaxLength))	
+		{
+			addError("Password must be between " + strMinLength +" and " + strMaxLength + " characters in length", "Password","");
+		}
+		else
+		{
+			validateStrongPassword(ObjPassword.value, "Password");
+		}			
+	
+		if(ObjPassword.value != ObjConfirmPassword.value)
+		{
+			addError("Password and Confirm Password do not match", "Confirm Password","");
+		}			
+		
+		if(gErrString != '')
+		{					 
+			 fl_displayErrorsInlineNoErrNums("Please correct the following errors.","create"); 
+		}
+		else
+		{
+				
+			if ( lngadminid == "" || lngadminid == 1) 
+			{	
+				return true;						
+			}
+			else
+			{
+				if (lngadminid > 1)
+				{				
+					document.FormCreate.action = "CreateAppAccAdmin_Action.asp?ID=" + "byugrad"							
+					return true;			
+				}
+			}
+		}
+		return false;
+	}
+	function loader()
+	{			
+		var QSErrString					
+		QSErrString = "";
+		gErrString = QSErrString;
+		
+		if (QSErrString !='' )
+			{			
+			fl_displayErrorsInlineNoErrNums("Please review the details presented below for more information.","login");							
+			gErrString = "";
+			QSErrString= "";					
+			}	
+		QSErrString = "";				
+		gErrString = QSErrString;
+		
+		if (QSErrString !='' )
+			{			
+			$('#CreateAccountLink').click()	
+			fl_displayErrorsInlineNoErrNums("Please review the details presented below for more information.","create");							
+			gErrString = "";
+			QSErrString= "";
+			
+			}
+		else
+		{
+			if("" !='' )
+			{
+				$('#CreateAccountLink').click()
+			}
+		}					
+	}
+	function showConfirmHtml()
+	{
+		ConfirmHtml = ""
+		if(ConfirmHtml !='')
+			{		$('#ay-confirmation').html(ConfirmHtml)	
+					$('#ay-account').hide()	
+					$('#ay-confirmation').show()
+			}
+	}
+	
+	function createAccount()
+	{
+	   if(sRedirectURL != "")
+	   {
+	        window.location = sRedirectURL;
+			return false;
+	   }
+	   else
+	   {
+			$("#tab2").show();
+			return true;	
+	    }
+	}
+</script>
+
+
+
+<!-- =================== END HEADER ================== -->
+<!-- Interest Page Template 3.0 -->
+<!-- Template Version Date: 05/01/2010  -->
+
+<!-- required for jscalendar -->
+<link href="https://static.askadmissions.net/_EMTFILES/datepicker/calendar-blue2.css" type="text/css" rel="stylesheet">
+<!-- Do not modify the links below -->
+<link href="https://static.askadmissions.net/_EMTFILES/css/template/emtstyles.css" type="text/css" rel="stylesheet">
+<!--<link href="https://static.askadmissions.net/_EMTFILES/css/template/interestPage.css" type="text/css" rel="stylesheet">-->
+<script src="https://static.askadmissions.net/_EMTFILES/js/template/emtscripts.js" type="text/javascript"></script>
+
+<script src="https://static.askadmissions.net/byugrad/specialscripts/emtscripts3.0.js" type="text/javascript"></script>
+<link href="https://static.askadmissions.net/byugrad/connectImages06_2013/interestPage.css" type="text/css" rel="stylesheet" media="screen">
+<link href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/subInterestPage.css" type="text/css" rel="stylesheet" media="screen">
+<link href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/ipbranding.css" type="text/css" rel="stylesheet" media="screen">
+<script type="text/javascript" language="javascript">
+OtherloadCSSScript('IP')
+</script>
+</head>
+<body onload="loader()">
+<!-- ================ BEGIN TOP WRAPPER =============== -->
+
+
+
+
+	<noscript>In order to use the system, please make sure that Javascript is enabled on your machine</noscript>
+<link rel="stylesheet" href="https://static.askadmissions.net/byugrad/connectImages06_2013/default/fl_style.css" type="text/css">
+	<script language="javascript">
+
+	function loadImages()
+	{
+	MM_preloadImages('https://static.askadmissions.net/byugrad/connectImages06_2013/default/contact_us_o.gif','https://static.askadmissions.net/byugrad/connectImages06_2013/default/technical_support_o.gif','https://static.askadmissions.net/byugrad/connectImages06_2013/default/login_o.gif')
+	}
+
+		function windowPopOpen(theURL,winName,features) 
+						{ 
+							 window.open(theURL,winName,features);
+						}
+
+	</script>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+        <div class="container" id="header" style="background-image:url(https://static.askadmissions.net/byugrad/connectImages06_2013/default/xxx.jpg); background-repeat:no-repeat;">
+      <h1 class="off-screen">University Name Online Applicatioin</h1>
+      <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">University of Hobsons</a>--> 
+      <!--<div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>--><!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+	
+
+	 <div class="container">   
+			  <!-- Main Body container -->
+			<div class="hero-unit"> 
+				<!-- columns -->
+				<div class="row-fluid">				
+
+
+
+
+
+
+
+<!-- ================ END TOP WRAPPER ================= -->
+<form name="emtinterestpage" method="post" action="./emtinterestpage.aspx?ip=ay" id="emtinterestpage" onsubmit="document.getElementById(&#39;js_enabled&#39;).value = &#39;1&#39;;return true;">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM2MTcxNzAwMA9kFgJmD2QWAmYPZBYCAgEPFgIeCG9uc3VibWl0BT5kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnanNfZW5hYmxlZCcpLnZhbHVlID0gJzEnO3JldHVybiB0cnVlO2Rk2G8cj4CsRCr3krT1Fw2wox8a4e8=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AFFFE888" />
+</div>
+  <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WBNPJJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBNPJJ');</script><!-- End Google Tag Manager -->
+      <!-- Branding Placeholder --><noscript  xmlns:cc="remove" xmlns:validators="Common.Web.Validators">
+      JavaScript is required in order to submit the web form you are attempting to access.  Please enable JavaScript or download the latest version of a browser that supports JavaScript such as <a href="http://firefox.com/">Firefox</a> or <a href="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">Internet Explorer</a>.
+    </noscript>
+<div id="offLeftScreenReader"  xmlns:cc="remove" xmlns:validators="Common.Web.Validators">
+  <p>
+        Please fill out the fields below and submit the form.
+        Some information is required and marked with asterisks.
+        You will not be able to submit the form without filling the required fields.
+        Please make sure that Email and Verify Email should match with each other.
+      </p>
+</div>
+<div id="hobsonsIPContentDiv"  xmlns:cc="remove" xmlns:validators="Common.Web.Validators">
+  <div class="hobsonsHiddenAttributes" id="hobsonsIPDescriptionGeneric"></div><div id="hobsonsIPRequiredFieldEmpty" style="display:none;" class="required"></div><div class="hobsonsHiddenAttributes" id="hobsonsIPOuterDiv"><input type="hidden" title="Store ContactID " value="" id="StoredcontactID" class="hobsonsHiddenAttributes" />  <div class="hobsonsIPInnerDiv hobsonsIPInnerDivBody1" id="hobsonsDiv"><div class="hobsonsIPTitle hobsonsIPTitle1" id="hobsonsTitle"><h2> </h2> </div><div class="hobsonsIPSubtitle hobsonsIPDivSubtitle1" id="hobsonsSubtitle"> </div> <div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperFullName" id="hobsonsIPLabelWrapperFullName">Full Name</div><div class="hobsonsIPParent" id="hobsonsfirstnameParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperfirstname" id="hobsonsIPLabelWrapperfirstname"><label for="firstname">First Name</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperfirstname" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperfirstname"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivfirstname" id="hobsonsIPWidgetDivfirstname"><aspnetcontrol><input name="firstname" type="text" id="firstname" style="width:250px;" /></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredfirstname" id="hobsonsIPWidgetRequiredfirstname"><span class="required" style="display:none" ID="firstnameRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonslastnameParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperlastname" id="hobsonsIPLabelWrapperlastname"><label for="lastname">Last Name</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperlastname" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperlastname"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivlastname" id="hobsonsIPWidgetDivlastname"><aspnetcontrol><input name="lastname" type="text" id="lastname" style="width:250px;" /></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredlastname" id="hobsonsIPWidgetRequiredlastname"><span class="required" style="display:none" ID="lastnameRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsClear"></div><div class="hobsonsIPParent" id="hobsonsgenderParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrappergender" id="hobsonsIPLabelWrappergender"><label for="gender">Gender</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrappergender" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrappergender"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivgender" id="hobsonsIPWidgetDivgender"><aspnetcontrol><table id="gender" border="0" style="height:10px;width:200px;">
+	<tr>
+		<td><input id="gender_0" type="radio" name="gender" value="M" /><label for="gender_0">Male</label></td><td><input id="gender_1" type="radio" name="gender" value="F" /><label for="gender_1">Female</label></td>
+	</tr>
+</table></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredgender" id="hobsonsIPWidgetRequiredgender"><span class="required" style="display:none" ID="genderRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonsdobParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperdob" id="hobsonsIPLabelWrapperdob"><label for="dob">DOB</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperdob" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperdob"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivdob" id="hobsonsIPWidgetDivdob"><div id="hobsonsHiddenAttributesThird" class="hobsonsHiddenAttributes"><aspnetcontrol><input name="dob" type="text" id="dob" style="width:100px;" /></aspnetcontrol></div><span onclick="populateDatePicker('dob')"><select title="month" name="month" id="dobMonthDrop" ><option value="0">Month</option>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option> </select>
+															
+															<select title="day" name="day" id="dobDayDrop" >
+															<option value="0">Day</option>
+															</select>
+															</span>
+															
+                                                                <select title="year" name="year" id="dobYearDrop">
+																<option value="0">Year</option>
+															</select>
+                                                             
+															</div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequireddob" id="hobsonsIPWidgetRequireddob"><span class="required" style="display:none" ID="dobRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPWidgetRequired WidgetRequireddob divRequiredWrapper" id="hobsonsIPValidatedob"><span class="required verifydate" style="display:none" id="dobverifydate">The DOB is not valid.  Please verify that your DOB is correct.
+                              </span></div><div class="hobsonsIPParent" id="hobsonszipParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperzip" id="hobsonsIPLabelWrapperzip"><label for="zip">Zip</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperzip" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperzip"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivzip" id="hobsonsIPWidgetDivzip"><aspnetcontrol><input name="zip" type="text" id="zip" style="width:100px;" /></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredzip" id="hobsonsIPWidgetRequiredzip"><span class="required" style="display:none" ID="zipRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonsemailParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperemail" id="hobsonsIPLabelWrapperemail"><label for="email">E-mail</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperemail" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperemail"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivemail" id="hobsonsIPWidgetDivemail"><aspnetcontrol><input name="email" type="text" id="email" style="width:250px;" /></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredemail" id="hobsonsIPWidgetRequiredemail"><span class="required" style="display:none" id="VerifyEmailemail">E-mail is invalid. </span><span class="required" style="display:none" ID="emailRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonsverifyemailParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperverifyemail" id="hobsonsIPLabelWrapperverifyemail"><label for="verifyemail">
+                              Verify E-mail</label></div><div id="hobsonsIPAttributeWrapperverifyemail" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperverifyemail"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivverifyemail" id="hobsonsIPWidgetDivverifyemail"><input name="verifyemail" type="text" title="Verify Email" id="verifyemail" /></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPWidgetRequired WidgetRequiredemail divRequiredWrapper" id="hobsonsIPValidateemail"><span class="required" style="display:none" id="emailverifymessage">
+                              The E-mails do not match.  Please verify that your E-mail is correct. </span></div><div class="hobsonsIPParent" id="hobsonstext333Parent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrappertext333" id="hobsonsIPLabelWrappertext333"><label for="text333">Intended Program</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrappertext333" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrappertext333"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivtext333" id="hobsonsIPWidgetDivtext333"><aspnetcontrol><select name="text333" id="text333" style="height:20px;width:400px;">
+	<option value="">Select One</option>
+	<option value="232667">Accountancy - Professional MAcc</option>
+	<option value="232666">Accountancy - Tax MAcc</option>
+	<option value="732065">Anthropology MA</option>
+	<option value="692863">Biochemistry MS</option>
+	<option value="692864">Biochemistry PhD</option>
+	<option value="282060">Biological Science Education MS</option>
+	<option value="282061">Biology MS</option>
+	<option value="282070">Biology PhD</option>
+	<option value="234060">Business Administration MBA</option>
+	<option value="234062">Business Administration - Executive MBA</option>
+	<option value="392198">Chemical Engineering MS</option>
+	<option value="392160">Chemical Engineering PhD</option>
+	<option value="692872">Chemistry MS</option>
+	<option value="692873">Chemistry PhD</option>
+	<option value="392869">Civil Engineering MS</option>
+	<option value="392860">Civil Engineering PhD</option>
+	<option value="354361">Communication Disorders MS</option>
+	<option value="483660">Communications - Mass MA</option>
+	<option value="554263">Comparative Studies MA</option>
+	<option value="693260">Computer Science MS</option>
+	<option value="693261">Computer Science PhD</option>
+	<option value="354270">Counseling Psychology PhD</option>
+	<option value="553267">Creative Writing MFA</option>
+	<option value="350060">Educational Inquiry Measurement and Evaluation PhD</option>
+	<option value="353770">Educational Leadership MEd</option>
+	<option value="353763">Educational Leadership EdD</option>
+	<option value="393572">Electrical and Computer Engineering MS</option>
+	<option value="393560">Electrical and Computer Engineering PhD</option>
+	<option value="553298">English MA</option>
+	<option value="285860">Environmental Science MS</option>
+	<option value="663472">Exercise Sciences MS</option>
+	<option value="663467">Exercise Sciences PhD</option>
+	<option value="284361">Food Science MS</option>
+	<option value="553567">French Studies MA</option>
+	<option value="285861">Genetics and Biotechnology MS</option>
+	<option value="694098">Geology MS</option>
+	<option value="232668">Information Systems Management MISM</option>
+	<option value="355460">Instructional Psychology and Technology MS</option>
+	<option value="355461">Instructional Psychology and Technology PhD</option>
+	<option value="554960">Linguistics MA</option>
+	<option value="733862">Marriage and Family Therapy MS</option>
+	<option value="733863">Marriage and Family Therapy PhD</option>
+	<option value="735660">Marriage Family and Human Development MS</option>
+	<option value="735665">Marriage Family and Human Development PhD</option>
+	<option value="694660">Mathematics Education MA</option>
+	<option value="694461">Mathematics MS</option>
+	<option value="694463">Mathematics PhD</option>
+	<option value="394998">Mechanical Engineering MS</option>
+	<option value="394960">Mechanical Engineering PhD</option>
+	<option value="285180">Microbiology and Molecular Biology MS</option>
+	<option value="285181">Microbiology and Molecular Biology PhD</option>
+	<option value="732067">Museum Practices Cert</option>
+	<option value="484666">Music MA</option>
+	<option value="484668">Music MM</option>
+	<option value="285761">Neuroscience MS</option>
+	<option value="285771">Neuroscience PhD</option>
+	<option value="610168">Nursing MS</option>
+	<option value="284362">Nutritional Science MS</option>
+	<option value="694879">Physics and Astronomy PhD</option>
+	<option value="694898">Physics MS</option>
+	<option value="694897">Physics PhD</option>
+	<option value="285760">Physiology and Developmental Biology MS</option>
+	<option value="285770">Physiology and Developmental Biology PhD</option>
+	<option value="555496">Portuguese MA</option>
+	<option value="735460">Psychology- Clinical PhD</option>
+	<option value="735497">Psychology PhD</option>
+	<option value="233161">Public Administration - Executive MPA</option>
+	<option value="233160">Public Administration MPA</option>
+	<option value="662571">Public Health MPH</option>
+	<option value="776361">Religious Education MA</option>
+	<option value="776397">Religious Studies - Military Chaplaincy MA</option>
+	<option value="555560">Second Language Teaching MA</option>
+	<option value="354265">School Psychology EdS</option>
+	<option value="735960">Social Work MSW</option>
+	<option value="735864">Sociology MS</option>
+	<option value="555498">Spanish MA</option>
+	<option value="354261">Special Education MS</option>
+	<option value="695262">Statistics MS</option>
+	<option value="488068">Studio Art MFA</option>
+	<option value="356062">Teacher Education MA</option>
+	<option value="554965">Teaching English to Speakers of Other Languages MA</option>
+	<option value="396560">Technology MS</option>
+	<option value="282062">Wildlife and Wildlands Conservation MS</option>
+	<option value="282071">Wildlife and Wildlands Conservation PhD</option>
+
+</select></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredtext333" id="hobsonsIPWidgetRequiredtext333"><span class="required" style="display:none" ID="text333Required">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonstext311Parent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrappertext311" id="hobsonsIPLabelWrappertext311"><label for="text311">Entry Term and Year</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrappertext311" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrappertext311"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivtext311" id="hobsonsIPWidgetDivtext311"><aspnetcontrol><select name="text311" id="text311" style="height:20px;width:150px;">
+	<option value="">Select One</option>
+	<option value="20165">Fall 2016</option>
+	<option value="20171">Winter 2017</option>
+	<option value="20163">Spring 2016</option>
+	<option value="20164">Summer 2016</option>
+	<option value="20161">Winter 2016</option>
+
+</select></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredtext311" id="hobsonsIPWidgetRequiredtext311"><span class="required" style="display:none" ID="text311Required">Required</span></div></div><div class="hobsonsClear"></div></div></div> <div class="hobsonsIPInnerDiv hobsonsIPInnerDivBody2" id="hobsonsLoginInformationDiv"><div class="hobsonsIPTitle hobsonsIPTitle2" id="hobsonsLoginInformationTitle"><h2> Login Information</h2> </div><div class="hobsonsIPSubtitle hobsonsIPDivSubtitle2" id="hobsonsLoginInformationSubtitle"> </div> <div class="hobsonsIPParent" id="hobsonsloginParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperlogin" id="hobsonsIPLabelWrapperlogin"><label for="login">Login</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperlogin" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperlogin"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivlogin" id="hobsonsIPWidgetDivlogin"><aspnetcontrol><input name="login" type="text" id="login" style="width:250px;" /></aspnetcontrol></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredlogin" id="hobsonsIPWidgetRequiredlogin"><span class="required" style="display:none" ID="loginRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="divRequiredWrapper" id="VerifyLoginloginDiv"><span style="display:none" id="VerifyLoginlogin">Login needs to be greater than 5 characters. </span></div><div class="hobsonsIPParent" id="hobsonspasswordParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperpassword" id="hobsonsIPLabelWrapperpassword"><label for="password">Password</label><b class="hobsonsRequiredAsterisks"> *</b></div><div id="hobsonsIPAttributeWrapperpassword" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperpassword"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivpassword" id="hobsonsIPWidgetDivpassword"><div class="hobsonsHiddenAttributes"><aspnetcontrol><input name="password" type="text" id="password" style="width:250px;" /></aspnetcontrol></div><input name="newpassword" type="password" title="Enter New Password" id="newpassword"/></div><div class="hobsonsIPWidgetRequired hobsonsIPWidgetRequiredpassword" id="hobsonsIPWidgetRequiredpassword"><span class="required" style="display:none" ID="passwordRequired">Required</span></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPParent" id="hobsonsverifypasswordParent"><div class="hobsonsIPLabelWrapper hobsonsIPLabelWrapperverifypassword" id="hobsonsIPLabelWrapperverifypassword"><label for="verifypassword">
+                              Verify Password</label></div><div id="hobsonsIPAttributeWrapperverifypassword" class="hobsonsIPAttributeWrapper hobsonsIPAttributeWrapperverifypassword"><div class="hobsonsIPWidgetDiv hobsonsIPWidgetDivverifypassword" id="hobsonsIPWidgetDivverifypassword"><input name="verifypassword" type="password" title="Verify Password" id="verifypassword" /></div></div><div class="hobsonsClear"></div></div><div class="hobsonsIPWidgetRequired WidgetRequiredpassword divRequiredWrapper" id="hobsonsIPValidatepassword"><span class="required" style="display:none" id="passwordverifymessage">
+                              The Passwords do not match.  Please verify that your Password is correct. </span></div></div><div class="hobsonssubmitButtonDiv" id="hobsonssubmitButtonDiv">
+      <input type="submit" name="btnSetIPData" value="Submit Information" id="btnSetIPData" function="IPSetStudentData" validation="on" disabled="disabled" />
+    </div>
+  </div> <input id="specialScriptsLocation" name="specialScriptsLocation" type="hidden" value="https://static.askadmissions.net/byugrad/specialscripts/IPspecialScript.js" /></div>
+<div class="hobsonsHiddenAttributes" id="hobsonsBrandingFooterDiv"  xmlns:cc="remove" xmlns:validators="Common.Web.Validators"></div><input type="hidden" id="hobsonsTemplateVersion" value="2.2" name="templateVersion"  xmlns:cc="remove" xmlns:validators="Common.Web.Validators"><input type="hidden" id="clientSpecificMessages" value="true"  xmlns:cc="remove" xmlns:validators="Common.Web.Validators">
+<input name="js_enabled" type="hidden" id="js_enabled" value="0" /></form>
+<!-- ============== BEGIN BOTTOM WRAPPER ============== -->
+
+
+
+
+
+				  </div>
+			</div>
+            </div>
+			
+			<script src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/bootstrap.min.js"></script> 			
+			<script src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/fl_ApplicantLoginScript.js"></script> 
+			
+  <script language="JavaScript">
+      var Now = new Date();	
+      var h = $(window).height() - 100;
+	  var m = h*-.55;
+	  $(document).ready(function() {
+	      $('#modalbody').css({ 'max-height': h });
+	      $('#PreFTSysReqBody').css({ 'max-height': h });
+	      $('.modal').css('margin-top', m);
+	      $('#PreFTSecurityInfo').click(function() {
+	          $('#modalheader').html("<i class='icon-lock icon-white'></i> Security Information")
+	          $('#modalbody').load("../Common/fl_AppSecurity.asp")
+
+	      });
+	      $('#PreFTTechsupport').click(function() {
+	          $('#modalheader').html("<i class='icon-wrench icon-white'></i> Tech Support.")
+	          $.post("../AYContactHelpDesk/fl_TechSupport.asp?AYID=9F7A539-280F-4F93-8517-2CB26B8E427&packageType=" + encodeURI('Application for Admission') + "&d=" + escape(Now.getTime()), function(data) {
+	              $('#modalbody').html('<p style="text-align:center;"><img src="../Images/common_images/fl_loader.gif;pv22edfcf9c7b7c1e5" alt="Loading..."></p>');
+				  $('#modalbody').html(data);
+	          });
+
+	      });
+	      $('#Notice').click(function() {
+
+	          $('#modalheader').html("<i class='icon-white icon-file'></i> Notice to Applicants")
+	          $('#modalbody').html('<p style="text-align:center;"><img src="../Images/common_images/fl_loader.gif;pv22edfcf9c7b7c1e5" alt="Loading..."></p>');
+			  $('#modalbody').load("../AYApplicantLogin/fl_notice_to_applicants.htm")
+	          $('#dialog').modal('show')
+	      });
+	  });
+	  
+	
+	
+</script>
+<script language="javascript">
+    function clearDialog() {
+        $('#modalheader').html("");
+        //$('#modalbody').html("");
+		$('#modalbody').html('<p style="text-align:center;"><img src="https://static.askadmissions.net/byugrad/connectImages06_2013/default/fl_loader.gif" alt="Loading..."></p>');
+    }	
+</script>
+<div class="modal" id="dialog" style="display: none; margin-top: -359.15000000000003px;"> 						   
+    <div class="modal-header">
+	    <button id="modalClose" data-dismiss="modal" class="close" onclick="javascript:clearDialog();">×</button>
+	    <h3 id="modalheader"></h3>
+    </div>
+    <div id="modalbody" class="modal-body" style="max-height: 653px;"></div> 
+</div>
+
+<footer>
+ <ul class="footerTopUl">
+    
+	    <li class="footerTopLi"><a href="mailto:gradstudies@byu.edu">Contact Us</a></li>
+	
+		<li class="footerTopLi"><a id="PreFTTechsupport" data-toggle="modal" href="#dialog">Technical Support</a></li>
+		<li class="footerTopLi"><a id="PreFTSecurityInfo" data-toggle="modal" href="#dialog">Security Information</a></li>   
+		<li class="footerTopLi"><a data-toggle="modal" href="#PreFTSysReq">System Requirements</a></li>		
+ </ul>
+ 
+ </footer>
+ 
+ <!-- System Requirements Model -->
+<div class="modal" id="PreFTSysReq" style="display: none; margin-top: -359.15000000000003px;">
+  <div class="modal-header">
+    <button data-dismiss="modal" class="close" onclick="javascript:clearDialog();">×</button>
+    <h3><i class="icon-cog icon-white"></i> System Requirements</h3>
+  </div>
+  <div class="modal-body" id="PreFTSysReqBody" style="max-height: 653px;">
+  
+  
+  <h4>Application System Requirements</h4>
+    <p>Supported browsers include Internet Explorer 8 &amp; 9 (Windows), Firefox 3.6 &amp; 7 (Mac), Firefox 3 and 7 (Windows), Chrome 12 (Windows and Mac), Safari 4 &amp; 5 (Mac), (Macintosh users - OS X).</p>
+    <p>While the majority of features will work with other browsers, we can only guarantee full compatibility and offer support for the browsers mentioned above.</p>
+    <p> If you are using Internet Explorer 6, we strongly recommend upgrading to version 9 as version 6 does not meet our minimum security requirements.</p>
+   <p>
+        If you are using Compatibility View with Internet Explorer, some pages may not look as intended. We recommend removing applyourself.com from your list of sites that have Compatibility View enabled.
+        </p><p>
+            For IE8:
+        
+            </p><ul>
+                <li>
+                    In Internet Explorer, open the Tools menu at the top and select Compatibility View Settings.
+                </li>
+                <li>
+                    Select applyyourself.com under "Websites you've added to Compatibility View."
+                </li>
+                <li>
+                    Click Remove.
+                </li>
+            </ul>
+        <p></p>
+        <p>
+            For IE9:
+            </p><ul>
+                <li>
+                    In Internet Explorer, right-click on the gear icon in the upper right hand corner, next to the "favorites" star icon. (If you don't see this gear icon or your "File" and "Tools" menus at the top of your window, press your F10 key to make them show.)    
+                </li>
+                 <li>
+                    Select Command bar.
+                </li>
+                 <li>
+                    Open the Tools menu near the top and select Compatibility View Settings.
+                </li>
+                 <li>
+                    Select applyyourself.com under "Websites you've added to Compatibility View."
+                </li>
+                 <li>
+                    Click Remove.
+                </li>
+            </ul>
+        <p></p>
+    <p></p>
+    <p>If you are using one of the supported browsers and are experiencing problems, we encourage you to upgrade to the latest version. If you still experience problems after upgrading, please make sure that your browser is set to accept cookies. Also, make sure the following browser settings are enabled:<br>
+      JavaScript must be enabled.<br>
+      Popup blockers must be disabled. </p>
+    <p>If your browser has a section for trusted sites, please enter these two URLs:<br>
+      
+	                
+	                    </p><ul>	                	                    
+	                        <li><a href="http://app.applyyourself.com?id=BYUGrad" target="_blank"><u>http://app.applyyourself.com</u></a></li>
+	                        <li><a href="https://app.applyyourself.com?id=BYUGrad" target="_blank"><u>https://app.applyyourself.com</u></a></li>
+	                    </ul>
+	                
+	                <p>You will need Adobe Reader 6.0 or higher to download, view and print PDF files. While PDF files should work with most other PDF viewers, we can only guarantee full compatibility and support for Adobe Reader 6.0 or higher.</p>	 
+	                <p>If your email offers a whitelist, please add the following address:</p>	 
+	                    <ul>	                        
+	                        <li><a href="mailto:support@hobsons.com" target="_blank"><u>support@hobsons.com</u></a></li>
+	                    </ul>
+	                 
+						<p>A confirmation email containing your PIN information will be automatically sent to the email address provided above. Please record your password in a safe place since you will need both your PIN and password to access your application in the future.</p>
+					
+	                
+	                <p>For security reasons, we recommend that you should logout of the online application after each session.</p>	 	                
+	            
+				  
+	        					
+						<b>New Account</b>						
+								<ul>									
+									
+											<li>
+												Learn about this application by reading the <a id="Notice" data-dismiss="modal" href="#dialog">Notice 
+												to Applicants</a>.<br>
+											</li>
+											<li>
+												Create your applicant account if you are new to our application 
+												and do not already have a PIN by clicking on the "Create 
+												Account" button to the right.
+											</li>
+									
+								</ul>
+							
+				  
+	</div>
+</div>
+ 
+
+     
+
+   <script>
+       var sRedirectURL = "https://byugrad.askadmissions.net/emtinterestpage.aspx?ip=ay";
+       var strMinLength = "1";
+       var strMaxLength = "30";
+   </script>
+
+
+<!-- =============== END BOTTOM WRAPPER =============== -->
+</body>
+</html>

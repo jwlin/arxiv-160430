@@ -1,0 +1,157 @@
+[
+  {
+    "dom": "<input name=\"f_name\" size=\"20\" type=\"text\"/>", 
+    "feature": "type text name f name", 
+    "rule": {
+      "id": ["f_name"], 
+      "name": ["f_name"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input name=\"m_name\" size=\"10\" type=\"text\"/>", 
+    "feature": "denotes required field male female preferred preferred preferred american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name m name", 
+    "rule": {
+      "id": ["m_name"], 
+      "name": ["m_name"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input name=\"l_name\" size=\"20\" type=\"text\"/>", 
+    "feature": "type text name l name", 
+    "rule": {
+      "id": ["l_name"], 
+      "name": ["l_name"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input name=\"alt_name\" size=\"20\" type=\"text\"/>", 
+    "feature": "denotes required field male female preferred preferred preferred american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name alt name", 
+    "rule": {
+      "id": ["alt_name"], 
+      "name": ["alt_name"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input name=\"perm_address1\" size=\"40\" type=\"text\"/>", 
+    "feature": "type text name perm address1", 
+    "rule": {
+      "id": ["address1"], 
+      "name": ["address1"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input name=\"perm_address2\" size=\"40\" type=\"text\"/>", 
+    "feature": "denotes required field male female preferred preferred preferred american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name perm address2", 
+    "rule": {
+      "id": ["address2"], 
+      "name": ["address2"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input name=\"perm_city\" size=\"30\" type=\"text\"/>", 
+    "feature": "type text name perm city", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input name=\"perm_province\" size=\"30\" type=\"text\"/>", 
+    "feature": "denotes required field male female preferred preferred preferred american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name perm province", 
+    "rule": {
+      "id": ["province"], 
+      "name": ["province"]
+    }, 
+    "type": "state"
+  }, 
+  {
+    "dom": "<input maxlength=\"10\" name=\"perm_zip\" size=\"10\" type=\"text\"/>", 
+    "feature": "denotes required field male female preferred preferred preferred american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name perm zip maxlength 10", 
+    "rule": {
+      "id": ["zip"], 
+      "name": ["zip"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input maxlength=\"3\" name=\"phone_home[0]\" size=\"3\" type=\"text\"/>", 
+    "feature": "type text name phone home 0 maxlength 3", 
+    "rule": {
+      "id": ["phone_home[0]"], 
+      "name": ["phone_home[0]"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input maxlength=\"16\" name=\"phone_home[1]\" size=\"16\" type=\"text\"/>", 
+    "feature": "type text name phone home 1 maxlength 16", 
+    "rule": {
+      "id": ["phone_home[1]"], 
+      "name": ["phone_home[1]"]
+    }, 
+    "type": "phone-middle-postfix"
+  }, 
+  {
+    "dom": "<input maxlength=\"3\" name=\"phone_work[0]\" size=\"3\" type=\"text\"/>", 
+    "feature": "type text name phone work 0 maxlength 3", 
+    "rule": {
+      "id": ["phone_work[0]"], 
+      "name": ["phone_work[0]"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input maxlength=\"16\" name=\"phone_work[1]\" size=\"16\" type=\"text\"/>", 
+    "feature": "type text name phone work 1 maxlength 16", 
+    "rule": {
+      "id": ["phone_work[1]"], 
+      "name": ["phone_work[1]"]
+    }, 
+    "type": "phone-middle-postfix"
+  }, 
+  {
+    "dom": "<input maxlength=\"3\" name=\"phone_mobile[0]\" size=\"3\" type=\"text\"/>", 
+    "feature": "type text name phone mobile 0 maxlength 3", 
+    "rule": {
+      "id": ["phone_mobile[0]"], 
+      "name": ["phone_mobile[0]"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input maxlength=\"16\" name=\"phone_mobile[1]\" size=\"16\" type=\"text\"/>", 
+    "feature": "type text name phone mobile 1 maxlength 16", 
+    "rule": {
+      "id": ["phone_mobile[1]"], 
+      "name": ["phone_mobile[1]"]
+    }, 
+    "type": "phone-middle-postfix"
+  }, 
+  {
+    "dom": "<input name=\"email1\" size=\"30\" type=\"text\" value=\"b1776415@trbvn.com\"/>", 
+    "feature": "type text name email1 value b1776415 trbvn com", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input name=\"email2\" size=\"30\" type=\"text\"/>", 
+    "feature": "denotes required field preferred preferred preferred male female american indian or alaska native a person having origins in any of the original peoples of north and south america including central america and who maintains tribal affiliation or community attachment asian a person having origins in any of the original peoples of the far east southeast asia or the indian subcontinent including for example cambodia china india japan korea malaysia pakistan the philippine islands thailand and vietnam black or african american a person having origins in any of the black racial groups of africa native hawaiian or other pacific islander a person having origins in any of the peoples of hawaii guam samoa or other pacific islands white a person having origins in any of the original peoples of europe the middle east or north africa type text name email2", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }
+]

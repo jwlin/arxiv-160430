@@ -1,0 +1,78 @@
+[
+  {
+    "dom": "<input maxlength=\"30\" name=\"psurname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name psurname maxlength 30", 
+    "rule": {
+      "id": ["surname"], 
+      "name": ["surname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input maxlength=\"30\" name=\"pmi_name\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name pmi name maxlength 30", 
+    "rule": {
+      "id": ["pmi_name"], 
+      "name": ["pmi_name"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input maxlength=\"30\" name=\"pothername\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name pothername maxlength 30", 
+    "rule": {
+      "id": ["othername"], 
+      "name": ["othername"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input maxlength=\"30\" name=\"pemail\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name pemail maxlength 30", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"30\" name=\"pemail2\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name pemail2 maxlength 30", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"20\" name=\"pusername\" onchange=\"this.value=this.value.tolowercase()\" size=\"20\" type=\"text\" value=\"\"/>", 
+    "feature": "name pusername type text maxlength 20", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input maxlength=\"20\" name=\"ppassword\" size=\"20\" type=\"password\" value=\"\"/>", 
+    "feature": "type password name ppassword maxlength 20", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input maxlength=\"20\" name=\"ppassword2\" size=\"20\" type=\"password\" value=\"\"/>", 
+    "feature": "type password name ppassword2 maxlength 20", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

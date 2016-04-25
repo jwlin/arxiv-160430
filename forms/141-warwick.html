@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>University of Warwick - Postgraduate and Direct Application - New User Registration </title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<!-- Cached --><style type="text/css">textarea:focus,input:focus {outline: none;} textarea {padding-top:4px;} .SWIFT-Field-Required-Char, .SWIFT-Field-Required-Char-Focus, .SWIFT-Field-Required-Char-Hover, .SWIFT-Field-Required-Char-Focus-Hover {display:none;}.SWIFT-Button{font-family:Arial;font-size:10pt;;cursor:pointer;}
+.SWIFT-Button-Hover{font-family:Arial;font-size:10pt;;cursor:pointer;}
+.SWIFT-Button-Disabled{font-family:Arial;font-size:10pt;;cursor:pointer;}
+.SWIFT-Button-Required{font-family:Arial;font-size:10pt;;cursor:pointer;}
+.SWIFT-Check-Caption{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Check-Caption-Required{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Check-Caption-Disabled{font-family:Arial;font-size:10pt;color:#000000;position: relative; top: -2px;}
+.SWIFT-Styled-Checkbox, .SWIFT-Styled-Checkbox-Checked, .SWIFT-Styled-Checkbox-Disabled, .SWIFT-Styled-Checkbox-Disabled-Checked, .SWIFT-Styled-Checkbox-Hover, .SWIFT-Styled-Checkbox-Checked-Hover{display: inline; background-image: url(Assets.aspx/icon/spriteCheckbox); background-repeat: no-repeat; overflow:hidden; height: 25px; padding-left: 20px; padding-top:1px; font-size:20px;}
+.SWIFT-Styled-Checkbox{background-position: 0 0;} .SWIFT-Check-PlaceHolder-Hover .SWIFT-Styled-Checkbox{background-position: 0 -25px;} .SWIFT-Styled-Checkbox-Checked{background-position: 0 -50px;} .SWIFT-Check-PlaceHolder-Hover .SWIFT-Styled-Checkbox-Checked{background-position: 0 -75px;} .SWIFT-Check-PlaceHolder-Disabled .SWIFT-Styled-Checkbox, .SWIFT-Check-PlaceHolder-Disabled-Hover .SWIFT-Styled-Checkbox{background-position: 0 -100px;} .SWIFT-Check-PlaceHolder-Disabled .SWIFT-Styled-Checkbox-Checked, .SWIFT-Check-PlaceHolder-Disabled-Hover .SWIFT-Styled-Checkbox-Checked{background-position: 0 -125px;}
+.SWIFT-Clip-Empty{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -153px;width:28px;height:28px;}
+.SWIFT-Clip-Empty-Disabled{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -182px;;width:28px;height:28px;}
+.SWIFT-Clip-Empty-Required{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -211px;;width:28px;height:28px;}
+.SWIFT-Clip-Full{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -240px;width:28px;height:28px;}
+.SWIFT-Clip-Full-Disabled{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -269px;width:28px;height:28px;}
+.SWIFT-Clip-Full-Required{background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -240px;;width:28px;height:28px;}
+.SWIFT-Clip-Menu{white-space:nowrap;background-color:#EEEEEE;border:2px outset #EEEEEE;white-space:nowrap;padding:2px;}
+.SWIFT-Clip-Menu-Item{color:#000000;padding:2px;white-space:nowrap;font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;font-size:9pt;cursor:pointer;width:100%;}
+.SWIFT-Clip-Menu-Item-Selected{color:#EEEEEE;background-color:#000080;padding:2px;white-space:nowrap;font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;font-size:9pt;cursor:pointer;width:100%;}
+.SWIFT-Clip-Caption{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Clip-Caption-Required{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Clip-Caption-Disabled{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Clip-PlaceHolder{white-space:nowrap;text-align:center;}
+.SWIFT-Clip-PlaceHolder-Required{white-space:nowrap;text-align:center;}
+.SWIFT-Clip-PlaceHolder-Disabled{white-space:nowrap;text-align:center;}
+#SWIFT_DMS_Browser, #SWIFT_DMS_Uploader{display: none;}.SWIFT-Currency, .SWIFT-Currency-Hover{font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Currency-Disabled, .SWIFT-Currency-Disabled-Hover{font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-Currency-Required, .SWIFT-Currency-Required-Hover{font-family:Arial;font-size:10pt;border-Style:none; background-color:#FFFFFF;box-shadow:none;color:#000000;cursor:default;}
+.SWIFT-Currency-Focus, .SWIFT-Currency-Focus-Hover{font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Currency-Required-Focus, .SWIFT-Currency-Required-Focus-Hover{font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Currency-Caption{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-Caption-Top{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-Caption-Required{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-Caption-Top-Required{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-Caption-Disabled{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-Caption-Top-Disabled{font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Currency-PlaceHolder, .SWIFT-Currency-PlaceHolder-Hover, .SWIFT-Currency-PlaceHolder-Focus, .SWIFT-Currency-PlaceHolder-Focus-Hover{border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-Currency-PlaceHolder-Required, .SWIFT-Currency-PlaceHolder-Required-Hover, .SWIFT-Currency-PlaceHolder-Required-Focus, .SWIFT-Currency-PlaceHolder-Required-Focus-Hover{border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-Currency-PlaceHolder-Disabled, .SWIFT-Currency-PlaceHolder-Disabled-Hover, .SWIFT-Currency-PlaceHolder-Disabled-Focus-Hover{border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-Currency-PlaceHolder-Focus, .SWIFT-Currency-PlaceHolder-Focus-Hover, .SWIFT-Currency-PlaceHolder-Required-Focus, .SWIFT-Currency-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-Currency-PlaceHolder, .SWIFT-Currency-PlaceHolder-Hover, .SWIFT-Currency-PlaceHolder-Required, .SWIFT-Currency-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Date, .SWIFT-Date-Focus, .SWIFT-Date-Hover, .SWIFT-Date-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Date-Disabled, .SWIFT-Date-Disabled-Focus, .SWIFT-Date-Disabled-Hover, .SWIFT-Date-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-Date-Required, .SWIFT-Date-Required-Focus, .SWIFT-Date-Required-Hover, .SWIFT-Date-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Date-Focus, .SWIFT-Date-Focus-Hover, .SWIFT-Date-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Date-Required-Focus, .SWIFT-Date-Required-Focus-Hover, .SWIFT-Date-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Date-Caption, .SWIFT-Date-Caption-Focus, .SWIFT-Date-Caption-Hover, .SWIFT-Date-Caption-Focus-Hover, .SWIFT-Date-Caption-Top, .SWIFT-Date-Caption-Top-Focus, .SWIFT-Date-Caption-Top-Hover, .SWIFT-Date-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Date-Caption-Required, .SWIFT-Date-Caption-Required-Focus, .SWIFT-Date-Caption-Required-Hover, .SWIFT-Date-Caption-Required-Focus-Hover, .SWIFT-Date-Caption-Top-Required, .SWIFT-Date-Caption-Top-Required-Focus, .SWIFT-Date-Caption-Top-Required-Hover, .SWIFT-Date-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Date-Caption-Disabled, .SWIFT-Date-Caption-Disabled-Focus, .SWIFT-Date-Caption-Disabled-Hover, .SWIFT-Date-Caption-Disabled-Focus-Hover, .SWIFT-Date-Caption-Top-Disabled, .SWIFT-Date-Caption-Top-Disabled-Focus, .SWIFT-Date-Caption-Top-Disabled-Hover, .SWIFT-Date-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Date-PlaceHolder, .SWIFT-Date-PlaceHolder-Focus, .SWIFT-Date-PlaceHolder-Hover, .SWIFT-Date-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-Date-PlaceHolder-Required, .SWIFT-Date-PlaceHolder-Required-Focus, .SWIFT-Date-PlaceHolder-Required-Hover, .SWIFT-Date-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-Date-PlaceHolder-Disabled, .SWIFT-Date-PlaceHolder-Disabled-Focus, .SWIFT-Date-PlaceHolder-Disabled-Hover, .SWIFT-Date-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-Date-PlaceHolder-Focus, .SWIFT-Date-PlaceHolder-Focus-Hover, .SWIFT-Date-PlaceHolder-Required-Focus, .SWIFT-Date-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-Date-PlaceHolder, .SWIFT-Date-PlaceHolder-Hover, .SWIFT-Date-PlaceHolder-Required, .SWIFT-Date-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Date-Calendar, .SWIFT-Date-Calendar-Focus, .SWIFT-Date-Calendar-Hover, .SWIFT-Date-Calendar-Focus-Hover {margin-top:2px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -119px;width:16px;height:16px;}
+.SWIFT-Date-Calendar-Required, .SWIFT-Date-Calendar-Required-Focus, .SWIFT-Date-Calendar-Required-Hover, .SWIFT-Date-Calendar-Required-Focus-Hover {margin-top:2px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -119px;width:16px;height:16px;}
+.SWIFT-Date-Calendar-Disabled, .SWIFT-Date-Calendar-Disabled-Focus, .SWIFT-Date-Calendar-Disabled-Hover, .SWIFT-Date-Calendar-Disabled-Focus-Hover {margin-top:2px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -136px;width:16px;height:16px;}
+.SWIFT-Dropdown, .SWIFT-Dropdown-Focus, .SWIFT-Dropdown-Hover, .SWIFT-Dropdown-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Dropdown-Disabled, .SWIFT-Dropdown-Disabled-Focus, .SWIFT-Dropdown-Disabled-Hover, .SWIFT-Dropdown-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;background-color:#F5F4EA;}
+.SWIFT-Dropdown-Required, .SWIFT-Dropdown-Required-Focus, .SWIFT-Dropdown-Required-Hover, .SWIFT-Dropdown-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Dropdown-Caption, .SWIFT-Dropdown-Caption-Focus, .SWIFT-Dropdown-Caption-Hover, .SWIFT-Dropdown-Caption-Focus-Hover, .SWIFT-Dropdown-Caption-Top, .SWIFT-Dropdown-Caption-Top-Focus, .SWIFT-Dropdown-Caption-Top-Hover, .SWIFT-Dropdown-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Dropdown-Caption-Required, .SWIFT-Dropdown-Caption-Required-Focus, .SWIFT-Dropdown-Caption-Required-Hover, .SWIFT-Dropdown-Caption-Required-Focus-Hover, .SWIFT-Dropdown-Caption-Top-Required, .SWIFT-Dropdown-Caption-Top-Required-Focus, .SWIFT-Dropdown-Caption-Top-Required-Hover, .SWIFT-Dropdown-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Dropdown-Caption-Disabled, .SWIFT-Dropdown-Caption-Disabled-Focus, .SWIFT-Dropdown-Caption-Disabled-Hover, .SWIFT-Dropdown-Caption-Disabled-Focus-Hover, .SWIFT-Dropdown-Caption-Top-Disabled, .SWIFT-Dropdown-Caption-Top-Disabled-Focus, .SWIFT-Dropdown-Caption-Top-Disabled-Hover, .SWIFT-Dropdown-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Dropdown-PlaceHolder, .SWIFT-Dropdown-PlaceHolder-Focus, .SWIFT-Dropdown-PlaceHolder-Hover, .SWIFT-Dropdown-PlaceHolder-Focus-Hover {}
+.SWIFT-Dropdown-PlaceHolder-Required, .SWIFT-Dropdown-PlaceHolder-Required-Focus, .SWIFT-Dropdown-PlaceHolder-Required-Hover, .SWIFT-Dropdown-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; }
+.SWIFT-Dropdown-PlaceHolder-Disabled, .SWIFT-Dropdown-PlaceHolder-Disabled-Focus, .SWIFT-Dropdown-PlaceHolder-Disabled-Hover, .SWIFT-Dropdown-PlaceHolder-Disabled-Focus-Hover {}
+.SWIFT-DropdownList, .SWIFT-DropdownList-Focus, .SWIFT-DropdownList-Hover, .SWIFT-DropdownList-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownList-Disabled, .SWIFT-DropdownList-Disabled-Focus, .SWIFT-DropdownList-Disabled-Hover, .SWIFT-DropdownList-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-DropdownList-Required, .SWIFT-DropdownList-Required-Focus, .SWIFT-DropdownList-Required-Hover, .SWIFT-DropdownList-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownList-List, .SWIFT-DropdownList-List-Focus, .SWIFT-DropdownList-List-Hover, .SWIFT-DropdownList-List-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownList-Focus, .SWIFT-DropdownList-Focus-Hover, .SWIFT-DropdownList-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownList-Required-Focus, .SWIFT-DropdownList-Required-Focus-Hover, .SWIFT-DropdownList-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownList-Caption, .SWIFT-DropdownList-Caption-Focus, .SWIFT-DropdownList-Caption-Hover, .SWIFT-DropdownList-Caption-Focus-Hover, .SWIFT-DropdownList-Caption-Top, .SWIFT-DropdownList-Caption-Top-Focus, .SWIFT-DropdownList-Caption-Top-Hover, .SWIFT-DropdownList-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownList-Caption-Required, .SWIFT-DropdownList-Caption-Required-Focus, .SWIFT-DropdownList-Caption-Required-Hover, .SWIFT-DropdownList-Caption-Required-Focus-Hover, .SWIFT-DropdownList-Caption-Top-Required, .SWIFT-DropdownList-Caption-Top-Required-Focus, .SWIFT-DropdownList-Caption-Top-Required-Hover, .SWIFT-DropdownList-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownList-Caption-Disabled, .SWIFT-DropdownList-Caption-Disabled-Focus, .SWIFT-DropdownList-Caption-Disabled-Hover, .SWIFT-DropdownList-Caption-Disabled-Focus-Hover, .SWIFT-DropdownList-Caption-Top-Disabled, .SWIFT-DropdownList-Caption-Top-Disabled-Focus, .SWIFT-DropdownList-Caption-Top-Disabled-Hover, .SWIFT-DropdownList-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownList-PlaceHolder, .SWIFT-DropdownList-PlaceHolder-Focus, .SWIFT-DropdownList-PlaceHolder-Hover, .SWIFT-DropdownList-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-DropdownList-PlaceHolder-Required, .SWIFT-DropdownList-PlaceHolder-Required-Focus, .SWIFT-DropdownList-PlaceHolder-Required-Hover, .SWIFT-DropdownList-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-DropdownList-PlaceHolder-Disabled, .SWIFT-DropdownList-PlaceHolder-Disabled-Focus, .SWIFT-DropdownList-PlaceHolder-Disabled-Hover, .SWIFT-DropdownList-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-DropdownListEditable, .SWIFT-DropdownListEditable-Focus, .SWIFT-DropdownListEditable-Hover, .SWIFT-DropdownListEditable-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownListEditable-Disabled, .SWIFT-DropdownListEditable-Disabled-Focus, .SWIFT-DropdownListEditable-Disabled-Hover, .SWIFT-DropdownListEditable-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-DropdownListEditable-Required, .SWIFT-DropdownListEditable-Required-Focus, .SWIFT-DropdownListEditable-Required-Hover, .SWIFT-DropdownListEditable-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownListEditable-List, .SWIFT-DropdownListEditable-List-Focus, .SWIFT-DropdownListEditable-List-Hover, .SWIFT-DropdownListEditable-List-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownListEditable-Focus, .SWIFT-DropdownListEditable-Focus-Hover, .SWIFT-DropdownListEditable-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownListEditable-Required-Focus, .SWIFT-DropdownListEditable-Required-Focus-Hover, .SWIFT-DropdownListEditable-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;background-image: url(Assets.aspx/icon/dropdown);background-repeat: no-repeat;background-position: right center;}
+.SWIFT-DropdownListEditable-Caption, .SWIFT-DropdownListEditable-Caption-Focus, .SWIFT-DropdownListEditable-Caption-Hover, .SWIFT-DropdownListEditable-Caption-Focus-Hover, .SWIFT-DropdownListEditable-Caption-Top, .SWIFT-DropdownListEditable-Caption-Top-Focus, .SWIFT-DropdownListEditable-Caption-Top-Hover, .SWIFT-DropdownListEditable-Caption-Top-Focus-Hover  {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownListEditable-Caption-Required, .SWIFT-DropdownListEditable-Caption-Required-Focus, .SWIFT-DropdownListEditable-Caption-Required-Hover, .SWIFT-DropdownListEditable-Caption-Required-Focus-Hover, .SWIFT-DropdownListEditable-Caption-Top-Required, .SWIFT-DropdownListEditable-Caption-Top-Required-Focus, .SWIFT-DropdownListEditable-Caption-Top-Required-Hover, .SWIFT-DropdownListEditable-Caption-Top-Required-Focus-Hover  {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownListEditable-Caption-Disabled, .SWIFT-DropdownListEditable-Caption-Disabled-Focus, .SWIFT-DropdownListEditable-Caption-Disabled-Hover, .SWIFT-DropdownListEditable-Caption-Disabled-Focus-Hover, .SWIFT-DropdownListEditable-Caption-Top-Disabled, .SWIFT-DropdownListEditable-Caption-Top-Disabled-Focus, .SWIFT-DropdownListEditable-Caption-Top-Disabled-Hover, .SWIFT-DropdownListEditable-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-DropdownListEditable-PlaceHolder, .SWIFT-DropdownListEditable-PlaceHolder-Focus, .SWIFT-DropdownListEditable-PlaceHolder-Hover, .SWIFT-DropdownListEditable-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-DropdownListEditable-PlaceHolder-Required, .SWIFT-DropdownListEditable-PlaceHolder-Required-Focus, .SWIFT-DropdownListEditable-PlaceHolder-Required-Hover, .SWIFT-DropdownListEditable-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-DropdownListEditable-PlaceHolder-Disabled, .SWIFT-DropdownListEditable-PlaceHolder-Disabled-Focus, .SWIFT-DropdownListEditable-PlaceHolder-Disabled-Hover, .SWIFT-DropdownListEditable-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-DropdownListEditable-PlaceHolder-Focus, .SWIFT-DropdownListEditable-PlaceHolder-Focus-Hover, .SWIFT-DropdownListEditable-PlaceHolder-Required-Focus, .SWIFT-DropdownListEditable-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-DropdownListEditable-PlaceHolder, .SWIFT-DropdownListEditable-PlaceHolder-Hover, .SWIFT-DropdownListEditable-PlaceHolder-Required, .SWIFT-DropdownListEditable-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Grid-Header, .SWIFT-Grid-Header-Focus, .SWIFT-Grid-Header-Hover, .SWIFT-Grid-Header-Focus-Hover {border:1px solid #CCCCCC;border-bottom:0px outset #FFFFFF;background-color:#EBEADB;}
+.SWIFT-Grid-Content, .SWIFT-Grid-Content-Focus, .SWIFT-Grid-Content-Hover, .SWIFT-Grid-Content-Focus-Hover {border:1px solid #CCCCCC;border-top:0px solid #CCCCCC;border-bottom:0px solid #CCCCCC;padding:0px;margin:0px;}
+.SWIFT-Grid-Header-Cell, .SWIFT-Grid-Header-Cell-Focus, .SWIFT-Grid-Header-Cell-Hover, .SWIFT-Grid-Header-Cell-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;padding:2px;border-right:1px solid #CCCCCC;border-bottom:3px solid #A0A0A0;cursor:pointer;}
+.SWIFT-Grid-Header-Cell-Hover, .SWIFT-Grid-Header-Cell-Hover-Focus, .SWIFT-Grid-Header-Cell-Hover-Hover, .SWIFT-Grid-Header-Cell-Hover-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;padding:2px;background-color:#FAF9F4;border-right:1px solid #CCCCCC;border-bottom:3px solid #FCC247;cursor:pointer;}
+.SWIFT-Grid-Header-Cell-Link, .SWIFT-Grid-Header-Cell-Link-Focus, .SWIFT-Grid-Header-Cell-Link-Hover, .SWIFT-Grid-Header-Cell-Link-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;text-decoration:none;}
+.SWIFT-Grid-Header-Cell-Sort, .SWIFT-Grid-Header-Cell-Sort-Focus, .SWIFT-Grid-Header-Cell-Sort-Hover, .SWIFT-Grid-Header-Cell-Sort-Focus-Hover {width:0px;height:0px;margin:0px;background-image: url(Assets.aspx/icon/blank);display:none;}
+.SWIFT-Grid-Header-Cell-Sort-Asc, .SWIFT-Grid-Header-Cell-Sort-Asc-Focus, .SWIFT-Grid-Header-Cell-Sort-Asc-Hover, .SWIFT-Grid-Header-Cell-Sort-Asc-Focus-Hover {width:8px;height:7px;margin:2px;margin-right:4px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -872px;}
+.SWIFT-Grid-Header-Cell-Sort-Desc, .SWIFT-Grid-Header-Cell-Sort-Desc-Focus, .SWIFT-Grid-Header-Cell-Sort-Desc-Hover, .SWIFT-Grid-Header-Cell-Sort-Desc-Focus-Hover {width:8px;height:7px;margin:2px;margin-right:4px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -880px;}
+.SWIFT-Grid-Navigation, .SWIFT-Grid-Navigation-Focus, .SWIFT-Grid-Navigation-Hover, .SWIFT-Grid-Navigation-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-bottom:1px solid #CCCCCC;padding:2px;}
+.SWIFT-Grid-Navigation-First, .SWIFT-Grid-Navigation-First-Focus, .SWIFT-Grid-Navigation-First-Hover, .SWIFT-Grid-Navigation-First-Focus-Hover {background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -433px;width:15px;height:15px;}
+.SWIFT-Grid-Navigation-Back, .SWIFT-Grid-Navigation-Back-Focus, .SWIFT-Grid-Navigation-Back-Hover, .SWIFT-Grid-Navigation-Back-Focus-Hover {background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -96px;width:15px;height:15px;}
+.SWIFT-Grid-Navigation-Next, .SWIFT-Grid-Navigation-Next-Focus, .SWIFT-Grid-Navigation-Next-Hover, .SWIFT-Grid-Navigation-Next-Focus-Hover {background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -698px;width:15px;height:15px;}
+.SWIFT-Grid-Navigation-Last, .SWIFT-Grid-Navigation-Last-Focus, .SWIFT-Grid-Navigation-Last-Hover, .SWIFT-Grid-Navigation-Last-Focus-Hover {background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -619px;width:15px;height:15px;}
+#SWIFT_grid_helper{background-color:#FFFF00;border: none; background: none; overflow: hidden;}
+.SWIFT-GridAttachment-Cell{width:100%;} .SWIFT-Grid-Attachment-Action-Text-Disabled{display: none;}.SWIFT-GridAttachment-Header, .SWIFT-GridAttachment-Header-Focus, .SWIFT-GridAttachment-Header-Hover, .SWIFT-GridAttachment-Header-Focus-Hover {border:1px solid #CCCCCC;border-bottom:0px outset #FFFFFF;background-color:#EBEADB;padding:5px;}
+.SWIFT-GridAttachment-Content, .SWIFT-GridAttachment-Content-Focus, .SWIFT-GridAttachment-Content-Hover, .SWIFT-GridAttachment-Content-Focus-Hover {border:1px solid #CCCCCC;padding:0px;margin:0px;}
+.SWIFT-GridAttachment-Content-Required, .SWIFT-GridAttachment-Content-Required-Focus, .SWIFT-GridAttachment-Content-Required-Hover, .SWIFT-GridAttachment-Content-Required-Focus-Hover {border:1px solid #FF0000;padding:0px;margin:0px;background-color:#FFFFFF;}
+.SWIFT-GridAttachment-Browse, .SWIFT-GridAttachment-Browse-Focus, .SWIFT-GridAttachment-Browse-Hover, .SWIFT-GridAttachment-Browse-Focus-Hover, .SWIFT-GridAttachment-Add, .SWIFT-GridAttachment-Add-Focus, .SWIFT-GridAttachment-Add-Hover, .SWIFT-GridAttachment-Add-Focus-Hover {font-family:Arial;font-size:10pt;color:#0000FF;font-weight:bold;}
+.SWIFT-GridAttachment-Add-Icon, .SWIFT-GridAttachment-Add-Icon-Focus, .SWIFT-GridAttachment-Add-Icon-Hover, .SWIFT-GridAttachment-Add-Icon-Focus-Hover {margin-right:2px;background: url(Assets.aspx/icon/sprites) no-repeat top left;background-position: 0 -391px;vertical-align: middle;width:20px;height:20px;}
+.SWIFT-GridAttachment-Browse-Icon, .SWIFT-GridAttachment-Browse-Icon-Focus, .SWIFT-GridAttachment-Browse-Icon-Hover, .SWIFT-GridAttachment-Browse-Icon-Focus-Hover {margin-right:2px;vertical-align: middle;width:20px;height:20px;}
+.SWIFT-GridAttachment-Body, .SWIFT-GridAttachment-Body-Focus, .SWIFT-GridAttachment-Body-Hover, .SWIFT-GridAttachment-Body-Focus-Hover {background-color:#FFFFFF;padding:0px;margin:0px;}
+.SWIFT-GridEditable-Header, .SWIFT-GridEditable-Header-Focus, .SWIFT-GridEditable-Header-Hover, .SWIFT-GridEditable-Header-Focus-Hover {border:1px solid #CCCCCC;border-bottom:0px outset #FFFFFF;background-color:#EBEADB;}
+.SWIFT-GridEditable-Content, .SWIFT-GridEditable-Content-Focus, .SWIFT-GridEditable-Content-Hover, .SWIFT-GridEditable-Content-Focus-Hover {border:1px solid #CCCCCC;border-top:0px solid #CCCCCC;border-bottom:0px solid #CCCCCC;padding:0px;margin:0px;}
+.SWIFT-GridEditable-Header-Cell, .SWIFT-GridEditable-Header-Cell-Focus, .SWIFT-GridEditable-Header-Cell-Hover, .SWIFT-GridEditable-Header-Cell-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;padding:2px;border-right:1px solid #CCCCCC;border-bottom:3px solid #A0A0A0;}
+.SWIFT-GridEditable-Cell-Field, .SWIFT-GridEditable-Cell-Field-Focus, .SWIFT-GridEditable-Cell-Field-Hover, .SWIFT-GridEditable-Cell-Field-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-width:0px;white-space:nowrap;margin-left:0px;margin-top:2px}
+.SWIFT-GridEditable-Cell-Field-Required, .SWIFT-GridEditable-Cell-Field-Required-Focus, .SWIFT-GridEditable-Cell-Field-Required-Hover, .SWIFT-GridEditable-Cell-Field-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#CC0000;border-width:0px;white-space:nowrap;margin-left:2px;margin-top:2px}
+.SWIFT-GridEditable-Cell-Field-Disabled, .SWIFT-GridEditable-Cell-Field-Disabled-Focus, .SWIFT-GridEditable-Cell-Field-Disabled-Hover, .SWIFT-GridEditable-Cell-Field-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#888888;background-color:#EEEEEE;border-width:0px;white-space:nowrap;margin-left:2px;margin-top:2px}
+.SWIFT-GridEditable-Cell-Field-List, .SWIFT-GridEditable-Cell-Field-List-Focus, .SWIFT-GridEditable-Cell-Field-List-Hover, .SWIFT-GridEditable-Cell-Field-List-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-GridEditable-Cell-Field-Focus, .SWIFT-GridEditable-Cell-Field-Focus-Hover, .SWIFT-GridEditable-Cell-Field-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-width:0px;background-color:#FFFF00;padding-top:1px;}
+.SWIFT-GridEditable-DeleteColumn-Last {display: none;}
+.SWIFT-GridEditable-Field-PlaceHolder, .SWIFT-GridEditable-Field-PlaceHolder-Focus, .SWIFT-GridEditable-Field-PlaceHolder-Hover, .SWIFT-GridEditable-Field-PlaceHolder-Focus-Hover {padding:1px;}
+.SWIFT-Label-URL, .SWIFT-Label-URL-Focus, .SWIFT-Label-URL-Hover, .SWIFT-Label-URL-Focus-Hover {color:#0000FF;text-decoration:underline;}
+.SWIFT-List, .SWIFT-List-Focus, .SWIFT-List-Hover, .SWIFT-List-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-List-Disabled, .SWIFT-List-Disabled-Focus, .SWIFT-List-Disabled-Hover, .SWIFT-List-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-List-Required, .SWIFT-List-Required-Focus, .SWIFT-List-Required-Hover, .SWIFT-List-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-List-Caption, .SWIFT-List-Caption-Focus, .SWIFT-List-Caption-Hover, .SWIFT-List-Caption-Focus-Hover, .SWIFT-Checklist-Caption, .SWIFT-Checklist-Caption-Focus, .SWIFT-Checklist-Caption-Hover, .SWIFT-List-Checklist-Focus-Hover, .SWIFT-List-Caption-Top, .SWIFT-List-Caption-Top-Focus, .SWIFT-List-Caption-Top-Hover, .SWIFT-List-Caption-Top-Focus-Hover, .SWIFT-Checklist-Caption-Top, .SWIFT-Checklist-Caption-Top-Focus, .SWIFT-Checklist-Caption-Top-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-List-Caption-Required, .SWIFT-List-Caption-Required-Focus, .SWIFT-List-Caption-Required-Hover, .SWIFT-List-Caption-Required-Focus-Hover, .SWIFT-List-Caption-Required-Focus, .SWIFT-List-Caption-Required-Hover, .SWIFT-List-Caption-Top-Required, .SWIFT-List-Caption-Top-Required-Focus, .SWIFT-List-Caption-Top-Required-Hover, .SWIFT-List-Caption-Top-Required-Focus-Hover, .SWIFT-List-Caption-Top-Required-Focus, .SWIFT-List-Caption-Top-Required-Hover, .SWIFT-Checklist-Caption-Required, .SWIFT-Checklist-Caption-Required-Focus, .SWIFT-Checklist-Caption-Required-Hover, .SWIFT-Checklist-Caption-Required-Focus-Hover, .SWIFT-Checklist-Caption-Required-Focus, .SWIFT-Checklist-Caption-Required-Hover, .SWIFT-Checklist-Caption-Top-Required, .SWIFT-Checklist-Caption-Top-Required-Focus, .SWIFT-Checklist-Caption-Top-Required-Hover, .SWIFT-Checklist-Caption-Top-Required-Focus-Hover, .SWIFT-Checklist-Caption-Top-Required-Focus, .SWIFT-Checklist-Caption-Top-Required-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-List-Caption-Disabled, .SWIFT-List-Caption-Disabled-Focus, .SWIFT-List-Caption-Disabled-Hover, .SWIFT-List-Caption-Disabled-Focus-Hover, .SWIFT-Checklist-Caption-Disabled, .SWIFT-Checklist-Caption-Disabled-Focus, .SWIFT-Checklist-Caption-Disabled-Hover, .SWIFT-Checklist-Caption-Disabled-Focus-Hover, .SWIFT-List-Caption-Top-Disabled, .SWIFT-List-Caption-Top-Disabled-Focus, .SWIFT-List-Caption-Top-Disabled-Hover, .SWIFT-List-Caption-Top-Disabled-Focus-Hover, .SWIFT-Checklist-Caption-Top-Disabled, .SWIFT-Checklist-Caption-Top-Disabled-Focus, .SWIFT-Checklist-Caption-Top-Disabled-Hover, .SWIFT-Checklist-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-List-PlaceHolder-Required, .SWIFT-List-PlaceHolder-Required-Focus, .SWIFT-List-PlaceHolder-Required-Hover, .SWIFT-List-PlaceHolder-Required-Focus-Hover, SWIFT-Checklist-PlaceHolder-Required, .SWIFT-Checklist-PlaceHolder-Required-Focus, .SWIFT-Checklist-PlaceHolder-Required-Hover, .SWIFT-Checklist-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; }
+.SWIFT-Checklist, .SWIFT-Checklist-Focus, .SWIFT-Checklist-Hover, .SWIFT-Checklist-Focus-Hover { border: 1px solid #cccccc; overflow: auto; padding-left: 0px; margin:0;font-family:Arial;font-size:10pt;color:#000000;} .SWIFT-Checklist li{list-style-type: none;}.SWIFT-Checklist-Disabled, .SWIFT-Checklist-Disabled-Focus, .SWIFT-Checklist-Disabled-Hover, .SWIFT-Checklist-Disabled-Focus-Hover  { border: 1px solid #cccccc; overflow: auto; padding-left: 0px; margin:0;font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;}.SWIFT-Checklist-Required, .SWIFT-Checklist-Required-Focus, .SWIFT-Checklist-Required-Hover, .SWIFT-Checklist-Required-Focus-Hover { border: 1px solid #cccccc; overflow: auto; padding-left: 0px; margin:0;font-family:Arial;font-size:10pt;color:#000000;}.SWIFT-Memo, .SWIFT-Memo-Focus, .SWIFT-Memo-Hover, .SWIFT-Memo-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Memo-Disabled, .SWIFT-Memo-Disabled-Focus, .SWIFT-Memo-Disabled-Hover, .SWIFT-Memo-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;cursor:default;overflow:auto;}
+.SWIFT-Memo-Required, .SWIFT-Memo-Required-Focus, .SWIFT-Memo-Required-Hover, .SWIFT-Memo-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Memo-Focus, .SWIFT-Memo-Focus-Hover, .SWIFT-Memo-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Memo-Required-Focus, .SWIFT-Memo-Required-Focus-Hover, .SWIFT-Memo-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Memo-Caption, .SWIFT-Memo-Caption-Focus, .SWIFT-Memo-Caption-Hover, .SWIFT-Memo-Caption-Focus-Hover, .SWIFT-Memo-Caption-Top, .SWIFT-Memo-Caption-Top-Focus, .SWIFT-Memo-Caption-Top-Hover, .SWIFT-Memo-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Memo-Caption-Required, .SWIFT-Memo-Caption-Required-Focus, .SWIFT-Memo-Caption-Required-Hover, .SWIFT-Memo-Caption-Required-Focus-Hover, .SWIFT-Memo-Caption-Top-Required, .SWIFT-Memo-Caption-Top-Required-Focus, .SWIFT-Memo-Caption-Top-Required-Hover, .SWIFT-Memo-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Memo-Caption-Disabled, .SWIFT-Memo-Caption-Disabled-Focus, .SWIFT-Memo-Caption-Disabled-Hover, .SWIFT-Memo-Caption-Disabled-Focus-Hover, .SWIFT-Memo-Caption-Top-Disabled, .SWIFT-Memo-Caption-Top-Disabled-Focus, .SWIFT-Memo-Caption-Top-Disabled-Hover, .SWIFT-Memo-Caption-Top-Disabled-Focus-Hover  {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Memo-PlaceHolder, .SWIFT-Memo-PlaceHolder-Focus, .SWIFT-Memo-PlaceHolder-Hover, .SWIFT-Memo-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-Memo-PlaceHolder-Required, .SWIFT-Memo-PlaceHolder-Required-Focus, .SWIFT-Memo-PlaceHolder-Required-Hover, .SWIFT-Memo-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; }
+.SWIFT-Memo-PlaceHolder-Disabled, .SWIFT-Memo-PlaceHolder-Disabled-Focus, .SWIFT-Memo-PlaceHolder-Disabled-Hover, .SWIFT-Memo-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; }
+.SWIFT-RichTextEdit, .SWIFT-RichTextEdit-Focus, .SWIFT-RichTextEdit-Hover, .SWIFT-RichTextEdit-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-RichTextEdit-Disabled, .SWIFT-RichTextEdit-Disabled-Focus, .SWIFT-RichTextEdit-Disabled-Hover, .SWIFT-RichTextEdit-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;cursor:default;overflow:auto;}
+.SWIFT-RichTextEdit-Required, .SWIFT-RichTextEdit-Required-Focus, .SWIFT-RichTextEdit-Required-Hover, .SWIFT-RichTextEdit-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-RichTextEdit-Focus, .SWIFT-RichTextEdit-Focus-Hover, .SWIFT-RichTextEdit-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-RichTextEdit-Required-Focus, .SWIFT-RichTextEdit-Required-Focus-Hover, .SWIFT-RichTextEdit-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-RichTextEdit-Caption, .SWIFT-RichTextEdit-Caption-Focus, .SWIFT-RichTextEdit-Caption-Hover, .SWIFT-RichTextEdit-Caption-Focus-Hover, .SWIFT-RichTextEdit-Caption-Top, .SWIFT-RichTextEdit-Caption-Top-Focus, .SWIFT-RichTextEdit-Caption-Top-Hover, .SWIFT-RichTextEdit-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-RichTextEdit-Caption-Required, .SWIFT-RichTextEdit-Caption-Required-Focus, .SWIFT-RichTextEdit-Caption-Required-Hover, .SWIFT-RichTextEdit-Caption-Required-Focus-Hover, .SWIFT-RichTextEdit-Caption-Top-Required, .SWIFT-RichTextEdit-Caption-Top-Required-Focus, .SWIFT-RichTextEdit-Caption-Top-Required-Hover, .SWIFT-RichTextEdit-Caption-Top-Required-Focus-Hover  {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-RichTextEdit-Caption-Disabled, .SWIFT-RichTextEdit-Caption-Disabled-Focus, .SWIFT-RichTextEdit-Caption-Disabled-Hover, .SWIFT-RichTextEdit-Caption-Disabled-Focus-Hover, .SWIFT-RichTextEdit-Caption-Top-Disabled, .SWIFT-RichTextEdit-Caption-Top-Disabled-Focus, .SWIFT-RichTextEdit-Caption-Top-Disabled-Hover, .SWIFT-RichTextEdit-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-RichTextEdit-PlaceHolder, .SWIFT-RichTextEdit-PlaceHolder-Focus, .SWIFT-RichTextEdit-PlaceHolder-Hover, .SWIFT-RichTextEdit-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-RichTextEdit-PlaceHolder-Required, .SWIFT-RichTextEdit-PlaceHolder-Required-Focus, .SWIFT-RichTextEdit-PlaceHolder-Required-Hover, .SWIFT-RichTextEdit-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; }
+.SWIFT-RichTextEdit-PlaceHolder-Disabled, .SWIFT-RichTextEdit-PlaceHolder-Disabled-Focus, .SWIFT-RichTextEdit-PlaceHolder-Disabled-Hover, .SWIFT-RichTextEdit-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; }
+.SWIFT-Number, .SWIFT-Number-Focus, .SWIFT-Number-Hover, .SWIFT-Number-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Number-Disabled, .SWIFT-Number-Disabled-Focus, .SWIFT-Number-Disabled-Hover, .SWIFT-Number-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-Number-Required, .SWIFT-Number-Required-Focus, .SWIFT-Number-Required-Hover, .SWIFT-Number-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Number-Focus, .SWIFT-Number-Focus-Hover, .SWIFT-Number-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Number-Required-Focus, .SWIFT-Number-Required-Focus-Hover, .SWIFT-Number-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Number-Caption, .SWIFT-Number-Caption-Focus, .SWIFT-Number-Caption-Hover, .SWIFT-Number-Caption-Focus-Hover, .SWIFT-Progress-Caption, .SWIFT-Number-Caption-Top, .SWIFT-Number-Caption-Top-Focus, .SWIFT-Number-Caption-Top-Hover, .SWIFT-Number-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Number-Caption-Required, .SWIFT-Number-Caption-Required-Focus, .SWIFT-Number-Caption-Required-Hover, .SWIFT-Number-Caption-Required-Focus-Hover, .SWIFT-Number-Caption-Top-Required, .SWIFT-Number-Caption-Top-Required-Focus, .SWIFT-Number-Caption-Top-Required-Hover, .SWIFT-Number-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Number-Caption-Disabled, .SWIFT-Number-Caption-Disabled-Focus, .SWIFT-Number-Caption-Disabled-Hover, .SWIFT-Number-Caption-Disabled-Focus-Hover, .SWIFT-Number-Caption-Top-Disabled, .SWIFT-Number-Caption-Top-Disabled-Focus, .SWIFT-Number-Caption-Top-Disabled-Hover, .SWIFT-Number-Caption-Disabled-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Number-PlaceHolder, .SWIFT-Number-PlaceHolder-Focus, .SWIFT-Number-PlaceHolder-Hover, .SWIFT-Number-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-Number-PlaceHolder-Required, .SWIFT-Number-PlaceHolder-Required-Focus, .SWIFT-Number-PlaceHolder-Required-Hover, .SWIFT-Number-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-Number-PlaceHolder-Disabled, .SWIFT-Number-PlaceHolder-Disabled-Focus, .SWIFT-Number-PlaceHolder-Disabled-Hover, .SWIFT-Number-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-Number-PlaceHolder-Focus, .SWIFT-Number-PlaceHolder-Focus-Hover, .SWIFT-Number-PlaceHolder-Required-Focus, .SWIFT-Number-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-Number-PlaceHolder, .SWIFT-Number-PlaceHolder-Hover, .SWIFT-Number-PlaceHolder-Required, .SWIFT-Number-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Progress, .SWIFT-Progress-Focus, .SWIFT-Progress-Hover, .SWIFT-Progress-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Progress-Disabled, .SWIFT-Progress-Disabled-Focus, .SWIFT-Progress-Disabled-Hover, .SWIFT-Progress-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-Progress-Required, .SWIFT-Progress-Required-Focus, .SWIFT-Progress-Required-Hover, .SWIFT-Progress-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Progress-Focus, .SWIFT-Progress-Focus-Hover, .SWIFT-Progress-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Progress-Required-Focus, .SWIFT-Progress-Required-Focus-Hover, .SWIFT-Progress-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Progress-Caption, .SWIFT-Progress-Caption-Focus, .SWIFT-Progress-Caption-Hover, .SWIFT-Progress-Caption-Focus-Hover, .SWIFT-Progress-Caption, .SWIFT-Progress-Caption-Top, .SWIFT-Progress-Caption-Top-Focus, .SWIFT-Progress-Caption-Top-Hover, .SWIFT-Progress-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Progress-Caption-Required, .SWIFT-Progress-Caption-Required-Focus, .SWIFT-Progress-Caption-Required-Hover, .SWIFT-Progress-Caption-Required-Focus-Hover, .SWIFT-Progress-Caption-Top-Required, .SWIFT-Progress-Caption-Top-Required-Focus, .SWIFT-Progress-Caption-Top-Required-Hover, .SWIFT-Progress-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Progress-Caption-Disabled, .SWIFT-Progress-Caption-Disabled-Focus, .SWIFT-Progress-Caption-Disabled-Hover, .SWIFT-Progress-Caption-Disabled-Focus-Hover, .SWIFT-Progress-Caption-Top-Disabled, .SWIFT-Progress-Caption-Top-Disabled-Focus, .SWIFT-Progress-Caption-Top-Disabled-Hover, .SWIFT-Progress-Caption-Disabled-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Progress-PlaceHolder, .SWIFT-Progress-PlaceHolder-Focus, .SWIFT-Progress-PlaceHolder-Hover, .SWIFT-Progress-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-Progress-PlaceHolder-Required, .SWIFT-Progress-PlaceHolder-Required-Focus, .SWIFT-Progress-PlaceHolder-Required-Hover, .SWIFT-Progress-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-Progress-PlaceHolder-Disabled, .SWIFT-Progress-PlaceHolder-Disabled-Focus, .SWIFT-Progress-PlaceHolder-Disabled-Hover, .SWIFT-Progress-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-Progress-PlaceHolder-Focus, .SWIFT-Progress-PlaceHolder-Focus-Hover, .SWIFT-Progress-PlaceHolder-Required-Focus, .SWIFT-Progress-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-Progress-PlaceHolder, .SWIFT-Progress-PlaceHolder-Hover, .SWIFT-Progress-PlaceHolder-Required, .SWIFT-Progress-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Progress{height: 100%; background-color: Blue;}
+.SWIFT-Radiogroup, .SWIFT-Radiogroup-Focus, .SWIFT-Radiogroup-Hover, .SWIFT-Radiogroup-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-Radiogroup-Disabled, .SWIFT-Radiogroup-Disabled-Focus, .SWIFT-Radiogroup-Disabled-Hover, .SWIFT-Radiogroup-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; }
+.SWIFT-Radiogroup-Required, .SWIFT-Radiogroup-Required-Focus, .SWIFT-Radiogroup-Required-Hover, .SWIFT-Radiogroup-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; }
+.SWIFT-Radiogroup-Caption, .SWIFT-Radiogroup-Caption-Focus, .SWIFT-Radiogroup-Caption-Hover, .SWIFT-Radiogroup-Caption-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Radiogroup-Caption-Required, .SWIFT-Radiogroup-Caption-Required-Focus, .SWIFT-Radiogroup-Caption-Required-Hover, .SWIFT-Radiogroup-Caption-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Radiogroup-Caption-Disabled, .SWIFT-Radiogroup-Caption-Disabled-Focus, .SWIFT-Radiogroup-Caption-Disabled-Hover, .SWIFT-Radiogroup-Caption-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Radiogroup-Item-Caption, .SWIFT-Radiogroup-Item-Caption-Focus, .SWIFT-Radiogroup-Item-Caption-Hover, .SWIFT-Radiogroup-Item-Caption-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;position: relative; top: -2;}
+.SWIFT-Radiogroup-Item-Caption-Required, .SWIFT-Radiogroup-Item-Caption-Required-Focus, .SWIFT-Radiogroup-Item-Caption-Required-Hover, .SWIFT-Radiogroup-Item-Caption-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;position: relative; top: -2;}
+.SWIFT-Radiogroup-Item-Caption-Disabled, .SWIFT-Radiogroup-Item-Caption-Disabled-Focus, .SWIFT-Radiogroup-Item-Caption-Disabled-Hover, .SWIFT-Radiogroup-Item-Caption-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;position: relative; top: -2;}
+.SWIFT-TabStrip, .SWIFT-TabStrip-Focus, .SWIFT-TabStrip-Hover, .SWIFT-TabStrip-Focus-Hover, .SWIFT-TabStrip-Vertical, .SWIFT-TabStrip-Vertical-Focus, .SWIFT-TabStrip-Vertical-Hover, .SWIFT-TabStrip-Vertical-Focus-Hover {background-color:#FFFBE9;border-bottom:2px solid #ECE9D8;}
+.SWIFT-TabStrip-Item-Void, .SWIFT-TabStrip-Item-Void-Focus, .SWIFT-TabStrip-Item-Void-Hover, .SWIFT-TabStrip-Item-Void-Focus-Hover {font-family:Arial;font-size:10pt;padding:5px;font-weight:normal;color:#817E73;border-right:1px inset #ECE9D8;}
+.SWIFT-TabStrip-Item, .SWIFT-TabStrip-Item-Focus, .SWIFT-TabStrip-Item-Hover, .SWIFT-TabStrip-Item-Focus-Hover {font-family:Arial;font-size:10pt;padding:5px;font-weight:normal;color:#817E73;border-right:1px inset #ECE9D8;cursor:pointer;}
+.SWIFT-TabStrip-Item-Selected, .SWIFT-TabStrip-Item-Selected-Focus, .SWIFT-TabStrip-Item-Selected-Hover, .SWIFT-TabStrip-Item-Selected-Focus-Hover {font-family:Arial;font-size:10pt;background-color:#ECE9D8;padding:5px;font-weight:bold;color:#000000;border:1px outset #ECE9D8;border-bottom:0px solid #ECE9D8;cursor:default;}
+.SWIFT-TabStrip-Item-Link, .SWIFT-TabStrip-Item-Link-Focus, .SWIFT-TabStrip-Item-Link-Hover, .SWIFT-TabStrip-Item-Link-Focus-Hover {font-family:Arial;font-size:10pt;text-decoration:none;color:#817E73;}
+.SWIFT-TabStrip-Item-Link-Selected, .SWIFT-TabStrip-Item-Link-Selected-Focus, .SWIFT-TabStrip-Item-Link-Selected-Hover, .SWIFT-TabStrip-Item-Link-Selected-Focus-Hover {font-family:Arial;font-size:10pt;text-decoration:none;color:#000000;}
+.SWIFT-Text, .SWIFT-Text-Focus, .SWIFT-Text-Hover, .SWIFT-Text-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Text-Disabled, .SWIFT-Text-Disabled-Focus, .SWIFT-Text-Disabled-Hover, .SWIFT-Text-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#F5F4EA;box-shadow:none;cursor:default;}
+.SWIFT-Text-Required, .SWIFT-Text-Required-Focus, .SWIFT-Text-Required-Hover, .SWIFT-Text-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none; background-color:#FFFFFF;box-shadow:none;cursor:default;}
+.SWIFT-Text-Focus, .SWIFT-Text-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Text-Required-Focus, .SWIFT-Text-Required-Focus-Hover{font-family:Arial;font-size:10pt;color:#000000;border-Style:none;background-color:#FFFF00;box-shadow:none;}
+.SWIFT-Text-Caption, .SWIFT-Text-Caption-Focus, .SWIFT-Text-Caption-Hover, .SWIFT-Text-Caption-Focus-Hover,.SWIFT-Text-Caption-Top, .SWIFT-Text-Caption-Top-Focus, .SWIFT-Text-Caption-Top-Hover, .SWIFT-Text-Caption-Top-Focus-Hover  {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Text-Caption-Required, .SWIFT-Text-Caption-Required-Focus, .SWIFT-Text-Caption-Required-Hover, .SWIFT-Text-Caption-Required-Focus-Hover, .SWIFT-Text-Caption-Top-Required, .SWIFT-Text-Caption-Top-Required-Focus, .SWIFT-Text-Caption-Top-Required-Hover, .SWIFT-Text-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Text-Caption-Disabled, .SWIFT-Text-Caption-Disabled-Focus, .SWIFT-Text-Caption-Disabled-Hover, .SWIFT-Text-Caption-Disabled-Focus-Hover, .SWIFT-Text-Caption-Top-Disabled, .SWIFT-Text-Caption-Top-Disabled-Focus, .SWIFT-Text-Caption-Top-Disabled-Hover, .SWIFT-Text-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-Text-PlaceHolder, .SWIFT-Text-PlaceHolder-Focus, .SWIFT-Text-PlaceHolder-Hover, .SWIFT-Text-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; padding:1px;}
+.SWIFT-Text-PlaceHolder-Required, .SWIFT-Text-PlaceHolder-Required-Focus, .SWIFT-Text-PlaceHolder-Required-Hover, .SWIFT-Text-PlaceHolder-Required-Focus-Hover {border:1px solid #FF0000; overflow: hidden; padding:1px;}
+.SWIFT-Text-PlaceHolder-Disabled, .SWIFT-Text-PlaceHolder-Disabled-Focus, .SWIFT-Text-PlaceHolder-Disabled-Hover, .SWIFT-Text-PlaceHolder-Disabled-Focus-Hover {border:1px solid #C9C7BA; background-color:#F5F4EA; overflow: hidden; padding:1px;}
+.SWIFT-Text-PlaceHolder-Focus, .SWIFT-Text-PlaceHolder-Focus-Hover, .SWIFT-Text-PlaceHolder-Required-Focus, .SWIFT-Text-PlaceHolder-Required-Focus-Hover {background-color:#FFFF00;}
+.SWIFT-Text-PlaceHolder, .SWIFT-Text-PlaceHolder-Hover, .SWIFT-Text-PlaceHolder-Required, .SWIFT-Text-PlaceHolder-Required-Hover {background-color:#FFFFFF;}
+.SWIFT-Status, .SWIFT-Status-Focus, .SWIFT-Status-Hover, .SWIFT-Status-Focus-Hover {cursor:pointer;}
+.SWIFT-WebPage-Caption, .SWIFT-WebPage-Caption-Focus, .SWIFT-WebPage-Caption-Hover, .SWIFT-WebPage-Caption-Focus-Hover, .SWIFT-WebPage-Caption-Top, .SWIFT-WebPage-Caption-Top-Focus, .SWIFT-WebPage-Caption-Top-Hover, .SWIFT-WebPage-Caption-Top-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-WebPage-Caption-Required, .SWIFT-WebPage-Caption-Required-Focus, .SWIFT-WebPage-Caption-Required-Hover, .SWIFT-WebPage-Caption-Required-Focus-Hover, .SWIFT-WebPage-Caption-Top-Required, .SWIFT-WebPage-Caption-Top-Required-Focus, .SWIFT-WebPage-Caption-Top-Required-Hover, .SWIFT-WebPage-Caption-Top-Required-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-WebPage-Caption-Disabled, .SWIFT-WebPage-Caption-Disabled-Focus, .SWIFT-WebPage-Caption-Disabled-Hover, .SWIFT-WebPage-Caption-Disabled-Focus-Hover, .SWIFT-WebPage-Caption-Top-Disabled, .SWIFT-WebPage-Caption-Top-Disabled-Focus, .SWIFT-WebPage-Caption-Top-Disabled-Hover, .SWIFT-WebPage-Caption-Top-Disabled-Focus-Hover {font-family:Arial;font-size:10pt;color:#000000;}
+.SWIFT-WebPage-PlaceHolder, .SWIFT-WebPage-PlaceHolder-Focus, .SWIFT-WebPage-PlaceHolder-Hover, .SWIFT-WebPage-PlaceHolder-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-WebPage-PlaceHolder-Required, .SWIFT-WebPage-PlaceHolder-Required-Focus, .SWIFT-WebPage-PlaceHolder-Required-Hover, .SWIFT-WebPage-PlaceHolder-Required-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-WebPage-PlaceHolder-Disabled, .SWIFT-WebPage-PlaceHolder-Disabled-Focus, .SWIFT-WebPage-PlaceHolder-Disabled-Hover, .SWIFT-WebPage-PlaceHolder-Disabled-Focus-Hover {border:1px solid #7F9DB9; overflow: hidden; }
+.SWIFT-Help-Balloon-Message, .SWIFT-Help-Balloon-Message-Focus, .SWIFT-Help-Balloon-Message-Hover, .SWIFT-Help-Balloon-Message-Focus-Hover {font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;font-size:8pt;font-weight:bold;color:#000000;}
+.SWIFT-Help-Warning-Message, .SWIFT-Help-Warning-Message-Focus, .SWIFT-Help-Warning-Message-Hover, .SWIFT-Help-Warning-Message-Focus-Hover {font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;font-size:8pt;font-weight:bold;color:#FFFF00;}
+.SWIFT-Progress-Indicator, .SWIFT-Progress-Indicator-Focus, .SWIFT-Progress-Indicator-Hover, .SWIFT-Progress-Indicator-Focus-Hover {cursor:wait;background-image: url(Assets.aspx/icon/blank);}
+</style>
+<link href="Assets.aspx/styles/en-GB/balloon" rel="stylesheet" type="text/css" /><link href="Assets.aspx/styles/en-GB/dmsGlobal" rel="stylesheet" type="text/css" />
+<link href="../style/style.css" rel="stylesheet" type="text/css">
+<link href="../style/alerts.css" rel="stylesheet" type="text/css">
+<link href="../style/styleIE.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../style/login.css">	
+
+
+
+<style>
+.SWIFT-Folder-Sections-Active
+{
+	visibility: hidden;
+}
+
+#SWIFT_Folder_Button_Submit
+{
+	visibility : hidden;
+}
+
+#SWIFT_Folder_Button_Cancel
+{
+	visibility : hidden;
+}
+.SWIFT-Currency-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+.SWIFT-Date-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+.SWIFT-Dropdown-PlaceHolder-Required{border:1px solid #7F9DB9;}
+.SWIFT-DropdownList-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+.SWIFT-DropdownListEditable-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+.SWIFT-GridAttachment-Content-Required{border:1px solid #7F9DB9;padding:0px;margin:0px;background-color:#FFFFFF;}
+.SWIFT-List-PlaceHolder-Required{border:1px solid #7F9DB9;}
+.SWIFT-Memo-PlaceHolder-Required{border:1px solid #7F9DB9;}
+.SWIFT-Number-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+.SWIFT-Radiogroup-Required{border:1px solid #7F9DB9;}
+.SWIFT-Text-PlaceHolder-Required{border:1px solid #7F9DB9;padding:1px;}
+
+
+
+</style>
+
+<script>
+var isIE=Boolean(document.all && navigator.cpuClass);
+var isDOM=Boolean(!isIE && document.getElementById);
+var isNN=Boolean(document.layers);
+
+var colW=200;
+
+function hideFolderBar(x)
+{
+	if(isIE)
+	{
+		if(x)
+		{
+			self.mainFrameSet.cols="14,*";
+			self.leftArea.cols="0,14";
+		}else{
+			self.mainFrameSet.cols="214,*";
+			self.leftArea.cols="200,14";
+		}
+	}
+}
+
+function resizeBars(x)
+{
+	colW=filterArea.document.body.offsetWidth+separator.document.body.offsetWidth-14;
+	if(isIE)
+	{
+		self.leftArea.cols=colW+",14,*";
+	}
+}
+</script>
+
+</head>
+
+
+
+
+
+
+<body class="login-page global">
+
+
+<div id="container">			
+
+                <div id="loginarea" class="loginarea"><!-- login box /--> 
+
+                                <div class="loginarea-header-one">
+                                        &nbsp;
+                                </div>
+                                <div class="loginarea-header-two">
+                                        <h2>Postgraduate and Direct Admission</h2>
+                                </div>
+                                <div class="loginarea-header-three">
+                                        &nbsp;
+                                </div>					
+
+                                        <div id="loginarea-content">
+                                                <h2>Registration <a href="http://go.warwick.ac.uk/pgapphelp/login" target="_blank"><img src="../images/qmark.gif"/></a></h2>
+
+<script src="Assets.aspx/script/en-GB/Strings" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Common" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Folder" type="text/javascript"></script><div class="SWIFT-Folder-Sections-Area"><table id="SWIFT_Folder_Sections_Area_Table" class="SWIFT-Folder-Sections-Area-Table" cellpadding="0px" cellspacing="0px" border="0px" width="100%"><tr><td valign="top" class="SWIFT-Folder-Sections-Left"><a name="SectionsScrollLeft" href="#SectionsScrollLeft" onclick="SWIFT_Sections_Scroll_Left();"><img src="Assets.aspx/icon/blank" style="border-style: none;" class="SWIFT-Folder-Sections-ScrollButton-Left" alt="&lt;" title="&lt;" /></a></td><td id="SWIFT_Folder_Sections_Area_Cell" valign="top" align="left" width="100%" style="overflow:hidden;"><div id="SWIFT_Section_Scroller" class="SWIFT-Folder-Sections-ScrollArea" style="position:absolute;overflow:hidden;width:100%;"><table id="SWIFT_Section_Holder" class="SWIFT-Folder-Sections-ScrollTable" cellpadding="0px" cellspacing="0px" border="0px" style="position:relative;overflow:hidden;"><tr><td valign="top" nowrap="true"><div class="SWIFT-Folder-Sections-F1" id="SWIFT_Folder_Section_0"><img src="Assets.aspx/icon/blank" alt="Image" title="Image" /></div></td><td valign="top" nowrap="true" class="SWIFT-Folder-Sections-Active" id="SWIFT_Folder_Section_1" title="Register">Register</td><td valign="top" nowrap="true"><div class="SWIFT-Folder-Sections-L1" id="SWIFT_Folder_Section_2"><img src="Assets.aspx/icon/blank" alt="Image" title="Image" /></div></td><td valign="top" width="100%"><div class="SWIFT-Folder-Sections-Empty"><img src="Assets.aspx/icon/blank" alt="Image" title="Image" /></div></td></tr></table></div></td><td valign="top" class="SWIFT-Folder-Sections-Right"><a name="SectionsScrollRight" href="#SectionsScrollRight" onclick="SWIFT_Sections_Scroll_Right();"><img src="Assets.aspx/icon/blank" style="border-style: none;" class="SWIFT-Folder-Sections-ScrollButton-Right" alt="&gt;" title="&gt;" /></a></td></tr></table></div><noscript>JavaScript MUST be enabled in order to view this page!!!</noscript><form id="eConfirmCancelForm" action="" style="display:none;"><input name="FolderID" id="FolderID" type="hidden" value="aGLse34S9BswdZz32dlwP1lZ17tbmtcHqxlh2Vp0RYTUwHEVFzzCsNkXngbNLwVUfVuFfybAlJynUC4UjTH6BQ" /><input name="Action" id="Action" type="hidden" value="Register" /><input name="SessionTimeout" id="SessionTimeout" type="hidden" value="45" /><input name="ExposerVersion" id="ExposerVersion" type="hidden" value="SWIFT.MBPM7 7.0.4785.28074" /><input name="WebClientVersion" id="WebClientVersion" type="hidden" value="SWIFT.WEB 7.0.4785.28106" /></form><script src="Assets.aspx/script/en-GB/Strings" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Common" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/main" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/MicrosoftAjax.debug" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/eField" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/eWorkData" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Keyboard" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Date" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Clip" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Grid" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Dropdown" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/date_format" type="text/javascript"></script><div class="SWIFT-Progress-Indicator" id="SWIFT_Progress_Indicator" style="position:absolute;z-index:1025;display:none;"></div><div id="SWIFT_mainForm" style="position:absolute;width:100%;height:100%"><form name="SWIFT_Form" id="SWIFT_Form" method="post" action="SWIFT.aspx" target="SWIFT_FormProcess3E27D6BD4D6C6793EF65409224FD4142"><input name="SWIFT_HtmlEncoding" id="SWIFT_HtmlEncoding" type="hidden" value="" /><input name="SWIFT_LanguageCode" id="SWIFT_LanguageCode" type="hidden" value="en-GB" /><input name="SWIFT_DateFormat" id="SWIFT_DateFormat" type="hidden" value="dd/MM/yyyy" /><input name="SWIFT_TimeFormat" id="SWIFT_TimeFormat" type="hidden" value="HH:mm" /><input name="SWIFT_NumberDecimalSeparator" id="SWIFT_NumberDecimalSeparator" type="hidden" value="." /><input name="SWIFT_NumberThousandSeparator" id="SWIFT_NumberThousandSeparator" type="hidden" value="," /><input name="SWIFT_FormName" id="SWIFT_FormName" type="hidden" value="Register" /><input name="SWIFT_Engine" id="SWIFT_Engine" type="hidden" value="LJou2dDWqySHEwCEoLwjBHJqVoBMbbP1PyjzhRObXaKX0JihkgGwJ9OOShowan37LgJfCiyUQGtIfI9Nb0SKE3dSfCcEcdydRV-IWpvzPXw1R9OYXpFDfA" /><input name="SWIFT_FolderHash" id="SWIFT_FolderHash" type="hidden" value="3E27D6BD4D6C6793EF65409224FD4142" /><input name="SWIFT_FolderID" id="SWIFT_FolderID" type="hidden" value="FyAHWadJfygPP2MK9vDX47TyIDK8BU9vuvrCjOZCmJOYZ-_xyi1taf11P5I1u7rw2SrfffyXwAS6-aNFX2DaNg" /><input name="SWIFT_ProcedureVersion" id="SWIFT_ProcedureVersion" type="hidden" value="14" /><input name="SWIFT_MapName" id="SWIFT_MapName" type="hidden" value="New User Registration" /><input name="SWIFT_ProcedureName" id="SWIFT_ProcedureName" type="hidden" value="New User Registration" /><input name="SWIFT_ActionName" id="SWIFT_ActionName" type="hidden" value="Register" /><input name="SWIFT_Folder_Is_Child" id="SWIFT_Folder_Is_Child" type="hidden" value="false" /><input name="SWIFT_Folder_Is_New" id="SWIFT_Folder_Is_New" type="hidden" value="True" /><input name="SWIFT_Call" id="SWIFT_Call" type="hidden" value="" /><input name="SWIFT_ExtraCSS" id="SWIFT_ExtraCSS" type="hidden" value="" /><input name="SWIFT_UseFormCssEm" id="SWIFT_UseFormCssEm" type="hidden" value="0" /><input name="SWIFT_EmbeddedCss" id="SWIFT_EmbeddedCss" type="hidden" value="1" /><input name="SWIFT_CalendarCSS" id="SWIFT_CalendarCSS" type="hidden" value="" /><input name="SWIFT_UploaderCSS" id="SWIFT_UploaderCSS" type="hidden" value="" /><input name="SWIFT_DmsBrowserCSS" id="SWIFT_DmsBrowserCSS" type="hidden" value="" /><input name="SWIFT_DmsUploaderCSS" id="SWIFT_DmsUploaderCSS" type="hidden" value="" /><input name="SWIFT_Refill_Trigger" id="SWIFT_Refill_Trigger" type="hidden" value="" /><input name="SWIFT_URL_submit" id="SWIFT_URL_submit" type="hidden" value="Regresult.aspx" /><input name="SWIFT_URL_cancel" id="SWIFT_URL_cancel" type="hidden" value="Regresult.aspx?Cancel=1" /><input name="SWIFT_URL_close" id="SWIFT_URL_close" type="hidden" value="" /><input name="SWIFT_URL_reopen" id="SWIFT_URL_reopen" type="hidden" value="registration.aspx?FolderID=0000000000000000000000003479162" /><input name="SWIFTWizardNextAction" id="SWIFTWizardNextAction" type="hidden" value="" /><div id="Pos_Label4" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:78px;height:17px;width:121px;z-index:1;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label4" style="color:#000000;font-family:Arial;font-size:10pt;z-index:1;"><span id="Label4" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label4');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label4');">Email address:
+</span></div></div><div id="Pos_Label5" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:114px;height:17px;width:65px;z-index:2;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label5" style="color:#000000;font-family:Arial;font-size:10pt;z-index:2;"><span id="Label5" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label5');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label5');">Password:
+</span></div></div><div id="Pos_Label6" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:151px;height:17px;width:121px;z-index:3;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label6" style="color:#000000;font-family:Arial;font-size:10pt;z-index:3;"><span id="Label6" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label6');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label6');">Confirm password:
+</span></div></div><div id="Pos_Label3131" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:266px;height:32px;width:382px;z-index:4;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label3131" style="color:#000000;font-family:Arial;font-size:10pt;z-index:4;"><span id="Label3131" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label3131');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label3131');">Please note: Your account will expire after 12 months of inactivity.  You may re-register at any time.
+</span></div></div><div id="Pos_Label3133" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:20px;height:32px;width:362px;z-index:5;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label3133" style="color:#000000;font-family:Arial;font-size:10pt;z-index:5;"><span id="Label3133" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label3133');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label3133');">Please enter a current Email address and choose a password Note: The password MUST be at least 8 characters in length.
+</span></div></div><div id="Pos_Label61" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:12px;top:187px;height:17px;width:121px;z-index:6;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label61" style="color:#000000;font-family:Arial;font-size:10pt;z-index:6;"><span id="Label61" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label61');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label61');">Date of Birth:
+</span></div></div><div id="Pos_Label3134" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:11px;top:203px;height:17px;width:96px;z-index:7;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label3134" style="color:#000000;font-family:Arial;font-size:8pt;z-index:7;"><span id="Label3134" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label3134');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label3134');">(security question)
+</span></div></div><div id="Pos_Label3135" class="SWIFT-Label-PlaceHolder" style="position:absolute;left:398px;top:186px;height:17px;width:65px;z-index:8;" onclick="SWIFT_HelpOff();"><div id="Lbl_Label3135" style="color:#000000;font-family:Arial;font-size:10pt;z-index:8;"><span id="Label3135" class="SWIFT-Label" tabindex="-1" onclick="SWIFT_HideAllSelectors();" onmouseout="SWIFT_Field_Mouse_Out(this,'Label3135');" onmouseover="SWIFT_Field_Mouse_Over(this,'Label3135');">dd/mm/yyyy
+</span></div></div><div id="Lbl_txtUserName" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:120px;top:80px;z-index:8;text-align:left;width:15px;"><div style="text-align:right;width:15px;white-space:nowrap;"><label id="Caption_txtUserName" for="txtUserName" style="z-index:0;white-space:nowrap;" class="SWIFT-Text-Caption-Required" data-position="Left"><sup class="SWIFT-Field-Required-Char">*</sup></label></div><input name="LblDT_txtUserName" id="LblDT_txtUserName" type="hidden" value="-5" /><input name="LblDL_txtUserName" id="LblDL_txtUserName" type="hidden" value="20" /></div><div id="Pos_txtUserName" style="position:absolute;left:140px;top:75px;width:250px;z-index:10;"><div class="SWIFT-Text-PlaceHolder-Required" id="Hld_txtUserName"><input type="text" id="txtUserName" maxlength="100" name="txtUserName" class="SWIFT-Text-Required" style="width:100%;z-index:0;" value="" tabindex="1" onblur="SWIFT_Field_Blur(this,'txtUserName');" onchange="try{this_checked=SWIFT_CheckText(this,null);SWIFT_Form_Refill('txtUserName');}catch (ex){alert('Client script error in txtUserName.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'txtUserName');" onmouseout="SWIFT_Field_Mouse_Out(this,'txtUserName');" onmouseover="SWIFT_Field_Mouse_Over(this,'txtUserName');" /><input name="txtUserName_mask" id="txtUserName_mask" type="hidden" value="\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b" /></div><input name="txtUserName_value" id="txtUserName_value" type="hidden" value="" /></div><div id="Lbl_txtPassWord" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:120px;top:115px;z-index:8;text-align:left;width:15px;"><div style="text-align:right;width:15px;white-space:nowrap;"><label id="Caption_txtPassWord" for="txtPassWord" style="z-index:0;white-space:nowrap;" class="SWIFT-Text-Caption-Required" data-position="Left"><sup class="SWIFT-Field-Required-Char">*</sup></label></div><input name="LblDT_txtPassWord" id="LblDT_txtPassWord" type="hidden" value="-5" /><input name="LblDL_txtPassWord" id="LblDL_txtPassWord" type="hidden" value="20" /></div><div id="Pos_txtPassWord" style="position:absolute;left:140px;top:110px;width:250px;z-index:11;"><div class="SWIFT-Text-PlaceHolder-Required" id="Hld_txtPassWord"><input type="password" id="txtPassWord" maxlength="100" name="txtPassWord" class="SWIFT-Text-Required" style="width:100%;z-index:0;" value="" tabindex="2" onblur="SWIFT_Field_Blur(this,'txtPassWord');" onchange="try{this_checked=SWIFT_CheckText(this,null);SWIFT_Form_Refill('txtPassWord');}catch (ex){alert('Client script error in txtPassWord.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'txtPassWord');" onmouseout="SWIFT_Field_Mouse_Out(this,'txtPassWord');" onmouseover="SWIFT_Field_Mouse_Over(this,'txtPassWord');" /><input name="txtPassWord_mask" id="txtPassWord_mask" type="hidden" value="" /></div><input name="txtPassWord_value" id="txtPassWord_value" type="hidden" value="" /></div><div id="Lbl_txtConfirmPassword" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:120px;top:152px;z-index:8;text-align:left;width:15px;"><div style="text-align:right;width:15px;white-space:nowrap;"><label id="Caption_txtConfirmPassword" for="txtConfirmPassword" style="z-index:0;white-space:nowrap;" class="SWIFT-Text-Caption-Required" data-position="Left"><sup class="SWIFT-Field-Required-Char">*</sup></label></div><input name="LblDT_txtConfirmPassword" id="LblDT_txtConfirmPassword" type="hidden" value="-5" /><input name="LblDL_txtConfirmPassword" id="LblDL_txtConfirmPassword" type="hidden" value="20" /></div><div id="Pos_txtConfirmPassword" style="position:absolute;left:140px;top:147px;width:250px;z-index:12;"><div class="SWIFT-Text-PlaceHolder-Required" id="Hld_txtConfirmPassword"><input type="password" id="txtConfirmPassword" maxlength="100" name="txtConfirmPassword" class="SWIFT-Text-Required" style="width:100%;z-index:0;" value="" tabindex="3" onblur="SWIFT_Field_Blur(this,'txtConfirmPassword');" onchange="try{this_checked=SWIFT_CheckText(this,null);SWIFT_Form_Refill('txtConfirmPassword');}catch (ex){alert('Client script error in txtConfirmPassword.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'txtConfirmPassword');" onmouseout="SWIFT_Field_Mouse_Out(this,'txtConfirmPassword');" onmouseover="SWIFT_Field_Mouse_Over(this,'txtConfirmPassword');" /><input name="txtConfirmPassword_mask" id="txtConfirmPassword_mask" type="hidden" value="" /></div><input name="txtConfirmPassword_value" id="txtConfirmPassword_value" type="hidden" value="" /></div><div id="Lbl_SWIFTValidationAction" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:167px;top:224px;z-index:8;display:none;text-align:left;width:330px;"><div style="text-align:right;width:330px;white-space:nowrap;"><label id="Caption_SWIFTValidationAction" for="SWIFTValidationAction" style="z-index:0;white-space:nowrap;" class="SWIFT-Text-Caption" data-position="Left">SWIFTValidationAction<sup class="SWIFT-Field-Required-Char">&nbsp;</sup></label></div><input name="LblDT_SWIFTValidationAction" id="LblDT_SWIFTValidationAction" type="hidden" value="-5" /><input name="LblDL_SWIFTValidationAction" id="LblDL_SWIFTValidationAction" type="hidden" value="335" /></div><div id="Pos_SWIFTValidationAction" style="position:absolute;left:502px;top:219px;width:49px;z-index:13;display:none;"><div class="SWIFT-Text-PlaceHolder" id="Hld_SWIFTValidationAction"><input type="text" id="SWIFTValidationAction" maxlength="250" name="SWIFTValidationAction" class="SWIFT-Text" style="width:100%;z-index:0;" value="Validation1" tabindex="4" onblur="SWIFT_Field_Blur(this,'SWIFTValidationAction');" onchange="try{this_checked=SWIFT_CheckText(this,null);}catch (ex){alert('Client script error in SWIFTValidationAction.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'SWIFTValidationAction');" onmouseout="SWIFT_Field_Mouse_Out(this,'SWIFTValidationAction');" onmouseover="SWIFT_Field_Mouse_Over(this,'SWIFTValidationAction');" /><input name="SWIFTValidationAction_mask" id="SWIFTValidationAction_mask" type="hidden" value="" /></div><input name="SWIFTValidationAction_value" id="SWIFTValidationAction_value" type="hidden" value="Validation1" /></div><div id="Lbl_txtUserStatus" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:288px;top:249px;z-index:8;display:none;text-align:left;width:210px;"><div style="text-align:right;width:210px;white-space:nowrap;"><label id="Caption_txtUserStatus" for="txtUserStatus" style="z-index:0;white-space:nowrap;" class="SWIFT-Text-Caption" data-position="Left">txtUserStatus<sup class="SWIFT-Field-Required-Char">&nbsp;</sup></label></div><input name="LblDT_txtUserStatus" id="LblDT_txtUserStatus" type="hidden" value="-5" /><input name="LblDL_txtUserStatus" id="LblDL_txtUserStatus" type="hidden" value="215" /></div><div id="Pos_txtUserStatus" style="position:absolute;left:503px;top:244px;width:39px;z-index:14;display:none;"><div class="SWIFT-Text-PlaceHolder" id="Hld_txtUserStatus"><input type="text" id="txtUserStatus" maxlength="1" name="txtUserStatus" class="SWIFT-Text" style="width:100%;z-index:0;" value="" tabindex="5" onblur="SWIFT_Field_Blur(this,'txtUserStatus');" onchange="try{this_checked=SWIFT_CheckText(this,null);}catch (ex){alert('Client script error in txtUserStatus.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'txtUserStatus');" onmouseout="SWIFT_Field_Mouse_Out(this,'txtUserStatus');" onmouseover="SWIFT_Field_Mouse_Over(this,'txtUserStatus');" /><input name="txtUserStatus_mask" id="txtUserStatus_mask" type="hidden" value="" /></div><input name="txtUserStatus_value" id="txtUserStatus_value" type="hidden" value="" /></div><div id="Pos_SWIFTAlertShow" class="SWIFT-Check-PlaceHolder" style="position:absolute;left:432px;top:272px;width:145px;z-index:15;display:none;" onmouseout="SWIFT_Field_Mouse_Out(this,'SWIFTAlertShow');" onmouseover="SWIFT_Field_Mouse_Over(this,'SWIFTAlertShow');"><span style="white-space:nowrap;"><input type="checkbox" id="SWIFTAlertShow" name="SWIFTAlertShow" class="SWIFT-Check" tabindex="6" value="SWIFTAlertShow" onblur="SWIFT_Field_Blur(this,'SWIFTAlertShow');" onfocus="SWIFT_Field_Focus(this,'SWIFTAlertShow');" /><label for="SWIFTAlertShow" id="Lbl_SWIFTAlertShow" class="SWIFT-Check-Caption" style="z-index:0;">SWIFTAlertShow</label></span><input name="SWIFTAlertShow_value" id="SWIFTAlertShow_value" type="hidden" value="0" /></div><div id="Pos_SWIFTValidationOK" class="SWIFT-Check-PlaceHolder" style="position:absolute;left:553px;top:251px;width:172px;z-index:16;display:none;" onmouseout="SWIFT_Field_Mouse_Out(this,'SWIFTValidationOK');" onmouseover="SWIFT_Field_Mouse_Over(this,'SWIFTValidationOK');"><span style="white-space:nowrap;"><input type="checkbox" id="SWIFTValidationOK" name="SWIFTValidationOK" class="SWIFT-Check" tabindex="7" value="SWIFTValidationOK" onblur="SWIFT_Field_Blur(this,'SWIFTValidationOK');" onfocus="SWIFT_Field_Focus(this,'SWIFTValidationOK');" /><label for="SWIFTValidationOK" id="Lbl_SWIFTValidationOK" class="SWIFT-Check-Caption" style="z-index:0;">SWIFTValidationOK</label></span><input name="SWIFTValidationOK_value" id="SWIFTValidationOK_value" type="hidden" value="0" /></div><div id="Lbl_SWIFTAlert" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:511px;top:66px;z-index:8;display:none;"><div><label id="Caption_SWIFTAlert" for="SWIFTAlert" style="z-index:0;white-space:nowrap;" class="SWIFT-Memo-Caption-Disabled" data-position="Top"><sup class="SWIFT-Field-Required-Char">&nbsp;</sup></label></div><input name="LblDT_SWIFTAlert" id="LblDT_SWIFTAlert" type="hidden" value="1" /><input name="LblDL_SWIFTAlert" id="LblDL_SWIFTAlert" type="hidden" value="0" /></div><div id="Pos_SWIFTAlert" style="position:absolute;left:511px;top:67px;height:147px;width:149px;z-index:17;display:none;"><div class="SWIFT-Memo-PlaceHolder-Disabled" id="Hld_SWIFTAlert"><textarea id="SWIFTAlert" name="SWIFTAlert" class="SWIFT-Memo-Disabled" style="height:143px;width:100%;z-index:0;{resize: none}" readonly="true" tabindex="-1" onblur="try{;}catch (ex){alert('Client script error in SWIFTAlert.onblur : ' + ex);}" onfocus="try{;}catch (ex){alert('Client script error in SWIFTAlert.onfocus : ' + ex);}" onmouseout="try{;}catch (ex){alert('Client script error in SWIFTAlert.onmouseout : ' + ex);}" onmouseover="try{;}catch (ex){alert('Client script error in SWIFTAlert.onmouseover : ' + ex);}"></textarea></div><input name="SWIFTAlert_value" id="SWIFTAlert_value" type="hidden" value="" /></div><div id="Pos_Validation1" class="SWIFT-Button-PlaceHolder" style="position:absolute;left:581px;top:280px;height:25px;width:75px;z-index:18;display:none;"><button type="button" id="Validation1" name="Validation1" class="SWIFT-Button" style="height:25px;width:100%;z-index:0;" tabindex="9" value="Validation1" onblur="SWIFT_Field_Blur(this,'Validation1');" onclick="SWIFT_Form_Refill('Validation1');" onfocus="SWIFT_Field_Focus(this,'Validation1');" onmouseout="SWIFT_Field_Mouse_Out(this,'Validation1');" onmouseover="SWIFT_Field_Mouse_Over(this,'Validation1');"><span>Validation1</span></button></div><div id="Lbl_companyID" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:477px;top:226px;z-index:8;display:none;text-align:left;width:150px;"><div style="text-align:right;width:150px;white-space:nowrap;"><label id="Caption_companyID" for="companyID" style="z-index:0;white-space:nowrap;" class="SWIFT-Number-Caption" data-position="Left">companyID<sup class="SWIFT-Field-Required-Char">&nbsp;</sup></label></div><input name="LblDT_companyID" id="LblDT_companyID" type="hidden" value="-5" /><input name="LblDL_companyID" id="LblDL_companyID" type="hidden" value="155" /></div><div id="Pos_companyID" style="position:absolute;left:632px;top:221px;width:28px;z-index:19;display:none;"><div class="SWIFT-Number-PlaceHolder" id="Hld_companyID"><input id="companyID" name="companyID" class="SWIFT-Number" style="width:100%;text-align:right;z-index:0;" value="0" pattern="&quot;[0-9]*\.[0-9]*&quot;" tabindex="10" onblur="SWIFT_Field_Blur(this,'companyID');" onchange="try{this_checked=SWIFT_CheckNumber(this,null);this_checked=false;}catch (ex){alert('Client script error in companyID.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'companyID');" onkeypress="try{return SWIFT_InputNumber(event);}catch (ex){alert('Client script error in companyID.onkeypress : ' + ex);}" onmouseout="SWIFT_Field_Mouse_Out(this,'companyID');" onmouseover="SWIFT_Field_Mouse_Over(this,'companyID');" /><input name="companyID_decs" id="companyID_decs" type="hidden" value="0" /><input name="companyID_max" id="companyID_max" type="hidden" value="1.79769313486232E+308" /><input name="companyID_min" id="companyID_min" type="hidden" value="-1.79769313486232E+308" /></div><input name="companyID_value" id="companyID_value" type="hidden" value="0" /></div><div id="dtDateOfBirth_Calendar" style="position:absolute;top:184px;left:374px;z-index:20;"><a href="#" onclick="SWIFT_ShowCalendar('dtDateOfBirth','24'); return false;"><img src="Assets.aspx/icon/blank" style="border-style: none;" name="Pic_dtDateOfBirth" id="Pic_dtDateOfBirth" align="top" class="SWIFT-Date-Calendar-Required" alt="Date/Time Picker" title="Date/Time Picker" /></a></div><div id="Lbl_dtDateOfBirth" onclick="SWIFT_HideAllSelectors();" style="position:absolute;left:120px;top:189px;z-index:8;text-align:left;width:15px;"><div style="text-align:right;width:15px;white-space:nowrap;"><label id="Caption_dtDateOfBirth" for="dtDateOfBirth" style="z-index:0;white-space:nowrap;" class="SWIFT-Date-Caption-Required" data-position="Left"><sup class="SWIFT-Field-Required-Char">*</sup></label></div><input name="LblDT_dtDateOfBirth" id="LblDT_dtDateOfBirth" type="hidden" value="-5" /><input name="LblDL_dtDateOfBirth" id="LblDL_dtDateOfBirth" type="hidden" value="20" /></div><div id="Pos_dtDateOfBirth" style="position:absolute;left:140px;top:184px;width:230px;z-index:20;"><div id="Hld_dtDateOfBirth" class="SWIFT-Date-PlaceHolder-Required" style="white-space:nowrap;"><input id="dtDateOfBirth" name="dtDateOfBirth" class="SWIFT-Date-Required" style="width:100%;z-index:0;" value="" max="9999-12-31" min="1899-12-30" required="required" x-blackberry-focusable="true" tabindex="11" onblur="SWIFT_Field_Blur(this,'dtDateOfBirth');if(SWIFT_CalendarShownFor==this){return;};" onchange="try{this_checked=SWIFT_CheckDate(this);SWIFT_Form_Refill('dtDateOfBirth');this_checked=false;}catch (ex){alert('Client script error in dtDateOfBirth.onchange : ' + ex);}" onfocus="SWIFT_Field_Focus(this,'dtDateOfBirth');if(SWIFT_CalendarShownFor==this){return;};" onkeydown="try{return SWIFT_InputDate(event);}catch (ex){alert('Client script error in dtDateOfBirth.onkeydown : ' + ex);}" onmouseout="SWIFT_Field_Mouse_Out(this,'dtDateOfBirth');" onmouseover="SWIFT_Field_Mouse_Over(this,'dtDateOfBirth');" /><input name="dtDateOfBirth_type" id="dtDateOfBirth_type" type="hidden" value="date" /><input name="dtDateOfBirth_max" id="dtDateOfBirth_max" type="hidden" value="9999-12-31T23:59:59" /><input name="dtDateOfBirth_min" id="dtDateOfBirth_min" type="hidden" value="1899-12-30T00:00:00" /></div><input name="dtDateOfBirth_value" id="dtDateOfBirth_value" type="hidden" value="" /></div><div id="Pos_Button1" class="SWIFT-Button-PlaceHolder" style="position:absolute;left:140px;top:227px;height:25px;width:100px;z-index:21;"><button type="button" id="Button1" name="Button1" class="SWIFT-Button" style="height:25px;width:100%;z-index:0;" tabindex="12" value="Register" onblur="SWIFT_Field_Blur(this,'Button1');" onclick="SWIFT_Form_Submit();" onfocus="SWIFT_Field_Focus(this,'Button1');" onmouseout="SWIFT_Field_Mouse_Out(this,'Button1');" onmouseover="SWIFT_Field_Mouse_Over(this,'Button1');"><span>Register</span></button></div><div id="Pos_Button2" class="SWIFT-Button-PlaceHolder" style="position:absolute;left:254px;top:227px;height:25px;width:100px;z-index:22;"><button type="button" id="Button2" name="Button2" class="SWIFT-Button" style="height:25px;width:100%;z-index:0;" tabindex="13" value="Cancel" onblur="SWIFT_Field_Blur(this,'Button2');" onclick="SWIFT_Form_Cancel();" onfocus="SWIFT_Field_Focus(this,'Button2');" onmouseout="SWIFT_Field_Mouse_Out(this,'Button2');" onmouseover="SWIFT_Field_Mouse_Over(this,'Button2');"><span>Cancel</span></button></div></form><div id="SWIFT_grid_helper" style="position:absolute;top:-350px;left:-350px;visibility:hidden;z-index:0;"><input id="SWIFT_grid_helper_field" name="SWIFT_grid_helper_field" class="SWIFT-GridEditable-Cell-Field-Focus" style="border-width:0px;width:100%;height:100%" onkeydown="return SWIFT_InputGrid(event);" onkeyup="SWIFT_TypeGridSelect(this);" onkeypress="return SWIFT_TypeGrid(event);" /><input name="SWIFT_grid_helper_field_name" id="SWIFT_grid_helper_field_name" type="hidden" value="" /><input name="SWIFT_grid_helper_field_type" id="SWIFT_grid_helper_field_type" type="hidden" value="" /></div><div id="SWIFT_uploader" style="position:absolute;top:-350px;left:-350px;visibility:hidden;z-index:0;border:1px solid #000000;"><iframe id="SWIFT_uploader_frame" name="SWIFT_uploader_frame" style="visibility:hidden;" width="300px" height="250px" scrolling="no" frameborder="0"></iframe></div><div id="SWIFT_calendar" style="position:absolute;top:-350px;left:-350px;visibility:hidden;z-index:0;border:1px solid #000000;"><iframe id="SWIFT_calendar_frame" name="SWIFT_calendar_frame" style="visibility:hidden;" width="142px" height="0px" scrolling="no" frameborder="0"></iframe></div>﻿<div id="SWIFT_DMS_Browser" class="SWIFT-Popup-Container">
+<div class="SWIFT-Popup-Mask"></div>
+<div class="SWIFT-Popup-Shell">
+<div class="SWIFT-Popup-Dialog">
+<div class="SWIFT-Popup-Title">
+<div class="SWIFT-Popup-Icon">
+</div>
+<div class="SWIFT-Popup-Caption">
+DMS Browser
+</div>
+<div class="SWIFT-Popup-Close" onclick="SWIFT_DMS_Hide();">
+</div>
+</div>
+<div class="SWIFT-Popup-Client-Wrapper">
+<div class="SWIFT-Popup-Client">
+<div class="SWIFT-DMS-AddressBar">Address: <input id="SWIFT_DMS_Address" type="text" /><input type="button" class="SWIFT-DMS-button" id="SWIFT_DMS_GoButton" value="Go" onclick="SWIFT_DMS_Go()" /></div>
+<div class="SWIFT-DMS-Tree-Container">
+<div class="SWIFT-DMSStore"><div class="lines"><div class="contract"></div></div><div class="icon"></div><div class="label"><a id="SWIFT_DMS_Root_Address">http://ultima.brdee.com/Shared Documents</a></div>
+<ul id="SWIFT_DMS_Root">
+</ul>
+</div>
+</div>
+<div class="SWIFT-DMS-Actions"><input type="button" class="SWIFT-DMS-button" value="Cancel" onclick="SWIFT_DMS_Hide();" /><input type="button" class="SWIFT-DMS-button" value="Ok" onclick="SWIFT_DMS_Submit();" /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+﻿<div id="SWIFT_DMS_Uploader" class="SWIFT-Popup-Container">
+<div class="SWIFT-Popup-Mask"></div>
+<div class="SWIFT-Popup-Shell">
+<div class="SWIFT-Upload-Dialog">
+    <div class="SWIFT-Popup-Title">
+    <div class="SWIFT-Upload-Icon">
+    </div>
+    <div class="SWIFT-Popup-Caption">
+    DMS Upload
+    </div>
+    <div class="SWIFT-Popup-Close" onclick="SWIFT_DMS_Hide();">
+    </div>
+    </div>
+    <div class="SWIFT-Popup-Client-Wrapper">
+    <div class="SWIFT-Popup-Client">
+    <form>
+    <div id="SWIFT-DMS-Upload-Area">
+    
+    <div class="SWIFT-Upload-Row">
+    <div class="fileinputs">
+    <a>File Name:</a>
+    <input type="file" class="SWIFT_File" name="file" onchange="document.getElementById('SWIFT_Fake_File_Input').value = this.value.replace(/^C:\\fakepath\\/i, '');" onmouseover="document.getElementById('SWIFT_Fake_File_Button').className = 'button-Hover'" onmouseout="document.getElementById('SWIFT_Fake_File_Button').className = 'button'" />
+    	<div class="fakefile">
+		<input id="SWIFT_Fake_File_Input" />
+		<input id="SWIFT_Fake_File_Button" type="button" class="button" value="Browse..." />
+	</div>
+    </div>
+    </div>
+    <div class="SWIFT-Upload-Row">
+    <a>Location:</a>
+    <input id="SWIFT_Location" type="input" class="SWIFT-Location" name="SWIFT-Location-Input" />
+    <input class="button" type="button" value="Browse..." />
+    </div>
+    <div class="SWIFT-Overwrite-Row">
+    <input id="SWIFT_Overwrite_Check" type="checkbox" />
+    <label for="SWIFT_Overwrite_Check">Overwrite existing document?</label>
+    </div>
+    </div>     
+    <div class="SWIFT-DMS-Actions"><input class="button" type="button" value="Cancel" onclick="SWIFT_DMS_Uploader_Hide();" /><input class="button" type="button" value="Ok" onclick="SWIFT_DMS_Uploader_Submit();" /></div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+<ul class="swift-warning" id="Swift_Balloon"><li><div class="swift-balloon" id="swift_top_triangle"> </div></li><li> <div class="swift-balloon-wrapper" id="Swift_Wrapper"><div class="swift-balloon" id="swift_balloon_top_l"> </div><div class="swift-balloon" id="swift_balloon_top_r"> </div><div class="swift-balloon" id="swift_hide" onclick="SWIFT_HideBalloon()"> </div><div class="swift-top-padding" id="Swift_Padding_Top"> </div><div class="swift-balloon-middle" id="Swift_Text"> </div><div class="swift-balloon" id="swift_balloon_bottom_l"> </div><div class="swift-balloon" id="swift_balloon_bottom_r"> </div><div class="swift-balloon" id="swift_bottom_triangle"> </div><div class="swift-bottom-padding" id="Swift_Padding_Bottom"> </div></div></li></ul><iframe id="SWIFT_FormProcess3E27D6BD4D6C6793EF65409224FD4142" name="SWIFT_FormProcess3E27D6BD4D6C6793EF65409224FD4142" style="visibility:hidden;" width="1px" height="1px"></iframe></div><div id="SWIFT_FormAreaTable" onclick="SWIFT_HideAllSelectors();" style="border:0px solid transparent;width:677px;height:393px;">&nbsp;</div><script type="text/javascript">
+var eworkData=new eworkDataObj('', '', 'Register', '0000000000000000000000003479162', false, true, 'New User Registration');
+var SWIFT_FormWidth=677;
+var SWIFT_FormHeight=393;
+var txtUserName=document.SWIFT_Form["txtUserName"];
+var txtPassWord=document.SWIFT_Form["txtPassWord"];
+var txtConfirmPassword=document.SWIFT_Form["txtConfirmPassword"];
+var SWIFTValidationAction=document.SWIFT_Form["SWIFTValidationAction"];
+var txtUserStatus=document.SWIFT_Form["txtUserStatus"];
+var SWIFTAlertShow=document.SWIFT_Form["SWIFTAlertShow"];
+var SWIFTValidationOK=document.SWIFT_Form["SWIFTValidationOK"];
+var SWIFTAlert=document.SWIFT_Form["SWIFTAlert"];
+var Validation1=document.SWIFT_Form["Validation1"];
+var companyID=document.SWIFT_Form["companyID"];
+var dtDateOfBirth=document.SWIFT_Form["dtDateOfBirth"];
+var Button1=document.SWIFT_Form["Button1"];
+var Button2=document.SWIFT_Form["Button2"];
+function SWIFT_FillEworkObjects(){
+"use strict";
+eworkData.AddField("Label4", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label5", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label6", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label3131", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label3133", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label61", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label3134", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("Label3135", "Label", "optional", -1, 0, false,  0, 0);
+eworkData.AddField("txtUserName", "Text", "mandatory", 1, 1, false,  0, 0);
+eworkData.AddField("txtPassWord", "Text", "mandatory", 2, 1, false,  0, 0);
+eworkData.AddField("txtConfirmPassword", "Text", "mandatory", 3, 1, false,  0, 0);
+eworkData.AddField("SWIFTValidationAction", "Text", "optional", 4, 0, false,  0, 1);
+eworkData.AddField("txtUserStatus", "Text", "optional", 5, 0, false,  0, 1);
+eworkData.AddField("SWIFTAlertShow", "Check", "optional", 6, 0, false,  0, 1);
+eworkData.AddField("SWIFTValidationOK", "Check", "optional", 7, 0, false,  0, 1);
+eworkData.AddField("SWIFTAlert", "Memo", "readonly", 8, 0, false,  0, 1);
+eworkData.AddField("Validation1", "Button", "optional", 9, 1, false,  0, 1);
+eworkData.AddField("companyID", "Number", "optional", 10, 0, false,  0, 1);
+eworkData.AddField("dtDateOfBirth", "Date", "mandatory", 11, 1, false,  0, 0);
+eworkData.AddField("Button1", "Button", "optional", 12, 0, false,  0, 0);
+eworkData.AddField("Button2", "Button", "optional", 13, 0, false,  0, 0);
+}
+function SWIFT_RunOnLoadOnFrameset()
+{
+"use strict";
+if(parent && parent.SWIFT_Show_Form)
+{
+	parent.SWIFT_Show_Form(true);
+	if(window.SWIFT_FocusFirstField){SWIFT_FocusFirstField();}
+}else{
+	if(window.SWIFT_FocusFirstField){SWIFT_FocusFirstField();}
+}
+}
+var oldLoad=window.onload;
+function SWIFT_RunOnLoad()
+{
+"use strict";
+if(oldLoad){oldLoad();}
+SWIFT_FillEworkObjects();
+SWIFT_ResizeFormArea();
+SWIFT_RunOnLoadOnFrameset();
+}
+window.onload=SWIFT_RunOnLoad;
+function SWIFT_RunOnSubmit()
+{
+"use strict";
+	var success = SWIFT_CheckMandatory();
+	if(typeof success === 'string'){alert('Validation has failed for the  following fields:\n\n' + success);
+	return false;
+	}
+	else{
+	
+	if(!success)
+	{
+		SWIFT_Alert("The form could not be submitted. Please check the error messages on the form and then try again.");
+		return false;
+	}
+	}
+		return true;
+}
+function SWIFT_CheckVisibility(itm)
+{
+"use strict";
+	SWIFT_UpdateVisibilityConditions();
+}
+function SWIFT_UpdateVisibilityConditions()
+{
+"use strict";
+}
+function SWIFT_MoveTop(itm)
+{
+"use strict";
+}
+var SWIFT_MoveTops=[];
+function SWIFT_MoveTopTrigger(itm)
+{
+"use strict";}
+function SWIFT_MoveLeft(itm)
+{
+"use strict";
+}
+var SWIFT_MoveLefts=[];
+function SWIFT_MoveLeftTrigger(itm)
+{
+"use strict";}
+
+</script><script src="Attachments.aspx/script/Procedure/New%c2%a6User%c2%a6Registration/14/en-GB/Client.js" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Strings" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Common" type="text/javascript"></script><script src="Assets.aspx/script/en-GB/Folder" type="text/javascript"></script><table class="SWIFT-Folder-Actions-Area" cellpadding="0px" cellspacing="0px" border="0px" width="100%"><tr><td class="SWIFT-Folder-Actions-Area-Buttons-1" valign="top" nowrap="true" width="100%"><button type="button" id="SWIFT_Folder_Button_Cancel" name="SWIFT_Folder_Button_Cancel" title="Cancel" class="SWIFT-Folder-Button-Cancel" style="cursor:pointer;" value="Cancel" onclick="if(window.SWIFT_Form_Cancel){SWIFT_Form_Cancel();}; return false;"><span>Cancel</span></button></td><td class="SWIFT-Folder-Actions-Area-Actions" valign="top" width="100%" style="display:none;">;</td><td class="SWIFT-Folder-Actions-Area-Buttons-2" valign="top" nowrap="true"><button type="button" id="SWIFT_Folder_Button_Submit" name="SWIFT_Folder_Button_Submit" title="Submit" class="SWIFT-Folder-Button-Submit" style="cursor:pointer;" value="Submit" onclick="if(window.SWIFT_Form_Submit){SWIFT_Form_Submit();}; return false;"><span>Submit</span></button></td></tr></table>
+					</div>
+
+
+                                <div id="loginarea-footer">
+                                        <div id="loginarea-footer-inner">
+					<br />***<br />*** Postgraduate Courses<br />***<br />Postgraduate Admissions Service, Student Admissions and Recruitment Office, University House, University of Warwick, Coventry CV4 8UW. <br />Enquiry form: <a href="http://www.warwick.ac.uk/go/contactpgadmissions">www.warwick.ac.uk/go/contactpgadmissions</a>   Telephone: +44 (0)24 765 24585<br />
+					<br />***<br />*** Warwick International Foundation Programme<br />***<br />Warwick IFP Team, International Office, University House, University of Warwick, Coventry CV4 8UW. <br />Email: <a href="mailto:ifp@warwick.ac.uk">ifp@warwick.ac.uk</a>   Telephone: +44 (0)24 765 23003
+					</div>
+				</div>
+                </div>
+        </div>
+
+</body>
+</html>

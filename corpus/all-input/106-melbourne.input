@@ -1,0 +1,148 @@
+[
+  {
+    "dom": "<input id=\"ctl00_content_eappart_personal_txtgvnname_inputcontrol\" maxlength=\"40\" name=\"ctl00$content$eappart_personal$txtgvnname$inputcontrol\" size=\"40\" title=\"the applicant's given name.\" type=\"text\"/>", 
+    "feature": "given name name ctl00 content eappart personal txtgvnname inputcontrol type text id ctl00 content eappart personal txtgvnname inputcontrol maxlength 40", 
+    "rule": {
+      "id": ["gvnname"], 
+      "name": ["gvnname"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_personal_txtothname_inputcontrol\" maxlength=\"40\" name=\"ctl00$content$eappart_personal$txtothname$inputcontrol\" size=\"40\" title=\"the applicant's other given names (if any).\" type=\"text\"/>", 
+    "feature": "other given name s name ctl00 content eappart personal txtothname inputcontrol type text id ctl00 content eappart personal txtothname inputcontrol maxlength 40", 
+    "rule": {
+      "id": ["othname"], 
+      "name": ["othname"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_personal_txtprefname_inputcontrol\" maxlength=\"40\" name=\"ctl00$content$eappart_personal$txtprefname$inputcontrol\" size=\"40\" title=\"the applicant's preferred name.\" type=\"text\"/>", 
+    "feature": "preferred given name name ctl00 content eappart personal txtprefname inputcontrol type text id ctl00 content eappart personal txtprefname inputcontrol maxlength 40", 
+    "rule": {
+      "id": ["fname"], 
+      "name": ["fname"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_personal_txtfamname_inputcontrol\" maxlength=\"80\" name=\"ctl00$content$eappart_personal$txtfamname$inputcontrol\" size=\"80\" title=\"the applicant's family name.\" type=\"text\"/>", 
+    "feature": "family name must be entered name ctl00 content eappart personal txtfamname inputcontrol type text id ctl00 content eappart personal txtfamname inputcontrol maxlength 80", 
+    "rule": {
+      "id": ["famname"], 
+      "name": ["famname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_personal_txtprevfamname_inputcontrol\" maxlength=\"40\" name=\"ctl00$content$eappart_personal$txtprevfamname$inputcontrol\" size=\"40\" title=\"the applicant's previous family name, if applicable.\" type=\"text\"/>", 
+    "feature": "previous family name name ctl00 content eappart personal txtprevfamname inputcontrol type text id ctl00 content eappart personal txtprevfamname inputcontrol maxlength 40", 
+    "rule": {
+      "id": ["famname"], 
+      "name": ["famname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_contact_txtemail_inputcontrol\" maxlength=\"255\" name=\"ctl00$content$eappart_contact$txtemail$inputcontrol\" size=\"255\" title=\"the applicant's email address.\" type=\"text\"/>", 
+    "feature": "email address must be entered the entered email address does not appear to be a validly formed email address name ctl00 content eappart contact txtemail inputcontrol type text id ctl00 content eappart contact txtemail inputcontrol maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_contact_txtemailconfirm_inputcontrol\" maxlength=\"255\" name=\"ctl00$content$eappart_contact$txtemailconfirm$inputcontrol\" size=\"255\" title=\"please retype your email address.\" type=\"text\"/>", 
+    "feature": "confirm email address must be entered the confirm email doesn t match your email name ctl00 content eappart contact txtemailconfirm inputcontrol type text id ctl00 content eappart contact txtemailconfirm inputcontrol maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_contact_repphone_ctl00_txtphone_inputcontrol\" maxlength=\"20\" name=\"ctl00$content$eappart_contact$repphone$ctl00$txtphone$inputcontrol\" type=\"text\"/>", 
+    "feature": "home phone type text id ctl00 content eappart contact repphone ctl00 txtphone inputcontrol name ctl00 content eappart contact repphone ctl00 txtphone inputcontrol maxlength 20", 
+    "rule": {
+      "id": ["phone"], 
+      "name": ["phone"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_contact_repphone_ctl01_txtphone_inputcontrol\" maxlength=\"20\" name=\"ctl00$content$eappart_contact$repphone$ctl01$txtphone$inputcontrol\" type=\"text\"/>", 
+    "feature": "work phone type text id ctl00 content eappart contact repphone ctl01 txtphone inputcontrol name ctl00 content eappart contact repphone ctl01 txtphone inputcontrol maxlength 20", 
+    "rule": {
+      "id": ["phone"], 
+      "name": ["phone"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_contact_repphone_ctl02_txtphone_inputcontrol\" maxlength=\"20\" name=\"ctl00$content$eappart_contact$repphone$ctl02$txtphone$inputcontrol\" type=\"text\"/>", 
+    "feature": "mobile phone type text id ctl00 content eappart contact repphone ctl02 txtphone inputcontrol name ctl00 content eappart contact repphone ctl02 txtphone inputcontrol maxlength 20", 
+    "rule": {
+      "id": ["phone"], 
+      "name": ["phone"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrline1_inputcontrol\" maxlength=\"50\" name=\"ctl00$content$eappart_address$txtaddrline1$inputcontrol\" size=\"50\" title=\"the first line of the applicant's address\" type=\"text\"/>", 
+    "feature": "address line 1 must be entered name ctl00 content eappart address txtaddrline1 inputcontrol type text id ctl00 content eappart address txtaddrline1 inputcontrol maxlength 50", 
+    "rule": {
+      "id": ["addrline1"], 
+      "name": ["addrline1"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrline2_inputcontrol\" maxlength=\"50\" name=\"ctl00$content$eappart_address$txtaddrline2$inputcontrol\" size=\"50\" title=\"the second line of the applicant's address\" type=\"text\"/>", 
+    "feature": "address line 2 name ctl00 content eappart address txtaddrline2 inputcontrol type text id ctl00 content eappart address txtaddrline2 inputcontrol maxlength 50", 
+    "rule": {
+      "id": ["addrline2"], 
+      "name": ["addrline2"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrline3_inputcontrol\" maxlength=\"50\" name=\"ctl00$content$eappart_address$txtaddrline3$inputcontrol\" size=\"50\" title=\"the third line of the applicant's address\" type=\"text\"/>", 
+    "feature": "address line 3 name ctl00 content eappart address txtaddrline3 inputcontrol type text id ctl00 content eappart address txtaddrline3 inputcontrol maxlength 50", 
+    "rule": {
+      "id": ["addrline3"], 
+      "name": ["addrline3"]
+    }, 
+    "type": "street-line-3"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrsuburb_inputcontrol\" maxlength=\"50\" name=\"ctl00$content$eappart_address$txtaddrsuburb$inputcontrol\" size=\"50\" title=\"the suburb/town of the applicant's address\" type=\"text\"/>", 
+    "feature": "suburb town must be entered name ctl00 content eappart address txtaddrsuburb inputcontrol type text id ctl00 content eappart address txtaddrsuburb inputcontrol maxlength 50", 
+    "rule": {
+      "id": ["suburb"], 
+      "name": ["suburb"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrstate_inputcontrol\" maxlength=\"40\" name=\"ctl00$content$eappart_address$txtaddrstate$inputcontrol\" size=\"40\" title=\"the state of the applicant's address\" type=\"text\"/>", 
+    "feature": "state name ctl00 content eappart address txtaddrstate inputcontrol type text id ctl00 content eappart address txtaddrstate inputcontrol maxlength 40", 
+    "rule": {
+      "id": ["state"], 
+      "name": ["state"]
+    }, 
+    "type": "state"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_eappart_address_txtaddrpostcode_inputcontrol\" maxlength=\"15\" name=\"ctl00$content$eappart_address$txtaddrpostcode$inputcontrol\" size=\"15\" title=\"the postcode of the applicant's address\" type=\"text\"/>", 
+    "feature": "postcode name ctl00 content eappart address txtaddrpostcode inputcontrol type text id ctl00 content eappart address txtaddrpostcode inputcontrol maxlength 15", 
+    "rule": {
+      "id": ["postcode"], 
+      "name": ["postcode"]
+    }, 
+    "type": "zipcode"
+  }
+]

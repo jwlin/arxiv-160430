@@ -1,0 +1,648 @@
+
+<html>
+	<head>
+		<title>VZ CollegeApp: USF: Apply Now!</title>
+		
+		<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+		<meta content="Global" name="Distribution">
+		<meta content="Tue, 01 Jun 1999 19:58:02 GMT" name="Expires">
+		<meta content="1" name="Revisit-After">
+		<link href="https://secure.vzcollegeapp.com/usf/srcs/calendar.css" rel="stylesheet" type="text/css">
+		<link href="https://secure.vzcollegeapp.com/usf/srcs/studentdefault.css" rel="stylesheet" type="text/css">
+		
+		<LINK REL="icon" HREF="https://secure.vzcollegeapp.com/usf/images/iconbrowser.ico" TYPE="image/ico">
+		<script language="JavaScript" src="https://secure.vzcollegeapp.com/usf/srcs/autotab.js" type="text/JavaScript"></script>
+		<script language="JavaScript" src="https://secure.vzcollegeapp.com/usf/srcs/calendar.js" type="text/JavaScript"></script>
+		<script language="JavaScript" src="https://secure.vzcollegeapp.com/usf/srcs/default.js" type="text/JavaScript"></script>
+		<script language="JavaScript" src="https://secure.vzcollegeapp.com/usf/srcs/errormanager.js" type="text/JavaScript"></script>
+		<noscript><meta content="1;URL=https://secure.vzcollegeapp.com/usf/error.aspx?eid=1" http-equiv="refresh"></noscript>
+		<script language="javascript" type="text/javascript">
+			document.onkeypress =
+				function (e) 
+				{
+					var c = document.layers ? e.which 
+							: document.all ? event.keyCode
+							: e.keyCode;
+												
+					if (c == '13')
+					{
+						switch (parseInt (GetElementValue ('InputToActivate')))
+						{
+							case 1:
+								Save ('Insert');
+								break;
+							case 2:
+								SignIn ();
+								break;
+							default:
+								break;
+						}
+					}
+						
+					return true;
+				};
+		</script>
+		<script language="javascript" type="text/javascript">
+			function OnLoad_handler ()
+			{
+				SetElements ();
+				
+				if (!IsBlank ('TextBoxSignInEmailAddress')) SetFocus ('SignInPassword','TextBox'); 
+				else SetFocus ('FirstName','TextBox');
+				
+				return true;
+			}
+			function Save (ProcessTypeID)
+			{
+				SetElements ();
+				
+				var itsAllGood = true;
+
+				// BEGIN My Account
+				if (IsBlank ('TextBoxPasswordRetype')){itsAllGood = false;SetElement (itsAllGood,'PasswordRetype','TextBox','This is a required field.');}
+				if (IsBlank ('TextBoxPassword')){itsAllGood = false;SetElement (itsAllGood,'Password','TextBox','This is a required field.');}
+				else
+				{
+					if (AreEqual ('TextBoxPassword','TextBoxPasswordRetype'))
+					{
+						if (!IsPassword ('TextBoxPassword'))
+						{
+							itsAllGood = false;
+							SetElement (itsAllGood,'Password','TextBox','The password supplied does not meet the minimum complexity requirements. Please select another password that meets all of the following criteria:<br/> - contains at least 6 characters<br/> - contains at least one english uppercase character (A through Z)<br/> - contains at least one english lowercase character (a through z)<br/> - contains at least one numeral (0 through 9)<br/><br/>Type a password which meets these requirement in both text boxes.')
+						}
+					}
+					else
+					{
+						itsAllGood = false;
+						// SetElement (itsAllGood,'PasswordRetype','TextBox','The password and retyped password do not match.');
+						SetElement (itsAllGood,'Password','TextBox','The password supplied does not match the retyped password.');
+					}
+				}
+				if (IsBlank ('TextBoxEmailAddressRetype')){itsAllGood = false;SetElement (itsAllGood,'EmailAddressRetype','TextBox','This is a required field.');}
+				if (IsBlank ('TextBoxEmailAddress')){itsAllGood = false;SetElement (itsAllGood,'EmailAddress','TextBox','This is a required field.');}
+				else
+				{
+					if (AreEqual ('TextBoxEmailAddress','TextBoxEmailAddressRetype'))
+					{
+						if (!IsEmailAddress ('TextBoxEmailAddress'))
+						{
+							itsAllGood = false;
+							SetElement (itsAllGood,'EmailAddress','TextBox','Invalid e-mail address.');
+						}
+					}
+					else
+					{
+						itsAllGood = false;
+						// SetElement (itsAllGood,'EmailAddressRetype','TextBox','The e-mail address supplied does not match the retyped e-mail address.');
+						SetElement (itsAllGood,'EmailAddress','TextBox','The e-mail address supplied does not match the retyped e-mail address.');
+					}
+				}
+				// END My Account
+
+				// BEGIN Personal Information
+				if (IsBlank ('TextBoxLastName')){itsAllGood = false;SetElement (itsAllGood,'LastName','TextBox','This is a required field.');}
+				if (IsBlank ('TextBoxFirstName')){itsAllGood = false;SetElement (itsAllGood,'FirstName','TextBox','This is a required field.');}
+				// END Personal Information
+				
+				if (itsAllGood)
+				{
+					document.getElementById ('InputHiddenProcessType').value = ProcessTypeID;
+					document.getElementById ('FormDefault').submit ();
+				}
+				else
+					return false;
+			}
+			function SetElements ()
+			{	
+				// BEGIN My Account
+				SetElement (true,'PasswordRetype','TextBox','');
+				SetElement (true,'Password','TextBox','');
+				SetElement (true,'EmailAddressRetype','TextBox','');
+				SetElement (true,'EmailAddress','TextBox','');
+				// END My Account
+				
+				// BEGIN Personal Information
+				SetElement (true,'LastName','TextBox','');
+				SetElement (true,'FirstName','TextBox','');
+				// END Personal Information
+				
+				return true;
+			}
+			function SignIn ()
+			{
+				SetElementSrc ('ImageTextBoxEmailAddress', GetElementValue ('URL') + '/images/icons/icontextboxusername.gif');
+				SetElementClassName ('TextBoxSignInEmailAddress', 'InputEmailAddress');
+				SetElementClassName ('TextBoxSignInPassword', 'Input');
+				
+				if (IsBlank ('TextBoxSignInEmailAddress')) {alert ('EmailAddress is a required field.');SetElementSrc ('ImageTextBoxEmailAddress', GetElementValue ('URL') + '/images/icons/icontextboxusernameerror.gif');SetElementClassName ('TextBoxSignInEmailAddress', 'InputEmailAddressError');SetFocus ('SignInEmailAddress', 'TextBox');}
+				else if (IsBlank ('TextBoxSignInPassword')) {alert ('Password is a required field.');SetElementClassName ('TextBoxSignInPassword', 'InputError');SetFocus ('SignInPassword', 'TextBox');}
+				else
+				{
+					document.getElementById ('InputHiddenProcessType').value = 'SignIn';
+					document.getElementById ('FormDefault').submit ();
+				}
+			}
+		</script>    
+	</head>
+	<body onload="OnLoad_handler (); return true;"> 
+		
+		<form name="FormDefault" method="post" action="./default.aspx?cid=87&amp;ltid=1" id="FormDefault" onsubmit="return false;">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MTQ4NTY2NjEPZBYEZg9kFgJmDxYCHgRUZXh0ZWQCAQ9kFhACBw9kFgQCAg8WAh8AZWQCBg8PFgIeB1Zpc2libGVnZGQCCA9kFgICBA8PFgIfAWdkZAIJDxYCHwAFtwU8dGFibGUgY2xhc3M9Ik1lc3NhZ2VJbnN0cnVjdGlvbnMiPgo8dHI+Cjx0ZCBjbGFzcz0iTWVzc2FnZUluc3RydWN0aW9ucyI+Cjx0YWJsZSBjZWxscGFkZGluZz0iMiIgY2VsbHNwYWNpbmc9IjIiPgo8dHI+Cjx0ZCBjbGFzcz0iTWVzc2FnZUluc3RydWN0aW9uc1RleHQiPkFwcGx5IE5vdyEgIFRoYW5rIHlvdSBmb3IgYXBwbHlpbmcgZm9yIGFkbWlzc2lvbi4gIFBsZWFzZSBzZXQgYXNpZGUgYXBwcm94aW1hdGVseSAzMCBtaW51dGVzIHRvIGNvbXBsZXRlIHRoZSBhcHBsaWNhdGlvbiBhbmQgYXR0YWNoIHN1cHBvcnRpbmcgZG9jdW1lbnRzLiAgWW91IG1heSBzYXZlIHdoYXQgeW91IGhhdmUgZW50ZXJlZCBhbmQgcmV0dXJuIHRvIHRoZSBhcHBsaWNhdGlvbiBhdCBhbnkgdGltZSBpbiB0aGUgZnV0dXJlLiBBZnRlciBzdWJtaXR0aW5nIHRoZSBhcHBsaWNhdGlvbiB5b3Ugd2lsbCBiZSBhYmxlIHRvIHBheSB0aGUgJDMwIChVU0QpIGFwcGxpY2F0aW9uIGZlZSBieSA8Yj5jcmVkaXQgY2FyZDwvYj4gKERpc2NvdmVyLCBWaXNhLCBNYXN0ZXJDYXJkKSBvciA8Yj5FLWNoZWNrPC9iPi48L3RkPgo8L3RyPgo8L3RhYmxlPgo8L3RkPgo8L3RyPgo8L3RhYmxlPgo8dGFibGUgY2xhc3M9IlNwYWNlciIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkIGNsYXNzPSJTcGFjZXIiPjwvdGQ+PC90cj48L3RhYmxlPmQCCw8WAh8ABf4HPHRhYmxlIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgd2lkdGg9IjEwMCUiPgo8dHI+Cjx0ZCB3aWR0aD0iMTAwJSI+PHRhYmxlIGNsYXNzPSJTdWJUaXRsZSI+PHRyPjx0ZCBjbGFzcz0iU3ViVGl0bGUiPlBlcnNvbmFsIEluZm9ybWF0aW9uPC90ZD48dGQgY2xhc3M9IlN1YlRpdGxlIj48ZGl2IGlkPSJEaXZIZWxwMUljb24iIG9uY2xpY2s9IlNob3dIZWxwICgnMScsICcnKTsgcmV0dXJuIHRydWU7IiBzdHlsZT0iY3Vyc29yOnBvaW50ZXI7Ij48aW1nIGFsdD0iSGVscCEiIHRpdGxlPSJIZWxwISIgYm9yZGVyPSIwIiBzcmM9Imh0dHBzOi8vc2VjdXJlLnZ6Y29sbGVnZWFwcC5jb20vdXNmL2ltYWdlcy9pY29ucy9pY29uaGVscC5naWYiIC8+PC9kaXY+PC90ZD48L3RyPjwvdGFibGU+PC90ZD4KPC90cj4KPC90YWJsZT4KPHRhYmxlIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgd2lkdGg9IjEwMCUiIHN0eWxlPSJwYWRkaW5nLWxlZnQ6MTJweDtwYWRkaW5nLXJpZ2h0OjEycHg7Ij4KPHRyPgo8dGQgd2lkdGg9IjEwMCUiPgo8dGFibGUgaWQ9IkhlbHBUYWJsZTEiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgY2xhc3M9IkhpZGRlbkhlbHBUYWJsZSI+Cjx0cj4KPHRkIGNsYXNzPSJIZWxwQ29sMSI+SGVscCE8L3RkPgo8dGQgY2xhc3M9IkhlbHBDb2wyIiBhbGlnbj0icmlnaHQiPjxkaXYgb25jbGljaz0iU2hvd0hlbHAgKCcxJywgJ0hpZGRlbicpOyByZXR1cm4gdHJ1ZTsiIHN0eWxlPSJjdXJzb3I6cG9pbnRlcjsiPjxpbWcgYWx0PSJDbG9zZSIgdGl0bGU9IkNsb3NlIiBib3JkZXI9IjAiIHNyYz0iaHR0cHM6Ly9zZWN1cmUudnpjb2xsZWdlYXBwLmNvbS91c2YvaW1hZ2VzL2ljb25zL2ljb25jbG9zZWhlbHAuZ2lmIiAvPjwvZGl2PjwvdGQ+CjwvdHI+Cjx0cj4KPHRkIGNvbHNwYW49IjIiIGNsYXNzPSJIZWxwQ29sMyI+UGxlYXNlIGVudGVyIHlvdXIgZmlyc3QgYW5kIGxhc3QgbmFtZS48L3RkPgo8L3RyPgo8L3RhYmxlPgo8L3RkPgo8L3RyPgo8L3RhYmxlPgpkAgwPFgIfAAXACDx0YWJsZSBjbGFzcz0iU3BhY2VyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgY2xhc3M9IlNwYWNlciI+PC90ZD48L3RyPjwvdGFibGU+Cjx0YWJsZSBpZD0iRWxlbWVudFBlcnNvbmFsSW5mb3JtYXRpb25JbnN0cnVjdGlvbnMiIGNsYXNzPSJFbGVtZW50IiBhbGlnbj0iY2VudGVyIj4KPHRyPgo8dGQ+Cjx0YWJsZSBjZWxscGFkZGluZz0iMSIgY2VsbHNwYWNpbmc9IjEiIHdpZHRoPSI1MTAiIGFsaWduPSJjZW50ZXIiPgo8dHI+Cjx0ZCB3aWR0aD0iMTAwJSI+PHRhYmxlIGNsYXNzPSJNZXNzYWdlSW5zdHJ1Y3Rpb25zIj4KPHRyPgo8dGQgY2xhc3M9Ik1lc3NhZ2VJbnN0cnVjdGlvbnMiPgo8dGFibGUgY2VsbHBhZGRpbmc9IjIiIGNlbGxzcGFjaW5nPSIyIj4KPHRyPgo8dGQgY2xhc3M9Ik1lc3NhZ2VJbnN0cnVjdGlvbnNUZXh0Ij5UaGUgaW5mb3JtYXRpb24geW91IGVudGVyIGhlcmUgd2lsbCBiZSBhdXRvbWF0aWNhbGx5IGVudGVyZWQgaW50byB5b3VyIG9ubGluZSBhcHBsaWNhdGlvbi4gUGxlYXNlIGVudGVyIHlvdXIgPGZvbnQgc3R5bGU9ImZvbnQtd2VpZ2h0OiBib2xkO2NvbG9yOiAjRkYwMDAwOyI+bGVnYWwgbmFtZTwvZm9udD4uIFlvdXIgZmFtaWx5L3N1cm5hbWUgc2hvdWxkIGJlIGVudGVyZWQgaW4gdGhlIGxhc3QgbmFtZSBmaWVsZC4gIEJlIHN1cmUgdG8gY2hlY2sgYWxsIHNwZWxsaW5nIGFuZCB0aGUgdXNlIG9mIHVwcGVyIGFuZCBsb3dlciBjYXNlIGxldHRlcnMuDTxiciAvPg08YnIgLz5JZiB5b3Ugbm90aWNlIHRoYXQgdGhlIHVzZXIgaW5mb3JtYXRpb24geW91IGVudGVyZWQgaXMgbm90IGNvcnJlY3QsIHlvdSA8Yj53aWxsPC9iPiBiZSBnaXZlbiBhIGNoYW5jZSB0byBtYWtlIGNvcnJlY3Rpb25zIHRocm91Z2hvdXQgdGhlIGFwcGxpY2F0aW9uLjwvdGQ+CjwvdHI+CjwvdGFibGU+CjwvdGQ+CjwvdHI+CjwvdGFibGU+Cjx0YWJsZSBjbGFzcz0iU3BhY2VyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgY2xhc3M9IlNwYWNlciI+PC90ZD48L3RyPjwvdGFibGU+PC90ZD4KPC90cj4KPC90YWJsZT4KPC90ZD4KPC90cj4KPC90YWJsZT4KZAIPDxYCHwAFywo8dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiB3aWR0aD0iMTAwJSI+Cjx0cj4KPHRkIHdpZHRoPSIxMDAlIj48dGFibGUgY2xhc3M9IlN1YlRpdGxlIj48dHI+PHRkIGNsYXNzPSJTdWJUaXRsZSI+TXkgQWNjb3VudDwvdGQ+PHRkIGNsYXNzPSJTdWJUaXRsZSI+PGRpdiBpZD0iRGl2SGVscDJJY29uIiBvbmNsaWNrPSJTaG93SGVscCAoJzInLCAnJyk7IHJldHVybiB0cnVlOyIgc3R5bGU9ImN1cnNvcjpwb2ludGVyOyI+PGltZyBhbHQ9IkhlbHAhIiB0aXRsZT0iSGVscCEiIGJvcmRlcj0iMCIgc3JjPSJodHRwczovL3NlY3VyZS52emNvbGxlZ2VhcHAuY29tL3VzZi9pbWFnZXMvaWNvbnMvaWNvbmhlbHAuZ2lmIiAvPjwvZGl2PjwvdGQ+PC90cj48L3RhYmxlPjwvdGQ+CjwvdHI+CjwvdGFibGU+Cjx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIHdpZHRoPSIxMDAlIiBzdHlsZT0icGFkZGluZy1sZWZ0OjEycHg7cGFkZGluZy1yaWdodDoxMnB4OyI+Cjx0cj4KPHRkIHdpZHRoPSIxMDAlIj4KPHRhYmxlIGlkPSJIZWxwVGFibGUyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGNsYXNzPSJIaWRkZW5IZWxwVGFibGUiPgo8dHI+Cjx0ZCBjbGFzcz0iSGVscENvbDEiPkhlbHAhPC90ZD4KPHRkIGNsYXNzPSJIZWxwQ29sMiIgYWxpZ249InJpZ2h0Ij48ZGl2IG9uY2xpY2s9IlNob3dIZWxwICgnMicsICdIaWRkZW4nKTsgcmV0dXJuIHRydWU7IiBzdHlsZT0iY3Vyc29yOnBvaW50ZXI7Ij48aW1nIGFsdD0iQ2xvc2UiIHRpdGxlPSJDbG9zZSIgYm9yZGVyPSIwIiBzcmM9Imh0dHBzOi8vc2VjdXJlLnZ6Y29sbGVnZWFwcC5jb20vdXNmL2ltYWdlcy9pY29ucy9pY29uY2xvc2VoZWxwLmdpZiIgLz48L2Rpdj48L3RkPgo8L3RyPgo8dHI+Cjx0ZCBjb2xzcGFuPSIyIiBjbGFzcz0iSGVscENvbDMiPlBsZWFzZSB0eXBlIGluIGEgcGFzc3dvcmQgdGhhdCBtZWV0cyBhbGwgb2YgdGhlIGZvbGxvd2luZyBjcml0ZXJpYToNPGJyIC8+LSBjb250YWlucyBhdCBsZWFzdCA2IGNoYXJhY3RlcnMNPGJyIC8+LSBjb250YWlucyBhdCBsZWFzdCBvbmUgZW5nbGlzaCB1cHBlcmNhc2UgY2hhcmFjdGVyIChBIHRocm91Z2ggWikNPGJyIC8+LSBjb250YWlucyBhdCBsZWFzdCBvbmUgZW5nbGlzaCBsb3dlcmNhc2UgY2hhcmFjdGVyIChhIHRocm91Z2ggeikNPGJyIC8+LSBjb250YWlucyBhdCBsZWFzdCBvbmUgbnVtZXJhbCAoMCB0aHJvdWdoIDkpDTxiciAvPg08YnIgLz5UeXBlIGEgcGFzc3dvcmQgd2hpY2ggbWVldHMgdGhlc2UgcmVxdWlyZW1lbnQgaW4gYm90aCB0ZXh0IGJveGVzLjwvdGQ+CjwvdHI+CjwvdGFibGU+CjwvdGQ+CjwvdHI+CjwvdGFibGU+CmQCEA8WAh8ABesFPHRhYmxlIGNsYXNzPSJTcGFjZXIiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZCBjbGFzcz0iU3BhY2VyIj48L3RkPjwvdHI+PC90YWJsZT4KPHRhYmxlIGlkPSJFbGVtZW50RW1haWxBZGRyZXNzSW5zdHJ1Y3Rpb25zIiBjbGFzcz0iRWxlbWVudCIgYWxpZ249ImNlbnRlciI+Cjx0cj4KPHRkPgo8dGFibGUgY2VsbHBhZGRpbmc9IjEiIGNlbGxzcGFjaW5nPSIxIiB3aWR0aD0iNTEwIiBhbGlnbj0iY2VudGVyIj4KPHRyPgo8dGQgd2lkdGg9IjEwMCUiPjx0YWJsZSBjbGFzcz0iTWVzc2FnZUluc3RydWN0aW9ucyI+Cjx0cj4KPHRkIGNsYXNzPSJNZXNzYWdlSW5zdHJ1Y3Rpb25zIj4KPHRhYmxlIGNlbGxwYWRkaW5nPSIyIiBjZWxsc3BhY2luZz0iMiI+Cjx0cj4KPHRkIGNsYXNzPSJNZXNzYWdlSW5zdHJ1Y3Rpb25zVGV4dCI+UGxlYXNlIHByb3ZpZGUgYW4gZS1tYWlsIGFkZHJlc3MgdGhhdCB5b3UgY2hlY2sgcmVndWxhcmx5LiBXZSB3aWxsIHVzZSB0aGlzIGUtbWFpbCBhZGRyZXNzIHRvIGNvbW11bmljYXRlIDxiPmltcG9ydGFudCBpbmZvcm1hdGlvbjwvYj4gdG8geW91LjwvdGQ+CjwvdHI+CjwvdGFibGU+CjwvdGQ+CjwvdHI+CjwvdGFibGU+Cjx0YWJsZSBjbGFzcz0iU3BhY2VyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgY2xhc3M9IlNwYWNlciI+PC90ZD48L3RyPjwvdGFibGU+PC90ZD4KPC90cj4KPC90YWJsZT4KPC90ZD4KPC90cj4KPC90YWJsZT4KZAITDxYCHwAFiwc8dGFibGUgY2xhc3M9IlNwYWNlciIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkIGNsYXNzPSJTcGFjZXIiPjwvdGQ+PC90cj48L3RhYmxlPgo8dGFibGUgaWQ9IkVsZW1lbnRQYXNzd29yZEluc3RydWN0aW9ucyIgY2xhc3M9IkVsZW1lbnQiIGFsaWduPSJjZW50ZXIiPgo8dHI+Cjx0ZD4KPHRhYmxlIGNlbGxwYWRkaW5nPSIxIiBjZWxsc3BhY2luZz0iMSIgd2lkdGg9IjUxMCIgYWxpZ249ImNlbnRlciI+Cjx0cj4KPHRkIHdpZHRoPSIxMDAlIj48dGFibGUgY2xhc3M9Ik1lc3NhZ2VJbnN0cnVjdGlvbnMiPgo8dHI+Cjx0ZCBjbGFzcz0iTWVzc2FnZUluc3RydWN0aW9ucyI+Cjx0YWJsZSBjZWxscGFkZGluZz0iMiIgY2VsbHNwYWNpbmc9IjIiPgo8dHI+Cjx0ZCBjbGFzcz0iTWVzc2FnZUluc3RydWN0aW9uc1RleHQiPlBsZWFzZSB0eXBlIGluIGEgcGFzc3dvcmQgdGhhdCBtZWV0cyBhbGwgb2YgdGhlIGZvbGxvd2luZyBjcml0ZXJpYTogDTxiciAvPi0gY29udGFpbnMgYXQgbGVhc3QgNiBjaGFyYWN0ZXJzIA08YnIgLz4tIGNvbnRhaW5zIGF0IGxlYXN0IG9uZSBlbmdsaXNoIHVwcGVyY2FzZSBjaGFyYWN0ZXIgKEEgdGhyb3VnaCBaKSANPGJyIC8+LSBjb250YWlucyBhdCBsZWFzdCBvbmUgZW5nbGlzaCBsb3dlcmNhc2UgY2hhcmFjdGVyIChhIHRocm91Z2ggeikgDTxiciAvPi0gY29udGFpbnMgYXQgbGVhc3Qgb25lIG51bWVyYWwgKDAgdGhyb3VnaCA5KTwvdGQ+CjwvdHI+CjwvdGFibGU+CjwvdGQ+CjwvdHI+CjwvdGFibGU+Cjx0YWJsZSBjbGFzcz0iU3BhY2VyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgY2xhc3M9IlNwYWNlciI+PC90ZD48L3RyPjwvdGFibGU+PC90ZD4KPC90cj4KPC90YWJsZT4KPC90ZD4KPC90cj4KPC90YWJsZT4KZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUSQ2hlY2tCb3hSZW1lbWJlck1leS1Lq8ql45/g4XR/0gm0bFIDtyIVPN1tQEOLzETRtX4=" />
+
+
+<script type="text/javascript" src="/USF/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/USF/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/USF/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/USF/ajaxpro/VZCollegeApp.Ajax.DataManager,VZCollegeAppUSF.ashx"></script>
+<script type="text/javascript" src="/USF/ajaxpro/VZCollegeApp.Ajax.ErrorManager,VZCollegeAppUSF.ashx"></script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="02560F5F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABENE7fEBIUMkM4rg+kMf7NYYWqqFR8fQpKML8Ij3aQACfhhBSyqhrOisKXm7Oyc+dqJhcK6syX+QjbfKL+lWl7NDCWUfmQgV5Kwn9ZgvmC3H94EAiINLfnx9zzLTmWTUZmnHcRKhWOaloxE2i3Gf/WpkvcrpaasTsVOrJQZIcCDMha06depAwbvZj3swenBi3Hb4Nz3P9MIoJj6noGeSfXPy7/n1Q8hfBnzhh3nm+4zQtek/nOn0Cgcl4Dwx7aEMqv9Bwm5htdH1ct6Q38SfVMon8p4OaqnBhdX0VG8qtVEezQDGdj5NC2BUKrpVLGqeiNG3l5GhYcd12crAFZ36rILrmxszCZIMzTxMy3O+QtG8BmEuBvLrzfJJzE8ju01QFHwzd53hkX+OSCngBOoIblg" />
+			
+			<input type="hidden" id="InputToActivate" name="InputToActivate" value="0" />
+			<input name="InputHiddenProcessType" type="hidden" id="InputHiddenProcessType" />
+			<input name="InputHiddenCampusID" type="hidden" id="InputHiddenCampusID" value="87" />
+			<input name="InputHiddenLevelTypeID" type="hidden" id="InputHiddenLevelTypeID" value="1" />
+			<input name="InputHiddenProgramID" type="hidden" id="InputHiddenProgramID" value="0" />
+			<input name="InputHiddenStudentTypeID" type="hidden" id="InputHiddenStudentTypeID" value="0" />
+			<input name="InputHiddenUniversityCollege" type="hidden" id="InputHiddenUniversityCollege" value="0" />
+            <input name="InputHiddenCampusLocked" type="hidden" id="InputHiddenCampusLocked" value="0" />
+			<input id="URL" name="URL" type="hidden" value="https://secure.vzcollegeapp.com/usf" />
+			
+			<table align="center" cellpadding="0" cellspacing="0" width="832" height="100%">
+				<tr>
+					<td width="26" class="StudentBackgroundLeft"><div id="StudentBackgroundLeftShadow"><div id="StudentBackgroundLeft"></div></div></td>
+					<td width="780" valign="top">
+					
+						<table align="center" cellpadding="0" cellspacing="0" width="780">
+							<tr>
+								<td width="100%" class="HeaderBackground">
+									
+		
+		
+		<div id="VZHeader_PanelHeaderUnauthenticated">
+	
+			<div id="Header_Unauthenticated">
+				<div id="HeaderLogo_Unauthenticated">
+					<table cellpadding="0" cellspacing="0" height="89" width="100%">
+						<tr>
+							<td width="*" valign="middle">
+								<table cellpadding="0" cellspacing="0" align="right">
+									<tr>
+										<td style="padding-right: 15px;"><div id="LinkSignIn" onclick="location.href = GetElementValue ('URL') + '/default.aspx'; return true;" style="cursor:pointer;" onmouseover="document.getElementById ('LinkSignIn').className = 'Header_UnauthenticatedHover'; return true;" onmouseout="document.getElementById ('LinkSignIn').className = 'Header_Unauthenticated'; return true;" class="Header_Unauthenticated">Sign In</div></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		
+</div>
+									
+		
+		<div id="HeaderMenu_PanelHeaderMenuUnauthenticated">
+	
+			<div id="HeaderMenu">
+				<table cellpadding="0" cellspacing="0" height="31" width="100%">
+					<tr>
+						<td height="31" width="33%" align="center"><a href="https://secure.vzcollegeapp.com/usf/default.aspx" class="HeaderMenu">Apply  Now!</a></td>
+						<td><table class="HeaderMenuSpacer" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+						<td height="31" width="33%" align="center"><a href="javascript: Redirect (GetElementValue ('URL') + '/faqs.aspx'); void (0);" class="HeaderMenu">FAQs</a></td>
+						<td><table class="HeaderMenuSpacer" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+						<td height="31" width="33%" align="center"><a href="javascript: Redirect (GetElementValue ('URL') + '/contactus.aspx'); void (0);" class="HeaderMenu">Contact Us</a></td>
+					</tr>
+				</table>
+			</div>
+		
+</div>		
+								</td>
+							</tr>
+							<tr>
+								<td class="Body" valign="top" width="100%">
+									
+									<table cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td width="100%" align="center" style="padding-left:1px;padding-right:1px;">
+												
+												<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+												
+												<table cellpadding="0" cellspacing="0" id="Title">
+													<tr>
+														<td class="Title" style="padding-left:10px;">
+															<table cellpadding="0" cellspacing="0">
+																<tr>
+																	<td><img alt="Apply Now!" border="0" id="ImageLogo" name="ImageLogo" src="https://secure.vzcollegeapp.com/usf/images/icons/iconregisternow.gif" title="Apply Now!" /></td>
+																	<td style="width: 8px;"></td>
+																	<td class="TitleText">Apply Now!</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												
+												<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+												
+												<table class="MessageInstructions">
+<tr>
+<td class="MessageInstructions">
+<table cellpadding="2" cellspacing="2">
+<tr>
+<td class="MessageInstructionsText">Apply Now!  Thank you for applying for admission.  Please set aside approximately 30 minutes to complete the application and attach supporting documents.  You may save what you have entered and return to the application at any time in the future. After submitting the application you will be able to pay the $30 (USD) application fee by <b>credit card</b> (Discover, Visa, MasterCard) or <b>E-check</b>.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+
+												
+												
+												<table class="Elements" cellpadding="0" cellspacing="0">
+													<tr>
+														<td width="*" align="center" style="padding-left:1px;padding-right:1px;">															
+<!-- BEGIN Personal Information -->
+															<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="100%"><table class="SubTitle"><tr><td class="SubTitle">Personal Information</td><td class="SubTitle"><div id="DivHelp1Icon" onclick="ShowHelp ('1', ''); return true;" style="cursor:pointer;"><img alt="Help!" title="Help!" border="0" src="https://secure.vzcollegeapp.com/usf/images/icons/iconhelp.gif" /></div></td></tr></table></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="padding-left:12px;padding-right:12px;">
+<tr>
+<td width="100%">
+<table id="HelpTable1" cellpadding="0" cellspacing="0" class="HiddenHelpTable">
+<tr>
+<td class="HelpCol1">Help!</td>
+<td class="HelpCol2" align="right"><div onclick="ShowHelp ('1', 'Hidden'); return true;" style="cursor:pointer;"><img alt="Close" title="Close" border="0" src="https://secure.vzcollegeapp.com/usf/images/icons/iconclosehelp.gif" /></div></td>
+</tr>
+<tr>
+<td colspan="2" class="HelpCol3">Please enter your first and last name.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+<table id="ElementPersonalInformationInstructions" class="Element" align="center">
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" width="510" align="center">
+<tr>
+<td width="100%"><table class="MessageInstructions">
+<tr>
+<td class="MessageInstructions">
+<table cellpadding="2" cellspacing="2">
+<tr>
+<td class="MessageInstructionsText">The information you enter here will be automatically entered into your online application. Please enter your <font style="font-weight: bold;color: #FF0000;">legal name</font>. Your family/surname should be entered in the last name field.  Be sure to check all spelling and the use of upper and lower case letters.<br /><br />If you notice that the user information you entered is not correct, you <b>will</b> be given a chance to make corrections throughout the application.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementFirstName" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorFirstName">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessageFirstName"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">Applicant First Name: *</td>
+																				<td width="300"><input name="TextBoxFirstName" type="text" maxlength="25" id="TextBoxFirstName" class="Input" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementLastName" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorLastName">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessageLastName"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">Applicant Last Name: *</td>
+																				<td width="300"><input name="TextBoxLastName" type="text" maxlength="25" id="TextBoxLastName" class="Input" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table class="Element" align="center" align="center">
+																<tr>
+																	<td>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">* Indicates a required field</td>
+																				<td align="right" width="*"><span onclick="BackToTop ();" class="TextBackToTop">Back To Top</span></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+<!-- END Personal Information -->
+
+<!-- BEGIN My Account -->
+															<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="100%"><table class="SubTitle"><tr><td class="SubTitle">My Account</td><td class="SubTitle"><div id="DivHelp2Icon" onclick="ShowHelp ('2', ''); return true;" style="cursor:pointer;"><img alt="Help!" title="Help!" border="0" src="https://secure.vzcollegeapp.com/usf/images/icons/iconhelp.gif" /></div></td></tr></table></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="padding-left:12px;padding-right:12px;">
+<tr>
+<td width="100%">
+<table id="HelpTable2" cellpadding="0" cellspacing="0" class="HiddenHelpTable">
+<tr>
+<td class="HelpCol1">Help!</td>
+<td class="HelpCol2" align="right"><div onclick="ShowHelp ('2', 'Hidden'); return true;" style="cursor:pointer;"><img alt="Close" title="Close" border="0" src="https://secure.vzcollegeapp.com/usf/images/icons/iconclosehelp.gif" /></div></td>
+</tr>
+<tr>
+<td colspan="2" class="HelpCol3">Please type in a password that meets all of the following criteria:<br />- contains at least 6 characters<br />- contains at least one english uppercase character (A through Z)<br />- contains at least one english lowercase character (a through z)<br />- contains at least one numeral (0 through 9)<br /><br />Type a password which meets these requirement in both text boxes.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+<table id="ElementEmailAddressInstructions" class="Element" align="center">
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" width="510" align="center">
+<tr>
+<td width="100%"><table class="MessageInstructions">
+<tr>
+<td class="MessageInstructions">
+<table cellpadding="2" cellspacing="2">
+<tr>
+<td class="MessageInstructionsText">Please provide an e-mail address that you check regularly. We will use this e-mail address to communicate <b>important information</b> to you.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementEmailAddress" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorEmailAddress">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessageEmailAddress"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">E-mail: *</td>
+																				<td width="300"><input name="TextBoxEmailAddress" type="text" maxlength="100" id="TextBoxEmailAddress" class="Input" onpaste="return false;" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementEmailAddressRetype" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorEmailAddressRetype">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessageEmailAddressRetype"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">Retype E-mail: *</td>
+																				<td width="300"><input name="TextBoxEmailAddressRetype" type="text" maxlength="100" id="TextBoxEmailAddressRetype" class="Input" onpaste="return false;" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+<table id="ElementPasswordInstructions" class="Element" align="center">
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" width="510" align="center">
+<tr>
+<td width="100%"><table class="MessageInstructions">
+<tr>
+<td class="MessageInstructions">
+<table cellpadding="2" cellspacing="2">
+<tr>
+<td class="MessageInstructionsText">Please type in a password that meets all of the following criteria: <br />- contains at least 6 characters <br />- contains at least one english uppercase character (A through Z) <br />- contains at least one english lowercase character (a through z) <br />- contains at least one numeral (0 through 9)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementPassword" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorPassword">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessagePassword"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">Password: *</td>
+																				<td width="300"><input name="TextBoxPassword" type="password" maxlength="100" id="TextBoxPassword" class="Input" onpaste="return false;" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table id="ElementPasswordRetype" class="Element" align="center">
+																<tr>
+																	<td>
+																		<div id="ElementErrorPasswordRetype">
+																			<table cellpadding="1" cellspacing="1" width="450" align="center">
+																				<tr>
+																					<td class="TextError" colspan="2"><div id="ElementErrorMessagePasswordRetype"></div></td>
+																				</tr>
+																			</table>
+																		</div>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">Retype Password: *</td>
+																				<td width="300"><input name="TextBoxPasswordRetype" type="password" maxlength="100" id="TextBoxPasswordRetype" class="Input" onpaste="return false;" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;1&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:150px;" /></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table class="Element" align="center">
+																<tr>
+																	<td>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="150">* Indicates a required field</td>
+																				<td width="300"><a href="javascript: Save ('Insert'); void (0);"><img alt="Create a New Account" title="Create a New Account" border="0" src="https://secure.vzcollegeapp.com/usf/images/buttons/buttoncreatenewaccount.gif" /></a></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															<table class="Element" align="center">
+																<tr>
+																	<td>
+																		<table cellpadding="1" cellspacing="1" width="450" align="center">
+																			<tr>
+																				<td width="100%" align="right" width="*"><span onclick="BackToTop ();" class="TextBackToTop">Back To Top</span></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+																
+															<table class="Spacer" cellpadding="0" cellspacing="0" style="height: 10px;"><tr><td class="Spacer"></td></tr></table>															
+<!-- END My Account -->
+														</td>
+														<td width="188" valign="top" style="padding-right:1px;">
+														
+															<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+															
+															<div id="ReturningStudents">
+																<table cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td><img alt="" border="0" height="21" id="ImageHome" name="ImageHome" src="https://secure.vzcollegeapp.com/usf/images/studenticonreturningstudents.gif" width="188" /></td>
+																		<td style="width:1px;"></td>
+																	</tr>
+																</table>
+																<table cellspacing="0" cellpadding="0" class="ReturningStudents">
+																	<tr>
+																		<td width="*" colspan="2" style="padding-top: 5px;padding-left: 5px;">E-mail:</td>
+																	</tr>
+																	<tr>
+																		<td width="16" style="padding-left: 5px;"><img src="https://secure.vzcollegeapp.com/usf/images/icons/icontextboxusername.gif" id="ImageTextBoxEmailAddress" name="ImageTextBoxEmailAddress" border="0" alt="EmailAddress" title="EmailAddress" /></td>
+																		<td width="*"><input name="TextBoxSignInEmailAddress" type="text" maxlength="100" id="TextBoxSignInEmailAddress" class="InputEmailAddress" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;2&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:158px;" /></td>
+																	</tr>
+																	<tr>
+																		<td width="*" colspan="2" style="padding-top: 5px;padding-left: 5px;">Password:</td>
+																	</tr>
+																	<tr>
+																		<td width="*" colspan="2" style="padding-left: 5px;"><input name="TextBoxSignInPassword" type="password" maxlength="100" id="TextBoxSignInPassword" class="Input" onfocus="SetElementValue (&#39;InputToActivate&#39;, &#39;2&#39;); return true;" onblur="SetElementValue (&#39;InputToActivate&#39;, &#39;0&#39;); return true;" style="width:174px;" /></td>
+																	</tr>
+																	<tr>
+																		<td width="*" colspan="2" style="padding-top: 3px;padding-left: 5px;">
+																			<table cellpadding="0" cellspacing="0">
+																				<tr>
+																					<td><input id="CheckBoxRememberMe" type="checkbox" name="CheckBoxRememberMe" checked="checked" /></td>
+																					<td style="width:4px;"></td>
+																					<td>Remember Me</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td align="center" width="*" colspan="2" style="padding-top: 8px;"><a href="javascript: SignIn (); void (0);"><img alt="Sign In" border="0" title="Sign In" src="https://secure.vzcollegeapp.com/usf/images/buttons/buttonsignin.gif" /></a></td>
+																	</tr>
+																	<tr>
+																		<td align="center" width="*" colspan="2" style="padding-bottom: 5px;padding-top: 5px;padding-left: 5px;"><a href="javascript: Redirect (GetElementValue ('URL') + '/myaccountassistance.aspx'); void (0);" class="LinkPasswordAssitance">I cannot access my account</a></td>
+																	</tr>
+																</table>
+															</div>
+															
+														</td>
+													</tr>
+												</table>
+												
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+						
+						<table align="center" cellpadding="0" cellspacing="0" width="780">
+							<tr>
+								<td width="100%" class="FooterBackground">
+									
+		<table class="Spacer" cellpadding="0" cellspacing="0"><tr><td class="Spacer"></td></tr></table>
+		<div id="FooterLine"></div>
+		<table width="100%" cellpadding="5" cellspacing="5">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><a href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&dn=secure.vzcollegeapp.com" target="_blank"><img src="https://secure.vzcollegeapp.com/usf/images/icons/iconverisign.gif" border="0" alt="VeriSign" title="VeriSign" /></a></td>
+						</tr>
+					</table>
+				</td>
+				<td align="right" width="100%" valign="top">
+					<table>
+						<tr>
+							<td class="TextGrey">© 2016 Visualzen, Inc. All rights reserved.</td>
+							<td width="10">&nbsp;</td>
+							<td class="TextOrange">powered by</td><td><a href="http://www.visualzen.com/" target="_blank"><img src="https://secure.vzcollegeapp.com/usf/images/buttons/buttonpoweredby.gif" alt="Powered by VZ CollegeApp" title="Powered by VZ CollegeApp" border="0" /></a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+								</td>
+							</tr>
+						</table>
+						
+					</td>
+					<td width="26" class="StudentBackgroundRight"><div id="StudentBackgroundRightShadow"><div id="StudentBackgroundRight"></div></div></td>
+				</tr>
+			</table>
+
+		</form>
+		
+	</body>
+</html>

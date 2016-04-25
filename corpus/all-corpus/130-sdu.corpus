@@ -1,0 +1,11 @@
+search name q type text id q maxlength 255
+applicant s applicant s first given name name new first name type text id new first name maxlength 30
+applicant s applicant s middle name name new middle name type text id new middle name maxlength 30
+applicant s applicant s last family name name new last name type text id new last name maxlength 30
+mm dd yyyy name new dob type text id new dob maxlength 10
+if you do not currently have an e mail account you may create an account for free by using any of the popular e mail websites e g gmail outlook yahoo mail name new email address type text id new email address maxlength 50
+applicant s applicant s e mail address repeat name new cemail address id new cemail address type text maxlength 50
+use only characters a z 0 9 e mail address is allowed name new username type text id new username maxlength 50
+password hint password hint answer name new answer type text id new answer maxlength 32
+password name new password type password id new password maxlength 12
+password again name new cpassword type password id new cpassword2 maxlength 12

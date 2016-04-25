@@ -1,0 +1,9 @@
+email required name username placeholder email required type text id field loginemail
+first given name name firstname placeholder first given name type text id field firstname
+other given name s name middlename placeholder other given name s type text id field middlename
+family name s required name lastname placeholder family name s required type text id field lastname
+email address required name email placeholder email address required type email id field email
+confirm email address required name confirmemail placeholder confirm email address required type email id field confirmemail
+password required placeholder password required type password id field loginpassword name password
+password required placeholder password required type password id field password name password
+confirm password required placeholder confirm password required type password id field confirmpassword name confirmpassword

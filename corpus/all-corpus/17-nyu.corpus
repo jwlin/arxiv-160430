@@ -1,0 +1,14 @@
+continue user id password confirm password email address first name last name name scc nur wrk oprid id scc nur wrk oprid type text maxlength 30
+continue email address confirm password password user id first name last name name scc nur wrk email addr id scc nur wrk email addr type text maxlength 70
+continue first name email address confirm password password user id last name name scc nur wrk first name id scc nur wrk first name type text maxlength 30
+continue last name first name email address confirm password password user id name scc nur wrk last name id scc nur wrk last name type text maxlength 30
+if you have already created an account with this system enter your application user id and password below sign in forgot your user id forgot your password user id password name nyu aws derived oprid id nyu aws derived oprid type text maxlength 30
+default local node dbname portal node workcenter id url type text id ptus defaultlocalnode value wsq campus name ptus defaultlocalnode
+dbname default local node portal node workcenter id url type text id ptus dbname value csprod name ptus dbname
+portal dbname default local node node workcenter id url type text id ptus portal value employee name ptus portal
+node portal dbname default local node workcenter id url type text id ptus node value hrms name ptus node
+workcenter id node portal dbname default local node url type text id ptus workcenterid name ptus workcenterid
+url workcenter id node portal dbname default local node type text id ptus componenturl value https sis nyu edu psp csprod employee hrms c nyu aws ss nyu aaws login gbl name ptus componenturl
+continue password user id confirm password email address first name last name name scc nur wrk password id scc nur wrk password type password maxlength 254
+continue confirm password password user id email address first name last name name scc nur wrk password confirm id scc nur wrk password confirm type password maxlength 254
+if you have already created an account with this system enter your application user id and password below sign in forgot your user id forgot your password password user id name nyu aws derived password id nyu aws derived password type password maxlength 254

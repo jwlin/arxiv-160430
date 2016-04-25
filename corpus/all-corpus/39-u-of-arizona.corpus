@@ -1,0 +1,4 @@
+origin key type text id useroriginkey name data user origin key 
+email name data user email type email id useremail maxlength 255
+password type password id userpassword name data user password 
+confirm password type password id userconfirmpassword name data user confirm password 

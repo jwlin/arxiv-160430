@@ -1,0 +1,12 @@
+your email address is your username name email type text placeholder user example com id email maxlength 100
+first name type text id firstname name firstname maxlength 45
+middle name type text id middlename name middlename maxlength 25
+last name type text id lastname name lastname maxlength 45
+english first name type text id englishfirstname name englishfirstname maxlength 45
+english middle name type text id englishmiddlename name englishmiddlename maxlength 25
+english last name name englishlastname type text id englishlastname maxlength 45
+date of birth name dateofbirth placeholder mm dd yyyy type text id date input maxlength 10
+please include area or city code and local number name homenumber type text placeholder 5555555555 id homenumber maxlength 16
+please include area or city code and local number name mobilenumber type text placeholder 5555555555 id mobilenumber maxlength 16
+new password name password type password placeholder password id password maxlength 80
+confirm password type password placeholder password id confirmpassword name confirmpassword maxlength 80

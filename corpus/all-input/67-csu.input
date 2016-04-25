@@ -1,0 +1,89 @@
+[
+  {
+    "dom": "<input id=\"ctl00_content_txtemailaddrlogin\" maxlength=\"255\" name=\"ctl00$content$txtemailaddrlogin\" style=\"width:175px;\" title=\"enter your email address\" type=\"text\"/>", 
+    "feature": "enter your email enter your password email password name ctl00 content txtemailaddrlogin type text id ctl00 content txtemailaddrlogin maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtfirstname\" maxlength=\"35\" name=\"ctl00$content$txtfirstname\" style=\"width:155px;\" title=\"enter your first name\" type=\"text\"/>", 
+    "feature": "enter your first name first name name ctl00 content txtfirstname type text id ctl00 content txtfirstname maxlength 35", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtlastname\" maxlength=\"60\" name=\"ctl00$content$txtlastname\" style=\"width:155px;\" title=\"enter your last name\" type=\"text\"/>", 
+    "feature": "enter your last name last name name ctl00 content txtlastname type text id ctl00 content txtlastname maxlength 60", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtbirthdate\" maxlength=\"10\" name=\"ctl00$content$txtbirthdate\" style=\"width:63px;\" title=\"enter your birth date.\" type=\"text\"/>", 
+    "feature": "mm dd yyyy enter your birth date enter a valid birth date in mm dd yyyy format birth date name ctl00 content txtbirthdate type text id ctl00 content txtbirthdate maxlength 10", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtemailaddr\" maxlength=\"90\" name=\"ctl00$content$txtemailaddr\" style=\"width:200px;\" title=\"enter your email address\" type=\"text\"/>", 
+    "feature": "enter a valid email address enter a valid email address email name ctl00 content txtemailaddr type text id ctl00 content txtemailaddr maxlength 90", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtconfirmemail\" name=\"ctl00$content$txtconfirmemail\" style=\"width:200px;\" title=\"re-enter your email.\" type=\"text\"/>", 
+    "feature": "the email field did not match the email confirm field try again confirm your email address confirm email type text id ctl00 content txtconfirmemail name ctl00 content txtconfirmemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtpasswordlogin\" maxlength=\"15\" name=\"ctl00$content$txtpasswordlogin\" style=\"width:175px;\" title=\"enter your password\" type=\"password\"/>", 
+    "feature": "enter your email enter your password password email name ctl00 content txtpasswordlogin type password id ctl00 content txtpasswordlogin maxlength 15", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtpassword\" name=\"ctl00$content$txtpassword\" style=\"width:175px;\" title=\"your password must be at least 8 characters long but less than 15 characters long. \" type=\"password\"/>", 
+    "feature": "enter a password at least 8 characters long but less than 15 consisting of numbers or letters your password must be at least 8 characters long but less than 15 characters long enter your password password type password id ctl00 content txtpassword name ctl00 content txtpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_content_txtconfirm\" name=\"ctl00$content$txtconfirm\" style=\"width:175px;\" title=\"re-enter your password.\" type=\"password\"/>", 
+    "feature": "the password field did not match the confirm field try again confirm your password confirm password type password id ctl00 content txtconfirm name ctl00 content txtconfirm", 
+    "rule": {
+      "id": ["txtconfirm"], 
+      "name": ["txtconfirm"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

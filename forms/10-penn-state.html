@@ -1,0 +1,321 @@
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="utf-8">
+<title>Create an Identity: Legal Name</title>
+	
+<!-- DOCUMENT HEAD -->
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ 
+
+
+<meta name="language" content="English">
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />	
+
+<meta name="description" content="Identity Provisioning">
+<meta name="keywords" content="Identity Provisioning">
+<meta name="author" content="Charles Crust, Identity and Access Management, The Pennsylvania State University">
+
+<!-- styles -->
+<link href="./assets/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+<link href="./assets/css/psu-iam.css" rel="stylesheet">
+
+
+<!-- HTML5 shim (for IE6-8 support of HTML5 elements) -->
+<!--[if lt IE 9]>
+<script src="./assets/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- fav and touch icons -->
+<link rel="shortcut icon" href="./assets/ico/psuicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/iamps144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/iamps114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/iamps72.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/ico/iamps57.png">
+
+
+
+</head>
+	  
+<body>
+
+<div class="navbar navbar-fixed-top">
+<!-- BREADCRUMB TRAIL -->
+<div id="breadcrumbs" class="breadcrumb-left navbar-fixed-top-content visible-desktop"> &gt; Create an Identity &gt; <b>Legal Name </b></div><div class="breadcrumb-right navbar-fixed-top-content visible-desktop"><a href="http://identity.psu.edu/services/person-registration-and-identity-provisioning-services/provisioning/" target="_BLANK" title="Visit Penn State Identity Services for help and support (opens in a new window)">Help & Support</a></div>
+
+
+<!-- HEADER -->
+
+
+<div class="navbar-inner">
+<div class="container">
+
+<div class="logo"><a href="http://www.psu.edu"><img id="logo" class="img" src="./assets/img/psulogo.png" alt="Links to http://www.psu.edu" tabindex="1"></a></div>
+
+<div id="sitename" class="hidden">Penn State Identity</div>
+<div id="familiarname" class="hidden">Penn State</div>
+<div id="formalname" class="hidden">The Pennsylvania State University</div>
+<div id="nickname" class="hidden">PSU</div>
+
+<div class="sitename"  >
+<p>
+	Penn State Identity
+
+</p>
+</div>
+
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" tabindex="-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+
+<div class="nav-collapse">
+<ul class="nav">
+<li>SEARCH :</li>
+<li><a href="http://www.psu.edu/directory/"><i class="icon-user icon-white hidden-tablet" tabindex="2"></i>  People</a></li>
+<li><a href="http://www.psu.edu/directory/dept/"><i class="icon-home icon-white hidden-tablet" tabindex="3"></i>  Departments</a></li>
+<li><a href="http://search.psu.edu/"><i class="icon-search icon-globe icon-white hidden-tablet" tabindex="4"></i>  Penn State</a></li>
+<li class="visible-phone" style="background-color: #000000;">Progress:<div class="progress"><div id="progressbar" class="bar" style="width: 0%;"></div></div></li>
+</ul>
+</div><!-- end .nav-collapse -->
+
+</div><!-- end container -->
+</div><!-- end navbar-inner -->
+</div><!-- end navbar -->
+
+
+<!-- DATACARD -->
+
+<!-- UPDATE PROGRESS -->
+<script type="text/javascript">document.getElementById('progressbar').style.width="15%"</script>
+
+<div class="container">
+<div class="datacard">
+	<div class="title">
+		<div class=" div-inline pull-left" style="width: 2%">&nbsp;</div>
+		<div id="titletext" class=" div-inline" style="width: 90%">LEGAL NAME</div>
+		<a class="help" onclick="showhelpcontent('name', this, event, '260px')" onMouseover="showhelpcontent('name', this, event, '260px')" onMouseout="delayhidetip()"><div class="div-inline" style="width: 2%; padding-top: 2px; margin-right: 2px;"><i class="icon-question-sign icon-white"></i></div></a>
+	</div>
+
+<div class="dataform">
+
+<form id="legalname" name="legalname" action="/IdProvisioning/legal_name" method="post" class="form-inline" autocomplete="off">
+
+
+<fieldset class="fieldset">
+<div id="thefirstname" class="control-group">
+<label class="control-label" for="firstName">First/Given Name:</label>
+<div class="controls">
+<input type="text" name="firstName" value="" tabindex="5" id="firstName" class="input-xlarge"/>
+<span id="thefirstnamehelp" class="help-block hidden">&nbsp;</span>
+</div>
+</div>
+
+<div id="themiddlenames" class="control-group">
+<label class="control-label" for="middleNames">Middle Name(s):</label>
+<div class="controls">
+<input type="text" name="middleNames" value="" tabindex="6" id="middleNames" class="input-xlarge"/>
+<span id="themiddlenameshelp" class="help-block hidden">&nbsp;</span>
+</div>
+</div>
+
+<div id="thelastname" class="control-group">
+<label class="control-label" for="lastName">*Last/Family Name:</label>
+<div class="controls">
+<input type="text" name="lastName" value="" tabindex="7" id="lastName" class="input-xlarge"/><span style="padding-left:5px;"><a class="help" onclick="showhelpcontent('lastname', this, event, '260px')" onMouseover="showhelpcontent('lastname', this, event, '260px')" onMouseout="delayhidetip()"><div class="div-inline" style="width: 2%; padding-top: 2px; margin-right: 2px;"><i class="icon-question-sign icon-black"></i></div></a></span>
+<span id="thelastnamehelp" class="help-block hidden">&nbsp;</span>
+</div>
+</div>
+
+<div id="thesuffix" class="control-group">
+<label class="control-label" for="suffix">Suffix:</label>
+<div class="controls">
+
+
+<select name="suffix" tabindex="8" id="suffix" class="input-xlarge">
+    <option value=""
+    >Please select...</option>
+    <option value="Jr.">Jr.</option>
+    <option value="Sr.">Sr.</option>
+    <option value="II">II</option>
+    <option value="III">III</option>
+    <option value="IV">IV</option>
+    <option value="V">V</option>
+    <option value="VI">VI</option>
+    <option value="VII">VII</option>
+    <option value="VIII">VIII</option>
+    <option value="IX">IX</option>
+    <option value="X">X</option>
+
+
+</select>
+
+
+
+<span id="thesuffixhelp" class="help-block hidden">&nbsp;</span>
+</div>
+</div>
+</fieldset>
+
+
+
+<input type="hidden" name="btnsubmit" value="" id="btnsubmit"/>
+
+<input type="hidden" name="struts.token.name" value="token" />
+<input type="hidden" name="token" value="B49TYN1YNS6Q629FVKEKQTOHBRS7MJ9J" />
+</form>
+
+
+
+
+</div>
+
+<div class="desktop-spacer visible-desktop">&nbsp;</div>
+
+<!-- NAVIGATION (Large Screen) -->    
+
+
+<div id="navigationLarge" class="desktop-nav hidden-phone">
+	<div id="backLarge">
+	<a id="goback" href="data_accuracy" tabindex="26" class="btn-navbar-left" onfocus="setFocusedElement(this.id)" onblur="setFocusedElement(null)"><div class="navbar-link btn btn-primary btn-large"  onclick="javascript:navunhook();" role="button">
+		<small>Back</small>
+	</div></a>
+	</div>
+	
+	<div id="continueLarge">
+	<a tabindex="25" class="btn-navbar-right"><div class="navbar-link btn btn-primary btn-large" onclick="javascript:validateforms();">
+		<div id="continuetextLarge" role="button"><b>Continue</b></div>
+	</div></a>
+	</div>
+</div>
+
+
+</div> <!-- END DATACARD -->
+</div> <!-- END CONTAINER -->
+
+
+<!-- PROGRESS INDICATOR -->
+
+
+<div id="progresscontainer" class="center hidden-phone" style="max-width: 600px; margin-top: 10px;">
+
+<script type="text/javascript">
+var pageTotal =           10;
+var pageCount =          3;
+
+for (var i = 0; i < pageTotal; i++) {
+  if (i < pageCount) {
+	document.write('<div class="div-inline dots-on"></div>');
+  }
+  else {
+	document.write('<div class="div-inline dots-off"></div>');
+  }
+}
+</script>
+
+</div>
+
+
+<!-- DEVELOPER TOOLS -->
+
+
+<noscript> <!-- </noscript>
+
+<div id="devtools" class="well well-small center hidden" style="max-width: 600px; margin-top: 10px;"><p>Developer Tools</p>
+
+<button tabindex="-1" class="btn" id="btnvalidation" style="width: 140px;" onclick="javascript:navunhook();setValidation();">Loading...</button>
+<button tabindex="-1" class="btn" id="btndebug" style="width: 140px;" onclick="javascript:navunhook();setDebug();">Loading...</button>
+<button tabindex="-1" class="btn" id="btncookies" style="width: 140px;" onclick="javascript:navunhook();deleteCookies();">Loading...</button>
+<br><br>
+Session ID: 2284 [068,1442.212] <a href="invalidate.jsp">(invalidate)</a>
+</div>
+
+<div id="cookiemessage" class="center" style="max-width: 100%;"></div>
+<div id="validationmessage" class="center" style="max-width: 100%;"></div>
+
+<div id="debugdata" class="center" style="max-width: 100%;">
+
+</div>
+
+<noscript> --> </noscript>
+
+<!-- NAVIGATION (Small Screen) -->
+
+
+<div id="navigationSmall" class="navbar footer visible-phone">
+	<div class="navbar-inner">
+		<div class="container">
+			<div id="backSmall">
+			<a tabindex="28" class="btn-navbar-left" href="data_accuracy"><div class="navbar-link btn btn-navbar navSmall" onclick="javascript:navunhook();" role="button">
+				<small>Back</small>
+			</div></a>
+			</div>
+			<div id="continueSmall" class="navSmall">
+			<a tabindex="27" class="btn-navbar-right"><div class="navbar-link btn btn-navbar" onclick="javascript:validateforms();">
+				<div id="continuetextSmall" role="button"><small><b>Continue</b></small></div>
+			</div></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer hidden-phone"><a href="http://www.psu.edu" tabindex="50">&copy; <script type="text/javascript">var dt = new Date(); document.write(dt.getFullYear() );</script> The Pennsylvania State University</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="http://www.psu.edu/ur/legal.html" tabindex="51">Privacy and Legal Statements</a>
+<!--&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="https://wikispaces.psu.edu/display/IAM/IAM+Online+Testing+Results" target="_BLANK" tabindex="52">Provide&nbsp;Feedback</a>
+-->	        
+</div>
+
+
+	<!-- JavaScript placed at the end of the document so the pages load faster! -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/bootstrap-iam.js"></script>
+
+	<script type="text/javascript">
+	var URL = getCookie('raReferrer');
+	var RA = getCookie('ra');
+	var TRAIL = document.getElementById('breadcrumbs').innerHTML;
+	document.getElementById('breadcrumbs').innerHTML=RA + TRAIL;
+	goVerify();
+	focusOn('firstName');
+	</script>
+
+  </body>
+</html>

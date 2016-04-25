@@ -1,0 +1,97 @@
+[
+  {
+    "dom": "<input id=\"firstname\" name=\"firstname\" style=\"width:250px;\" type=\"text\"/>", 
+    "feature": "required type text id firstname name firstname", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"lastname\" name=\"lastname\" style=\"width:250px;\" type=\"text\"/>", 
+    "feature": "required type text id lastname name lastname", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"email\" name=\"email\" style=\"width:250px;\" type=\"text\"/>", 
+    "feature": "e mail is invalid required type text id email name email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"verifyemail\" name=\"verifyemail\" title=\"verify email\" type=\"text\"/>", 
+    "feature": "verify e mail type text id verifyemail name verifyemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"dob\" name=\"dob\" style=\"width:100px;\" type=\"text\"/>", 
+    "feature": "month january february march april may june july august september october november december day type text id dob name dob", 
+    "rule": {
+      "id": ["dob"], 
+      "name": ["dob"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"login\" name=\"login\" style=\"width:250px;\" type=\"text\"/>", 
+    "feature": "required type text id login name login", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["login"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"password\" name=\"password\" style=\"width:250px;\" type=\"text\"/>", 
+    "feature": "required type text id password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"zip\" name=\"zip\" style=\"width:100px;\" type=\"text\"/>", 
+    "feature": "zip type text id zip name zip", 
+    "rule": {
+      "id": ["zip"], 
+      "name": ["zip"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"newpassword\" name=\"newpassword\" title=\"enter new password\" type=\"password\"/>", 
+    "feature": "required type password id newpassword name newpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"verifypassword\" name=\"verifypassword\" title=\"verify password\" type=\"password\"/>", 
+    "feature": "verify password type password id verifypassword name verifypassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

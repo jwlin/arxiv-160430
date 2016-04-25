@@ -1,0 +1,41 @@
+[
+  {
+    "dom": "<input alt=\"search engine\" class=\"textfield\" id=\"search\" maxlength=\"255\" name=\"searchtext\" size=\"15\" type=\"text\"/>", 
+    "feature": "email address password confirm password name searchtext id search type text maxlength 255", 
+    "rule": {
+      "id": ["search"], 
+      "name": ["search"]
+    }, 
+    "type": "search_term"
+  }, 
+  {
+    "dom": "<input id=\"email\" name=\"email\" type=\"text\" value=\"\"/>", 
+    "feature": "password confirm password type text id email name email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"password\" name=\"password\" type=\"password\"/>", 
+    "feature": "email address confirm password type password id password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"password2\" name=\"password2\" type=\"password\"/>", 
+    "feature": "password email address type password id password2 name password2", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

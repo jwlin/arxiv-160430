@@ -1,0 +1,6 @@
+name p surname type text maxlength 40
+name p first given name type text maxlength 40
+type text name p apa email address maxlength 50
+type text name p confirm email address maxlength 50
+name p password type password maxlength 30
+name p confirm password type password maxlength 30

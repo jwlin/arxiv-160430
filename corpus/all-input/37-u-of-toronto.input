@@ -1,0 +1,285 @@
+[
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtstudentnumber\" maxlength=\"10\" name=\"ctl00$cphmain$txtstudentnumber\" size=\"15\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtstudentnumber name ctl00 cphmain txtstudentnumber maxlength 10", 
+    "rule": {
+      "id": ["studentnumber"], 
+      "name": ["studentnumber"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtgivenname\" maxlength=\"40\" name=\"ctl00$cphmain$txtgivenname\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtgivenname name ctl00 cphmain txtgivenname maxlength 40", 
+    "rule": {
+      "id": ["given"], 
+      "name": ["given"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtsurname\" maxlength=\"40\" name=\"ctl00$cphmain$txtsurname\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtsurname name ctl00 cphmain txtsurname maxlength 40", 
+    "rule": {
+      "id": ["sur"], 
+      "name": ["sur"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtprevsurname\" maxlength=\"40\" name=\"ctl00$cphmain$txtprevsurname\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtprevsurname name ctl00 cphmain txtprevsurname maxlength 40", 
+    "rule": {
+      "id": ["sur"], 
+      "name": ["sur"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txttelephonearea\" maxlength=\"3\" name=\"ctl00$cphmain$txttelephonearea\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txttelephonearea name ctl00 cphmain txttelephonearea maxlength 3", 
+    "rule": {
+      "id": ["phonearea"], 
+      "name": ["phonearea"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txttelephoneexchange\" maxlength=\"3\" name=\"ctl00$cphmain$txttelephoneexchange\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txttelephoneexchange name ctl00 cphmain txttelephoneexchange maxlength 3", 
+    "rule": {
+      "id": ["phoneexchange"], 
+      "name": ["phoneexchange"]
+    }, 
+    "type": "phone-middle"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txttelephone\" maxlength=\"4\" name=\"ctl00$cphmain$txttelephone\" size=\"4\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txttelephone name ctl00 cphmain txttelephone maxlength 4", 
+    "rule": {
+      "id": ["telephone"], 
+      "name": ["telephone"]
+    }, 
+    "type": "phone-postfix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txttelephoneforeign\" maxlength=\"40\" name=\"ctl00$cphmain$txttelephoneforeign\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txttelephoneforeign name ctl00 cphmain txttelephoneforeign maxlength 40", 
+    "rule": {
+      "id": ["telephoneforeign"], 
+      "name": ["telephoneforeign"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtworknumberarea\" maxlength=\"3\" name=\"ctl00$cphmain$txtworknumberarea\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtworknumberarea name ctl00 cphmain txtworknumberarea maxlength 3", 
+    "rule": {
+      "id": ["numberarea"], 
+      "name": ["numberarea"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtworknumberexchange\" maxlength=\"3\" name=\"ctl00$cphmain$txtworknumberexchange\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtworknumberexchange name ctl00 cphmain txtworknumberexchange maxlength 3", 
+    "rule": {
+      "id": ["numberexchange"], 
+      "name": ["numberexchange"]
+    }, 
+    "type": "phone-middle"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtworknumber\" maxlength=\"4\" name=\"ctl00$cphmain$txtworknumber\" size=\"4\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtworknumber name ctl00 cphmain txtworknumber maxlength 4", 
+    "rule": {
+      "id": ["worknumber"], 
+      "name": ["worknumber"]
+    }, 
+    "type": "phone-postfix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtworkextension\" maxlength=\"4\" name=\"ctl00$cphmain$txtworkextension\" size=\"4\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtworkextension name ctl00 cphmain txtworkextension maxlength 4", 
+    "rule": {
+      "id": ["workextension"], 
+      "name": ["workextension"]
+    }, 
+    "type": "phone-ext"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtworknumberforeign\" maxlength=\"40\" name=\"ctl00$cphmain$txtworknumberforeign\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtworknumberforeign name ctl00 cphmain txtworknumberforeign maxlength 40", 
+    "rule": {
+      "id": ["numberforeign"], 
+      "name": ["numberforeign"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtfaxnumberarea\" maxlength=\"3\" name=\"ctl00$cphmain$txtfaxnumberarea\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtfaxnumberarea name ctl00 cphmain txtfaxnumberarea maxlength 3", 
+    "rule": {
+      "id": ["numberarea"], 
+      "name": ["numberarea"]
+    }, 
+    "type": "phone-prefix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtfaxnumberexchange\" maxlength=\"3\" name=\"ctl00$cphmain$txtfaxnumberexchange\" size=\"3\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtfaxnumberexchange name ctl00 cphmain txtfaxnumberexchange maxlength 3", 
+    "rule": {
+      "id": ["numberexchange"], 
+      "name": ["numberexchange"]
+    }, 
+    "type": "phone-middle"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtfaxnumber\" maxlength=\"4\" name=\"ctl00$cphmain$txtfaxnumber\" size=\"4\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtfaxnumber name ctl00 cphmain txtfaxnumber maxlength 4", 
+    "rule": {
+      "id": ["faxnumber"], 
+      "name": ["faxnumber"]
+    }, 
+    "type": "phone-postfix"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtfaxnumberforeign\" maxlength=\"40\" name=\"ctl00$cphmain$txtfaxnumberforeign\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtfaxnumberforeign name ctl00 cphmain txtfaxnumberforeign maxlength 40", 
+    "rule": {
+      "id": ["faxnumberforeign"], 
+      "name": ["faxnumberforeign"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtemail\" maxlength=\"50\" name=\"ctl00$cphmain$txtemail\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above type text id ctl00 cphmain txtemail name ctl00 cphmain txtemail maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtconfirmemail\" maxlength=\"50\" name=\"ctl00$cphmain$txtconfirmemail\" onkeydown=\"return disablectrlkeycombination(event);\" onkeypress=\"return disablectrlkeycombination(event);\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtconfirmemail type text id ctl00 cphmain txtconfirmemail maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtmailcareof\" maxlength=\"60\" name=\"ctl00$cphmain$txtmailcareof\" onfocus=\"populatepermanent(null)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtmailcareof type text id ctl00 cphmain txtmailcareof maxlength 60", 
+    "rule": {
+      "id": ["careof"], 
+      "name": ["careof"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtmailstreet\" maxlength=\"54\" name=\"ctl00$cphmain$txtmailstreet\" onchange=\"populatepermanent(null)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtmailstreet type text id ctl00 cphmain txtmailstreet maxlength 54", 
+    "rule": {
+      "id": ["street"], 
+      "name": ["street"]
+    }, 
+    "type": "street"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtmailapartment\" maxlength=\"5\" name=\"ctl00$cphmain$txtmailapartment\" onchange=\"populatepermanent(null)\" size=\"10\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtmailapartment type text id ctl00 cphmain txtmailapartment maxlength 5", 
+    "rule": {
+      "id": ["apartment"], 
+      "name": ["apartment"]
+    }, 
+    "type": "room_number"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtmailcity\" maxlength=\"60\" name=\"ctl00$cphmain$txtmailcity\" onchange=\"populatepermanent(null)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtmailcity type text id ctl00 cphmain txtmailcity maxlength 60", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtmailpostalcd\" maxlength=\"12\" name=\"ctl00$cphmain$txtmailpostalcd\" onchange=\"populatepermanent(null)\" size=\"15\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtmailpostalcd type text id ctl00 cphmain txtmailpostalcd maxlength 12", 
+    "rule": {
+      "id": ["postal"], 
+      "name": ["postal"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtcareof\" maxlength=\"60\" name=\"ctl00$cphmain$txtcareof\" onfocus=\"checkblur(this)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtcareof type text id ctl00 cphmain txtcareof maxlength 60", 
+    "rule": {
+      "id": ["careof"], 
+      "name": ["careof"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtstreet\" maxlength=\"54\" name=\"ctl00$cphmain$txtstreet\" onfocus=\"checkblur(this)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtstreet type text id ctl00 cphmain txtstreet maxlength 54", 
+    "rule": {
+      "id": ["street"], 
+      "name": ["street"]
+    }, 
+    "type": "street"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtapartment\" maxlength=\"5\" name=\"ctl00$cphmain$txtapartment\" onfocus=\"checkblur(this)\" size=\"10\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtapartment type text id ctl00 cphmain txtapartment maxlength 5", 
+    "rule": {
+      "id": ["apartment"], 
+      "name": ["apartment"]
+    }, 
+    "type": "room_number"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtcity\" maxlength=\"60\" name=\"ctl00$cphmain$txtcity\" onfocus=\"checkblur(this)\" size=\"40\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtcity type text id ctl00 cphmain txtcity maxlength 60", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtpostalcd\" maxlength=\"12\" name=\"ctl00$cphmain$txtpostalcd\" onfocus=\"checkblur(this)\" size=\"15\" type=\"text\"/>", 
+    "feature": "same as above name ctl00 cphmain txtpostalcd type text id ctl00 cphmain txtpostalcd maxlength 12", 
+    "rule": {
+      "id": ["postal"], 
+      "name": ["postal"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtpassword1\" maxlength=\"20\" name=\"ctl00$cphmain$txtpassword1\" size=\"40\" type=\"password\"/>", 
+    "feature": "same as above type password id ctl00 cphmain txtpassword1 name ctl00 cphmain txtpassword1 maxlength 20", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_cphmain_txtpassword2\" maxlength=\"20\" name=\"ctl00$cphmain$txtpassword2\" size=\"40\" type=\"password\"/>", 
+    "feature": "same as above type password id ctl00 cphmain txtpassword2 name ctl00 cphmain txtpassword2 maxlength 20", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

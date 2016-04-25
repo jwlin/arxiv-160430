@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Emma Lu">
+	<title>NCTU International Admissions</title>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/admissions/public/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/admissions/public/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/admissions/public/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/admissions/public/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/admissions/public/ico/favicon.png">
+    
+	<link rel="stylesheet" media="all" href="/admissions/public/css/default/main.css" />
+	<link rel="stylesheet" media="all" href="/admissions/public/css/default/icons.css" />
+    <link rel="stylesheet" media="all" href="/admissions/public/css/default/global_forms.css" />
+    
+    <link rel="stylesheet" media="all" href="/admissions/public/css/default/coin-slider-styles.css" />
+    <link rel="stylesheet" media="all" href="/admissions/public/css/jquery.countdown.css" />
+    <link rel="stylesheet" media="all" href="/admissions/public/css/default/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" media="all" href="/admissions/public/bootstrap-default/css/bootstrap.css" />
+    <style>
+    .icon-ok-inlist{
+        float: right;
+        margin-top: 5px;
+        margin-right: 11px;
+        }
+     .uploadDataTable:hover{
+        cursor: pointer;
+        }
+</style>
+
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery-ui-1.7.2.min.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery.cokie.min.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery.qtip-1.0.0-rc2.min.js"></script>
+<script type="text/javascript" src="/admissions/public/js/msg.zh_TW.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jaxme.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery-tooltip/jquery.tooltip.js"></script>
+<script type="text/javascript" src="/admissions/public/js/tooltip.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/admissions/public/bootstrap-default/js/bootstrap.js"></script>
+<script type="text/javascript" src="/admissions/public/js/jquery/jquery.proxy.js"></script>
+<script type="text/javascript">
+<!--
+var DataChanged = false;
+var ReloadURL = '';
+$(function() {
+
+	// 護照期限選擇
+	$('input[datepicker="1"]').datepicker({
+		changeMonth		: true,
+		changeYear		: true,
+		dayNames		: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		dayNamesMin		: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+		dayNamesShort	: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+		dateFormat		: 'yy-mm-dd',
+		monthNames		: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		monthNamesShort	: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		nextText		: 'Next Month',
+		prevText		: 'Last Month',
+		yearRange		:'-20:+10'
+	});	
+
+	 	
+
+		
+	
+		
+	// JQuery Tooltip
+	$('.help').tooltip({
+		bodyHandler: function() { 
+			  name = $(this).attr('name');
+				return window.tooltips[name]; 
+    }, 
+    showURL: false 
+	});
+	
+	// 移動到指定頁面
+	jmGoto = function (url) {		
+		if (DataChanged && confirm('Data is modified, would you want to save data?\n\nPress \'OK\' to save data and logout.')) {
+			$('#frm').append('<input type="hidden" name="logout" value="1">');
+			$('#frm').submit();
+			location.href = '/admissions' + url;	
+		} else {
+			if (url == '/student/logout'){
+				if(DataChanged){
+					$('#frm').get(0).reset();
+				}
+				else if(confirm("Have you saved the data filled?")){
+				location.href = '/admissions' + url;	
+				}
+			}else if(url != '/student/logout'){
+				location.href = '/admissions' + url;	
+			}else if(DataChanged && url == '/student/logout'){
+				$('#frm').get(0).reset();
+			}
+		} 
+	}
+});
+
+$(function(){
+	
+	$('.lang').click(function () {
+		var nowLocale = 'en';
+		if(nowLocale == $(this).attr('data-locale')){
+			return false;
+		}
+		$.get('/admissions/student/lang/lang/' + $(this).data('locale'), function(){
+			window.location.reload();
+		});
+	});
+});
+//-->
+</script>
+</head>
+
+<body class="controller">
+<div class="wrap">
+  <header class="main-header">
+    <div class="body">
+      <div class="navbar-top">
+        
+                
+      </div>
+      <a class="logo" href="/admissions/index/index">
+        <h2>NCTU International Admissions</h2>
+        <h1>國立交通大學 外國學位生入學資訊</h1>
+      </a>
+    </div>
+  </header><!-- /.jsd-header -->
+  
+  <nav class="global">
+    <ul class="dropdown">
+		    </ul>
+  </nav>
+  
+<!--  !-->
+<script language="javascript">
+$(function() {
+
+		
+	// 游標初始化
+	$('#email').focus();
+	
+	// 送出表單前簡單檢查
+	$('#frm').submit(function() {
+	
+		var email 	= $('#email'),
+				pd 			= $('#password'),
+				pd_cfm 	= $('#password_cfm'),
+				auth		= $('#authKey');
+		
+		if ($.trim(email.val()) == '') {
+			alert('Please Enter your Email');
+			email.focus();
+			return false;
+		} else if ($.trim(pd.val()) == '') {
+			alert('Please Enter password');
+			pd.focus();
+			return false;
+		} else if ($.trim(pd_cfm.val()) == '') {
+			alert('Please Enter Password Comfirm');
+			pd_cfm.focus();
+			return false;
+		} else if (pd.val() !== pd_cfm.val()) {
+			alert('Password and Password Comifrm Are Difference');
+			pd.focus();
+			pd.select();
+			return false;
+		} else if ($.trim(auth.val()) == '') {
+			alert('Please Enter Verification Code');
+			auth.focus();
+			return false;
+		}
+	})
+	
+});
+</script>
+<style>
+.field label {
+	width:150px;
+	}
+</style>
+<section class="container container-index">
+    <div class="content-white article mt10">
+      <section class="row">
+        <div class="span12A">
+                    <h2 class="main-title">Thank you for your interest in studying at NCTU.</h2>
+          <article class="jsd-article pt30">
+            Log in using your existing e-mail address and set a password to accessing this online application system.
+ Each applicant may create ONE account only.
+Applicants with multiple accounts will be disqualified from application.
+The system will send a verification notice to your email account. Please check your email in order to complete the process.            
+            <section class="jsd-Athena">
+            
+		<form id="frm" name="frm" method="post" action="/admissions/student/register.do">
+              <div class="jsd-Athena-body none-bg">
+                <hr class="break-system" />
+                <div class="field">
+                  <label class="field-label"><span class="jsd-note-mark">*</span>Email:</label>
+                  <div class="field-content">
+                  <input name="email" class="w300 text" type="text" class="text" id="email" value="" size="60" maxlength="255" />
+                    <p class="block-noteA f13">Please make sure the email address you provided is active and check your email regularly as important message will be sent via email.</p>
+                  </div>
+                </div><!-- /.field -->
+                <div class="field">
+                  <label class="field-label"><span class="jsd-note-mark">*</span>Password:</label>
+                  <div class="field-content">
+                  <input name="password" type="password" class="w200 text" id="password" size="20" maxlength="12" />
+                    <p class="block-noteA f13">Your password can be 6-12 characters a-z or 0-9 and cannot contain any spaces.</p>
+                  </div>
+                </div><!-- /.field -->
+                <div class="field">
+                  <label class="field-label"><span class="jsd-note-mark">*</span>Confirm Password:</label>
+                  <div class="field-content">
+                  	<input name="password_cfm" type="password" class="w200 text" id="password_cfm" size="20" maxlength="12" />
+                  </div>
+                </div><!-- /.field -->
+                <div class="field">
+                  <label class="field-label" for="authKey"><span class="jsd-note-mark">*</span>Verification Code</label>
+                  <div class="field-content">
+                    <input type="text" maxlength="4" name="authKey" id="authKey" value="" class="verification">
+                    <iframe width="80" scrolling="no" height="27" frameborder="0" id="famImageAuth" src="/admissions/image.auth/image"></iframe>
+                    <button  onclick="$('#famImageAuth').attr('src', '/admissions/image.auth/image');" type="button" class="btn btn-small ml5">Renew</button>
+                                      </div>
+                </div><!-- /.field -->
+              </div>
+              <div class="action_area">
+                <button type="form" class="btn btn-primary">Send Verification Email</button>
+                              </div><!-- /.field -->
+              </form>
+            </section><!-- /.jsd-Athena -->
+          </article><!-- /.jsd-article -->
+        </div>
+      </section><!-- /.row -->
+    </div><!-- /.content-white -->
+  </section><!-- /.container -->
+
+<!--  !-->
+
+  <div class="push"></div>
+</div><!-- /.wrap -->
+<footer class="footer">
+  <div class="container">
+    <div class="f-nav">
+      <a target="_blank" href="http://www.ia.nctu.edu.tw/files/11-1000-118.php">Degree-Programs</a>
+      <span>|</span>
+      <a target="_blank" href="http://www.ia.nctu.edu.tw/files/11-1000-112.php">Student Story</a>
+      <span>|</span>
+      <a target="_blank" href="http://www.ia.nctu.edu.tw/bin/home.php">News</a>
+<!--       <span>|</span> -->
+<!--       <a href="javascript:void(0)">Academic Support</a> -->
+      <span>|</span>
+      <a target="_blank" href="http://en.hccg.gov.tw/web/SG?pageID=25679&_fcmID=FG0000001167000004_0_4">Hsinchu City</a>
+      <span>|</span>
+      <a target="_blank" href="http://www.ia.nctu.edu.tw/files/11-1000-194.php">FAQ</a>
+      <span>|</span>
+      <a target="_blank" href=" http://www.ia.nctu.edu.tw/files/11-1000-251.php">After Admission</a>
+<!--       <span>|</span> -->
+<!--       <a href="javascript:void(0)">Site Map</a> -->
+    </div>
+    <p>
+      <span>© Office of International Affairs, National Chiao Tung University</span><br />
+      <span>National Chiao Tung University​ Office of International Affairs</span><span>1001 University Road, Hsinchu 30010 Taiwan</span><br /> 
+      <span>FAX +886-3-513-1473</span><span>TEL +886-3-5712121 ext.50069</span><br />
+      <span>Email: <a href="mailto:nctu_ia@nctu.edu.tw">Contact Us</a></span>
+    </p>
+    <ul class="footer-link">
+      <li><a href="mailto:nctu_ia@nctu.edu.tw">Email us</a></li>
+      <li><a href="http://www.ia.nctu.edu.tw/bin/home.php" target="_blank">Office of International Affairs</a></li>
+      <li><a href="http://www.nctu.edu.tw/" target="_blank">National Chiao Tung University​</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

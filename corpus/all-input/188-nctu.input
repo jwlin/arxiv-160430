@@ -1,0 +1,41 @@
+[
+  {
+    "dom": "<input class=\"w300 text\" id=\"email\" maxlength=\"255\" name=\"email\" size=\"60\" type=\"text\" value=\"\"/>", 
+    "feature": "email name email id email type text maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"verification\" id=\"authkey\" maxlength=\"4\" name=\"authkey\" type=\"text\" value=\"\"/>", 
+    "feature": "verification code name authkey id authkey type text maxlength 4", 
+    "rule": {
+      "id": ["authkey"], 
+      "name": ["authkey"]
+    }, 
+    "type": "captcha"
+  }, 
+  {
+    "dom": "<input class=\"w200 text\" id=\"password\" maxlength=\"12\" name=\"password\" size=\"20\" type=\"password\"/>", 
+    "feature": "password name password id password type password maxlength 12", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"w200 text\" id=\"password_cfm\" maxlength=\"12\" name=\"password_cfm\" size=\"20\" type=\"password\"/>", 
+    "feature": "confirm password name password cfm id password cfm type password maxlength 12", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

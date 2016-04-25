@@ -1,0 +1,7 @@
+type text name first name maxlength 35
+type text name last name maxlength 35
+type text name email maxlength 35
+type text name check email maxlength 35
+type text name login name maxlength 25
+type password name password maxlength 25
+type password name check password maxlength 25

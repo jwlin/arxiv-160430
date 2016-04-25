@@ -1,0 +1,14 @@
+name q type text placeholder search
+first given name name first name type text id first name maxlength 20
+middle name name mid name type text id mid name maxlength 20
+last name surname name last name type text id last name maxlength 30
+student email address name email addr type text id email addr maxlength 50
+confirm student email address name confirm email addr type text id confirm email addr maxlength 50
+email address name parent email addr type text id parent email addr maxlength 50
+confirm email address name confirm parent email addr type text id confirm parent email addr maxlength 50
+security question name security question type text id security question maxlength 255
+security answer name security answer type text id security answer maxlength 45
+ minimum of 6 characters maximum of 25 characters username name form username type text id form username maxlength 25
+ minimum of 6 characters maximum of 25 characters same name as parent grandparent set birth date carefully it cannot be changed after account creation username password password again security question security answer email address confirm email address first given name middle name last name surname generation name birth date birth date day birth date year student email address confirm student email address type text id admissions hidden input guess name admissions hidden input guess
+password type password id form password name form password
+password again type password id form password2 name form password2

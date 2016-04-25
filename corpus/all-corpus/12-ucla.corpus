@@ -1,0 +1,10 @@
+required type text id firstname name firstname
+required type text id lastname name lastname
+e mail is invalid required type text id email name email
+verify e mail type text id verifyemail name verifyemail
+month january february march april may june july august september october november december day type text id dob name dob
+required type text id login name login
+required type text id password name password
+zip type text id zip name zip
+required type password id newpassword name newpassword
+verify password type password id verifypassword name verifypassword

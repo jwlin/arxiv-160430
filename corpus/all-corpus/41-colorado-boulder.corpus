@@ -1,0 +1,13 @@
+ legal first name type text name processrequest firstname id processrequest firstname
+middle name type text name processrequest middlename id processrequest middlename
+ legal last name type text name processrequest lastname id processrequest lastname
+ address line 1 name processrequest address1 type text id processrequest address1 maxlength 55
+address line 2 name processrequest address2 type text id processrequest address2 maxlength 55
+address line 3 name processrequest address3 type text id processrequest address3 maxlength 55
+ city name processrequest city type text id processrequest city maxlength 30
+ postal code name processrequest postalcode type text id processrequest postalcode maxlength 12
+phone type text name processrequest telephone id processrequest telephone
+ e mail address type text name processrequest emailaddress id processrequest emailaddress
+social security number type text name processrequest nationalid id processrequest nationalid
+ new password type password id password name password
+ confirm password type password id password2 name password2

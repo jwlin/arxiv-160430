@@ -1,0 +1,104 @@
+[
+  {
+    "dom": "<input id=\"uc-global-search-field\" name=\"q\" type=\"text\"/>", 
+    "feature": "search uofc type text name q id uc global search field", 
+    "rule": {
+      "id": ["search"], 
+      "name": ["q"]
+    }, 
+    "type": "search_term"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_username\" name=\"ctl00$contentplaceholder1$username\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 username name ctl00 contentplaceholder1 username", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_ucid\" name=\"ctl00$contentplaceholder1$ucid\" style=\"width:125px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 ucid name ctl00 contentplaceholder1 ucid", 
+    "rule": {
+      "id": ["ucid"], 
+      "name": ["ucid"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_surname\" name=\"ctl00$contentplaceholder1$surname\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 surname name ctl00 contentplaceholder1 surname", 
+    "rule": {
+      "id": ["surname"], 
+      "name": ["surname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_birthdate\" name=\"ctl00$contentplaceholder1$birthdate\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 birthdate name ctl00 contentplaceholder1 birthdate", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-yyyymmdd"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_email\" name=\"ctl00$contentplaceholder1$email\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 email name ctl00 contentplaceholder1 email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_display\" name=\"ctl00$contentplaceholder1$display\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 display name ctl00 contentplaceholder1 display", 
+    "rule": {
+      "id": ["display"], 
+      "name": ["display"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_answer1\" name=\"ctl00$contentplaceholder1$answer1\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 answer1 name ctl00 contentplaceholder1 answer1", 
+    "rule": {
+      "id": ["answer"], 
+      "name": ["answer"]
+    }, 
+    "type": "secure_ans"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_answer2\" name=\"ctl00$contentplaceholder1$answer2\" style=\"width:175px;\" type=\"text\"/>", 
+    "feature": "type text id ctl00 contentplaceholder1 answer2 name ctl00 contentplaceholder1 answer2", 
+    "rule": {
+      "id": ["answer"], 
+      "name": ["answer"]
+    }, 
+    "type": "secure_ans"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_password\" name=\"ctl00$contentplaceholder1$password\" style=\"width:175px;\" type=\"password\"/>", 
+    "feature": "type password id ctl00 contentplaceholder1 password name ctl00 contentplaceholder1 password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"ctl00_contentplaceholder1_passwordconfirm\" name=\"ctl00$contentplaceholder1$passwordconfirm\" style=\"width:175px;\" type=\"password\"/>", 
+    "feature": "type password id ctl00 contentplaceholder1 passwordconfirm name ctl00 contentplaceholder1 passwordconfirm", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

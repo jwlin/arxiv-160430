@@ -1,0 +1,97 @@
+[
+  {
+    "dom": "<input id=\"ay-login\" name=\"userid\" required=\"\" type=\"text\"/>", 
+    "feature": "pin password type text id ay login name userid", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["userid"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"aycreatefn\" maxlength=\"30\" name=\"aycreatefn\" required=\"\" type=\"text\"/>", 
+    "feature": "first or given name type text id aycreatefn name aycreatefn maxlength 30", 
+    "rule": {
+      "id": ["fn"], 
+      "name": ["fn"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"aycreateln\" maxlength=\"30\" name=\"aycreateln\" required=\"\" type=\"text\"/>", 
+    "feature": "last or family name type text id aycreateln name aycreateln maxlength 30", 
+    "rule": {
+      "id": ["ln"], 
+      "name": ["ln"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"emails\" id=\"aycreateemail\" maxlength=\"120\" name=\"aycreateemail\" required=\"\" size=\"35\" type=\"text\"/>", 
+    "feature": "email address name aycreateemail id aycreateemail type text maxlength 120", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"emails\" id=\"aycreateconfirmemail\" name=\"aycreateconfirmemail\" required=\"\" size=\"35\" type=\"text\"/>", 
+    "feature": "confirm email address name aycreateconfirmemail id aycreateconfirmemail type text", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"aycreatedob\" name=\"aycreatedob\" required=\"\" size=\"20\" type=\"text\"/>", 
+    "feature": "mm dd yyyy birth date type text id aycreatedob name aycreatedob", 
+    "rule": {
+      "id": ["dob"], 
+      "name": ["dob"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"aycreatepc\" maxlength=\"10\" name=\"aycreatepc\" required=\"\" type=\"text\"/>", 
+    "feature": "zip postal code type text id aycreatepc name aycreatepc maxlength 10", 
+    "rule": {
+      "id": ["pc"], 
+      "name": ["pc"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"ay-password\" name=\"password\" type=\"password\"/>", 
+    "feature": "password pin type password id ay password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"aycreatepassword\" name=\"aycreatepassword\" required=\"\" type=\"password\"/>", 
+    "feature": "password type password id aycreatepassword name aycreatepassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"aycreateconfirmpassword\" name=\"aycreateconfirmpassword\" required=\"\" type=\"password\"/>", 
+    "feature": "confirm password type password id aycreateconfirmpassword name aycreateconfirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

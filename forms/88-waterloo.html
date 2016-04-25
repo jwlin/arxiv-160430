@@ -1,0 +1,769 @@
+<html >
+<head>
+<title>Account </title>
+<script type="text/javascript">
+<!--
+/*
+Programmed by Sameer, April 2006
+Composition Rules
+Peter Schaefer, March 21, 2006
+· contain characters from 3 of the following 4 categories:
+1. Uppercase characters (A-Z)
+2. Lowercase characters (a-z)
+3. Numeric digits (0-9)
+4. Non-alphabetic characters (ie. ! $ # %)
+5. At least 7 characters in length
+*/
+var MIN_PSWD_LENGTH = 7;
+var failImg = "<td width=\"15\"><img src=\"/html/images-common/red-x.gif\" width=\"10\" height=\"10\"></td>";
+var passImg = "<td width=\"15\"><img src=\"/html/images-common/check_green.gif\" width=\"15\" height=\"15\"></td>";
+function validatePassword(pword, conf_pword) {
+if (conf_pword.value != pword.value) {
+alert("Your password and confirmation password do not match.");
+pword.select();
+} else if (pword.value.length<MIN_PSWD_LENGTH) {
+alert("Your password must be at least 7 characters in length.");
+pword.select();
+} else if (!checkPasswordRequirements(pword, conf_pword)) {
+alert("Your new password must contain at least 3 of 4 character types (upper case letters, lower case letters, numbers, and symbols).");
+pword.select();
+} else {
+return true;
+}
+return false;
+}
+function checkPasswordRequirements(afield, conf_afield) {
+// 65 to 90 A-Z
+// 97 to 122 a-z
+// 48 to 57 0-9
+var avalue = afield.value;
+var conf_value = conf_afield.value;
+var result;
+var nums = 0;
+var lLetters = 0;
+var uLetters = 0;
+var otherSymbols = 0;
+var threeOfFour = false;
+var tooShort = false;
+var failsConfirm = false;
+//count letters and numerals
+for (i = 0; i < avalue.length; i++) {
+if (avalue.charCodeAt(i) >= 65 && avalue.charCodeAt(i) <= 90) {
+uLetters++;
+} else if (avalue.charCodeAt(i) >= 97 && avalue.charCodeAt(i) <= 122) {
+lLetters++;
+} else if (avalue.charCodeAt(i) >= 48 && avalue.charCodeAt(i) <= 57) {
+nums++;
+} else {
+otherSymbols++;
+}
+}
+//at least 3 of 4 character classes
+if (!(
+( nums>0 && lLetters>0 && uLetters>0 ) ||
+( nums>0 && lLetters>0 && otherSymbols>0 ) ||
+( nums>0 && uLetters>0 && otherSymbols>0 ) ||
+( lLetters>0 && uLetters>0 && otherSymbols>0 )
+)) {
+threeOfFour = false;
+} else {
+threeOfFour = true;
+}
+if (avalue.length<MIN_PSWD_LENGTH) {
+tooShort = true;
+}
+//check if confirmation entered correctly, and some password entered
+if (avalue != conf_value || avalue.length==0) {
+failsConfirm = true;
+}
+displayComments(tooShort, failsConfirm, otherSymbols, lLetters, uLetters, nums, threeOfFour);
+return (!tooShort && !failsConfirm && threeOfFour);
+}
+function displayComments(tooShort, failsConfirm, otherSymbols, lLetters, uLetters, nums, threeOfFour) {
+var lfont='text-decoration: none;';
+var passwordComments = "<table style=\"border-style: solid; border-width: 1px; border-color: grey; margin-top: 1em; width: 100%\"><tr>";
+if (tooShort) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">At least " + MIN_PSWD_LENGTH + " characters</td>";
+//was the confirmation password entered correctly?
+if (failsConfirm) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">Passwords Match</td>";
+//Composition check - letters, numbers, symbols, etc..
+if (lLetters==0) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">Lower Case Letters</td>";
+if (uLetters==0) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">Upper Case Letters</td>";
+if (nums==0) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">Numbers<br>";
+if (otherSymbols==0) {
+passwordComments += failImg;
+} else {
+passwordComments += passImg;
+}
+passwordComments += "<td width=\"60\" style=\""+lfont+"\">Other Symbols</td>";
+passwordComments += "</tr>";
+var status;
+if (otherSymbols+uLetters+lLetters+nums == 0) {
+status="Please enter a password."
+} else if (!threeOfFour) {
+status="Invalid password.  Please ensure you have 3 of 4 character types.";
+} else if (tooShort) {
+status="Password too short.";
+} else if (failsConfirm) {
+status="Valid password - please re-enter your password to continue.";
+} else {
+status="Valid password.";
+}
+passwordComments += "<tr><td colspan=\"12\" align=\"left\" style=\"border-top-style: solid; border-top-width: 1px; border-color: grey;"+lfont+"\"><strong>" + status + "</strong></td></tr>";
+passwordComments += "</table>";
+writeComment(passwordComments, 'commentsDiv');
+}
+//Compliments Quirksmode (http://www.quirksmode.org/js/layerwrite.html)
+//Function is for browser/javascript compatibility
+function writeComment(text,id) {
+if (document.getElementById) {
+x = document.getElementById(id);
+x.innerHTML = '';
+x.innerHTML = text;
+} else if (document.all) {
+x = document.all[id];
+x.innerHTML = text;
+} else if (document.layers) {
+x = document.layers[id];
+text2 = '<P CLASS="">' + text + '</P>;';
+x.document.open();
+x.document.write(text2);
+x.document.close();
+}
+}
+// Call this to test whether required user id has been entered. either (1) refno/userId, or (2) school# and student#
+function checkUserId(thisform) {
+var valid="0123456789";
+var pUserId = thisform.userid.value;
+var pSchoolNum = thisform.schoolNum.value;
+var pStudentNumber = thisform.studentNum.value;
+if (pSchoolNum != '' || pStudentNumber != '') {
+if (pSchoolNum.length!=6) {
+alert("");
+thisform.schoolNum.focus();
+return(false);
+}
+if (pStudentNumber.length!=12) {
+alert("");
+thisform.studentNum.focus();
+return(false);
+}
+for(x=0; x < pStudentNumber.length; ++x){
+if (valid.indexOf(pStudentNumber.charAt(x))==-1){
+alert("");
+thisform.studentNum.focus();
+return(false);
+}
+}
+return true;
+}
+if (pStudentNum2 != '') {
+return true;
+}
+}
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+function isUSCAN(aCountry){
+return ((aCountry == "80021") || (aCountry =="66721" )) ;
+}
+function isNumeric(aNum) {
+//returns true if blank or aNum is composed only of numbers 0-9 (integers)
+var regTest = new RegExp("^[0-9]*$","i");
+return regTest.test(aNum);
+}
+function isEmpty(s) {
+return ((s == null) || (s == ""))
+}
+function getSelectedValue (s) {
+for (var i = 0; i < s.length; i++) {
+if (s[i].selected) { break }
+}
+if (isEmpty(s[i].value)) {
+return false;
+} else {
+return true;
+}
+}
+function checkRequiredFields(input, additionalRequiredFields) {
+var requiredFields = new Array("fname", "lname",  "pword", "conf_pword", "email");
+var fieldNames = new Array("First name", "Last name/family name", "Desired password","Confirm password", "Email address");
+var currObj;
+var currType;
+var x;
+var radioChecked;
+if (typeof additionalRequiredFields !== 'undefined') {
+if (additionalRequiredFields instanceof Array) {
+requiredFields.push.apply(requiredFields, additionalRequiredFields);
+} else {
+requiredFields.push(additionalRequiredFields);
+}
+}
+var fieldCheck = true;
+var fieldsNeeded = "\nA value must be entered or selected in the following field(s):\n\n";
+for(var fieldNum=0; fieldNum < requiredFields.length; fieldNum++) {
+currType = "";
+currObj = input.elements[requiredFields[fieldNum]];
+if (currObj == null) {
+currType = "";
+}
+else if ((currObj.type == undefined) ) {
+if (currObj[0].type == "radio") {
+currType = "radio";
+}
+if (currObj[0].type == "checkbox") {
+currType = "radio";
+}
+}
+else {
+currType = "text";
+}
+//Do nothing if the object doesn't exist
+if (currType == "") {
+}
+//Radio options are a special case since you can't access they're .value like you can with most objects
+else if (currType == "radio")
+{
+radioChecked = false;
+//loop through radio options to see if one is selected
+for (x=0;x<currObj.length;x++)
+{
+if (currObj[x].checked == true)
+{
+radioChecked = true;
+}
+}
+if (!radioChecked){
+fieldsNeeded += fieldNames[fieldNum] + "\n";
+if (fieldCheck == true)
+currObj[0].focus();
+fieldCheck = false;
+}
+}
+//Else consider it as a textObj (or any normal obj with a .value)
+else
+{
+if (isEmpty(input.elements[requiredFields[fieldNum]].value)) {
+if (input.elements[requiredFields[fieldNum]].value == null) {
+if (getSelectedValue(input.elements[requiredFields[fieldNum]]) == false) {
+fieldsNeeded += fieldNames[fieldNum] + "\n";
+if (fieldCheck == true)
+input.elements[requiredFields[fieldNum]].focus();
+fieldCheck = false;
+}
+} else {
+fieldsNeeded += fieldNames[fieldNum] + "\n";
+if (fieldCheck == true)
+input.elements[requiredFields[fieldNum]].focus();
+fieldCheck = false;
+}
+}
+}
+}
+if (fieldCheck == true) {
+return true;
+} else {
+var fieldsNeeded = fieldsNeeded.substring(0, fieldsNeeded.length-1);
+alert(fieldsNeeded);
+return false;
+}
+}
+function isSIN(text)
+{
+if(text == "") {
+return false;
+}
+if (!isNumeric(text)) { return false; }
+inStr = text;
+sin = text;
+inLen = inStr.length;
+if (inLen > 9 || inLen < 9) {
+return false;
+}
+for (var i = 0; i < text.length; i++) {
+var ch = text.substring(i, i + 1)
+}
+var lastdigit = text.substring(8, 8 + 1);
+// add numbers in odd positions; IE 1, 3, 5, 7
+var odd = ((text.substring(0,0 + 1)) * (1.0) + (text.substring(2,2 + 1)) * (1.0)
++(text.substring(4, 4+1)) * (1.0) + (text.substring(6,6 + 1)) * (1.0));
+// form texting of numbers in even positions IE 2, 4, 6, 8
+var enumbers = text.substring(1,1 + 1) + text.substring(3,3 + 1) + text.substring(5,5 + 1) + text.substring(7,7 + 1);
+// add together numbers in new text string
+// take numbers in even positions; IE 2, 4, 6, 8
+// and double them to form a new text string
+// EG if numbers are 2,5,1,9 new text string is 410218
+var ch_sum = "";
+for (var i = 0; i < enumbers.length; i++) {
+var ch = (enumbers.substring(i, i + 1) * 2);
+ch_sum = ch_sum + ch;
+}
+var esum = 0;
+for (var i = 0; i < ch_sum.length; i++) {
+var ch = (ch_sum.substring(i, i + 1));
+esum = ((esum * 1.0) + (ch * 1.0));
+}
+var checknum = (odd + esum);
+var checkdigit;
+// subtextact checknum from next highest multiple of 10
+// to give check digit which is last digit in valid SIN
+if (checknum <= 10) {
+(checkdigit = (10 - checknum));
+}
+if (checknum > 10 && checknum <= 20) {
+(checkdigit = (20 - checknum));
+}
+if (checknum > 20 && checknum <= 30) {
+(checkdigit = (30 - checknum));
+}
+if (checknum > 30 && checknum <= 40) {
+(checkdigit = (40 - checknum));
+}
+if (checknum > 40 && checknum <= 50) {
+(checkdigit = (50 - checknum));
+}
+if (checknum > 50 && checknum <= 60) {
+(checkdigit = (60 - checknum));
+}
+if (checknum > 60 && checknum <= 70) {
+(checkdigit = (70 - checknum));
+}
+if (checknum > 70 && checknum <= 80) {
+(checkdigit = (80 - checknum));
+}
+if (checkdigit != lastdigit) {
+return false;
+}
+return true;
+}
+function isPhoneNumber(aPhoneNum)
+{
+//returns true if blank or aNum is composed only of numbers 0-9 (integers)
+var regTest = new RegExp("^[(]?[0-9]{3}[)]?[ -]?[0-9]{3}[ -]?[0-9]{4}$","i");
+return regTest.test(aPhoneNum);
+}
+function stripHTML (inStr)
+{
+var inTag = 0;
+var outStr = "";
+for (var x=0;x<inStr.length;x++)
+{
+if (inStr.charAt(x) == "<")
+{
+inTag ++;
+}
+else if (inStr.charAt(x) == ">")
+{
+inTag --;
+outStr += " ";
+}
+else {
+if (inTag < 1)
+{
+outStr += inStr.charAt(x);
+}
+}
+}
+var rEx = /[&][n][b][s][p][;]/
+outStr = outStr.replace(/&nbsp;/," ");
+return outStr;
+}
+// Some Generic helper functions. Currently only used for requireFieldsAgent, but can be lobbed into
+// any of the requiredFields functions.
+// Outputs the string (retMsg) in an alert box, with pre-amble concerning missing fields
+function alertMissing(retMsg) {
+alert("\nA value must be entered or selected in the following field(s):\n\n" + retMsg);
+}
+// Return the value of the selected option in the select input (selectList)
+function getSelectValue(selectList) {
+return selectList.options[selectList.selectedIndex].value;
+}
+//Return the selected option in the select input (selectList)
+function getSelectOption(selectList) {
+return selectList.options[selectList.selectedIndex];
+}
+// Return true if the selected option in the select input (selectList) is identical to the given value (sValue), false otherwise
+function hasSelectValue(selectList, sValue) {
+return (getSelectValue(selectList) === sValue);
+}
+// Return true if an option in the given select input (selectList) has been selected, false otherwise
+function hasSelected(selectList) {
+var sVal = selectList.options[selectList.selectedIndex].value;
+return (sVal !== "" && sVal >= 0);
+}
+// Return true if one of the given radio buttons (radioButtonList) is checked, false otherwise
+// Useful for pages with multiple radio buttons with the same name
+function rListChecked(radioButtonList) {
+var hasChecked = false;
+var e = radioButtonList;
+for (var i=0; i<e.length; i++) {
+if (e[i].checked) {
+hasChecked = true;
+}
+}
+return hasChecked;
+}
+// Return true if the checked radio button in the given list of radio buttons (radioButtonList) has the given value (rValue), false otherwise
+function rListHasValue(radioButtonList, rValue) {
+var hasValue = false;
+var e = radioButtonList;
+for (var i=0; i<e.length; i++) {
+if (e[i].checked && e[i].value == rValue) {
+hasValue = true;
+}
+}
+return hasValue;
+}
+// Focus on the given form element (e), if the return value is true
+function errFoc(retVal, e) {
+if (retVal) {
+//Focus gets tricky when working with radio buttons
+if (e.type == undefined && (e[0].type == "radio" || e[0].type == "checkbox")) {
+e[0].focus();
+} else {
+e.focus();
+}
+}
+}
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+function isEmail(str) {
+// are regular expressions supported?
+var supported = 0;
+if (window.RegExp) {
+var tempStr = "a";
+var tempReg = new RegExp(tempStr);
+if (tempReg.test(tempStr)) supported = 1;
+}
+if (!supported) {
+return (str.indexOf(".") > 2) && (str.indexOf("@") > 0);
+}
+//no "@@" allowed or ".." (only allowed on left side of @) or "@." or starting with "."
+var r1 = new RegExp("(@.*@)|(.*@.*\\.\\.)|(@\\.)|(^\\.)");
+//old one before added rule to allow .. on left side of @ -- var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
+var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,5}|[0-9]{1,3})(\\]?)$");
+return (!r1.test(str) && r2.test(str));
+}
+function validateEmail(thisform) {
+var email_str = 'Invalid email address.';
+if (thisform.email != null && !isEmpty(thisform.email.value)) {
+if (!isEmail(thisform.email.value)) {
+alert(email_str);
+thisform.email.focus();
+return false;
+}
+}
+if (thisform.email2 != null && !isEmpty(thisform.email2.value)) {
+if (!isEmail(thisform.email2.value)) {
+alert(email_str);
+thisform.email2.focus();
+return false;
+}
+}
+return true;
+}
+function validateEmailConf(thisform) {
+var email_str = 'Email and Confirm Email fields do not match';
+if (thisform.email != null && !isEmpty(thisform.email.value)) {
+if (thisform.email.value != thisform.emailconf.value) {
+alert(email_str);
+thisform.email.focus();
+return false;
+}
+}
+return true;
+}
+function checkSignin(input) {
+var fieldCheck = true;
+var fieldsNeeded = "\nA value must be entered or selected in the following field(s):\n\n\t";
+// For Waterloo part time, check that the email and confirm email match
+if (input.email.value != input.emailconf.value) {
+alert("Email and Confirm Email fields do not match");
+input.email.focus();
+fieldCheck = false;
+return false;
+}
+if (input.conf_pword && isEmpty(input.pword.value)) {
+if (input.refno != null) {
+if (isEmpty(input.refno.value)) {
+fieldsNeeded += "Desired password" + "\n\t";
+if(fieldCheck==true) { input.pword.focus(); }
+fieldCheck = false;
+}
+} else {
+fieldsNeeded += "Desired password" + "\n\t";
+if(fieldCheck==true) { input.pword.focus(); }
+fieldCheck = false;
+}
+}
+if (input.conf_pword && isEmpty(input.conf_pword.value)) {
+if (input.refno != null) {
+if (isEmpty(input.refno.value)) {
+fieldsNeeded += "Confirm password" + "\n\t";
+if(fieldCheck==true) { input.conf_pword.focus(); }
+fieldCheck = false;
+}
+} else {
+fieldsNeeded += "Confirm password" + "\n\t";
+if(fieldCheck==true) { input.conf_pword.focus(); }
+fieldCheck = false;
+}
+}
+if (fieldCheck) {
+return true;
+} else {
+alert(fieldsNeeded);
+return false;
+}
+}
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+var submit=0;
+function shouldContinue() {
+if ( submit > 0 ) {
+alert('This page has already been submitted!');
+return false;
+} else {
+submit += 1;
+return true;
+}
+}
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+function OnShowHelp (link) {
+window.open(link, "TellMeAbout", "resizable=yes,scrollbars=yes,width=400,height=430");
+}
+//-->
+</SCRIPT>
+	<noscript><META HTTP-EQUIV="Refresh" CONTENT="0;URL='/webapp/logoff.d2w/report?ident=LOGOFF_DSP&merchant_rn=656872&xyz=C759316D&error_code=9103&remove_scookie=true'"></noscript>
+<SCRIPT type="text/javascript">
+<!--
+function OnShowPop (link) {
+window.open(link, "", "resizable=yes,scrollbars=yes,width=400,height=450");
+}
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript">
+<!--
+var loc_submit=0;
+function shouldContinue_submit(input) {
+if ( loc_submit > 0 ) {
+alert('This page has already been submitted!')
+return false
+} else {
+loc_submit += 1
+return true
+}
+}
+//-->
+</SCRIPT>
+<script type='text/javascript' src='/html/js/js_field_sanitizer.js'></script>
+<style type="text/css" media="screen">
+@import url("/html/uw/css/UWblank.css");
+@import url("/html/uw/css/common_header.css");
+@import url("/html/uw/css/webdev.css");
+</style>
+<style type="text/css" media="screen">
+@import url("/html/uw/css/UW2col.css");
+</style>
+<!-- if satement added for IE 6 printing, IE 5.5 will not print this page well -->
+<!--[if IE 6]>
+<style type="text/css" media="print">
+@import url("/html/uw/css/UWprint.css");
+</style>
+<![endif]-->
+<!-- this print will work in W3 Standard compliant browsers -->
+<script language="JavaScript1.2" type="text/javascript" src="/html/uw/css/tablecolour.js">
+</script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+</head>
+<body bgcolor="white" onLoad="document.Create.fname.focus();">
+<table border="0" cellpadding="0" cellspacing="0" class="page_width">
+<tr>
+</tr>
+</table>
+<div id="header">
+<div id="clfbar">
+<div id="uw_wordmark">
+<a href="http://www.uwaterloo.ca">
+<img src="/html/uw/images-navbar/uwlogo.gif" alt="Link to the University of Waterloo home page" height="40" width="120" />
+</a>
+</div>
+<div id="searchbox">
+<form action="http://search.uwaterloo.ca" method="post" id="search" title="search" dir="ltr" lang="en" xml:lang="en">
+<fieldset>
+<label for="searchterm" class="search_note">Search:</label>
+<input name="searchterm" type="text" id="searchterm" class="google" accesskey="s" tabindex="2" size="30" />
+<input type="image" id="submit" src="/html/uw/images-navbar/search_arrow.gif" class="google" tabindex="3" value="Search" alt="Search" />
+<input name="searchtype" type="hidden" value="google-uwdir-keyword" />
+</fieldset>
+</form>
+</div>
+</div>
+<div id="status">
+<b>Status:</b> Not Logged In </div>
+<div id="wordmark">
+<h1>
+<img src="/html/uw/images-headers/graduate-studies-application.gif" />
+</h1>
+</div>
+</div>
+<div id="primarynavarea">
+<ul id="primarynav">
+<li><a href="/webapp/account.d2w/report?ident=ACCOUNT_DSP&merchant_rn=656872&xyz=C759316D" onmouseout="window.status='';return true;" onmouseover="window.status='Account';return true;">Account</a></li>
+<li><a href="/webapp/prepare_main.d2w/report?ident=PREPAREAPP_DSP&merchant_rn=656872" onmouseout="window.status='';return true;" onmouseover="window.status='Prepare Your Application';return true;">Prepare Your Application</a> </li>
+<li><a href="/webapp/browse_main.d2w/report?ident=CAT_DSP&cgmenbr=656872&cgrfnbr=650835&pgmgrp=&xyz=C759316Dtruetruefalse" onmouseout="window.status='';return true;" onmouseover="window.status='Select Programs';return true;">Select Programs</a> </li>
+<li><a href="http://www.grad.uwaterloo.ca/students/applyingonline.html" target="_blank" onmouseout="window.status='';return true;" onmouseover="window.status='Application Required Documents';return true;">Application Required Documents</a></li>
+<br>
+<li><a href="http://uwaterloo.ca/graduate-studies/home" target="_blank" onmouseout="window.status='';return true;" onmouseover="window.status='Graduate Studies Home';return true;">Graduate Studies Home</a> </li>
+</ul>
+</div>
+<a name="content" id="content"></a>
+<tr valign="top" align="left">
+<div id="contentbar"> <h2>
+<!-- InstanceBeginEditable name="topictitle" -->Create Account <!-- InstanceEndEditable -->
+</h2> </div>
+</table>
+<div id="primarycontarea">
+<div id="primarycontent">
+	<p>
+<table border="0" cellpadding="0" cellspacing="0" class="content_width">
+<tr align="left" valign="top">
+<td class="indent_width" align="left" valign="top">&nbsp;</td>
+<td align="left" valign="top">
+<!--START Content-->
+<p>
+By creating an account and logging in to this application, you are accepting the following terms and conditions:
+</p>
+<ol>
+<li>Your personal information will be stored on the OUAC (Ontario Universities' Application Centre) confidential/secure site until October 2, 2016, and can be&nbsp;changed/modified&nbsp;until this date or the date you submit the application, whichever comes first. OUAC personnel will have access to this information in order to respond to your technical and fee payment questions during the application process.</li>
+	<li>If you have not submitted your application by October 2, 2016, and still wish to apply, you will need to create a new account. Your application/account will be deleted by the OUAC no later than the end of December 2016. </li>
+	</ol>
+Please review the
+<a href="http://www.uwaterloo.ca/privacy/" target="_blank">University of Waterloo Freedom of Information and Privacy statement</a> and the
+<a href="http://www.ouac.on.ca/privacy/grad-declaration-collab/" target="_blank">OUAC Notice of Collection, Use, Disclosure and Treatment of Personal Information by the OUAC</a>.
+If you submit this application, at the time of submission, you will be required to accept the terms and conditions in the University&nbsp;of Waterloo's <a href="#" OnClick="OnShowPop('http://horizon.ouac.on.ca/html/help_files/656872_f_applicant_responsibilities.html')" onMouseOver="window.status='Applicant Declaration';return true;" onMouseOut="window.status='';return true;">Applicant Declaration</a>.
+<br><br>
+<form name="Create" method="post" action="report" onSubmit="if (checkRequiredFields(this) && validateEmail(this) && validatePassword(document.forms.Create.pword,document.forms.Create.conf_pword)){ return shouldContinue(); } else{ return false; }" AUTOCOMPLETE="OFF">
+To create a new account, fill in this form.<br><br>
+<table border="0" cellpadding="0" cellspacing="3" width="100%">
+<tr align="left" valign="top">
+<td align="right" width="30%" id="fname">First name</td>
+<td width="70%"><input type="text" name="fname" size="30" maxlength="30" value=""></td>
+</tr>
+<tr align="left" valign="top">
+<td align="right" id="lname">Last name/family name</td>
+<td><input type="text" name="lname" size="30" maxlength="30" value=""></td>
+</tr>
+<tr align="left" valign="top">
+<td align="right" id="email">
+Email address</td>
+<td><input type="text" name="email" size="30" maxlength="60" value=""></td>
+</tr>
+<tr align="left" valign="top">
+<td align="right" id="emailconf">
+Confirm email address</td>
+<td><input type="text" name="emailconf" size="30" maxlength="60" value=""></td>
+</tr>
+<tr><td><br></td><tr>
+<tr>
+<td colspan="2">
+Your desired password must be between 7 - 30 characters and contain at least 3 of 4 character types (upper case letters, lower case letters, numbers, and symbols).
+</td>
+</tr>
+<tr><td><br></td><tr>
+<tr align="left" valign="top">
+<td align="right" id="pword">
+Desired password</td>
+<td><input type="password" name="pword" size="30" maxlength="30" value="" onkeyup="checkPasswordRequirements(pword,conf_pword)"> </td>
+</tr>
+<tr align="left" valign="top">
+<td align="right" id="conf_pword">
+Confirm password</td>
+<td><input type="password" name="conf_pword" size="30" maxlength="30" value="" onkeyup="checkPasswordRequirements(pword,conf_pword)"> </td>
+</tr>
+<tr><td colspan="2">
+<div id="commentsDiv">
+<!-- Password warnings go here -->
+</div>
+</td></tr>
+<SCRIPT type="text/javascript">
+<!--
+checkPasswordRequirements(document.forms.Create.pword, document.forms.Create.conf_pword);
+//-->
+</SCRIPT>
+<tr align="left" valign="top">
+<td>
+<input type="hidden" name="force_add" value="">
+&nbsp;
+</td>
+<td>
+<br>
+<input name="buttonsubmit" class="button_normal" type="submit" value="Create Account">
+</td>
+</tr>
+<input type="hidden" name="ident" value="REG_NEW">
+</form>
+</table>
+<br><b>Supported Browsers:</b>&nbsp;Microsoft Internet Explorer 11, Mozilla Firefox 38, Apple Safari 8 (Mac only) and Google Chrome 45. Currently we do not support mobile devices, such as smartphones or tablets. <a href="." OnClick="OnShowHelp('http://horizon.ouac.on.ca/html/help_files/2_help_browser_support.html'); return false" onMouseOver="window.status='http://horizon.ouac.on.ca/html/help_files/2_help_browser_support.html';return true;" onMouseOut="window.status='';return true;">More information on browser compatibility</a>.<br>
+</table>
+</div>
+</div>
+<div id="footer">
+<div id="departmentaddress">
+<a href="http://campaign.uwaterloo.ca" target=_blank><img src="/html/uw/images-navbar/littlecampaignlogo.gif" alt="Campaign Waterloo" class="campaignlogo" /></a>
+<p>
+University of Waterloo<br />
+200 University Avenue West<br />
+Waterloo, Ontario, Canada N2L 3G1<br />
+519 888 4567<br />
+<br />
+<a href="#" OnClick="OnShowPop('http://horizon.ouac.on.ca/html/help_files/656872_f_confidentiality.html');" onMouseOver="window.status='Confidentiality';return true;" onMouseOut="window.status='';return true;">Confidentiality</a> |
+<a href="#" OnClick="OnShowPop('http://horizon.ouac.on.ca/html/help_files/656872_f_applicant_responsibilities.html')" onMouseOver="window.status='Applicant Declaration';return true;" onMouseOut="window.status='';return true;">Applicant Declaration</a> |
+<a href="#" OnClick="OnShowPop('http://horizon.ouac.on.ca/html/help_files/656872_f_contact.html')" onMouseOver="window.status='Contact Info';return true;" onMouseOut="window.status='';return true;">Contact Info</a>
+<br /><br />
+<span class="textdkgrey">&copy; 2004 University of Waterloo Graduate Studies</span>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

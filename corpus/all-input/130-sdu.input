@@ -1,0 +1,105 @@
+[
+  {
+    "dom": "<input id=\"q\" maxlength=\"255\" name=\"q\" size=\"16\" type=\"text\" value=\"\"/>", 
+    "feature": "search name q type text id q maxlength 255", 
+    "rule": {
+      "id": ["q"], 
+      "name": ["q"]
+    }, 
+    "type": "search_term"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_first_name\" maxlength=\"30\" name=\"new_first_name\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "applicant s applicant s first given name name new first name type text id new first name maxlength 30", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_middle_name\" maxlength=\"30\" name=\"new_middle_name\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "applicant s applicant s middle name name new middle name type text id new middle name maxlength 30", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_last_name\" maxlength=\"30\" name=\"new_last_name\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "applicant s applicant s last family name name new last name type text id new last name maxlength 30", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"form-control dateform inline\" id=\"new_dob\" maxlength=\"10\" name=\"new_dob\" size=\"10\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy name new dob type text id new dob maxlength 10", 
+    "rule": {
+      "id": ["dob"], 
+      "name": ["dob"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_email_address\" maxlength=\"50\" name=\"new_email_address\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "if you do not currently have an e mail account you may create an account for free by using any of the popular e mail websites e g gmail outlook yahoo mail name new email address type text id new email address maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input autocomplete=\"no\" class=\"form-control\" id=\"new_cemail_address\" maxlength=\"50\" name=\"new_cemail_address\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "applicant s applicant s e mail address repeat name new cemail address id new cemail address type text maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_username\" maxlength=\"50\" name=\"new_username\" onfocus=\"updatestatelogoncheck(this);\" onkeyup=\"updatestatelogoncheck(this);\" size=\"12\" type=\"text\" value=\"\"/>", 
+    "feature": "use only characters a z 0 9 e mail address is allowed name new username type text id new username maxlength 50", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_answer\" maxlength=\"32\" name=\"new_answer\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "password hint password hint answer name new answer type text id new answer maxlength 32", 
+    "rule": {
+      "id": ["answer"], 
+      "name": ["answer"]
+    }, 
+    "type": "secure_ans"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_password\" maxlength=\"12\" name=\"new_password\" size=\"12\" type=\"password\" value=\"\"/>", 
+    "feature": "password name new password type password id new password maxlength 12", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"new_cpassword2\" maxlength=\"12\" name=\"new_cpassword\" size=\"12\" type=\"password\" value=\"\"/>", 
+    "feature": "password again name new cpassword type password id new cpassword2 maxlength 12", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

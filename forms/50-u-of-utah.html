@@ -1,0 +1,531 @@
+<!doctype html>
+<script language=javascript>
+    function SetCustomLocale()
+    {
+         return '';
+    }
+</script>
+
+<HTML>
+	<HEAD>
+		<TITLE>Online Application Login</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<meta name="ROBOTS" content="noindex,nofollow">
+		<META NAME="ROBOTS" CONTENT="NOARCHIVE">
+		<link rel="stylesheet" href="../common/stylesheet.css">
+		<link rel="stylesheet" href="../common/bootstrap.css">    
+		<link rel="stylesheet" href="../common/style.css">
+		<SCRIPT LANGUAGE="JavaScript" SRC="../common/common.js"></SCRIPT>
+		<SCRIPT LANGUAGE="JavaScript" SRC="../common/validation.js"></SCRIPT>
+		<SCRIPT LANGUAGE="JavaScript" SRC="../common/validationConsts.js"></SCRIPT>		
+		<script src="../common/fl_JS/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+		<script src="../common/jquery.min.js" type="text/javascript"></script>	
+		<script src="../common/jquery.validate.js" type="text/javascript"></script>	
+		
+		<SCRIPT LANGUAGE="javaScript">
+			var sessionid = "EF5E226-7A78-4234-A8C3-90903B71136";
+			var ConfirmHtml;	
+			if ("" == "2" && "_ga=GA1%2E3%2E827307727%2E1446285811;__utmc=1;__utma=1%2E827307727%2E1446285811%2E1451977354%2E1457772826%2E11;__utmz=1%2E1451977354%2E10%2E2%2Eutmcsr=grad%2Eillinois%2Eedu%7Cutmccn%3D%28referral%29%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fadmissions%2Fapply;ASP.NET_SessionId=bmces4yiyeqoyeurxi3r5cad;ay_persist=3449370634%2E39199%2E0000;C-N=uiuc%2Dgrad;" == "") 
+			{
+				window.top.location.href = "http://app.applyyourself.com/AYApplicantLogin/fl_ApplicantLogin.asp?id=utahgrad"; 
+			}
+			function PreSubmit()
+			{				
+				var objFName = $('#aycreateFN')[0];				
+				var ObjLName = $('#aycreateLN')[0];
+				var ObjBirthDt = $('#aycreateDOB')[0];
+				var ObjEmail = $('#aycreateEMail')[0];
+				var ObjConfirmEmail = $('#aycreateConfirmEMail')[0];
+				var ObjZip = $('#aycreatePC')[0];
+				var ObjPassword = $('#aycreatePassword')[0];
+				var ObjConfirmPassword = $('#aycreateConfirmPassword')[0];
+				var lngadminid ;
+				lngadminid = 1;
+				
+				gErrString = '';				
+				validateIsAlphaMixed(objFName.value,"First Name","");				
+				if (lngadminid == 1) 
+				{			
+					ValidateemailCheck(trim(ObjEmail.value), "Email Address", "email");			
+					ValidateemailCheck(trim(ObjConfirmEmail.value), "Confirmation Email Address", "email");		
+					if (ObjEmail.value.length >= 120)
+					{
+						addError("Your email address is longer than allowed in the database.  Please verify that you have entered a single address and that it has been entered correctly.  If your email address is greater than 120 characters, please send a message to technical support, and we will provide further assistance.","Email Address","");
+					}
+					if(trim(ObjEmail.value) != trim(ObjConfirmEmail.value))
+					{
+						addError("The confirmation email address and the email address do not match.","Confirmation Email/Email Address","");		
+					}
+				}	
+								
+				
+              if (validateDate("", ObjBirthDt.value,"Birth date"))
+              {
+                  Validatefuturedate(ObjBirthDt.value,"Birth date","");
+                 validateSQLSmallDateTimeDateRange(ObjBirthDt.value, "Birth date", "Birth date", "MM/DD/YYYY");
+              }
+                
+				
+				validateIsAlphaNumericSpace(ObjZip.value,"ZIP/Postal Code","");
+				if (ObjPassword.value=="")
+				{ 
+					addError("Please enter a Password", "Password","");
+				}
+				else
+				{	
+					validatePassword(ObjPassword.value, ObjConfirmPassword.value, 8, 30);
+				}	
+				if(gErrString != '')
+				{					 
+					 fl_displayErrorsInlineNoErrNums("Please correct the following errors.","create"); 					 
+				}
+				else
+				{
+						
+					if ( lngadminid == "" || lngadminid == 1) 
+					{	
+						return true;						
+					}
+					else
+					{
+						if (lngadminid > 1)
+						{				
+							document.FormCreate.action = "CreateAppAccAdmin_Action.asp?ID=" + "utahgrad"
+							return true;			
+						}
+					}
+				}
+				return false;
+			}
+			
+			function loader()
+			{
+				var QSErrString					
+				QSErrString = ''
+				gErrString = QSErrString;
+				
+				if (QSErrString !='' )
+					{	
+					fl_displayErrorsInlineNoErrNums("Please review the details presented below for more information.","login");							
+					gErrString = "";
+					QSErrString= "";					
+					}	
+				QSErrString = ''
+				gErrString = QSErrString;
+				
+				if (QSErrString !='' )
+					{
+					$('#CreateAccountLink').click()
+					fl_displayErrorsInlineNoErrNums("Please review the details presented below for more information.","create");							
+					gErrString = "";
+					QSErrString= "";
+																		
+					}
+				else
+				{
+				   	if("" !='' )
+					{
+					   $('#CreateAccountLink').click()
+					}
+				}				
+			}		
+			function showConfirmHtml()
+			{
+				ConfirmHtml = ""	
+				if(ConfirmHtml !='')
+				{	
+					$('#ay-account').hide()	
+					$('#ay-confirmation').show()
+				}
+			}
+			
+			function createAccount()
+			{			   
+					$("#tab2").show(); 
+					return true					
+			}
+		</SCRIPT>	
+		
+	
+	</HEAD>
+
+	<!--Agile 14/13C --- AYI-565 -- FIU-ADA-Navigating to Create account button with Tab key is opening Forgot password pop and create accout page
+	Removed onkeypress event as this is causing a weird behavior as mentioned in the ticket-->
+    
+	<body onLoad="loader()">
+	<noscript>In order to use the system, please make sure that Javascript is enabled on your machine</noscript>
+
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5BXB27" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+	        w[l] = w[l] || [];
+	        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+	        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+	        j.async = true;
+	        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+	        f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5BXB27');
+    </script>
+  <link rel="stylesheet" href="/_FileRoot/Clnt-979/fl_style.css" type="text/css">
+	<script language="javascript">
+
+	function loadImages()
+	{
+	MM_preloadImages('../Images/top_nav/contact_us_o.gif','../Images/top_nav/technical_support_o.gif','../Images/top_nav/login_o.gif')
+	}
+
+		function windowPopOpen(theURL,winName,features) 
+						{ 
+							 window.open(theURL,winName,features);
+						}
+
+	</script>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+        <div class="container" id="header" style= "background-image:url(/_FileRoot/Clnt-979/979_fl.gif); background-repeat:no-repeat;">
+      <h1 class="off-screen">University Name Online Application</h1>
+      <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">University of Hobsons</a>--> 
+      <!--<div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>--><!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+	
+
+	 <div class="container">   
+			  <!-- Main Body container -->
+			<div class="hero-unit"> 
+				<!-- columns -->
+				<div class="row-fluid">				
+					<!-- column 1 -->
+					<div class="span5">
+						<!-- Login Dynamic Text  -->
+								
+						<div id="ay-login-text" class="dynamicText">
+							<p class="information"><strong>For Internet Explorer users, please be sure to turn off <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie-9/features/compatibility-view" style="text-decoration: underline;" target="_blank">compatibility mode</a> for optimal viewing.</strong></p>
+<p><font style="font-size: 16px;"><strong><span lang="en-US">
+</span></strong></font></p>
+</br> 
+<strong>Welcome to the graduate application for the University of Utah.</strong>
+<p> This application is part of the ApplyYourself Application Network and is designed to make the application process as easy and convenient as possible for you.
+</p>
+<p>
+This application is for most Master's or Doctoral degree programs. If you wish to apply for a law degree, attend non-matriculated, or receive a graduate certificate only, please see the 
+<a href="http://catalog.utah.edu/" target="_blank">department’s website</a> for details.</p>
+<p>
+Below are the simple steps you can follow to ensure your application is received in complete condition:</p>
+<ol>
+    <li><u>Create an Account</u>
+    <br />
+    To get started on your application, create an account to the right. You will receive a PIN and Password. Please keep this PIN and Password in a safe place.  You will need both items to access your account.
+    <br />
+    <br />
+    Your information is transmitted through a secure server and is kept confidential. Only after you submit your application will it be available for review by University of Utah graduate department and the Office of Admissions staff.<br />
+    <br />
+    </li>
+    <li><u>Complete the Application</u>
+    <br />
+    Please carefully read the instructions that appear throughout the application pages. You can only submit one application to each graduate department.  A separate graduate admission application must be filled out for each academic department to which you are applying. You will be charged the application fee for each application you submit.
+    <br />
+    <br />
+    <div style="display: block;">
+    University Office of Admissions term deadlines are:
+    <div style="float: left; margin-left: 42px;">
+    Fall Semester<br />
+    Spring Semester<br />
+    Summer Semester<br />
+    </div>
+    <div style="float: left; margin-left: 20px;">
+    April 1<br />
+    November 1<br />
+    March 15<br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    Applications received after the term deadline will be assessed a $30 late fee.
+    </div>
+    <br />
+    PLEASE NOTE: your program may have an earlier deadline. Please <a href="http://catalog.utah.edu/" target="_blank">visit your program's website</a> for information regarding your department's deadlines, requirements and application process.<br />
+    <br />
+    </li>
+    <li><u>Pay the Application Fee</u><br />
+    When you have completed your application and are ready to submit, you must pay your application fees via credit card online or mail a check or money order to the University of Utah Office of Admissions, 201 South 1460 East, Room 250s, Salt Lake City, UT 84112.
+    <br />
+    <br />
+    Applications will not be processed until the application fee has been paid.<br />
+    <br />
+    </li>
+    <li><u>Submit your Application Electronically</u><br />
+    Click on the “Submit” button and we will have access to your application.  Note:  please do not print and mail the application to us.
+    <br />
+    <br />
+    If you have updates to any information you have submitted, please notify the University of Utah Office of Admissions immediately. Domestic applicants may email at <a href="mailto:graduate@sa.utah.edu">graduate@sa.utah.edu</a>, and International applicants may email at <a href="mailto:iao@sa.utah.edu">iao@sa.utah.edu</a>. All applicants may call at (801) 581-8761.<br />
+    <br />
+    </li>
+    <li><u>Check the Status of your Application</u>
+    <br />
+    At any time, you can log into the ApplyYourself system and check the status of your application.
+    </li>
+</ol>
+<br />
+<strong>Best of luck. We look forward to reviewing your application.</strong>				
+								
+						</div>			   
+						<!-- Create Account Dynamic Text  -->
+							<div id="ay-create-text" class="dynamicText">
+							 
+							Welcome to our online application. We are pleased that you are considering graduate study at the University of Utah.<BR><BR>Our online application is part of the ApplyYourself Application Network.  You have accessed this page to set up a new account and password. Please review the system requirements and complete the form below.  If you already have an application account, please return to the  login screen to log in to your application.<br><br>
+									<b>Already have a PIN but cannot remember it?  Please use the <a id="SearchPIN" data-toggle="modal" href="#dialog">automated search >></a> to locate it.</b>
+								
+								<br>
+						</div>
+					</div>
+			   <!-- column 2 (tabs) -->  
+				  <div class="span7">
+					<div class="tabbable">
+					  <ul class="nav nav-tabs">
+						<li class="active"><a id="UserLoginLink" href="#tab1" data-toggle="tab">User Login</a></li>
+						 
+						<li><a id="CreateAccountLink" href="#tab2" data-toggle="tab">Create Account</a></li>
+						
+					  </ul>
+					<div class="tab-content">
+                    <!-- Login Tab-->
+						<div class="tab-pane" id="tab1">
+                        <p id="ay-loginText" class="italic">Please input your login information below to open your application.</p>
+                        <div id="divLoginErrors" style="display: none;" class="error">
+												  
+							</div>
+						<div id="ay-login-box">              
+						
+						    <form id="frmApplicantLogin" class="newFormsLeft" action="../ayapplicantlogin/fl_ApplicantLogin_Action.asp?CID=979&ID=utahgrad&AYID=EF5E226-7A78-4234-A8C3-90903B71136" method="post">
+							  <fieldset>
+								<input type="hidden" name="ReferURL" value="http://www.cs.utah.edu/graduate/application/" ID="Hidden1">
+								<legend class="off-screen">Application Login</legend>
+								<label  for="ay-login">PIN</label>
+								<input name="UserID" id="ay-login" type="text" required/>								
+								<br/>
+								<label for="ay-password">Password</label>
+								<input name="Password" id="ay-password" type="password"/>
+								<br/>
+								<input id="ay-loginSubmit" type="submit" value="login" required />
+							  </fieldset>
+							</form>
+							<br/>							
+							<p id="ay-forgotPIN"><a id="forgotPIN" data-toggle="modal" href="#dialog">Forgot your PIN or password?</a></p>
+						  </div>
+						</div>              
+					
+
+				 
+				<!-- Account Creation Tab -->
+				<div class="tab-pane" id="tab2">
+				<form method="post" class="newFormsLeft" name="FormCreate" id="ay-create" action="../AYSecurity/fl_CreateAppAcc_action.asp?AYID=EF5E226-7A78-4234-A8C3-90903B71136&ID=utahgrad">            
+						<input type="hidden" name="AYFormID" value="26F5DAD7D9584461F9954BC14ABA643C2B7076F0" ID="Hidden1"> 
+					<div  class="create-tab" id="ay-account">
+						<h2>Account Profile</h2>
+						<p id="indicatesRequired" class="italic">* indicates a required question</p>	
+						<div id="divCreateErrors" style="display: none;" class="error">
+												  
+						</div>
+						
+						<div id="ay-create-box">
+							<fieldset>
+							  <legend class="off-screen">Applicant's Personal Information</legend>
+							  <div class="ay-create-label" id="parentFirstName">
+								<label for="aycreateFN">First or Given Name *</label>
+								<input type="text" name="aycreateFN" id="aycreateFN" required maxlength="30"/>
+							  </div>
+							  <div class="ay-create-label" id="parentLastName">
+								<label for="aycreateLN">Last or Family Name *</label>								
+								<input type="text" name="aycreateLN" id="aycreateLN" required maxlength="30"/>
+							  </div>
+							  <div class="ay-create-label" id="parentEmail">
+								<label for="aycreateEMail">Email Address *</label>
+								<input type="text" class="emails" name="aycreateEMail" id="aycreateEMail" required size="35" maxlength="120"/>
+							  </div>
+							  <div class="ay-create-label" id="parentConfirmEmail">
+								<label for="aycreateConfirmEMail">Confirm Email Address *</label>
+								<input type="text" class="emails" name="aycreateConfirmEMail" id="aycreateConfirmEMail" required size="35" />
+							  </div>
+							  <div class="ay-create-label" id="parentDOB">
+								<label for="aycreateDOB">Birth Date *</label>
+								<input type="text" name="aycreateDOB" id="aycreateDOB"  required size="20" />
+								<span class="italic help-inline">mm/dd/yyyy</span></div>
+							  <div class="ay-create-label" id="parentZip">
+								<label for="aycreatePC">ZIP/Postal Code *</label>
+								<input type="text" name="aycreatePC" id="aycreatePC"  required  maxlength="10"/>
+							  </div>
+							  <p id="ZipCaption" class="italic help-block">enter 00000 if you do not have a ZIP/Postal Code</p>
+							</fieldset>
+							<hr style="color:white" />
+							<p class="italic">Passwords must be between 8-30 characters, contain at least 1 uppercase letter (A-Z), 1 lowercase letter (a-z), 1 number (0-9), and 1 of the following special characters: !@#$%^&*()_+|~-=\`{}[]:";'<>?,./ Spaces are not allowed.<br><br></p>
+							<fieldset>
+							  <legend class="off-screen">Create Login Password</legend>
+							  <div class="ay-create-label" id="parentPassword">
+								<label for="aycreatePassword">Password *</label>
+								<input type="password" name="aycreatePassword" id="aycreatePassword" required />
+							  </div>
+							  <div class="ay-create-label" id="parentConfirmPassword">
+								<label for="aycreateConfirmPassword">Confirm Password *</label>
+								<input type="password" name="aycreateConfirmPassword" id="aycreateConfirmPassword" required />
+							  </div>
+							</fieldset>	
+								<INPUT id="Radio1" type="hidden" value="True" name="AppAllowContactPreSubmit">
+								<input type="hidden" name="UserRequest" value="">	
+								<input id="ay-createSubmit" type="submit" value="Create Account"/>              
+							</div>
+						</div>
+				</form>
+				<div  class="create-tab" id="ay-confirmation">
+						<form action="../AYApplicantLogin/fl_ApplicantLogin_Action.asp?CID=979&ID=utahgrad&AYID=EF5E226-7A78-4234-A8C3-90903B71136&createacc=y" method="post" name="frmConfirmAppAcct">
+						    <input type='hidden' name='UserID' value=''/>
+						    <input type='hidden' name='Password' value=''/>
+						        <p>
+						            ,<br/><br/>
+						            Your online personal account has been created and an email containing your account information (excluding your Password) has been sent to .
+						       </p>
+						       <p align='center'>
+						            <b>PIN:&nbsp;&nbsp;</b>
+						       </p>
+						       <p>
+						            Please record this PIN and the password you entered in a safe place. You will need both of these items to access your account in the future.
+						       </p>
+						       <p align='center'>
+						            <input id='ay-create-login' type='submit' value='login' href='javascript:document.frmConfirmAppAcct.submit();'/>
+						       </p>
+						       
+						    </form>
+				</div>	
+				</div>
+						
+					
+					</div>
+      <!--tab2 End-->      
+				</div>
+					</div>
+				  </div>
+			</div>
+    </div>
+			
+		<script src="../common/fl_JS/libs/bootstrap/bootstrap.min.js"></script> 			
+		<script src="../AyApplicantlogin/fl_ApplicantLoginScript.js"></script> 
+		<script src="../common/SetImagesSource.js"></script> 
+		
+  <script language="JavaScript">
+      var Now = new Date();	
+      var h = $(window).height() - 100;
+	  var m = h*-.55;
+	  $(document).ready(function() {
+	      $('#modalbody').css({ 'max-height': h });
+	      $('#PreFTSysReqBody').css({ 'max-height': h });
+	      $('.modal').css('margin-top', m);
+	      $('#PreFTSecurityInfo').click(function() {
+	          $('#modalheader').html("<i class='icon-lock icon-white'></i> Privacy & Security")
+	          $('#modalbody').load("../Common/fl_AppSecurity.asp")
+
+	      });
+	      $('#PreFTTechsupport').click(function() {
+	          $('#modalheader').html("<i class='icon-wrench icon-white'></i> Tech Support")
+	          $.post("../AYContactHelpDesk/fl_TechSupport.asp?AYID=EF5E226-7A78-4234-A8C3-90903B71136&packageType=" + encodeURI('Application for Admission') + "&d=" + escape(Now.getTime()), function(data) {
+	              $('#modalbody').html('<p style="text-align:center;"><img src="../Images/common_images/fl_loader.gif" alt="Loading..."></p>');
+				  $('#modalbody').html(data);
+	          });
+
+	      });
+	      $('#Notice').click(function() {
+
+	          $('#modalheader').html("<i class='icon-white icon-file'></i> Notice to Applicants")
+	          $('#modalbody').html('<p style="text-align:center;"><img src="../Images/common_images/fl_loader.gif" alt="Loading..."></p>');
+			  $('#modalbody').load("../AYApplicantLogin/fl_notice_to_applicants.htm")
+	          $('#dialog').modal('show')
+	      });
+	  });
+	  
+	
+	
+</script>
+<script language = "javascript" >
+    function clearDialog() {
+        $('#modalheader').html("");
+        //$('#modalbody').html("");
+		$('#modalbody').html('<p style="text-align:center;"><img src="../Images/common_images/fl_loader.gif" alt="Loading..."></p>');
+    }	
+</script>
+<div class = "modal" id="dialog" style="display: none;" > 						   
+    <div class="modal-header">
+	    <button id="modalClose" data-dismiss="modal" class="close" onclick = "javascript:clearDialog();">×</button>
+	    <h3 id="modalheader"></h3>
+    </div>
+    <div id = "modalbody" class="modal-body"></div> 
+</div>
+
+<footer>
+ <ul class="footerTopUl">
+    
+		<li class="footerTopLi"><a id="PreFTTechsupport" data-toggle="modal" href="#dialog">Technical Support</a></li>
+		<li class="footerTopLi"><a id="PreFTSecurityInfo" data-toggle="modal" href="#dialog">Privacy & Security</a></li>   
+		<li class="footerTopLi"><a data-toggle="modal" href="#PreFTSysReq">System Requirements</a></li>		
+ </ul>
+ 
+ </footer>
+ 
+ <!-- System Requirements Model -->
+<div class="modal" id="PreFTSysReq" style="display: none;">
+  <div class="modal-header">
+    <button data-dismiss="modal" class="close" onclick = "javascript:clearDialog();">×</button>
+    <h3><i class="icon-cog icon-white"></i> System Requirements</h3>
+  </div>
+  <div class="modal-body" id = "PreFTSysReqBody" >
+  
+  
+  <h4>Application System Requirements</h4>
+    <p>Supported browsers include Internet Explorer 9 and 11, Firefox, Chrome and Safari.</p>
+	<p>While the majority of features will work with other browsers, we can only guarantee full compatibility and offer support for the browsers mentioned above.</p>
+    <p>If you are using one of the supported browsers and are experiencing problems, we encourage you to upgrade to the latest version. If you still experience problems after upgrading, please make sure that your browser is set to accept cookies. Also, make sure the following browser settings are enabled:<br>
+      <ul>
+		  <li>JavaScript must be enabled.</li>
+		  <li>Popup blockers must be disabled.</li>
+	  </ul>
+	</p>
+    <p>If your browser has a section for trusted sites, please enter these two URLs:<br>
+      
+	                
+	                    <ul>	                	                    
+	                        <li><a href="http://app.applyyourself.com?id=utahgrad" target="_blank" ><u>http://app.applyyourself.com</u></a></li>
+	                        <li><a href="https://app.applyyourself.com?id=utahgrad" target="_blank"><u>https://app.applyyourself.com</u></a></li>
+	                    </ul>
+	                 
+    				<p>You will need Adobe Reader 6.0 or higher to download, view and print PDF files. While PDF files should work with most other PDF viewers, we can only guarantee full compatibility and support for Adobe Reader 6.0 or higher.</p>	 
+	                <p>If your email offers a whitelist, please add the following address:</p>	 
+					<ul>	                        
+						<li><a href="mailto:support@hobsons.com" target="_blank"><u>support@hobsons.com</u></a></li>
+					</ul>	
+	                
+						<p>A confirmation email containing your PIN/User Name information will be automatically sent to the email address provided above. Please record your password in a safe place since you will need both your PIN/User Name and password to access your application in the future.</p>
+					
+	                
+	                <p>For security reasons, we recommend that you should logout of the online application after each session.</p>	
+	</div>
+</div>
+ 
+
+
+</body>
+</html>

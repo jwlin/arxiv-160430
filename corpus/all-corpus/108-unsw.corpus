@@ -1,0 +1,9 @@
+name firstname type text maxlength 30
+name middlename type text maxlength 30
+name lastname type text maxlength 30
+name visanumber type text maxlength 15
+name emailaddress type text maxlength 70
+name emailaddress2 type text maxlength 70
+type text name login maxlength 14
+type password name password maxlength 14
+type password name password2 maxlength 14

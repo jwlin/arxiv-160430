@@ -1,0 +1,48 @@
+[
+  {
+    "dom": "<input class=\"input\" id=\"txtfirstname\" maxlength=\"50\" name=\"txtfirstname\" title=\"enter your firstname\" type=\"text\"/>", 
+    "feature": "first given names first given names name txtfirstname type text id txtfirstname maxlength 50", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"txtsurname\" maxlength=\"50\" name=\"txtsurname\" title=\"enter your surname as it was when you graduated from your first degree\" type=\"text\"/>", 
+    "feature": "surname family name surname family name name txtsurname type text id txtsurname maxlength 50", 
+    "rule": {
+      "id": ["surname"], 
+      "name": ["surname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"txtemail\" maxlength=\"100\" name=\"txtemail\" title=\"enter your email address\" type=\"text\"/>", 
+    "feature": "email address email address name txtemail type text id txtemail maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"txtconfirm\" maxlength=\"100\" name=\"txtconfirm\" title=\"confirm your email address\" type=\"text\"/>", 
+    "feature": "confirm email address confirm email address name txtconfirm type text id txtconfirm maxlength 100", 
+    "rule": {
+      "id": ["confirm"], 
+      "name": ["confirm"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"txtapplicantid\" maxlength=\"5\" name=\"txtapplicantid\" type=\"text\"/>", 
+    "feature": "applicant id type text id txtapplicantid name txtapplicantid maxlength 5", 
+    "rule": {
+      "id": ["applicantid"], 
+      "name": ["applicantid"]
+    }, 
+    "type": "special_id"
+  }
+]

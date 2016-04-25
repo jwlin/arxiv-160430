@@ -1,0 +1,59 @@
+[
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_last_name\" name=\"applicant[last_name]\" required=\"required\" type=\"text\" value=\"\"/>", 
+    "feature": "last name family name surname name applicant last name id applicant last name type text", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_first_name\" name=\"applicant[first_name]\" type=\"text\" value=\"\"/>", 
+    "feature": "first name given name name applicant first name type text id applicant first name", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_middle_name\" name=\"applicant[middle_name]\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name name applicant middle name type text id applicant middle name", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_email\" name=\"applicant[email]\" required=\"required\" type=\"email\"/>", 
+    "feature": "email type email name applicant email id applicant email", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_password\" name=\"applicant[password]\" required=\"required\" type=\"password\"/>", 
+    "feature": "password type password name applicant password id applicant password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"applicant_password_confirmation\" name=\"applicant[password_confirmation]\" required=\"required\" type=\"password\"/>", 
+    "feature": "password confirmation type password name applicant password confirmation id applicant password confirmation", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

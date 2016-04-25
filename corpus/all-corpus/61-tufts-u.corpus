@@ -1,0 +1,3 @@
+first name name first type text id first maxlength 64
+last name name last type text id last maxlength 64
+email address name email type email id email maxlength 64

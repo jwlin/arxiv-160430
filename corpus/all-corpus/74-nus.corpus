@@ -1,0 +1,5 @@
+ email address name emailaddress id emailaddress type text
+ full name name fullname id fullname type text
+ date of birth dd mm yyyy name dateofbirth id dateofbirth type text
+ password minimum 6 characters name password id password type password
+ confirm password minimum 6 characters name confirmpassword type password id confirmpassword

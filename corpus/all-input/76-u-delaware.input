@@ -1,0 +1,30 @@
+[
+  {
+    "dom": "<input autocomplete=\"off\" data-validate=\"{ required: true, help: 'first name is required.' }\" id=\"first\" maxlength=\"64\" name=\"first\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "first name name first type text id first maxlength 64", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" data-validate=\"{ required: true, help: 'last name is required.' }\" id=\"last\" maxlength=\"64\" name=\"last\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "last name name last type text id last maxlength 64", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" data-validate=\"{ required: true, format: 'email', help: 'email address is required.' }\" id=\"email\" maxlength=\"64\" name=\"email\" size=\"48\" type=\"email\" value=\"\"/>", 
+    "feature": "email address name email type email id email maxlength 64", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }
+]

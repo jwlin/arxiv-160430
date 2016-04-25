@@ -1,0 +1,7 @@
+search name searchterm type text id searchterm
+type text name fname maxlength 30
+type text name lname maxlength 30
+type text name email maxlength 60
+type text name emailconf maxlength 60
+name pword type password maxlength 30
+name conf pword type password maxlength 30

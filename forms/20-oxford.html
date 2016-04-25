@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    
+
+	
+	
+		<style type="text/css">
+			div#IPPSelections {
+			display:none;
+							}
+			div#IPPWelcome {
+			display:none;
+							}
+			div#IPPPageTabs {
+			display:none;
+							}
+		</style>
+
+    <title>New user screen</title>
+
+    <meta name="HTS_NAME" content="SIW_IPP_NEW" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link media="all" href="../oxford_files/ipp/css/oxford-sits.css" rel="stylesheet" type="text/css" />
+    <link media="print" href="../css/sits-print.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../javascript/sits_ajax.js"></script>
+	<script type="text/javascript" src="../javascript/dmx_tooltip.js"></script>
+
+    <script type="text/javascript">
+      sits_attach_event(window, "load", ipp_new_startup);
+      function ipp_new_startup() {
+	    sits_date_picker("#IPU_DOB");
+        sits_set_focus("TITLE");
+		sits_attach_event("#show_dp", "click", sits_show_terms);
+
+        if(sits_get_value("HID_USR") == "Y" && sits_get_value("HID_PWD") == "Y") {
+          $("[id^=login_pass]").hide();
+        } else if(sits_get_value("HID_USR") == "Y") {
+          $("#login_pass1").hide();
+          $("#login_pass2").hide();
+        } else if(sits_get_value("HID_PWD") == "Y") {
+          $("#login_pass3").hide();
+          $("#login_pass4").hide();
+        }
+
+      }
+
+      function sits_check_email() {
+
+        if(sits_get_value("HID_USR") == "Y") return true;
+
+        var emad1 = sits_get_value("IPU_HAEM");
+        var emad2 = sits_get_value("USERCODE");
+        var msg = "";
+
+		if(sits_validate_email(emad1) == false){
+			msg = "Please make sure you have entered a valid e-mail address."
+		}
+
+		if(emad1 == "" || emad2 == "") {
+		  msg = "Please complete both e-mail address fields."
+		}
+
+        if(emad1 != emad2) {
+          msg = "Please make sure both e-mail address fields match."
+        }
+
+		if(msg == "") {
+		return sits_check_terms();
+ 		//  return true
+		} else {
+		  var buttons = {};
+		  buttons["ok"] = function(){sits_dialog_close(true);};
+  		  sits_dialog("Warning!",msg,buttons,false,true,false,null);
+ 		  return false;
+		}
+	
+		
+      }
+
+function sits_check_terms(){
+		var msg = "Please make sure the Data Protection statement is checked";
+
+	if(sits_get_value("terms")=="N"){
+		var buttons = {};
+		  buttons["ok"] = function(){sits_dialog_close(true);};
+  		  sits_dialog("Warning!",msg,buttons,false,true,false,null);
+ 		  return false;
+		} else{
+			return true;
+		}
+
+	}
+	
+	function sits_show_terms(){
+		var msg = "In the course of completing an application for graduate study, you will provide the University with information about yourself.<br><br>When you submit an application, that information will be used by the University and its colleges for the purpose of processing your application for study, for student administration and, where relevant, for funding purposes.<br><br>The 'Declaration' page of the application form provides more information about how the University uses and shares your information after submission.<br><br>The University will only access information contained in an application that has not been submitted if a system administrator requires access to investigate a problem reported by the applicant or otherwise maintain the Universitya£á?s online application service.<br><br>If you have provided a valid email address, we may contact you with important information relating to your application (for example, deadlines for submission).<br><br>The University will not otherwise disclose any information contained in an application that has not been submitted except with your consent or if required by law.<br><br><b>Cookies</b><br><br>The online graduate application form only uses cookies that are essential to enable you to move around the website and use its features. Most web browsers allow some control of cookies through the browser settings.<br><br>To find out more about cookies, including how to see what cookies have been set and how to manage and delete them please visit <a href='http://www.allaboutcookies.org' target='_blank'>http://www.allaboutcookies.org</a>. <br><br>However, without these cookies, the services you have requested, such as registering for and using an account, cannot be provided.";		
+		
+
+		var buttons = {};
+		  buttons["ok"] = function(){sits_dialog_close(true);};
+  		  sits_dialog("Data Protection Statement",msg,buttons,false,true,false,null);
+ 		  return false;
+	}
+
+    </script>
+
+  </head>
+  <body>
+
+    
+      
+        <div style="position:absolute;top:0;left:-9999px"> <!-- screen reader prompt -->
+ Should you have difficulty accessing information within any area of eVision, please contact the Student Systems Support team at evision@admin.ox.ac.uk  We will endeavour to supply the information to you in an alternative form to suit your specific requirements.
+ </div>
+
+<!-- start of HTML from body-start-ipp.hts  -->
+
+<!-- =================================================================== -->
+
+
+
+<!-- any required page header html should go here,
+
+		in place of this default SITS header HTML.
+
+	It is good practice to use 'class="sitsscreenonly" on any header images
+
+	which would not be required in a printed version of the page.
+
+ -->
+
+<a name="top"></a>
+
+<!-- link to sits-print.css placed here also 
+
+because many HTS files do not have a link to this yet
+
+so 'screenonly' elements would otherwise print from those HTS pages -->
+
+<link media="all" href="../oxford_files/ipp/css/oxford-sits.css" rel="stylesheet" type="text/css">
+
+<div id="sits_page_background"><!-- overall page DIV -->
+
+
+
+
+ <div id="headercontainer" class="">
+
+<div id="sitsheaderstrap" class="sitsscreenonly">
+
+
+
+<div id="sitsheaderimage1" class="sitsscreenonly">
+<a href="http://www.ox.ac.uk/" target="blank"><img src="../oxford_files/logo-oxford.gif" alt="University of Oxford" style="border-style: none"/></a>
+</div>
+
+
+
+<h1 id="sitscpgtitle">Graduate Application Form</h1>
+
+
+
+
+
+<!--
+
+ <div id="sitsloggedinmessage"> 
+
+	 Logged In: <<MST_FNM1.MST&W>> <<MST_SURN.MST&W>> (<<MST_CODE.MST&W>>)
+
+</div>-->
+
+<!-- <div id="helpicon"><a href=""></a></div> -->
+
+
+</div> <!-- end of DIV sitsheaderstrap -->
+
+</div>
+
+
+<!--<div id="spacer" style="background:#fff url(../oxford_files/cellfade.png) repeat-x top;height:15px;width:100%;clear:both;float:left;display:block"></div>-->
+
+
+
+
+
+<div id="contentcontainer" class="">
+
+
+<a name="skiplinks"></a>
+
+<!-- DIV sitspagecontent (see sits.css) encloses main page content when logged into portal. It is opened in body-start, body-start-tabs, body-start-ipp and closed in body-end, body-end-ipp -->
+
+<div id="sitspagecontent" style="">
+
+
+
+<!-- =================================================================== -->
+
+<!-- end of html from body-start-ipp.hts  -->
+        
+
+<div id="IPPWelcome">Logged In:
+  
+    
+      <input type="hidden" name="FORENAME.TAB_DUMMY.CAMS" value="" />
+      <input type="hidden" name="SURNAME.TAB_DUMMY.CAMS" value="" />
+    
+  
+</div>
+
+<div id="IPPPageTabs">
+  
+  
+    
+      |
+      <span class="normaltab">
+        Course Search
+      </span>
+    
+      |
+      <span class="normaltab">
+        User Details
+      </span>
+    
+      |
+      <span class="normaltab">
+        Application Form
+      </span>
+    
+      |
+      <span class="normaltab">
+        
+      </span>
+    
+  <input type="hidden" name="%.TAB.MENSYS.1" /><input type="hidden" name="%.TAB.MENSYS.2" /><input type="hidden" name="%.TAB.MENSYS.3" /><input type="hidden" name="%.TAB.MENSYS.4" />
+  
+</div>
+
+
+<div id="IPPSelections">
+
+  <table class="sitstableoutline" summary="">
+    <caption>Your current application</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="sitscolhead" style="width:30%;">
+          Selected Course
+        </th>
+ 
+
+        <th scope="col" class="sitscolhead" style="text-align:center;width:20%;">
+          Mode of Attendance
+        </th>
+        <th scope="col" class="sitscolhead" style="text-align:center;width:15%;">
+          Academic Year
+        </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>
+            <input type="hidden" name="OCC.IPP.SRS.1" value="" />
+            -<input type="hidden" name="IPP_TITL.IPP.SRS.1" value="-" />
+          </td>
+    
+
+
+          <td style="text-align:center;width:20%;">
+            <<MOA_CODE=<IPO_MOAC>&GMOA_NAME.MOA.SRS>>
+          </td>
+          <td style="text-align:center;width:15%;"> 
+            <input type="hidden" name="IPO_AYRC.IPO.SRS.1-1" value="" />
+          </td>
+	
+        </tr>
+      
+    </tbody>
+  </table>
+<input type="hidden" name="#.IPP.SRS.1" />
+</div>
+      
+    <input type="hidden" name="%.WEB_HEAD.MENSYS.1" />
+
+    <form method="post" action="SIW_IPP_NEW" autocomplete="off">
+
+      
+        
+          <input type="hidden" name="NKEY.DUMMY.MENSYS.1" value="ISS:423D609A-E82E-11E5-B549-918F759C8176" />
+          <input type="hidden" name="PROCESS.DUMMY.MENSYS.1" value="siw_ipp_app_crs" />
+          <input type="hidden" name="IPP_CODE.DUMMY.MENSYS.1" value="" />
+          <input type="hidden" name="IPO_SEQN.DUMMY.MENSYS.1" value="" />
+          <input type="hidden" name="SESSION.DUMMY.MENSYS.1" value="4238DAD4-E82E-11E5-B549-918F759C8176" />
+          <input type="hidden" name="BACK.DUMMY.MENSYS.1" value="" />
+          <input type="hidden" name="SOURCE.DUMMY.MENSYS.1" value="" />
+          <input type="hidden" name="RUN_MODE.DUMMY.MENSYS.1" value="ACTHASH=1F106F7E50F353549F19D33B3883EB449232300FBC69FC305B4D8AC8C8AAD1FBFD9A59F5D37B43DEA3544B52623F6EB7A4010CB5055A52DDEB3CFAFE8E5294C6" />
+          <input type="hidden" name="EXISTING_MST.DUMMY.MENSYS.1" value="" />
+          <input type="hidden" name="EXISTING_USERNAME.DUMMY.MENSYS.1" value="" />
+		  <input type="hidden" name="HID_USR.DUMMY.MENSYS.1" value="N" id="HID_USR" />
+          <input type="hidden" name="HID_PWD.DUMMY.MENSYS.1" value="N" id="HID_PWD" />
+        
+      <input type="hidden" name="%.DUMMY.MENSYS.1" />
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+          <div id="sitspagetitlesection">
+            <h1 id="sitspagetitle" class="sitspagetitle">
+              Registration
+            </h1>
+            <p id="sitspagedesc" class="sitspagedesc">
+              Password must:<br>
+&#8226; be between 8 and 12 characters long <br />
+&#8226; contain at least one number and one letter <br /> 
+&#8226; match Confirm Password
+            </p>
+          </div>
+          
+
+          <table align="center" style="width:600px;">
+            <tr>
+              <td>
+                
+              </td>
+            </tr>
+          </table>
+
+          
+            <table class="sitstableoutline" summary="" style="width:600px;" align="center">
+              <caption>
+                New User Details
+              </caption>
+            <thead>
+              <tr>
+                <td class="sitstabledescriptioncell" colspan="2">
+                  <p class="sitstabledescription">
+                    Fields marked with an asterisk (<span class="mandred">*</span>) are mandatory.
+                  </p>
+                </td>
+              </tr>
+            </thead>
+              <tbody>
+                
+                  
+	
+                  
+
+                  <tr>
+                    <th scope="row" class="sitsrowhead">
+                      <label for="IPU_FNM1">
+                        Given name (Forename)<span class="mandred">*</span>
+                      </label>
+                    </th>
+                    <td>
+                      <input type="text" name="IPU_FNM1.IPU.SRS.1" value="" id="IPU_FNM1" size="45" maxlength="30" />
+                    </td>
+                  </tr>	
+				  
+                  
+
+                  <tr>
+                    <th scope="row" class="sitsrowhead">
+                      <label for="IPU_SURN">
+                        Family name (Surname)<span class="mandred">*</span>
+                      </label>
+                    </th>
+                    <td>
+                      <input type="text" name="IPU_SURN.IPU.SRS.1" value="" id="IPU_SURN" size="45" maxlength="40" />
+                    </td>
+                  </tr>				  
+
+                  
+				  
+                  
+                  <tr>
+                    <th scope="row" class="sitsrowhead">
+                      <label for="IPU_DOB">
+                        Date of Birth (DD/MM/YYYY) <span class="mandred">*</span>
+                      </label>
+                    </th>
+                    <td>
+                      <input type="text" name="IPU_DOB.IPU.SRS.1" value="" id="IPU_DOB" size="15" maxlength="11" />
+                    </td>
+                  </tr>
+                  
+                  <tr id="login_pass1">
+                    <th scope="row" class="sitsrowhead">
+                      <label for="USERCODE">
+                        Username (email address) <span class="mandred">*</span>
+                      </label>
+                    </th>
+
+                    <td>
+                      <input type="text" name="USERCODE.IPU.SRS.1" value="" id="USERCODE" size="45" />
+                    </td>
+                  </tr>
+                  
+                  <tr id="login_pass2">
+                    <th scope="row" class="sitsrowhead">
+                      <label for="IPU_HAEM">
+                        Confirm username (email address) <span class="mandred">*</span>
+                      </label>
+                    </th>
+                    <td>
+                      <input type="text" name="IPU_HAEM.IPU.SRS.1" value="" id="IPU_HAEM" size="45" maxlength="255" />
+                    </td>
+                  </tr>
+                  
+                  <tr id="login_pass3">
+                    <th scope="row" class="sitsrowhead">
+                      <label for="PASSWORD1">
+                        Password <span class="mandred">*</span>
+<img src="../images/icons/mess_help_small.gif" style="width:20px;height:20px" border="0" Alt="Tooltip" onMouseOver="tooltip('Password must be between 8 and 12 characters long <br />Password must contain at least one number and one letter <br /> Password and Confirm Password must match ');"
+onMouseOut="tooltip();">
+                      </label>
+                    </th>
+                    <td>
+                      <input type="password" name="PASSWORD1.IPU.SRS.1" value="" id="PASSWORD1" size="45" />
+                      <span class="pagehelptext">
+                        <!-- (max of 12 characters) -->
+                      </span>
+                    </td>
+                  </tr>
+                  
+                  <tr id="login_pass4">
+                    <th scope="row" class="sitsrowhead">
+                      <label for="PASSWORD2">
+                        Confirm password <span class="mandred">*</span>
+                      </label>
+                    </th>
+                    <td>
+                      <input type="password" name="PASSWORD2.IPU.SRS.1" value="" id="PASSWORD2" size="45" />
+                    </td>
+                  </tr>
+   
+                
+
+ 
+				              </tbody>
+              <tbody>
+                
+					<tr>
+					<td colspan="5" style="text-align:right;">
+			<label><input type="checkbox" id="terms" name="terms_and_conditions" value="accept"> I have read and accept the <a href="#" id="show_dp">Data Protection</a> statement *</label></td>
+			</tr>
+
+                <tr>
+                  <td colspan="6" style="text-align:right;">
+                    
+                      
+                        <input type="submit" name="CANCEL.DUM1.SRS.1" value="Cancel" title="Cancel your application" />
+                        <input type="submit" name="PROCEED.DUM1.SRS.1" value="Proceed" title="Proceed to the next section of the application" onclick="return sits_check_email();" />
+                      
+                    <input type="hidden" name="%.DUM1.SRS.1" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <input type="hidden" name="#.IPU.SRS.1" />
+
+          <script type="text/javascript">
+  setTimeout("sits_postcode('pcod_HA', 'IPU_CODC');",250);
+  setTimeout("sits_postcode('pcod_CA', 'IPU_COD2');",250);
+</script>
+
+        
+      
+
+    </form>
+
+    
+      
+        
+<!-- start of HTML from body-end-ipp.hts  -->
+
+<!-- =================================================================== -->
+
+
+
+</div><!-- end of sitspagecontent -->
+
+
+
+</div> <!--close sits content container -->
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+<div id="footercontainer" class="sitsscreenonly">
+
+<a href="#top" class="toplink">[Go to top of page]</a>
+
+
+<!-- page footer html should go here
+
+	It is good practice to use 'class="sitsscreenonly" on any footer items
+
+	which would not be required in a printed version of the page.
+
+ -->
+
+
+
+<!-- page footer HTML starts here  -->
+
+<div id="sitspagefooter1"> 
+
+
+<ul class="foot1list">
+<li class="listtitle">Related Links</li>
+<li><a href="http://www.graduate.ox.ac.uk/courses" alt="this link opens in a new browser tab" target="_blank">Course Guide</a></li>
+<li><a href="http://www.graduate.ox.ac.uk/applicationguide" alt="this link opens in a new browser tab" target="_blank">Application Guide</a></li>
+<li><a href="http://www.graduate.ox.ac.uk/funding" alt="this link opens in a new browser tab" target="_blank">Fees and Funding</a></li>
+<li><a href="http://www.ox.ac.uk/admissions/graduate/international-students" alt="this link opens in a new browser tab" target="_blank">Guide for International Students</a></li>
+<li>&nbsp;</li>
+<li>eVision  &copy; University of Oxford</li>
+</ul>
+
+
+<!--
+
+<script type="text/javascript">
+
+    var currentTime = new Date()
+    var day = currentTime.getDate()
+    var month = currentTime.getMonth() + 1
+    var year = currentTime.getFullYear()
+    document.write(day + "/" + month + "/" + year)
+
+</script>-->
+
+
+
+
+</div>
+
+
+<div id="sitspagefooter2"> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<ul class="foot2list">
+<li><a href="https://uni-of-oxford.custhelp.com/app/ask_form" target="_blank"><strong>Contact Us</strong></a></li>
+
+</ul>
+
+</div>
+
+
+<div id="sitspagefooter3"> 
+
+
+</div>
+
+
+    
+
+<div id="lowerstrap">
+  
+</div>
+
+
+
+
+
+ </div> <!-- overall background div (opened in header files) -->
+
+<!-- =================================================================== -->
+
+<!-- end of HTML from body-end-ipp.hts  -->
+<!-- end of HTML from body-end.hts  -->
+      
+    <input type="hidden" name="%.WEB_FOOT.MENSYS.1" />
+
+  </body>
+</html>

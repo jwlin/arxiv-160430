@@ -1,0 +1,525 @@
+[
+  {
+    "dom": "<input id=\"fname\" maxlength=\"25\" name=\"fname\" onchange=\"checkcaps(this.value)\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "first given name middle name last family name other names used name fname type text id fname maxlength 25", 
+    "rule": {
+      "id": ["fname"], 
+      "name": ["fname"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"mname\" maxlength=\"25\" name=\"mname\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name first given name last family name other names used type text name mname id mname maxlength 25", 
+    "rule": {
+      "id": ["mname"], 
+      "name": ["mname"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input id=\"lname\" maxlength=\"25\" name=\"lname\" onchange=\"checkcaps(this.value)\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "last family name middle name first given name other names used name lname type text id lname maxlength 25", 
+    "rule": {
+      "id": ["lname"], 
+      "name": ["lname"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"oname\" maxlength=\"100\" name=\"oname\" onchange=\"checkcaps(this.value)\" type=\"text\" value=\"\"/>", 
+    "feature": "other names used last family name middle name first given name name oname type text id oname maxlength 100", 
+    "rule": {
+      "id": ["oname"], 
+      "name": ["oname"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input id=\"nuid\" name=\"nuid\" onchange=\"checkid()\" type=\"text\" value=\"\"/>", 
+    "feature": "issued by the univ of nebraska or a nebraska state college issued by the united states government id number type id number again to confirm accuracy nuid number issued by the univ of nebraska or a nebraska state college us social security number issued by the united states government neither i do not have an nuid or ssn type text id nuid name nuid", 
+    "rule": {
+      "id": ["nuid"], 
+      "name": ["nuid"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input id=\"nuid_v\" name=\"nuid_v\" onchange=\"checkid()\" type=\"text\" value=\"\"/>", 
+    "feature": "issued by the univ of nebraska or a nebraska state college issued by the united states government type id number again to confirm accuracy id number nuid number issued by the univ of nebraska or a nebraska state college us social security number issued by the united states government neither i do not have an nuid or ssn type text id nuid v name nuid v", 
+    "rule": {
+      "id": ["nuid"], 
+      "name": ["nuid"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input alt=\"birthdate day\" id=\"birthdd\" maxlength=\"2\" name=\"birthdd\" onchange=\"validdate(this,'day')\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "day month year name birthdd type text id birthdd maxlength 2", 
+    "rule": {
+      "id": ["birthdd"], 
+      "name": ["birthdd"]
+    }, 
+    "type": "date-dd"
+  }, 
+  {
+    "dom": "<input alt=\"birthdate year\" id=\"birthyyyy\" maxlength=\"4\" name=\"birthyy\" onchange=\"validdate(this,'birthyear')\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "year day month name birthyy type text id birthyyyy maxlength 4", 
+    "rule": {
+      "id": ["birthyyyy"], 
+      "name": ["birthyyyy"]
+    }, 
+    "type": "year-yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"birth city\" id=\"birthcity\" maxlength=\"30\" name=\"birthcity\" type=\"text\" value=\"\"/>", 
+    "feature": "birth city country of citizenship birth country type of visa expected name birthcity type text id birthcity maxlength 30", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"email\" maxlength=\"50\" name=\"email\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "email address phone number name email type text id email maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"phone\" maxlength=\"13\" name=\"phone\" type=\"text\" value=\"\"/>", 
+    "feature": "phone number email address type text name phone id phone maxlength 13", 
+    "rule": {
+      "id": ["phone"], 
+      "name": ["phone"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input alt=\"street line 1\" id=\"cstreet\" maxlength=\"30\" name=\"cstreet\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "line 1 line 2 city country zip postal code if us if non us name cstreet type text id cstreet maxlength 30", 
+    "rule": {
+      "id": ["cstreet"], 
+      "name": ["cstreet"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input alt=\"street line 2\" id=\"cstreet2\" maxlength=\"30\" name=\"cstreet2\" type=\"text\" value=\"\"/>", 
+    "feature": "line 2 line 1 city country zip postal code if us if non us name cstreet2 type text id cstreet2 maxlength 30", 
+    "rule": {
+      "id": ["cstreet2"], 
+      "name": ["cstreet2"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input alt=\"city\" id=\"ccity\" maxlength=\"25\" name=\"ccity\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "city line 2 line 1 country zip postal code if us if non us name ccity type text id ccity maxlength 25", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input alt=\"province\" id=\"nonstate\" maxlength=\"20\" name=\"nonstate\" type=\"text\" value=\"\"/>", 
+    "feature": "if non us if us name nonstate type text id nonstate maxlength 20", 
+    "rule": {
+      "id": ["nonstate"], 
+      "name": ["nonstate"]
+    }, 
+    "type": "state"
+  }, 
+  {
+    "dom": "<input alt=\"zip code\" id=\"czip\" maxlength=\"10\" name=\"czip\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "zip postal code country city line 2 line 1 if us if non us name czip type text id czip maxlength 10", 
+    "rule": {
+      "id": ["zip"], 
+      "name": ["zip"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input alt=\"ne residency start (mm/yyyy)\" id=\"neresmm\" maxlength=\"7\" name=\"neresmm\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy mm yyyy start of ne residence mm yyyy employer location position start date mm yyyy end date mm yyyy name neresmm type text id neresmm maxlength 7", 
+    "rule": {
+      "id": ["neresmm"], 
+      "name": ["neresmm"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"employer\" id=\"nebresi3\" maxlength=\"30\" name=\"employer\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy employer location position start date mm yyyy end date mm yyyy name employer type text id nebresi3 maxlength 30", 
+    "rule": {
+      "id": ["nebresi3"], 
+      "name": ["employer"]
+    }, 
+    "type": "employer"
+  }, 
+  {
+    "dom": "<input alt=\"location\" id=\"nebresi4\" maxlength=\"30\" name=\"employloc\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy location employer position start date mm yyyy end date mm yyyy name employloc type text id nebresi4 maxlength 30", 
+    "rule": {
+      "id": ["nebresi4"], 
+      "name": ["employloc"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input alt=\"position\" id=\"nebresi5\" maxlength=\"30\" name=\"jobtitle\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy position location employer start date mm yyyy end date mm yyyy name jobtitle type text id nebresi5 maxlength 30", 
+    "rule": {
+      "id": ["nebresi5"], 
+      "name": ["jobtitle"]
+    }, 
+    "type": "job_title"
+  }, 
+  {
+    "dom": "<input alt=\"begin date (mm/yyyy)\" id=\"jobfrom\" maxlength=\"7\" name=\"jobfrommonth\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy start date mm yyyy position location employer end date mm yyyy name jobfrommonth type text id jobfrom maxlength 7", 
+    "rule": {
+      "id": ["jobfrom"], 
+      "name": ["jobfrommonth"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"end date (mm/yyyy)\" id=\"jobto\" maxlength=\"7\" name=\"jobtomonth\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy end date mm yyyy start date mm yyyy position location employer name jobtomonth type text id jobto maxlength 7", 
+    "rule": {
+      "id": ["jobto"], 
+      "name": ["jobtomonth"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"collegename1\" maxlength=\"32\" name=\"collegename1\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "name of school 1 city state country from mm yyyy to mm yyyy name collegename1 type text id collegename1 maxlength 32", 
+    "rule": {
+      "id": ["collegename"], 
+      "name": ["collegename"]
+    }, 
+    "type": "school_name"
+  }, 
+  {
+    "dom": "<input id=\"loc1\" maxlength=\"32\" name=\"loc1\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "city name of school 1 state country from mm yyyy to mm yyyy name loc1 type text id loc1 maxlength 32", 
+    "rule": {
+      "id": ["loc1"], 
+      "name": ["loc1"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"start1\" maxlength=\"7\" name=\"start1\" onchange=\"validdate(this,'month/year')\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "from mm yyyy to mm yyyy name start1 type text id start1 maxlength 7", 
+    "rule": {
+      "id": ["start1"], 
+      "name": ["start1"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"finish1\" maxlength=\"7\" name=\"finish1\" onchange=\"validdate(this,'month/year')\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "to mm yyyy from mm yyyy name finish1 type text id finish1 maxlength 7", 
+    "rule": {
+      "id": ["finish1"], 
+      "name": ["finish1"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad1a\" maxlength=\"7\" name=\"grad1a\" onchange=\"validdate(this,'month/year')\" required=\"\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad1a type text id grad1a maxlength 7", 
+    "rule": {
+      "id": ["grad1a"], 
+      "name": ["grad1a"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad1b\" maxlength=\"7\" name=\"grad1b\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad1b type text id grad1b maxlength 7", 
+    "rule": {
+      "id": ["grad1b"], 
+      "name": ["grad1b"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad1c\" maxlength=\"7\" name=\"grad1c\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad1c type text id grad1c maxlength 7", 
+    "rule": {
+      "id": ["grad1c"], 
+      "name": ["grad1c"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"college name\" id=\"collegename2\" maxlength=\"32\" name=\"collegename2\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy name of school 2 city state country from mm yyyy to mm yyyy name collegename2 type text id collegename2 maxlength 32", 
+    "rule": {
+      "id": ["collegename"], 
+      "name": ["collegename"]
+    }, 
+    "type": "school_name"
+  }, 
+  {
+    "dom": "<input alt=\"city\" id=\"loc2\" maxlength=\"32\" name=\"loc2\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy city name of school 2 state country from mm yyyy to mm yyyy name loc2 type text id loc2 maxlength 32", 
+    "rule": {
+      "id": ["loc"], 
+      "name": ["loc"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"start2\" maxlength=\"7\" name=\"start2\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy from mm yyyy to mm yyyy name start2 type text id start2 maxlength 7", 
+    "rule": {
+      "id": ["start2"], 
+      "name": ["start2"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"finish2\" maxlength=\"7\" name=\"finish2\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "mm yyyy mm yyyy to mm yyyy from mm yyyy name finish2 type text id finish2 maxlength 7", 
+    "rule": {
+      "id": ["finish2"], 
+      "name": ["finish2"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad2a\" maxlength=\"7\" name=\"grad2a\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad2a type text id grad2a maxlength 7", 
+    "rule": {
+      "id": ["grad2a"], 
+      "name": ["grad2a"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad2b\" maxlength=\"7\" name=\"grad2b\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad2b type text id grad2b maxlength 7", 
+    "rule": {
+      "id": ["grad2b"], 
+      "name": ["grad2b"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad2c\" maxlength=\"7\" name=\"grad2c\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad2c type text id grad2c maxlength 7", 
+    "rule": {
+      "id": ["grad2c"], 
+      "name": ["grad2c"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"college name\" id=\"collegename3\" maxlength=\"32\" name=\"collegename3\" type=\"text\" value=\"\"/>", 
+    "feature": "name of school 3 city state country from to name collegename3 type text id collegename3 maxlength 32", 
+    "rule": {
+      "id": ["collegename"], 
+      "name": ["collegename"]
+    }, 
+    "type": "school_name"
+  }, 
+  {
+    "dom": "<input alt=\"city\" id=\"loc3\" maxlength=\"32\" name=\"loc3\" type=\"text\" value=\"\"/>", 
+    "feature": "city name of school 3 state country from to name loc3 type text id loc3 maxlength 32", 
+    "rule": {
+      "id": ["loc"], 
+      "name": ["loc"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"start3\" maxlength=\"7\" name=\"start3\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "from to name start3 type text id start3 maxlength 7", 
+    "rule": {
+      "id": ["start3"], 
+      "name": ["start3"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"finish3\" maxlength=\"7\" name=\"finish3\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "to from name finish3 type text id finish3 maxlength 7", 
+    "rule": {
+      "id": ["finish3"], 
+      "name": ["finish3"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad3a\" maxlength=\"7\" name=\"grad3a\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad3a type text id grad3a maxlength 7", 
+    "rule": {
+      "id": ["grad3a"], 
+      "name": ["grad3a"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad3b\" maxlength=\"7\" name=\"grad3b\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad3b type text id grad3b maxlength 7", 
+    "rule": {
+      "id": ["grad3b"], 
+      "name": ["grad3b"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad3c\" maxlength=\"7\" name=\"grad3c\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad3c type text id grad3c maxlength 7", 
+    "rule": {
+      "id": ["grad3c"], 
+      "name": ["grad3c"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"college name\" id=\"collegename4\" maxlength=\"32\" name=\"collegename4\" type=\"text\" value=\"\"/>", 
+    "feature": "name of school 4 city state country from to name collegename4 type text id collegename4 maxlength 32", 
+    "rule": {
+      "id": ["collegename"], 
+      "name": ["collegename"]
+    }, 
+    "type": "school_name"
+  }, 
+  {
+    "dom": "<input alt=\"city\" id=\"loc4\" maxlength=\"32\" name=\"loc4\" type=\"text\" value=\"\"/>", 
+    "feature": "city name of school 4 state country from to name loc4 type text id loc4 maxlength 32", 
+    "rule": {
+      "id": ["loc"], 
+      "name": ["loc"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"start4\" maxlength=\"7\" name=\"start4\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "from to name start4 type text id start4 maxlength 7", 
+    "rule": {
+      "id": ["start4"], 
+      "name": ["start4"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"finish4\" maxlength=\"7\" name=\"finish4\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "to from name finish4 type text id finish4 maxlength 7", 
+    "rule": {
+      "id": ["finish4"], 
+      "name": ["finish4"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad4a\" maxlength=\"7\" name=\"grad4a\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad4a type text id grad4a maxlength 7", 
+    "rule": {
+      "id": ["grad4a"], 
+      "name": ["grad4a"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad4b\" maxlength=\"7\" name=\"grad4b\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad4b type text id grad4b maxlength 7", 
+    "rule": {
+      "id": ["grad4b"], 
+      "name": ["grad4b"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad4c\" maxlength=\"7\" name=\"grad4c\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad4c type text id grad4c maxlength 7", 
+    "rule": {
+      "id": ["grad4c"], 
+      "name": ["grad4c"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"college name\" id=\"collegename5\" maxlength=\"32\" name=\"collegename5\" type=\"text\" value=\"\"/>", 
+    "feature": "name of school 5 city state country from to name collegename5 type text id collegename5 maxlength 32", 
+    "rule": {
+      "id": ["collegename"], 
+      "name": ["collegename"]
+    }, 
+    "type": "school_name"
+  }, 
+  {
+    "dom": "<input alt=\"city\" id=\"loc5\" maxlength=\"32\" name=\"loc5\" type=\"text\" value=\"\"/>", 
+    "feature": "city name of school 5 state country from to name loc5 type text id loc5 maxlength 32", 
+    "rule": {
+      "id": ["loc"], 
+      "name": ["loc"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"start5\" maxlength=\"7\" name=\"start5\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "from to name start5 type text id start5 maxlength 7", 
+    "rule": {
+      "id": ["start5"], 
+      "name": ["start5"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"finish5\" maxlength=\"7\" name=\"finish5\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "to from name finish5 type text id finish5 maxlength 7", 
+    "rule": {
+      "id": ["finish5"], 
+      "name": ["finish5"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad5a\" maxlength=\"7\" name=\"grad5a\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad5a type text id grad5a maxlength 7", 
+    "rule": {
+      "id": ["grad5a"], 
+      "name": ["grad5a"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad5b\" maxlength=\"7\" name=\"grad5b\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad5b type text id grad5b maxlength 7", 
+    "rule": {
+      "id": ["grad5b"], 
+      "name": ["grad5b"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"grad5c\" maxlength=\"7\" name=\"grad5c\" onchange=\"validdate(this,'month/year')\" type=\"text\" value=\"\"/>", 
+    "feature": "date degree name grad5c type text id grad5c maxlength 7", 
+    "rule": {
+      "id": ["grad5c"], 
+      "name": ["grad5c"]
+    }, 
+    "type": "date-mm/yyyy"
+  }, 
+  {
+    "dom": "<input alt=\"promotion code\" id=\"promo_code\" name=\"promo_code\" type=\"text\" value=\"\"/>", 
+    "feature": "if you have been given a no fee authorization code enter that code here i don t have to pay the fee type text name promo code id promo code", 
+    "rule": {
+      "id": ["promo_code"], 
+      "name": ["promo_code"]
+    }, 
+    "type": "promo_code"
+  }
+]

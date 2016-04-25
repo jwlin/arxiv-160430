@@ -1,0 +1,41 @@
+[
+  {
+    "dom": "<input class=\"origin-key\" id=\"useroriginkey\" name=\"data[user][origin_key]\" type=\"text\"/>", 
+    "feature": "origin key type text id useroriginkey name data user origin key", 
+    "rule": {
+      "id": ["originkey"], 
+      "name": ["originkey"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" id=\"useremail\" maxlength=\"255\" name=\"data[user][email]\" required=\"required\" type=\"email\"/>", 
+    "feature": "email name data user email type email id useremail maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" id=\"userpassword\" name=\"data[user][password]\" required=\"required\" type=\"password\"/>", 
+    "feature": "password type password id userpassword name data user password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" id=\"userconfirmpassword\" name=\"data[user][confirm_password]\" required=\"required\" type=\"password\"/>", 
+    "feature": "confirm password type password id userconfirmpassword name data user confirm password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

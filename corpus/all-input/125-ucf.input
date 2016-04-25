@@ -1,0 +1,58 @@
+[
+  {
+    "dom": "<input data-val=\"true\" data-val-email=\"the email address/user is not a valid email address.\" data-val-length=\"email address/user must be between 6 and 50 characters.\" data-val-length-max=\"50\" data-val-length-min=\"6\" data-val-required=\"email address/user is required.\" id=\"username\" maxlength=\"50\" name=\"username\" type=\"text\" value=\"\"/>", 
+    "feature": "name username type text id username maxlength 50", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input data-val=\"true\" data-val-equalto=\"confirm email address/user does not match email address/user.\" data-val-equalto-other=\"*.username\" id=\"confirmusername\" maxlength=\"50\" name=\"confirmusername\" type=\"text\" value=\"\"/>", 
+    "feature": "name confirmusername id confirmusername type text maxlength 50", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input class=\"textbox-narrow\" data-val=\"true\" data-val-required=\"first name is required.\" id=\"firstname\" maxlength=\"50\" name=\"firstname\" type=\"text\" value=\"\"/>", 
+    "feature": "name firstname id firstname type text maxlength 50", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"textbox-narrow\" data-val=\"true\" data-val-required=\"last name is required.\" id=\"lastname\" maxlength=\"50\" name=\"lastname\" type=\"text\" value=\"\"/>", 
+    "feature": "name lastname id lastname type text maxlength 50", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"textbox-narrow\" data-val=\"true\" data-val-length=\"password must be between 6 and 100 characters.\" data-val-length-max=\"100\" data-val-length-min=\"6\" data-val-required=\"password is required.\" id=\"password\" maxlength=\"128\" name=\"password\" type=\"password\"/>", 
+    "feature": "name password id password type password maxlength 128", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"textbox-narrow\" data-val=\"true\" data-val-equalto=\"confirm password does not match password.\" data-val-equalto-other=\"*.password\" id=\"confirmpassword\" maxlength=\"128\" name=\"confirmpassword\" type=\"password\"/>", 
+    "feature": "name confirmpassword id confirmpassword type password maxlength 128", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "dom": "<input accesskey=\"s\" name=\"q\" placeholder=\"search\" tabindex=\"1\" title=\"search\" type=\"text\"/>", 
+    "feature": "name q type text placeholder search", 
+    "rule": {
+      "id": ["q"], 
+      "name": ["q"]
+    }, 
+    "type": "search_term"
+  }, 
+  {
+    "dom": "<input id=\"first_name\" maxlength=\"20\" name=\"first_name\" size=\"25\" type=\"text\" value=\"\"/>", 
+    "feature": "first given name name first name type text id first name maxlength 20", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"mid_name\" maxlength=\"20\" name=\"mid_name\" size=\"25\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name name mid name type text id mid name maxlength 20", 
+    "rule": {
+      "id": ["mid"], 
+      "name": ["mid"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input id=\"last_name\" maxlength=\"30\" name=\"last_name\" size=\"25\" type=\"text\" value=\"\"/>", 
+    "feature": "last name surname name last name type text id last name maxlength 30", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"email_addr\" maxlength=\"50\" name=\"email_addr\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "student email address name email addr type text id email addr maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"confirm_email_addr\" maxlength=\"50\" name=\"confirm_email_addr\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "confirm student email address name confirm email addr type text id confirm email addr maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"parent_email_addr\" maxlength=\"50\" name=\"parent_email_addr\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "email address name parent email addr type text id parent email addr maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"confirm_parent_email_addr\" maxlength=\"50\" name=\"confirm_parent_email_addr\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "confirm email address name confirm parent email addr type text id confirm parent email addr maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"security_question\" maxlength=\"255\" name=\"security_question\" size=\"60\" type=\"text\" value=\"\"/>", 
+    "feature": "security question name security question type text id security question maxlength 255", 
+    "rule": {
+      "id": ["security_question"], 
+      "name": ["security_question"]
+    }, 
+    "type": "secure_q"
+  }, 
+  {
+    "dom": "<input id=\"security_answer\" maxlength=\"45\" name=\"security_answer\" size=\"40\" type=\"text\" value=\"\"/>", 
+    "feature": "security answer name security answer type text id security answer maxlength 45", 
+    "rule": {
+      "id": ["security_answer"], 
+      "name": ["security_answer"]
+    }, 
+    "type": "secure_ans"
+  }, 
+  {
+    "dom": "<input id=\"form_username\" maxlength=\"25\" name=\"form_username\" size=\"25\" type=\"text\" value=\"\"/>", 
+    "feature": "minimum of 6 characters maximum of 25 characters username name form username type text id form username maxlength 25", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input id=\"admissions_hidden_input_guess\" name=\"admissions_hidden_input_guess\" size=\"24\" type=\"text\"/>", 
+    "feature": "minimum of 6 characters maximum of 25 characters same name as parent grandparent set birth date carefully it cannot be changed after account creation username password password again security question security answer email address confirm email address first given name middle name last name surname generation name birth date birth date day birth date year student email address confirm student email address type text id admissions hidden input guess name admissions hidden input guess", 
+    "rule": {
+      "id": ["input_guess"], 
+      "name": ["input_guess"]
+    }, 
+    "type": "captcha"
+  }, 
+  {
+    "dom": "<input id=\"form_password\" name=\"form_password\" size=\"20\" type=\"password\"/>", 
+    "feature": "password type password id form password name form password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"form_password2\" name=\"form_password2\" size=\"20\" type=\"password\"/>", 
+    "feature": "password again type password id form password2 name form password2", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

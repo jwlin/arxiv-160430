@@ -1,0 +1,5 @@
+first name first name name mainform firstname type text id mainform firstname maxlength 255
+last name last name type text id mainform lastname name mainform lastname maxlength 255
+enter your email confirm your email enter your email confirm your email type text id mainform email name mainform email maxlength 40
+confirm your email enter your email confirm your email enter your email type text id mainform confirmemail name mainform confirmemail maxlength 40
+cwl login name cwl login name name mainform loginname type text id mainform loginname maxlength 8

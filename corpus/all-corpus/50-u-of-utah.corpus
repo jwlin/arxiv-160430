@@ -1,0 +1,10 @@
+pin password type text id ay login name userid
+first or given name type text id aycreatefn name aycreatefn maxlength 30
+last or family name type text id aycreateln name aycreateln maxlength 30
+email address name aycreateemail id aycreateemail type text maxlength 120
+confirm email address name aycreateconfirmemail id aycreateconfirmemail type text
+mm dd yyyy birth date type text id aycreatedob name aycreatedob
+zip postal code type text id aycreatepc name aycreatepc maxlength 10
+password pin type password id ay password name password
+password type password id aycreatepassword name aycreatepassword
+confirm password type password id aycreateconfirmpassword name aycreateconfirmpassword

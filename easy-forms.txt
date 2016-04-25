@@ -1,0 +1,36 @@
+id	name	country	short_url	submit actions				
+2	Stanford University	us 	http://tinyurl.com/zvnc9wx	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+4	"University of California, Berkeley"	us 	http://tinyurl.com/zmpyq4t	tag==button&&id==submit;<button type="submit" id="submit" name="submit" value="submit">Create New Account</button>
+5	Cornell University	us 	http://tinyurl.com/hejyvya	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+8	University of Michigan	us 	http://tinyurl.com/jalms7z	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+14	University of Pennsylvania	us 	https://tinyurl.com/zxqfo9y	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+17	New York University	us 	https://tinyurl.com/z7lzjqg	tag==a&&id==NYU_AWS_DERIVED_CONTINUE_PB;<a name="NYU_AWS_DERIVED_CONTINUE_PB" id="NYU_AWS_DERIVED_CONTINUE_PB" ptlinktgt="pt_peoplecode" tabindex="28" href="javascript:submitAction_win0(document.win0,'NYU_AWS_DERIVED_CONTINUE_PB');" class="NYU_AAWS_BUTTON">Continue</a>
+18	Princeton University	us 	https://tinyurl.com/hbt5hnn	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+24	"University of California, San Diego"	us 	https://tinyurl.com/j53snwf	tag==input&&name==commit;<input type="submit" name="commit" value="Sign up" class="btn btn-primary">
+27	University of Maryland	us 	https://tinyurl.com/hpsfq59	tag==input&&id==btnSetIPData;<input type="submit" name="btnSetIPData" value="Submit Information" id="btnSetIPData" function="IPSetStudentData" validation="on">
+32	"Rutgers, The State University of New Jersey"	us 	https://tinyurl.com/2zk58s	tag==input&&id==createBtn;<input type="submit" name="createBtn" id="createBtn" tabindex="13" class="inputBtn" value="create account">
+38	"University of California, Irvine"	us 	https://tinyurl.com/hutg5fd	tag==input&&xpath==//*[@id="newuser"]/table/tbody/tr[16]/td[2]/input;<input type="submit" value="Start Application" style="padding: 3px 16px 3px 16px;">
+39	University of Arizona	us 	https://tinyurl.com/hvbh6du	tag==input&&xpath==//*[@id="UserNewAccountForm"]/div[6]/input;<input type="submit" value="Create account">
+51	Georgia Institute of Technology	us 	https://tinyurl.com/hf9ouxu	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+57	California Institute of Technology	us 	https://tinyurl.com/zznjb8s	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+59	University of Iowa	us 	https://tinyurl.com/jl4uqvq	tag==input&&name==action;<input type="submit" name="action" value="Create My Account">
+65	Oregon State University	us 	https://tinyurl.com/jrzuvvy	tag==input&&id==j_id0:OSUThemeGradAppTemplate:theForm:submit;<input id="j_id0:OSUThemeGradAppTemplate:theForm:submit" type="submit" name="j_id0:OSUThemeGradAppTemplate:theForm:submit" value="Submit" class="pull-right btn btn-primary">
+66	University of Georgia	us 	https://tinyurl.com/zbzlejo	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+67	Colorado State University	us 	https://tinyurl.com/gw5dxut	tag==input&&id==ctl00_content_btnCreate;<input type="submit" name="ctl00$content$btnCreate" value="Create Application" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$content$btnCreate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_content_btnCreate" title="Create your account">
+68	Brown University	us 	https://tinyurl.com/htchnha	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+69	University of South Florida	us 	https://tinyurl.com/j8mfs54	tag==a&&xpath==//*[@id="FormDefault"]/table/tbody/tr/td[2]/table[1]/tbody/tr[2]/td/table/tbody/tr/td/table[6]/tbody/tr/td[1]/table[26]/tbody/tr/td/table/tbody/tr/td[2]/a;"
+72	Washington State University	us 	https://tinyurl.com/gtdr2v7	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+74	National University of Singapore	sg 	https://tinyurl.com/htt5kn2	tag==input&&xpath==//*[@id="inner-content-right"]/form/fieldset/table/tbody/tr[6]/td[2]/input;<input type="submit" value="Create" class="navbtn">
+75	University of Oregon	us 	https://tinyurl.com/285fra	tag==input&&name==submit_btn;<input type="submit" name="submit_btn" value="Login">
+81	Rice University	us 	https://tinyurl.com/j9dnca7	tag==input&&id==submit;<input type="submit" name="submit" id="submit" value="Register">
+88	University of Waterloo	ca 	https://tinyurl.com/zuxt3qj	tag==input&&name==buttonsubmit;<input name="buttonsubmit" class="button_normal" type="submit" value="Create Account">
+89	University of Houston	us 	https://tinyurl.com/hsma5du	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+94	Emory University	us 	https://tinyurl.com/zv42t9x	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+98	McGill University	ca 	https://tinyurl.com/gncj8js	tag==input&&xpath==//*[@id="registerForm"]/div[14]/input;<input type="submit" class="mainSubmit" value="Submit">
+103	The University of Tennessee	us 	https://tinyurl.com/jkuy39b	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+104	"University of California, San Francisco"	us 	https://tinyurl.com/znsl2dk	tag==input&&id==ctl00_ContentMain_nu_btnCreateUser;<input type="submit" name="ctl00$ContentMain$nu$btnCreateUser" value="Create Account" id="ctl00_ContentMain_nu_btnCreateUser" class="btn btn-primary">
+110	University of Illinois at Chicago	us 	https://tinyurl.com/hpgqm2h	tag==input&&name==submit_btn;<input type="submit" name="submit_btn" value="Login">
+123	University of Kansas	us 	https://tinyurl.com/j5axnv5	tag==button&&xpath==//*[@id="actForm"]/fieldset/div[12]/button;<button class="btn btn-custom" type="submit">Create Account</button>
+125	University of Central Florida	us 	https://tinyurl.com/hkfyrwd	tag==input&&id==Save;<input type="submit" value="Create Account" id="Save">
+137	University of Leeds	gb 	https://tinyurl.com/jjwnch3	tag==input&&name==submit_btn;<input type="submit" name="submit_btn" value="Login">
+141	The University of Warwick	gb 	https://tinyurl.com/z3y4ma3	tag==button&&id==Button1;<button type="button" id="Button1" name="Button1" class="SWIFT-Button" ><span>Register</span></button>

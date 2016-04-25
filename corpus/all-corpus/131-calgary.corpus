@@ -1,0 +1,11 @@
+search uofc type text name q id uc global search field
+ type text id ctl00 contentplaceholder1 username name ctl00 contentplaceholder1 username
+type text id ctl00 contentplaceholder1 ucid name ctl00 contentplaceholder1 ucid
+ type text id ctl00 contentplaceholder1 surname name ctl00 contentplaceholder1 surname
+ type text id ctl00 contentplaceholder1 birthdate name ctl00 contentplaceholder1 birthdate
+ type text id ctl00 contentplaceholder1 email name ctl00 contentplaceholder1 email
+type text id ctl00 contentplaceholder1 display name ctl00 contentplaceholder1 display
+ type text id ctl00 contentplaceholder1 answer1 name ctl00 contentplaceholder1 answer1
+ type text id ctl00 contentplaceholder1 answer2 name ctl00 contentplaceholder1 answer2
+ type password id ctl00 contentplaceholder1 password name ctl00 contentplaceholder1 password
+ type password id ctl00 contentplaceholder1 passwordconfirm name ctl00 contentplaceholder1 passwordconfirm

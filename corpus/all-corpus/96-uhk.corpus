@@ -1,0 +1,8 @@
+type text name psurname maxlength 30
+type text name pmi name maxlength 30
+type text name pothername maxlength 30
+type text name pemail maxlength 30
+type text name pemail2 maxlength 30
+name pusername type text maxlength 20
+type password name ppassword maxlength 20
+type password name ppassword2 maxlength 20

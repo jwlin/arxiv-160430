@@ -1,0 +1,5 @@
+required invalid email address login email address id ctl00 contentmain nu tbemail type text name ctl00 contentmain nu tbemail maxlength 100
+required first name type text id ctl00 contentmain nu tbfirstname name ctl00 contentmain nu tbfirstname maxlength 75
+required last name id ctl00 contentmain nu tblastname type text name ctl00 contentmain nu tblastname maxlength 75
+required password does not meet the requirements password name ctl00 contentmain nu password1 tbpassword type password id ctl00 contentmain nu password1 tbpassword maxlength 30
+passwords do not match confirm password name ctl00 contentmain nu password1 tbpasswordconfirm type password id ctl00 contentmain nu password1 tbpasswordconfirm maxlength 30

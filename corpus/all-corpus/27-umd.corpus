@@ -1,0 +1,9 @@
+required type text id firstname name firstname
+middle name type text id middlename name middlename
+required type text id lastname name lastname
+e mail is invalid required type text id email name email
+verify e mail type text id verifyemail name verifyemail
+required type text id login name login
+required type text id password name password
+required type password id newpassword name newpassword
+verify password type password id verifypassword name verifypassword

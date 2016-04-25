@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+ * UBC CLF (Common Look and Feel) v7.0.4
+ * Copyright 2012 The University of British Columbia
+ * UBC Communications and Marketing
+ * http://brand.ubc.ca/clf
+ */
+ --><!--[if IEMobile 7]><html class="iem7 oldie" lang="en"><![endif]--><!--[if (IE 7)&!(IEMobile)]><html class="ie7 oldie" lang="en"><![endif]--><!--[if (IE 8)&!(IEMobile)]><html class="ie8 oldie" lang="en"><![endif]--><!--[if (IE 9)&!(IEMobile)]><html class="ie9" lang="en"><![endif]--><!--[[if (gt IE 9)|(gt IEMobile 7)]><!--><html lang="en"><!--<![endif]--><head><link type="text/css" rel="stylesheet" href="/iamweb/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo" /><link type="text/css" rel="stylesheet" href="/iamweb/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=4.0" /><script type="text/javascript" src="/iamweb/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=4.0"></script><script type="text/javascript" src="/iamweb/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&amp;v=4.0"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" />
+		<meta name="author" />
+		<title>The University of British Columbia</title>
+		<!-- Stylesheets -->	
+        <link href="//cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full.min.css" rel="stylesheet" />
+        <link href="/iamweb/resources/styles/unit.css" rel="stylesheet" /><!--[if lte IE 7]>
+    		<link href="/iamweb/resources/styles/font-awesome-ie7.css" rel="stylesheet" /><![endif]--><!--[if lt IE 9]>
+    		<script src="/iamweb/resources/scripts/html5.js"></script><![endif]-->
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="http://cdn.ubc.ca/clf/7.0.4/img/favicon.ico" />
+		<link href="/iamweb/resources/img/apple-touch-icon-144-precomposed.png" sizes="144x144" />
+		<link href="/iamweb/resources/img/apple-touch-icon-114-precomposed.png" sizes="114x114" />
+		<link href="/iamweb/resources/img/apple-touch-icon-72-precomposed.png" sizes="72x72" />
+		<link href="/iamweb/resources/img/apple-touch-icon-57-precomposed.png" />
+		<script>			
+		</script></head><body class="full-width">
+<!-- FROM JOHN -->
+    <!-- UBC Header -->
+    <header id="ubc7-header" class="row-fluid expand">
+    	<div class="container">
+	        <div class="span1">
+	            <div id="ubc7-logo">
+	                <a href="http://www.ubc.ca">The University of British Columbia</a>
+	            </div>
+	        </div>
+	        <div class="span2">
+	            <div id="ubc7-apom">
+	                <a href="//cdn.ubc.ca/clf/ref/aplaceofmind">UBC - A Place of Mind</a>                        
+	            </div>
+	        </div>
+	        <div class="span9" id="ubc7-wordmark-block">
+	            <div id="ubc7-wordmark">
+	                <a href="http://www.ubc.ca">The University of British Columbia</a>
+	            </div>
+	            </div>
+		</div>
+    </header>
+    <!-- End of UBC Header -->  
+    
+    <div class="full-width-container">	
+	
+	<!-- content area -->
+			<div id="content">
+				<div>
+<form autocomplete="off" id="mainForm" name="mainForm" method="post" action="/iamweb/account/create.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="mainForm" value="mainForm" />
+   
+	<script type="text/javascript">
+	    window.onload = function() {
+	    	if(document.getElementById("mainForm:firstName")) {
+	    		document.getElementById("mainForm:firstName").focus();
+	    	} 
+	    };
+	</script>
+    <div class="content expand"><div id="mainForm:setAccountPanel" class="ui-outputpanel ui-widget">
+        <div class="row">
+          <div id="flexContainer">
+            <h1>CWL Account Creation</h1>
+            <div id="progressBarContainer">
+              <div id="progressIdentity" class="progressBarActive">Create<br />
+                <span class="subtitle">Create Your Identity</span> </div>
+              <div id="progressCreateStudent" class="progressBarInactive">Set Up<br />
+                <span class="subtitle">Set Up Password/Passphrase</span> </div>
+              <div id="progressSelectStudent" class="progressBarInactive">Select<br />
+                <span class="subtitle">Select Security Questions</span> </div>
+              <div id="progressSuccessStudent" class="progressBarInactive sits">Done<br />
+                <span class="subtitle">Activate Account...</span></div>
+            </div>
+            <h2>Create Your Identity</h2>
+            <div id="col1">
+              <p> Upon completion of these steps you will be sent a Campus-Wide Login (CWL) Account Activation link.</p>
+              <div class="accordion" id="accordion1">
+                <div> <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">Show CWL login name requirements »</a> </div>
+                <div id="collapseOne" class="accordion-body collapse">  
+                  <div class="restrictions">
+                    <p><strong>CWL Login Name Requirements</strong></p>
+                    <ul>
+                      <li>must be between 2 to 8 characters</li>
+                      <li>allowed characters include letters (a-z) and numbers (0-9)</li>
+                      <li>first two characters must be alpha characters</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p><strong>Note</strong>: Your CWL Login Name is considered public information and is exempt from <a href="http://universitycounsel.ubc.ca/access-and-privacy/public-information/" target="_blank">FIPPA</a>.</p>
+              <p>*Required</p>
+            </div>
+            <div id="col2">
+              <fieldset><div id="mainForm:setFirstNamePanel" class="ui-outputpanel ui-widget">
+                  <label for="First Name"><label for="mainForm:firstName">
+First Name*</label>
+                  </label><input autofocus="true" id="mainForm:firstName" name="mainForm:firstName" type="text" maxlength="255" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " /><script id="mainForm:firstName_s" type="text/javascript">PrimeFaces.cw('InputText','widget_mainForm_firstName',{id:'mainForm:firstName'});</script><div id="mainForm:firstNameErrorBlock_outer" class="ui-outputpanel ui-widget"></div></div><div id="mainForm:setLastNamePanel" class="ui-outputpanel ui-widget">
+                  <label for="Last Name"><label for="mainForm:lastName">
+Last Name*</label>
+                  </label><input id="mainForm:lastName" name="mainForm:lastName" type="text" maxlength="255" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " /><script id="mainForm:lastName_s" type="text/javascript">PrimeFaces.cw('InputText','widget_mainForm_lastName',{id:'mainForm:lastName'});</script><div id="mainForm:lastNameErrorBlock_outer" class="ui-outputpanel ui-widget"></div></div>
+                <br /><div id="mainForm:emailPanel" class="ui-outputpanel ui-widget">
+                  <label for="Email"><label for="mainForm:email">
+Enter Your Email*</label>
+                  </label><input id="mainForm:email" type="text" name="mainForm:email" class="" maxlength="40" /><div id="mainForm:emailErrorBlock_outer" class="ui-outputpanel ui-widget"></div>
+                  <label for="Confirm Email"><label for="mainForm:confirmEmail">
+Confirm Your Email*</label>
+                  </label><input id="mainForm:confirmEmail" type="text" name="mainForm:confirmEmail" class="" maxlength="40" /></div>
+                <br /><div id="mainForm:loginNamePanel" class="ui-outputpanel ui-widget">
+                  <label for="Login Name"><label for="mainForm:loginName">
+CWL Login Name*</label>
+                  </label><input id="mainForm:loginName" type="text" name="mainForm:loginName" class="" maxlength="8" onclick="PrimeFaces.ab({source:this,event:'click',process:'mainForm:loginName',update:'mainForm:alternativeLogin'}, arguments[1]);" />
+                  <div class="input-restrictions">length must be 2 to 8 alphanumeric characters and the first two must be alpha characters</div><div id="mainForm:loginNameErrorBlock_outer" class="ui-outputpanel ui-widget"></div></div><table id="mainForm:alternativeLogin">
+</table>
+                <br /><div id="mainForm:captchaPanel" class="ui-outputpanel ui-widget">
+                  <label for="Validation Code"><label>
+Validation Code*</label>
+                  </label>
+                  <script type="text/javascript">
+                  var RecaptchaOptions = {
+                  tabindex: 1,
+                  theme: "white"};
+                  </script>
+                  <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6LcjPu8SAAAAAG4TRA6bHJpVCgNRq2WyKeaWBqq5">
+		  </script>
+                  <noscript>
+                  <iframe src="https://www.google.com/recaptcha/api/noscript?k=6LcjPu8SAAAAAG4TRA6bHJpVCgNRq2WyKeaWBqq5" height="300" width="500" frameborder="0"></iframe>
+                  <br />
+                  <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+                  <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+                  </noscript><div id="mainForm:captchaErrorBlock_outer" class="ui-outputpanel ui-widget"></div></div>
+              </fieldset>
+              <br /><button id="mainForm:j_idt44" name="mainForm:j_idt44" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn" onclick="PrimeFaces.ab({source:'mainForm:j_idt44',process:'mainForm:j_idt44 mainForm:firstName mainForm:lastName mainForm:email mainForm:confirmEmail mainForm:loginName mainForm:alternativeLogin',update:'mainForm:firstName mainForm:lastName mainForm:email mainForm:confirmEmail mainForm:loginName mainForm:alternativeLogin mainForm:firstNameErrorBlock_outer mainForm:lastNameErrorBlock_outer mainForm:emailErrorBlock_outer mainForm:loginNameErrorBlock_outer mainForm:captchaErrorBlock_outer',onerror:function(xhr,status,error){Recaptcha.reload();},oncomplete:function(xhr,status,args){Recaptcha.reload();}});return false;" type="submit"><span class="ui-button-text ui-c">Next</span></button><script id="mainForm:j_idt44_s" type="text/javascript">PrimeFaces.cw('CommandButton','widget_mainForm_j_idt44',{id:'mainForm:j_idt44'});</script><a id="mainForm:cancel" href="#" class="ui-commandlink ui-widget buttonLink" onclick="PrimeFaces.ab({source:'mainForm:cancel'});return false;">Cancel</a>
+            </div>
+          </div>
+        </div></div>
+    </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="9129595750567896904:-6683458250322950479" autocomplete="off" />
+</form>
+				</div>
+			</div>
+	<!-- end content area -->
+
+</div>
+	<!-- End of Content Area -->
+    <!-- Footer Area Unit Menu - Mobile Only -->
+    <div id="ubc7-unit-alternate-navigation" class="navbar expand visible-phone">
+        <!-- /navbar-inner -->
+    </div><!-- /navbar -->
+    <!-- End of Footer Area Unit Menu -->
+<!--    &lt;footer id=&quot;ubc7-footer&quot; class=&quot;expand&quot; role=&quot;contentinfo&quot;&gt;   -->
+        <div class="row-fluid expand" id="ubc7-minimal-footer">
+        	<div class="container">
+	            <div class="span12">
+	                <ul>
+	                    <li><a href="//cdn.ubc.ca/clf/ref/terms">Terms of Use</a> <span class="divider">|</span></li>
+	                    <li><a href="//cdn.ubc.ca/clf/ref/copyright">Copyright</a> <span class="divider">|</span></li>
+	                    <li><a href="//cdn.ubc.ca/clf/ref/accessibility">Accessibility</a> <span class="divider">|</span></li><li><a href="http://it.ubc.ca/support">Need Help?</a></li>
+	                </ul>
+	            </div>
+			</div>
+        </div>
+<!--    &lt;/footer&gt;-->
+    <!-- Placed javascript at the end for faster loading -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdn.ubc.ca/clf/7.0.4/js/ubc-clf.min.js"></script></body></html>

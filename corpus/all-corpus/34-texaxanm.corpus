@@ -1,0 +1,38 @@
+last name or family name or surname type text name s user last nm id s user last nm maxlength 30
+first name or given name type text name s user first nm id s user first nm maxlength 20
+middle name type text name s user middle nm id s user middle nm maxlength 20
+suffix e g jr iii etc but do not enter mr mrs ms etc name s user suffix nm type text id s user suffix nm maxlength 5
+birthdate 4 digit year birthdate day birthdate month date of birth 4 digit year name s user dob cy type text id s user dob cy maxlength 4
+city type text name s city of birth id s city of birth maxlength 22
+4 digit year permanent resident card issued day permanent resident card issued month permanent resident card issued permanent resident card name s alien num issued cy type text id s alien num issued cy maxlength 4
+alien number type text name s alien num id s alien num maxlength 12
+e mail address type text name s user email id s user email maxlength 75
+confirm e mail address please re type email address type text name s confirm email id s confirm email maxlength 75
+street address line 1 address only do not re enter your name include apartment number if you have one type text id s user perm addr1 name s user perm addr1 maxlength 40
+street address line 2 use only if street address line 1 is too long type text id s user perm addr2 name s user perm addr2 maxlength 40
+city type text id s user perm city name s user perm city maxlength 22
+postal zip code do not include dashes type text name s user perm postal code id s user perm postal code maxlength 14
+street address if different from permanent address include apartment number if you have one type text id s user area addr1 name s user area addr1 maxlength 40
+street address line 2 use only if street address line 1 is too long type text id s user area addr2 name s user area addr2 maxlength 40
+city type text id s user area city name s user area city maxlength 22
+postal zip code do not include dashes type text name s user area postal code id s user area postal code maxlength 14
+4 digit year day month physical address is good until physical address good until name s user area good cy type text id s user area good cy maxlength 4
+ required preferred phone required numbers only type text name s primary phone id s primary phone maxlength 12
+preferred phone country code if not a u s number name s user perm ph country code type text id s user perm ph country code maxlength 3
+alternate phone numbers only type text name s alternate phone id s alternate phone maxlength 12
+alternate phone country code if not a u s number name s user area ph country code type text id s user area ph country code maxlength 3
+first name type text name s emer contact first nm id s emer contact first nm maxlength 15
+last name type text name s emer contact last nm id s emer contact last nm maxlength 30
+phone numbers only include country code if applicable type text name s emer contact phone id s emer contact phone maxlength 15
+street address type text id s emer contact addr1 name s emer contact addr1 maxlength 35
+street address line 2 type text id s emer contact addr2 name s emer contact addr2 maxlength 35
+city type text id s emer contact city name s emer contact city maxlength 22
+postal zip code name s emer contact postal code type text id s emer contact postal code maxlength 14
+e mail address type text name s emer contact email id s emer contact email maxlength 75
+answer type text name s pw q answer1 id s pw q answer1 maxlength 30
+answer type text name s pw q answer2 id s pw q answer2 maxlength 30
+answer type text name s pw q answer3 id s pw q answer3 maxlength 30
+answer type text name s pw q answer4 id s pw q answer4 maxlength 30
+answer type text name s pw q answer5 id s pw q answer5 maxlength 30
+password type password name s inpwd id s user pwd maxlength 12
+confirm password type password name s user pwd confirm id s user pwd confirm maxlength 12

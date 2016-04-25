@@ -1,0 +1,77 @@
+[
+  {
+    "dom": "<input id=\"firstname\" name=\"firstname\" type=\"text\" value=\"\"/>", 
+    "feature": "first name type text name firstname id firstname", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"middlename\" name=\"middlename\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name type text name middlename id middlename", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input id=\"lastname\" name=\"lastname\" type=\"text\" value=\"\"/>", 
+    "feature": "last name type text name lastname id lastname", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"previousname\" name=\"previousname\" type=\"text\" value=\"\"/>", 
+    "feature": "previous name type text name previousname id previousname", 
+    "rule": {
+      "id": ["previous"], 
+      "name": ["previous"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input id=\"dateofbirth\" name=\"dateofbirth\" type=\"text\" value=\"\"/>", 
+    "feature": "date of birth type text name dateofbirth id dateofbirth", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"emailaddress\" name=\"emailaddress\" type=\"text\" value=\"\"/>", 
+    "feature": "email address type text name emailaddress id emailaddress", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"password\" name=\"password\" type=\"password\" value=\"\"/>", 
+    "feature": "password type password name password id password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"confirmpassword\" name=\"confirmpassword\" type=\"password\" value=\"\"/>", 
+    "feature": "confirm password type password name confirmpassword id confirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

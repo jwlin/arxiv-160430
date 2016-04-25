@@ -1,0 +1,113 @@
+[
+  {
+    "dom": "<input id=\"email\" maxlength=\"100\" name=\"email\" placeholder=\"user@example.com\" type=\"text\" value=\"\"/>", 
+    "feature": "your email address is your username name email type text placeholder user example com id email maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"firstname\" maxlength=\"45\" name=\"firstname\" type=\"text\" value=\"\"/>", 
+    "feature": "first name type text id firstname name firstname maxlength 45", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"middlename\" maxlength=\"25\" name=\"middlename\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name type text id middlename name middlename maxlength 25", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    },
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input id=\"lastname\" maxlength=\"45\" name=\"lastname\" type=\"text\" value=\"\"/>", 
+    "feature": "last name type text id lastname name lastname maxlength 45", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    },
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"englishfirstname\" maxlength=\"45\" name=\"englishfirstname\" type=\"text\" value=\"\"/>", 
+    "feature": "english first name type text id englishfirstname name englishfirstname maxlength 45", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    },
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"englishmiddlename\" maxlength=\"25\" name=\"englishmiddlename\" type=\"text\" value=\"\"/>", 
+    "feature": "english middle name type text id englishmiddlename name englishmiddlename maxlength 25", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"english\" id=\"englishlastname\" maxlength=\"45\" name=\"englishlastname\" type=\"text\" value=\"\"/>", 
+    "feature": "english last name name englishlastname type text id englishlastname maxlength 45", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"input-small\" id=\"date-input\" maxlength=\"10\" name=\"dateofbirth\" placeholder=\"mm/dd/yyyy\" size=\"16\" type=\"text\" value=\"\"/>", 
+    "feature": "date of birth name dateofbirth placeholder mm dd yyyy type text id date input maxlength 10", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"homenumber\" maxlength=\"16\" name=\"homenumber\" placeholder=\"5555555555\" type=\"text\" value=\"\"/>", 
+    "feature": "please include area or city code and local number name homenumber type text placeholder 5555555555 id homenumber maxlength 16", 
+    "rule": {
+      "id": ["homenumber"], 
+      "name": ["homenumber"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"mobilenumber\" maxlength=\"16\" name=\"mobilenumber\" placeholder=\"5555555555\" type=\"text\" value=\"\"/>", 
+    "feature": "please include area or city code and local number name mobilenumber type text placeholder 5555555555 id mobilenumber maxlength 16", 
+    "rule": {
+      "id": ["mobile"], 
+      "name": ["mobile"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"password\" maxlength=\"80\" name=\"password\" placeholder=\"password\" type=\"password\" value=\"\"/>", 
+    "feature": "new password name password type password placeholder password id password maxlength 80", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"confirmpassword\" maxlength=\"80\" name=\"confirmpassword\" placeholder=\"password\" type=\"password\"/>", 
+    "feature": "confirm password type password placeholder password id confirmpassword name confirmpassword maxlength 80", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

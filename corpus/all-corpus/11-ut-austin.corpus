@@ -1,0 +1,12 @@
+first given name name firstname type text id firstname maxlength 50
+middle name name middlename type text id middlename maxlength 50
+ last family name name lastname type text id lastname maxlength 50
+ for example your nickname other first names for example your nickname name otherfirstname type text id otherfirstname maxlength 50
+ for example your maiden name other last names for example your maiden name name otherlastname type text id otherlastname maxlength 50
+city or town of birth type text id cityortownofbirth name cityortownofbirth
+ why do we ask for your ssn u s social security number why do we ask for your ssn name studentssna type text id studentssna maxlength 3
+ why do we ask for your ssn u s social security number why do we ask for your ssn name studentssnb type text id studentssnb maxlength 2
+ why do we ask for your ssn u s social security number why do we ask for your ssn name studentssnc type text id studentssnc maxlength 4
+ the 16 digit number on the front of your ut austin id card if you have one ut austin id card number type text id idcardnumber name idcardnumber
+ use an e mail account you will have access to several months from now why e mail address type text id emailaddress name emailaddress
+verify your e mail address type text id emailaddressverify name emailaddressverify

@@ -1,0 +1,6 @@
+ name username type text id username maxlength 50
+ name confirmusername id confirmusername type text maxlength 50
+ name firstname id firstname type text maxlength 50
+ name lastname id lastname type text maxlength 50
+ name password id password type password maxlength 128
+ name confirmpassword id confirmpassword type password maxlength 128

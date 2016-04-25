@@ -1,0 +1,25 @@
+according to official document name familyname id familyname type text maxlength 30
+according to official document e g marc peter ralph name givenname id givenname type text maxlength 30
+first name for correspondence e g marc name preferredgivenname id preferredgivenname type text maxlength 30
+if any name previousname id previousname type text maxlength 30
+date format yyyy mm dd name dateofbirth id birthdate type text maxlength 10
+swiss social security number name socialsecuritynum1 value 756 type text id socialsecuritynum1 maxlength 3
+swiss social security number name socialsecuritynum2 id socialsecuritynum2 type text maxlength 4
+swiss social security number name socialsecuritynum3 id socialsecuritynum3 type text maxlength 4
+swiss social security number name socialsecuritynum4 id socialsecuritynum4 type text maxlength 2
+important note if you change your e mail address your login name will also change name emailaddress id emailaddress type text maxlength 400
+additional e g c o miller name permanentco type text id permanentco maxlength 34
+additional e g c o miller name studiesco type text id studiesco maxlength 34
+ street and number name permanentstr type text id permanentstr maxlength 34
+ street and number name studiesstr type text id studiesstr maxlength 34
+additional name permanentadd type text id permanentadd maxlength 34
+additional name studiesadd type text id studiesadd maxlength 34
+ zipcode name permanentpostalcode type text id permanentpostalcode maxlength 10
+ zipcode name studiespostalcode type text id studiespostalcode maxlength 10
+ town name permanentcity type text id permanentcity maxlength 27
+ town name studiescity type text id studiescity maxlength 27
+phone name permanenttel type text id permanenttel maxlength 20
+phone name studiestel type text id studiestel maxlength 20
+mobile phone name privatemobile type text id privatemobile maxlength 20
+password must consist of at least 6 characters plus 2 digits name password type password id password maxlength 32
+ repeat password name password2 type password id password2 maxlength 32

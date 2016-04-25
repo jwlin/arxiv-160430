@@ -1,0 +1,30 @@
+[
+  {
+    "dom": "<input class=\"form-control\" id=\"j_id0:osuthemegradapptemplate:theform:firstname\" maxlength=\"40\" name=\"j_id0:osuthemegradapptemplate:theform:firstname\" required=\"required\" type=\"text\"/>", 
+    "feature": "first name name j id0 osuthemegradapptemplate theform firstname type text id j id0 osuthemegradapptemplate theform firstname maxlength 40", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" id=\"j_id0:osuthemegradapptemplate:theform:lastname\" maxlength=\"59\" name=\"j_id0:osuthemegradapptemplate:theform:lastname\" required=\"required\" type=\"text\"/>", 
+    "feature": "last name name j id0 osuthemegradapptemplate theform lastname type text id j id0 osuthemegradapptemplate theform lastname maxlength 59", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"form-control popover-toggle\" data-content=\"this email will be used for official correspondence.  if you are a current or prior osu student or employee, please use your onid email address.  please do not use a microsoft account.\" data-placement=\"top\" data-toggle=\"popover\" data-trigger=\"focus\" id=\"j_id0:osuthemegradapptemplate:theform:email\" maxlength=\"80\" name=\"j_id0:osuthemegradapptemplate:theform:email\" required=\"required\" type=\"text\"/>", 
+    "feature": "email name j id0 osuthemegradapptemplate theform email type text id j id0 osuthemegradapptemplate theform email maxlength 80", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }
+]

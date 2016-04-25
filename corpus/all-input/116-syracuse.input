@@ -1,0 +1,94 @@
+[
+  {
+    "dom": "<input maxlength=\"100\" name=\"t3005\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t3005 maxlength 100", 
+    "rule": {
+      "id": ["t3005"], 
+      "name": ["t3005"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"100\" name=\"t5111\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t5111 maxlength 100", 
+    "rule": {
+      "id": ["t5111"], 
+      "name": ["t5111"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input maxlength=\"40\" name=\"t5010\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t5010 maxlength 40", 
+    "rule": {
+      "id": ["t5010"], 
+      "name": ["t5010"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input maxlength=\"50\" name=\"t5030\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t5030 maxlength 50", 
+    "rule": {
+      "id": ["t5030"], 
+      "name": ["t5030"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input maxlength=\"100\" name=\"t4050\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t4050 maxlength 100", 
+    "rule": {
+      "id": ["t4050"], 
+      "name": ["t4050"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input maxlength=\"100\" name=\"t4055\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t4055 maxlength 100", 
+    "rule": {
+      "id": ["t4055"], 
+      "name": ["t4055"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input maxlength=\"60\" name=\"t4060\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t4060 maxlength 60", 
+    "rule": {
+      "id": ["t4060"], 
+      "name": ["t4060"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input maxlength=\"20\" name=\"t4080\" size=\"10\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name t4080 maxlength 20", 
+    "rule": {
+      "id": ["t4080"], 
+      "name": ["t4080"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input maxlength=\"50\" name=\"t3010\" size=\"20\" type=\"password\"/>", 
+    "feature": "type password name t3010 maxlength 50", 
+    "rule": {
+      "id": ["t3010"], 
+      "name": ["t3010"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input maxlength=\"50\" name=\"t3015\" size=\"20\" type=\"password\"/>", 
+    "feature": "type password name t3015 maxlength 50", 
+    "rule": {
+      "id": ["t3015"], 
+      "name": ["t3015"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

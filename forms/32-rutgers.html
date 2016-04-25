@@ -1,0 +1,73 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  	<head>
+    	<title>Graduate Admissions : New Applicant Account</title>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="author" content="Administrative Computing Services" />
+		<script type="text/javascript" src="./js/common.js"></script>
+		<link href="./css/common.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- $Id: establishNewApplicant.jsp,v 1.13 2006/08/09 13:18:39 htorres Exp $ -->
+  	</head>
+
+	<body>
+		<form id="formNewApplicantAccount" method="post" action="processEstablishNewApplicant.app?origin=P">
+			<div id="headerDiv">
+				<div id="ruDiv">Rutgers University &raquo; Graduate Admissions</div>
+				<h1><img src="./images/pusher.gif" height="33" width="54" alt="">&nbsp;New Applicant Account</h1>
+				<div id="lineDiv"></div>
+			</div>
+			
+			<div id="content">
+				<!-- $Id: errors.jsp,v 1.9 2006/10/12 15:03:02 htorres Exp $ -->
+	
+				<!-- $Id: info.jsp,v 1.11 2003/10/03 15:19:22 bgrebowi Exp $ -->
+ 
+ 				<fieldset id="f1">
+					<legend><span class="accesskey">C</span>reate Login ID &amp; PIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="helpText.hlp?helpFunction=APPLICATION&helpScreen=SIGNON&helpSection=SIGNON" class="footnote" tabindex="1" onclick="window.popUp(this.href,'console',250,450);return false;">help</a></legend>
+					<p>
+						Be sure to <span class="b orange">remember your Login ID and PIN</span> so that you can review or resume your work.<br />
+						If you have questions about completing any section of the application, click on the help link for instructions.
+					</p>
+					<div class="row">
+						<span class="fLabel"><label for="applicantId" accesskey="c">Login ID:</label></span>
+						<span class="fField"><input name="applicantId" id="applicantId" tabindex="10" class="inputTxt" maxlength="9" /> (4 to 9 characters)</span>
+						&nbsp;
+					</div>
+					<div class="row">
+						<span class="fLabel"><label for="applicantPin">Personal Identification Number(PIN):</label></span>
+						<span class="fField"><input type="password" name="applicantPin" id="applicantPin" tabindex="11" class="inputTxt" maxlength="6" /> (6 characters)</span>
+						&nbsp;
+					</div>
+					<div class="row">
+						<span class="fLabel"><label for="confirmedApplicantPin">Verify PIN:</label></span>
+						<span class="fField"><input type="password" name="confirmedApplicantPin" id="confirmedApplicantPin" tabindex="12" class="inputTxt" maxlength="6" /> (6 characters)</span>
+						&#160;
+					</div>
+					<div class="sNavDiv">
+						<input type="submit" name="createBtn" id="createBtn" tabindex="13" class="inputBtn" value="create account" />
+					</div>
+				</fieldset>
+			</div>		
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

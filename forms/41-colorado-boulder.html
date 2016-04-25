@@ -1,0 +1,949 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- APP BUILD: Version: 3.7.0.11.129 | Revision: unknown | Package: d61e7e4e -->
+<head>
+<script type="text/javascript" >
+window.setTimeout('top.window.location = "/degreeprog/userRegDEGREEPROG_CUBLD/j_spring_security_logout"', ((1800 * 1000)) - (60 * 1000));</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>University of Colorado Boulder - New User Registration</title>
+<script type="text/javascript" src="commonScripts/jquery-1.2.6.js">
+</script>
+<script type="text/javascript" src="commonScripts/jquery.form.js">
+</script>
+<script type="text/javascript" src="commonScripts/jquery.blockUI.js">
+</script>
+<script type="text/javascript" src="js/jquery.gradient.aaron.js">
+</script>
+<script type="text/javascript" src="js/jquery.dropshadow.js">
+</script>
+<script type="text/javascript" src="js/register.js">
+</script>
+<script type="text/javascript" src="js/core.js">
+</script>
+<script type="text/javascript" src="js/validation.js">
+</script>
+<script type="text/javascript" src="commonScripts/site.js">
+</script>
+<link rel="stylesheet" type="text/css" href="commonCss/main.css"/>
+<link rel="stylesheet" type="text/css" href="commonCss/site.css"/>
+</head>
+
+<link href="commonCss/application.css" rel="stylesheet" type="text/css" />
+<link href="../commonCss/application.css" rel="stylesheet" type="text/css" />
+
+	<body>
+		<script type="text/javascript">
+
+		    var _gaq = _gaq || [];
+		    //Enterprise Portal Analytics Info is prefixed with EP.
+		    _gaq.push(['_setAccount', 'UA-36025414-2'], ['_trackPageview']);
+
+		    (function() {
+		        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		    })();
+
+		</script>
+
+		<div id="branding">
+			<h1>MyCUBoulder Application</h1>
+		    <div id="page">
+		        <div id="contentDiv">
+
+<div id="messageTemplate">
+	<div id="warningMessage$field$Top"></div>
+	<div id="message$field$" class="warningMessage" style="display: none;"><span id="$field$message">$message$</span></div>
+<img src="images/header_userreg.jpg" />
+<div class="headingEssay">Thank you for your interest in University of Colorado Boulder. By becoming a registered user you will have access to additional features and information to help you plan for your educational needs. To create your user account we require the following information. Only fields marked with a * are required, but providing as much information as possible will establish a more complete profile for future use.</div>
+<script>
+	registerForm.formFields = [];
+	registerForm.requiredFields = [];
+</script>
+<p></p>
+<div id="registrationFormDiv">
+<form id="bioForm" method="post" action="submitBioData.action" onsubmit="return registerForm.validate()" name="bioForm">
+<input type="hidden" name="returnURL" value="https://soa.prod.cu.edu/degreeprog/applyDEGREEPROG_CUBLD" id="returnURL"/>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="firstNameLabel">
+	Legal first name
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.firstName" size="50" value="" id="processRequest_firstName"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("firstName");
+	    	registerForm.requiredFields.push("firstName");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="middleNameLabel">
+	Middle name
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.middleName" size="50" value="" id="processRequest_middleName"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("middleName");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="lastNameLabel">
+	Legal last name
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.lastName" size="50" value="" id="processRequest_lastName"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("lastName");
+	    	registerForm.requiredFields.push("lastName");
+	    </script>
+
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="countryLabel">
+	Country
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<select name="processRequest.country" id="processRequest_country" onchange="registerForm.getLocations();">
+    <option value="AFG">Afghanistan</option>
+    <option value="ALA">Aland Islands</option>
+    <option value="ALB">Albania</option>
+    <option value="DZA">Algeria</option>
+    <option value="ASM">American Samoa</option>
+    <option value="AND">Andorra</option>
+    <option value="AGO">Angola</option>
+    <option value="AIA">Anguilla</option>
+    <option value="ATA">Antarctica</option>
+    <option value="ATG">Antigua and Barbuda</option>
+    <option value="ARG">Argentina</option>
+    <option value="ARM">Armenia</option>
+    <option value="ABW">Aruba</option>
+    <option value="AUS">Australia</option>
+    <option value="AUT">Austria</option>
+    <option value="AZE">Azerbaijan</option>
+    <option value="BHS">Bahamas</option>
+    <option value="BHR">Bahrain</option>
+    <option value="BGD">Bangladesh</option>
+    <option value="BRB">Barbados</option>
+    <option value="BLR">Belarus</option>
+    <option value="BEL">Belgium</option>
+    <option value="BLZ">Belize</option>
+    <option value="BEN">Benin</option>
+    <option value="BMU">Bermuda</option>
+    <option value="BTN">Bhutan</option>
+    <option value="BOL">Bolivia</option>
+    <option value="BIH">Bosnia and Herzegovina</option>
+    <option value="BWA">Botswana</option>
+    <option value="BVT">Bouvet Island</option>
+    <option value="BRA">Brazil</option>
+    <option value="IOT">British Indian Ocean Territory</option>
+    <option value="BRN">Brunei Darussalam</option>
+    <option value="BGR">Bulgaria</option>
+    <option value="BFA">Burkina Faso</option>
+    <option value="BDI">Burundi</option>
+    <option value="KHM">Cambodia</option>
+    <option value="CMR">Cameroon</option>
+    <option value="CAN">Canada</option>
+    <option value="CPV">Cape Verde</option>
+    <option value="CYM">Cayman Islands</option>
+    <option value="CAF">Central African Republic</option>
+    <option value="TCD">Chad</option>
+    <option value="CHL">Chile</option>
+    <option value="CHN">China</option>
+    <option value="CXR">Christmas Island</option>
+    <option value="CCK">Cocos (Keeling) Islands</option>
+    <option value="COL">Colombia</option>
+    <option value="COM">Comoros</option>
+    <option value="COG">Congo</option>
+    <option value="COD">Congo, The Democratic Republic</option>
+    <option value="COK">Cook Islands</option>
+    <option value="CRI">Costa Rica</option>
+    <option value="CIV">Cote D'Ivoire</option>
+    <option value="HRV">Croatia</option>
+    <option value="CUB">Cuba</option>
+    <option value="CYP">Cyprus</option>
+    <option value="CZE">Czech Republic</option>
+    <option value="DNK">Denmark</option>
+    <option value="DJI">Djibouti</option>
+    <option value="DMA">Dominica</option>
+    <option value="DOM">Dominican Republic</option>
+    <option value="TLS">East Timor</option>
+    <option value="ECU">Ecuador</option>
+    <option value="EGY">Egypt</option>
+    <option value="SLV">El Salvador</option>
+    <option value="ENG">England</option>
+    <option value="GNQ">Equatorial Guinea</option>
+    <option value="ERI">Eritrea</option>
+    <option value="EST">Estonia</option>
+    <option value="ETH">Ethiopia</option>
+    <option value="FLK">Falkland Islands (Malvinas)</option>
+    <option value="FRO">Faroe Islands</option>
+    <option value="FJI">Fiji</option>
+    <option value="FIN">Finland</option>
+    <option value="MKD">Fmr Yugoslav Rep of Macedonia</option>
+    <option value="FRA">France</option>
+    <option value="GUF">French Guiana</option>
+    <option value="PYF">French Polynesia</option>
+    <option value="ATF">French Southern Territories</option>
+    <option value="GAB">Gabon</option>
+    <option value="GMB">Gambia</option>
+    <option value="GEO">Georgia</option>
+    <option value="DEU">Germany</option>
+    <option value="GHA">Ghana</option>
+    <option value="GIB">Gibraltar</option>
+    <option value="GRC">Greece</option>
+    <option value="GRL">Greenland</option>
+    <option value="GRD">Grenada</option>
+    <option value="GLP">Guadeloupe</option>
+    <option value="GUM">Guam</option>
+    <option value="GTM">Guatemala</option>
+    <option value="GGY">Guernsey</option>
+    <option value="GIN">Guinea</option>
+    <option value="GNB">Guinea-Bissau</option>
+    <option value="GUY">Guyana</option>
+    <option value="HTI">Haiti</option>
+    <option value="HMD">Heard and McDonald Islands</option>
+    <option value="VAT">Holy See (Vatican City State)</option>
+    <option value="HND">Honduras</option>
+    <option value="HKG">Hong Kong</option>
+    <option value="HUN">Hungary</option>
+    <option value="ISL">Iceland</option>
+    <option value="IND">India</option>
+    <option value="IDN">Indonesia</option>
+    <option value="IRN">Iran (Islamic Republic Of)</option>
+    <option value="IRQ">Iraq</option>
+    <option value="IRL">Ireland</option>
+    <option value="IMN">Isle of Man</option>
+    <option value="ISR">Israel</option>
+    <option value="ITA">Italy</option>
+    <option value="JAM">Jamaica</option>
+    <option value="JPN">Japan</option>
+    <option value="JEY">Jersey</option>
+    <option value="JOR">Jordan</option>
+    <option value="KAZ">Kazakhstan</option>
+    <option value="KEN">Kenya</option>
+    <option value="KIR">Kiribati</option>
+    <option value="PRK">Korea, Democratic People's Rep</option>
+    <option value="KOR">Korea, Republic of</option>
+    <option value="KOS">Kosovo</option>
+    <option value="KWT">Kuwait</option>
+    <option value="KGZ">Kyrgyzstan</option>
+    <option value="LAO">Lao People's Democratic Rep</option>
+    <option value="LVA">Latvia</option>
+    <option value="LBN">Lebanon</option>
+    <option value="LSO">Lesotho</option>
+    <option value="LBR">Liberia</option>
+    <option value="LBY">Libya</option>
+    <option value="LIE">Liechtenstein</option>
+    <option value="LTU">Lithuania</option>
+    <option value="LUX">Luxembourg</option>
+    <option value="MAC">Macao</option>
+    <option value="MDG">Madagascar</option>
+    <option value="MWI">Malawi</option>
+    <option value="MYS">Malaysia</option>
+    <option value="MDV">Maldives</option>
+    <option value="MLI">Mali</option>
+    <option value="MLT">Malta</option>
+    <option value="MHL">Marshall Islands</option>
+    <option value="MTQ">Martinique</option>
+    <option value="MRT">Mauritania</option>
+    <option value="MUS">Mauritius</option>
+    <option value="MYT">Mayotte</option>
+    <option value="MEX">Mexico</option>
+    <option value="FSM">Micronesia, Federated States</option>
+    <option value="MDA">Moldova, Republic of</option>
+    <option value="MCO">Monaco</option>
+    <option value="MNG">Mongolia</option>
+    <option value="MSR">Montserrat</option>
+    <option value="MAR">Morocco</option>
+    <option value="MOZ">Mozambique</option>
+    <option value="MMR">Myanmar</option>
+    <option value="NAM">Namibia</option>
+    <option value="NRU">Nauru</option>
+    <option value="NPL">Nepal</option>
+    <option value="NLD">Netherlands</option>
+    <option value="ANT">Netherlands Antilles</option>
+    <option value="NCL">New Caledonia</option>
+    <option value="NZL">New Zealand</option>
+    <option value="NIC">Nicaragua</option>
+    <option value="NER">Niger</option>
+    <option value="NGA">Nigeria</option>
+    <option value="NIU">Niue</option>
+    <option value="NFK">Norfolk Island</option>
+    <option value="NIR">Northern Ireland</option>
+    <option value="MNP">Northern Mariana Islands</option>
+    <option value="NOR">Norway</option>
+    <option value="NAP">Not Applicable</option>
+    <option value="NRE">Not Reported</option>
+    <option value="OMN">Oman</option>
+    <option value="PAK">Pakistan</option>
+    <option value="PLW">Palau</option>
+    <option value="PSE">Palestinian Territory, Occupie</option>
+    <option value="PAN">Panama</option>
+    <option value="PNG">Papua New Guinea</option>
+    <option value="PRY">Paraguay</option>
+    <option value="PER">Peru</option>
+    <option value="PHL">Philippines</option>
+    <option value="PCN">Pitcairn</option>
+    <option value="POL">Poland</option>
+    <option value="PRT">Portugal</option>
+    <option value="PRI">Puerto Rico</option>
+    <option value="QAT">Qatar</option>
+    <option value="MNE">Republic of Montenegro</option>
+    <option value="SRB">Republic of Serbia</option>
+    <option value="REU">Reunion</option>
+    <option value="ROU">Romania</option>
+    <option value="RUS">Russian Federation</option>
+    <option value="RWA">Rwanda</option>
+    <option value="BLM">Saint Barthelemy</option>
+    <option value="SHN">Saint Helena</option>
+    <option value="KNA">Saint Kitts and Nevis</option>
+    <option value="LCA">Saint Lucia</option>
+    <option value="MAF">Saint Martin</option>
+    <option value="SPM">Saint Pierre and Miquelon</option>
+    <option value="WSM">Samoa</option>
+    <option value="SMR">San Marino</option>
+    <option value="STP">Sao Tome and Principe</option>
+    <option value="SAU">Saudi Arabia</option>
+    <option value="SCT">Scotland</option>
+    <option value="SEN">Senegal</option>
+    <option value="SYC">Seychelles</option>
+    <option value="SLE">Sierra Leone</option>
+    <option value="SGP">Singapore</option>
+    <option value="SVK">Slovakia</option>
+    <option value="SVN">Slovenia</option>
+    <option value="SLB">Solomon Islands</option>
+    <option value="SOM">Somalia</option>
+    <option value="ZAF">South Africa</option>
+    <option value="SSD">South Sudan</option>
+    <option value="ESP">Spain</option>
+    <option value="LKA">Sri Lanka</option>
+    <option value="VCT">St Vincent and the Grenadines</option>
+    <option value="SGS">Sth Georgia &amp; Sth Sandwich Is</option>
+    <option value="SDN">Sudan</option>
+    <option value="SUR">Suriname</option>
+    <option value="SJM">Svalbard and Jan Mayen</option>
+    <option value="SWZ">Swaziland</option>
+    <option value="SWE">Sweden</option>
+    <option value="CHE">Switzerland</option>
+    <option value="SYR">Syrian Arab Republic</option>
+    <option value="TWN">Taiwan</option>
+    <option value="TJK">Tajikistan</option>
+    <option value="TZA">Tanzania, United Republic of</option>
+    <option value="THA">Thailand</option>
+    <option value="TGO">Togo</option>
+    <option value="TKL">Tokelau</option>
+    <option value="TON">Tonga</option>
+    <option value="TTO">Trinidad and Tobago</option>
+    <option value="TUN">Tunisia</option>
+    <option value="TUR">Turkey</option>
+    <option value="TKM">Turkmenistan</option>
+    <option value="TCA">Turks and Caicos Islands</option>
+    <option value="TUV">Tuvalu</option>
+    <option value="UMI">US Minor Outlying Islands</option>
+    <option value="UGA">Uganda</option>
+    <option value="UKR">Ukraine</option>
+    <option value="ARE">United Arab Emirates</option>
+    <option value="GBR">United Kingdom</option>
+    <option value="USA" selected="selected">United States</option>
+    <option value="UNK">Unknown</option>
+    <option value="URY">Uruguay</option>
+    <option value="UZB">Uzbekistan</option>
+    <option value="VUT">Vanuatu</option>
+    <option value="VEN">Venezuela</option>
+    <option value="VNM">Viet Nam</option>
+    <option value="VGB">Virgin Islands (British)</option>
+    <option value="VIR">Virgin Islands (U.S.)</option>
+    <option value="WAL">Wales</option>
+    <option value="WLF">Wallis and Futuna Islands</option>
+    <option value="ESH">Western Sahara</option>
+    <option value="YEM">Yemen</option>
+    <option value="YUG">Yugoslavia</option>
+    <option value="ZMB">Zambia</option>
+    <option value="ZWE">Zimbabwe</option>
+
+
+</select>
+
+                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("country");
+	    	registerForm.requiredFields.push("country");
+	    </script>
+  <div id="addressFields">
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="address1Label">
+	Address line 1
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.address1" size="50" maxlength="55" value="" id="processRequest_address1"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("address1");
+	    	registerForm.requiredFields.push("address1");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="address2Label">
+	Address line 2
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.address2" size="50" maxlength="55" value="" id="processRequest_address2"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("address2");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="address3Label">
+	Address line 3
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.address3" size="50" maxlength="55" value="" id="processRequest_address3"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("address3");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="cityLabel">
+	City
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.city" size="50" maxlength="30" value="" id="processRequest_city"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("city");
+	    	registerForm.requiredFields.push("city");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="stateLabel">
+	State
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<select name="processRequest.state" id="processRequest_state">
+    <option value=""
+    >Select One</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AS">American Samoa</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="AA">Armed Forces Americas</option>
+    <option value="AE">Armed Forces Europe</option>
+    <option value="AP">Armed Forces Pacific</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="GU">Guam</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="MP">Northern Mariana Islands</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="PR">Puerto Rico</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VI">Virgin Islands</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+
+
+</select>
+
+                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("state");
+	    	registerForm.requiredFields.push("state");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="postalCodeLabel">
+	Postal code
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.postalCode" size="50" maxlength="12" value="" id="processRequest_postalCode"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("postalCode");
+	    	registerForm.requiredFields.push("postalCode");
+	    </script>
+  </div>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="dobLabel">
+	Date of birth
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+        	<div id="dob">
+	<select id="month" name="month">
+		<option value="-1">Month</option>
+		<option value="0" >January</option>
+		<option value="1" >February</option>
+		<option value="2" >March</option>
+		<option value="3" >April</option>
+		<option value="4" >May</option>
+		<option value="5" >June</option>
+		<option value="6" >July</option>
+		<option value="7" >August</option>
+		<option value="8" >September</option>
+		<option value="9" >October</option>
+		<option value="10" >November</option>
+		<option value="11" >December</option>
+	</select>
+	<select id="day" name="day">
+		<option value="-1">Day</option>
+		<option value="1" >1</option>
+		<option value="2" >2</option>
+		<option value="3" >3</option>
+		<option value="4" >4</option>
+		<option value="5" >5</option>
+		<option value="6" >6</option>
+		<option value="7" >7</option>
+		<option value="8" >8</option>
+		<option value="9" >9</option>
+		<option value="10" >10</option>
+		<option value="11" >11</option>
+		<option value="12" >12</option>
+		<option value="13" >13</option>
+		<option value="14" >14</option>
+		<option value="15" >15</option>
+		<option value="16" >16</option>
+		<option value="17" >17</option>
+		<option value="18" >18</option>
+		<option value="19" >19</option>
+		<option value="20" >20</option>
+		<option value="21" >21</option>
+		<option value="22" >22</option>
+		<option value="23" >23</option>
+		<option value="24" >24</option>
+		<option value="25" >25</option>
+		<option value="26" >26</option>
+		<option value="27" >27</option>
+		<option value="28" >28</option>
+		<option value="29" >29</option>
+		<option value="30" >30</option>
+		<option value="31" >31</option>
+	</select>
+	<select id="year" name="year">
+		<option value="-1">Year</option>
+		<option value="2016" >2016</option>
+		<option value="2015" >2015</option>
+		<option value="2014" >2014</option>
+		<option value="2013" >2013</option>
+		<option value="2012" >2012</option>
+		<option value="2011" >2011</option>
+		<option value="2010" >2010</option>
+		<option value="2009" >2009</option>
+		<option value="2008" >2008</option>
+		<option value="2007" >2007</option>
+		<option value="2006" >2006</option>
+		<option value="2005" >2005</option>
+		<option value="2004" >2004</option>
+		<option value="2003" >2003</option>
+		<option value="2002" >2002</option>
+		<option value="2001" >2001</option>
+		<option value="2000" >2000</option>
+		<option value="1999" >1999</option>
+		<option value="1998" >1998</option>
+		<option value="1997" >1997</option>
+		<option value="1996" >1996</option>
+		<option value="1995" >1995</option>
+		<option value="1994" >1994</option>
+		<option value="1993" >1993</option>
+		<option value="1992" >1992</option>
+		<option value="1991" >1991</option>
+		<option value="1990" >1990</option>
+		<option value="1989" >1989</option>
+		<option value="1988" >1988</option>
+		<option value="1987" >1987</option>
+		<option value="1986" >1986</option>
+		<option value="1985" >1985</option>
+		<option value="1984" >1984</option>
+		<option value="1983" >1983</option>
+		<option value="1982" >1982</option>
+		<option value="1981" >1981</option>
+		<option value="1980" >1980</option>
+		<option value="1979" >1979</option>
+		<option value="1978" >1978</option>
+		<option value="1977" >1977</option>
+		<option value="1976" >1976</option>
+		<option value="1975" >1975</option>
+		<option value="1974" >1974</option>
+		<option value="1973" >1973</option>
+		<option value="1972" >1972</option>
+		<option value="1971" >1971</option>
+		<option value="1970" >1970</option>
+		<option value="1969" >1969</option>
+		<option value="1968" >1968</option>
+		<option value="1967" >1967</option>
+		<option value="1966" >1966</option>
+		<option value="1965" >1965</option>
+		<option value="1964" >1964</option>
+		<option value="1963" >1963</option>
+		<option value="1962" >1962</option>
+		<option value="1961" >1961</option>
+		<option value="1960" >1960</option>
+		<option value="1959" >1959</option>
+		<option value="1958" >1958</option>
+		<option value="1957" >1957</option>
+		<option value="1956" >1956</option>
+		<option value="1955" >1955</option>
+		<option value="1954" >1954</option>
+		<option value="1953" >1953</option>
+		<option value="1952" >1952</option>
+		<option value="1951" >1951</option>
+		<option value="1950" >1950</option>
+		<option value="1949" >1949</option>
+		<option value="1948" >1948</option>
+		<option value="1947" >1947</option>
+		<option value="1946" >1946</option>
+		<option value="1945" >1945</option>
+		<option value="1944" >1944</option>
+		<option value="1943" >1943</option>
+		<option value="1942" >1942</option>
+		<option value="1941" >1941</option>
+		<option value="1940" >1940</option>
+		<option value="1939" >1939</option>
+		<option value="1938" >1938</option>
+		<option value="1937" >1937</option>
+		<option value="1936" >1936</option>
+		<option value="1935" >1935</option>
+		<option value="1934" >1934</option>
+		<option value="1933" >1933</option>
+		<option value="1932" >1932</option>
+		<option value="1931" >1931</option>
+		<option value="1930" >1930</option>
+		<option value="1929" >1929</option>
+		<option value="1928" >1928</option>
+		<option value="1927" >1927</option>
+		<option value="1926" >1926</option>
+		<option value="1925" >1925</option>
+		<option value="1924" >1924</option>
+		<option value="1923" >1923</option>
+		<option value="1922" >1922</option>
+		<option value="1921" >1921</option>
+		<option value="1920" >1920</option>
+		<option value="1919" >1919</option>
+		<option value="1918" >1918</option>
+		<option value="1917" >1917</option>
+		<option value="1916" >1916</option>
+		<option value="1915" >1915</option>
+		<option value="1914" >1914</option>
+		<option value="1913" >1913</option>
+		<option value="1912" >1912</option>
+		<option value="1911" >1911</option>
+		<option value="1910" >1910</option>
+		<option value="1909" >1909</option>
+		<option value="1908" >1908</option>
+		<option value="1907" >1907</option>
+		<option value="1906" >1906</option>
+		<option value="1905" >1905</option>
+		<option value="1904" >1904</option>
+		<option value="1903" >1903</option>
+		<option value="1902" >1902</option>
+		<option value="1901" >1901</option>
+		<option value="1900" >1900</option>
+	</select>
+        	</div>
+                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("dob");
+	    	registerForm.requiredFields.push("dob");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="phoneLabel">
+	Phone
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.telephone" size="50" value="" id="processRequest_telephone"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("phone");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="emailAddressLabel">
+	E-mail Address
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.emailAddress" size="50" value="" id="processRequest_emailAddress"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("emailAddress");
+	    	registerForm.requiredFields.push("emailAddress");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="genderLabel">
+	Gender
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<select name="processRequest.gender" id="processRequest_gender">
+    <option value=""
+    >Select One</option>
+    <option value="F">Female</option>
+    <option value="M">Male</option>
+    <option value="U">Unknown</option>
+
+
+</select>
+
+                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("gender");
+	    </script>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top">
+        <table border="0" cellpadding="0" cellspacing="0"><tr><td>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable" >
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="nationalIdLabel">
+	Social Security Number
+					<span class="required">
+						
+						&nbsp;
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="text" name="processRequest.nationalId" size="50" value="" id="processRequest_nationalId"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("nationalId");
+	    </script>
+        </td>
+        </tr></table>
+  <div>Passwords must meet the following requirements:<ul><li>At least 8 characters in length</li><li>Contain characters from 3 of the following classes: lower case letters, upper case letters, numbers, and special characters</li><li>No part of the password can be based on a dictionary word</li></ul></div>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="passwordLabel">
+	New Password
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="password" name="password" size="10" id="password"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("password");
+	    	registerForm.requiredFields.push("password");
+	    </script>
+	<table cellpadding="0" cellspacing="0" border="0" class="labelValueTable"  title="This is a required field">
+        <tr>
+            <td class="labelColumn" valign="middle">
+        		<label id="password2Label">
+	Confirm Password
+					<span class="required">
+						*
+						
+					</span>	
+		      </label>&#160;
+            </td>
+            <td class="valueColumn" valign="middle">
+		      	<div class="inputText">
+<input type="password" name="password2" size="10" id="password2"/>                </div>
+            </td>
+        </tr>
+	</table>
+	    <script>
+	    	registerForm.formFields.push("password2");
+	    	registerForm.requiredFields.push("password2");
+	    </script>
+  <div style="padding: 20px 0 20px 150px; ">
+    <a href="#" id="submitButton" onclick="registerForm.submitBioData()"><img class="noborder" src="images/button_submit.gif" title="Submit your information"/></a>
+  	&nbsp;&nbsp;
+  	<a href="clearBioData.action" id="resetButton" title="Reset form fields to their original values"><img src="images/button_clearfields.gif" width="88" height="25" border="0" /></a>
+  </div>
+</td>
+</tr></table>
+</form>
+</div>
+	        	</div><!--close contentDiv-->
+			</div><!--close page-->
+		</div><!--close container-->
+	</body>
+
+</html>

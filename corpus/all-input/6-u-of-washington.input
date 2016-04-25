@@ -1,0 +1,114 @@
+[
+  {
+    "dom": "<input id=\"txtboxfirstname\" maxlength=\"22\" name=\"txtboxfirstname\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "last name is required birth month is required birth day is required birth year is required citizenship status is required the native english speaker question is required email is required a valid email address is required confirm email is required the email and confirm email must match do not use or password is required confirm password is required the password and confirmation password must match security question is required security answer is required confirm security answer is required the security answer and confirm security answer must match male female united states citizen united states green card holder united states immigrant visa none of the above yes no not applicable i am a us citizen yes no type text id txtboxfirstname name txtboxfirstname maxlength 22", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxlastname\" maxlength=\"22\" name=\"txtboxlastname\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "last name is required type text id txtboxlastname name txtboxlastname maxlength 22", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxformerlastname1\" maxlength=\"22\" name=\"txtboxformerlastname1\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "type text id txtboxformerlastname1 name txtboxformerlastname1 maxlength 22", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxformerfirstname1\" maxlength=\"22\" name=\"txtboxformerfirstname1\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "type text id txtboxformerfirstname1 name txtboxformerfirstname1 maxlength 22", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxformerlastname2\" maxlength=\"22\" name=\"txtboxformerlastname2\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "type text id txtboxformerlastname2 name txtboxformerlastname2 maxlength 22", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxformerfirstname2\" maxlength=\"22\" name=\"txtboxformerfirstname2\" style=\"width:160px;\" type=\"text\"/>", 
+    "feature": "type text id txtboxformerfirstname2 name txtboxformerfirstname2 maxlength 22", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"txtboxemail\" maxlength=\"50\" name=\"txtboxemail\" style=\"width:200px;\" type=\"text\"/>", 
+    "feature": "a valid email address is required type text id txtboxemail name txtboxemail maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"txtboxconfirmemail\" maxlength=\"50\" name=\"txtboxconfirmemail\" style=\"width:200px;\" type=\"text\"/>", 
+    "feature": "the email and confirm email must match type text id txtboxconfirmemail name txtboxconfirmemail maxlength 50", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"txtboxpassword\" maxlength=\"128\" name=\"txtboxpassword\" style=\"width:200px;\" type=\"password\"/>", 
+    "feature": "do not use or password is required type password id txtboxpassword name txtboxpassword maxlength 128", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"txtboxconfirmpassword\" maxlength=\"128\" name=\"txtboxconfirmpassword\" style=\"width:200px;\" type=\"password\"/>", 
+    "feature": "the password and confirmation password must match type password id txtboxconfirmpassword name txtboxconfirmpassword maxlength 128", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"txtboxanswer\" maxlength=\"128\" name=\"txtboxanswer\" style=\"width:200px;\" type=\"password\"/>", 
+    "feature": "security answer is required type password id txtboxanswer name txtboxanswer maxlength 128", 
+    "rule": {
+      "id": ["answer"], 
+      "name": ["answer"]
+    }, 
+    "type": "secure_ans"
+  }, 
+  {
+    "dom": "<input id=\"txtboxconfirmanswer\" maxlength=\"128\" name=\"txtboxconfirmanswer\" style=\"width:200px;\" type=\"password\"/>", 
+    "feature": "the security answer and confirm security answer must match type password id txtboxconfirmanswer name txtboxconfirmanswer maxlength 128", 
+    "rule": {
+      "id": ["answer"], 
+      "name": ["answer"]
+    }, 
+    "type": "secure_ans"
+  }
+]

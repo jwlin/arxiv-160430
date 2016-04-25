@@ -1,0 +1,78 @@
+[
+  {
+    "dom": "<input class=\"txt\" maxlength=\"100\" name=\"firstname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants name firstname type text maxlength 100", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"txt\" maxlength=\"100\" name=\"lastname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants name lastname type text maxlength 100", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"txt\" maxlength=\"255\" name=\"email\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants name email type text maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"txt\" maxlength=\"255\" name=\"email2\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants name email2 type text maxlength 255", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"txtmid\" maxlength=\"10\" name=\"birthdate\" size=\"10\" type=\"text\" value=\"\"/>", 
+    "feature": "mm dd yyyy name birthdate type text maxlength 10", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input class=\"txt5\" maxlength=\"5\" name=\"zip5\" size=\"10\" type=\"text\" value=\"\"/>", 
+    "feature": "00000 for international applicants name zip5 type text maxlength 5", 
+    "rule": {
+      "id": ["zip"], 
+      "name": ["zip"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input class=\"txt\" name=\"password\" size=\"30\" type=\"password\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants type password name password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"txt\" name=\"password2\" size=\"30\" type=\"password\" value=\"\"/>", 
+    "feature": "mm dd yyyy 00000 for international applicants type password name password2", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

@@ -1,0 +1,6 @@
+city of birth name txtr1 type text maxlength 128
+e mails sent to name txtemailsentto type text maxlength 64
+e mail address name txtusername type text maxlength 64
+password name txtpassword type password maxlength 32
+verify password name txtpasswordagain type password maxlength 32
+password type password name txtpassword maxlength 32

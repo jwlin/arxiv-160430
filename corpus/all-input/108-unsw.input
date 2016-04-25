@@ -1,0 +1,87 @@
+[
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"30\" name=\"firstname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "name firstname type text maxlength 30", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"30\" name=\"middlename\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "name middlename type text maxlength 30", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"30\" name=\"lastname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "name lastname type text maxlength 30", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"15\" name=\"visanumber\" size=\"15\" type=\"text\" value=\"\"/>", 
+    "feature": "name visanumber type text maxlength 15", 
+    "rule": {
+      "id": ["visanumber"], 
+      "name": ["visanumber"]
+    }, 
+    "type": "visa_number"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"70\" name=\"emailaddress\" size=\"70\" type=\"text\" value=\"\"/>", 
+    "feature": "name emailaddress type text maxlength 70", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"70\" name=\"emailaddress2\" size=\"70\" type=\"text\" value=\"\"/>", 
+    "feature": "name emailaddress2 type text maxlength 70", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"14\" name=\"login\" size=\"14\" type=\"text\"/>", 
+    "feature": "type text name login maxlength 14", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["login"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"14\" name=\"password\" size=\"14\" type=\"password\"/>", 
+    "feature": "type password name password maxlength 14", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" maxlength=\"14\" name=\"password2\" size=\"14\" type=\"password\"/>", 
+    "feature": "type password name password2 maxlength 14", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

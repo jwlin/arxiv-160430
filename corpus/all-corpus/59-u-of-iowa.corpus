@@ -1,0 +1,8 @@
+ mm dd yyyy 00000 for international applicants name firstname type text maxlength 100
+ mm dd yyyy 00000 for international applicants name lastname type text maxlength 100
+ mm dd yyyy 00000 for international applicants name email type text maxlength 255
+ mm dd yyyy 00000 for international applicants name email2 type text maxlength 255
+ mm dd yyyy name birthdate type text maxlength 10
+ 00000 for international applicants name zip5 type text maxlength 5
+ mm dd yyyy 00000 for international applicants type password name password
+ mm dd yyyy 00000 for international applicants type password name password2

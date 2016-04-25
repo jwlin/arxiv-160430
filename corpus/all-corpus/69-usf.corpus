@@ -1,0 +1,8 @@
+name textboxfirstname id textboxfirstname type text maxlength 25
+name textboxlastname id textboxlastname type text maxlength 25
+name textboxemailaddress id textboxemailaddress type text maxlength 100
+name textboxemailaddressretype id textboxemailaddressretype type text maxlength 100
+name textboxsigninemailaddress id textboxsigninemailaddress type text maxlength 100
+name textboxpassword id textboxpassword type password maxlength 100
+name textboxpasswordretype id textboxpasswordretype type password maxlength 100
+name textboxsigninpassword id textboxsigninpassword type password maxlength 100

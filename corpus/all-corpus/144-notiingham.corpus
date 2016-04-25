@@ -1,0 +1,5 @@
+first given names first given names name txtfirstname type text id txtfirstname maxlength 50
+surname family name surname family name name txtsurname type text id txtsurname maxlength 50
+email address email address name txtemail type text id txtemail maxlength 100
+confirm email address confirm email address name txtconfirm type text id txtconfirm maxlength 100
+applicant id type text id txtapplicantid name txtapplicantid maxlength 5

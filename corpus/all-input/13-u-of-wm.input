@@ -1,0 +1,68 @@
+[
+  {
+    "dom": "<input class=\"form-control\" data-val=\"true\" data-val-length=\"the field user name must be a string with a maximum length of 35.\" data-val-length-max=\"35\" data-val-required=\"the user name field is required.\" id=\"username\" name=\"username\" placeholder=\"user name\" type=\"text\" value=\"\"/>", 
+    "feature": "user name name username placeholder user name id username type text", 
+    "rule": {
+      "id": ["username"], 
+      "name": ["username"]
+    }, 
+    "type": "uname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" data-val=\"true\" data-val-email=\"the email field is not a valid e-mail address.\" data-val-length=\"the field email must be a string with a maximum length of 50.\" data-val-length-max=\"50\" data-val-required=\"the email field is required.\" id=\"email\" name=\"email\" placeholder=\"email\" type=\"text\" value=\"\"/>", 
+    "feature": "email name email placeholder email id email type text", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" data-val=\"true\" data-val-length=\"the field first / given name must be a string with a maximum length of 30.\" data-val-length-max=\"30\" data-val-required=\"the first / given name field is required.\" id=\"firstname\" name=\"firstname\" placeholder=\"first name\" type=\"text\" value=\"\"/>", 
+    "feature": "first given name name firstname placeholder first name id firstname type text", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" data-val=\"true\" data-val-length=\"the field middle name must be a string with a maximum length of 30.\" data-val-length-max=\"30\" id=\"middlename\" name=\"middlename\" placeholder=\"middle name\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name name middlename placeholder middle name id middlename type text", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"form-control\" data-val=\"true\" data-val-length=\"the field last / family name must be a string with a maximum length of 30.\" data-val-length-max=\"30\" data-val-required=\"the last / family name field is required.\" id=\"lastname\" name=\"lastname\" placeholder=\"last name\" type=\"text\" value=\"\"/>", 
+    "feature": "last family name name lastname placeholder last name id lastname type text", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"form-control\" data-val=\"true\" data-val-length=\"the password must be at least 8 characters long.\" data-val-length-max=\"100\" data-val-length-min=\"8\" data-val-regex=\"the password does not meet complexity requirements.\" data-val-regex-pattern=\"^.*((?=.*[a-z])(?=.*[a-z])(?=.*[0-9])|(?=.*[a-z])(?=.*[a-z])(?=.*[~`!@\\#$%&amp;*\\(\\)+\\-{}[\\]|'&quot;/=?_.,:;\\\\&lt;&gt;^])|(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@\\#$%&amp;*\\(\\)+\\-{}[\\]|'&quot;/=?_.,:;\\\\&lt;&gt;^])|(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@\\#$%&amp;*\\(\\)+\\-{}[\\]|'&quot;/=?_.,:;\\\\&lt;&gt;^])).*$\" data-val-required=\"the password field is required.\" id=\"password\" name=\"password\" placeholder=\"password\" type=\"password\"/>", 
+    "feature": "password name password placeholder password id password type password", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input autocomplete=\"off\" class=\"form-control\" data-val=\"true\" data-val-equalto=\"the password and confirmation password do not match.\" data-val-equalto-other=\"*.password\" id=\"confirmpassword\" name=\"confirmpassword\" placeholder=\"confirm password\" type=\"password\"/>", 
+    "feature": "password name confirmpassword placeholder confirm password type password id confirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

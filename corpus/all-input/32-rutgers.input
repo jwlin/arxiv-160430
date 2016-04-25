@@ -1,0 +1,20 @@
+[
+  {
+    "dom": "<input class=\"inputtxt\" id=\"applicantpin\" maxlength=\"6\" name=\"applicantpin\" tabindex=\"11\" type=\"password\"/>", 
+    "feature": "personal identification number pin personal identification number pin name applicantpin type password id applicantpin maxlength 6", 
+    "rule": {
+      "id": ["applicantpin"], 
+      "name": ["applicantpin"]
+    }, 
+    "type": "short_pwd"
+  }, 
+  {
+    "dom": "<input class=\"inputtxt\" id=\"confirmedapplicantpin\" maxlength=\"6\" name=\"confirmedapplicantpin\" tabindex=\"12\" type=\"password\"/>", 
+    "feature": "verify pin verify pin name confirmedapplicantpin type password id confirmedapplicantpin maxlength 6", 
+    "rule": {
+      "id": ["applicantpin"], 
+      "name": ["applicantpin"]
+    }, 
+    "type": "short_pwd"
+  }
+]

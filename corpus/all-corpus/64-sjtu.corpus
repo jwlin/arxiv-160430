@@ -1,0 +1,6 @@
+type text id fetch email name fetch email
+type text id validate email name validate email
+ register sign in student number login type text id account name account
+ register sign in student number login type text name verification code id verification code
+ register sign in student number login type password id password name password
+ register sign in student number login type password id confirm password name confirm password

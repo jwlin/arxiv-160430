@@ -1,0 +1,29 @@
+[
+  {
+    "dom": "<input class=\"input-xlarge\" id=\"firstname\" name=\"firstname\" tabindex=\"5\" type=\"text\" value=\"\"/>", 
+    "feature": "first given name name firstname id firstname type text", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"input-xlarge\" id=\"middlenames\" name=\"middlenames\" tabindex=\"6\" type=\"text\" value=\"\"/>", 
+    "feature": "middle name s name middlenames id middlenames type text", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input class=\"input-xlarge\" id=\"lastname\" name=\"lastname\" tabindex=\"7\" type=\"text\" value=\"\"/>", 
+    "feature": "last family name name lastname id lastname type text", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }
+]

@@ -1,0 +1,16 @@
+given name name ctl00 content eappart personal txtgvnname inputcontrol type text id ctl00 content eappart personal txtgvnname inputcontrol maxlength 40
+other given name s name ctl00 content eappart personal txtothname inputcontrol type text id ctl00 content eappart personal txtothname inputcontrol maxlength 40
+preferred given name name ctl00 content eappart personal txtprefname inputcontrol type text id ctl00 content eappart personal txtprefname inputcontrol maxlength 40
+family name must be entered name ctl00 content eappart personal txtfamname inputcontrol type text id ctl00 content eappart personal txtfamname inputcontrol maxlength 80
+previous family name name ctl00 content eappart personal txtprevfamname inputcontrol type text id ctl00 content eappart personal txtprevfamname inputcontrol maxlength 40
+email address must be entered the entered email address does not appear to be a validly formed email address name ctl00 content eappart contact txtemail inputcontrol type text id ctl00 content eappart contact txtemail inputcontrol maxlength 255
+confirm email address must be entered the confirm email doesn t match your email name ctl00 content eappart contact txtemailconfirm inputcontrol type text id ctl00 content eappart contact txtemailconfirm inputcontrol maxlength 255
+home phone type text id ctl00 content eappart contact repphone ctl00 txtphone inputcontrol name ctl00 content eappart contact repphone ctl00 txtphone inputcontrol maxlength 20
+work phone type text id ctl00 content eappart contact repphone ctl01 txtphone inputcontrol name ctl00 content eappart contact repphone ctl01 txtphone inputcontrol maxlength 20
+mobile phone type text id ctl00 content eappart contact repphone ctl02 txtphone inputcontrol name ctl00 content eappart contact repphone ctl02 txtphone inputcontrol maxlength 20
+address line 1 must be entered name ctl00 content eappart address txtaddrline1 inputcontrol type text id ctl00 content eappart address txtaddrline1 inputcontrol maxlength 50
+address line 2 name ctl00 content eappart address txtaddrline2 inputcontrol type text id ctl00 content eappart address txtaddrline2 inputcontrol maxlength 50
+address line 3 name ctl00 content eappart address txtaddrline3 inputcontrol type text id ctl00 content eappart address txtaddrline3 inputcontrol maxlength 50
+suburb town must be entered name ctl00 content eappart address txtaddrsuburb inputcontrol type text id ctl00 content eappart address txtaddrsuburb inputcontrol maxlength 50
+state name ctl00 content eappart address txtaddrstate inputcontrol type text id ctl00 content eappart address txtaddrstate inputcontrol maxlength 40
+postcode name ctl00 content eappart address txtaddrpostcode inputcontrol type text id ctl00 content eappart address txtaddrpostcode inputcontrol maxlength 15

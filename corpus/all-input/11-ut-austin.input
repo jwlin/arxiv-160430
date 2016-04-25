@@ -1,0 +1,112 @@
+[
+  {
+    "dom": "<input id=\"firstname\" maxlength=\"50\" name=\"firstname\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "first given name name firstname type text id firstname maxlength 50", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"middlename\" maxlength=\"50\" name=\"middlename\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "middle name name middlename type text id middlename maxlength 50", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input id=\"lastname\" maxlength=\"50\" name=\"lastname\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "last family name name lastname type text id lastname maxlength 50", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"otherfirstname\" id=\"otherfirstname\" maxlength=\"50\" name=\"otherfirstname\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "for example your nickname other first names for example your nickname name otherfirstname type text id otherfirstname maxlength 50", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"otherlastname\" id=\"otherlastname\" maxlength=\"50\" name=\"otherlastname\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "for example your maiden name other last names for example your maiden name name otherlastname type text id otherlastname maxlength 50", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"cityortownofbirth\" name=\"cityortownofbirth\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "city or town of birth type text id cityortownofbirth name cityortownofbirth", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"studentssna\" maxlength=\"3\" name=\"studentssna\" onkeypress=\"return handleenter(this, event)\" size=\"3\" type=\"text\"/>", 
+    "feature": "why do we ask for your ssn u s social security number why do we ask for your ssn name studentssna type text id studentssna maxlength 3", 
+    "rule": {
+      "id": ["ssna"], 
+      "name": ["ssna"]
+    }, 
+    "type": "ssn-prefix"
+  }, 
+  {
+    "dom": "<input id=\"studentssnb\" maxlength=\"2\" name=\"studentssnb\" onkeypress=\"return handleenter(this, event)\" size=\"2\" type=\"text\"/>", 
+    "feature": "why do we ask for your ssn u s social security number why do we ask for your ssn name studentssnb type text id studentssnb maxlength 2", 
+    "rule": {
+      "id": ["ssnb"], 
+      "name": ["ssnb"]
+    }, 
+    "type": "ssn-middle"
+  }, 
+  {
+    "dom": "<input id=\"studentssnc\" maxlength=\"4\" name=\"studentssnc\" onkeypress=\"return handleenter(this, event)\" size=\"4\" type=\"text\"/>", 
+    "feature": "why do we ask for your ssn u s social security number why do we ask for your ssn name studentssnc type text id studentssnc maxlength 4", 
+    "rule": {
+      "id": ["ssnc"], 
+      "name": ["ssnc"]
+    }, 
+    "type": "ssn-postfix"
+  }, 
+  {
+    "dom": "<input id=\"idcardnumber\" name=\"idcardnumber\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "the 16 digit number on the front of your ut austin id card if you have one ut austin id card number type text id idcardnumber name idcardnumber", 
+    "rule": {
+      "id": ["idcardnumber"], 
+      "name": ["idcardnumber"]
+    }, 
+    "type": "digit-16"
+  }, 
+  {
+    "dom": "<input id=\"emailaddress\" name=\"emailaddress\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "use an e mail account you will have access to several months from now why e mail address type text id emailaddress name emailaddress", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"emailaddressverify\" name=\"emailaddressverify\" onkeypress=\"return handleenter(this, event)\" size=\"25\" type=\"text\"/>", 
+    "feature": "verify your e mail address type text id emailaddressverify name emailaddressverify", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }
+]

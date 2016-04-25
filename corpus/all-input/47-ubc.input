@@ -1,0 +1,49 @@
+[
+  {
+    "dom": "<input autofocus=\"true\" class=\"ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all \" id=\"mainform:firstname\" maxlength=\"255\" name=\"mainform:firstname\" type=\"text\"/>", 
+    "feature": "first name first name name mainform firstname type text id mainform firstname maxlength 255", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all \" id=\"mainform:lastname\" maxlength=\"255\" name=\"mainform:lastname\" type=\"text\"/>", 
+    "feature": "last name last name type text id mainform lastname name mainform lastname maxlength 255", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"\" id=\"mainform:email\" maxlength=\"40\" name=\"mainform:email\" type=\"text\"/>", 
+    "feature": "enter your email confirm your email enter your email confirm your email type text id mainform email name mainform email maxlength 40", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"\" id=\"mainform:confirmemail\" maxlength=\"40\" name=\"mainform:confirmemail\" type=\"text\"/>", 
+    "feature": "confirm your email enter your email confirm your email enter your email type text id mainform confirmemail name mainform confirmemail maxlength 40", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"\" id=\"mainform:loginname\" maxlength=\"8\" name=\"mainform:loginname\" onclick=\"primefaces.ab({source:this,event:'click',process:'mainform:loginname',update:'mainform:alternativelogin'}, arguments[1]);\" type=\"text\"/>", 
+    "feature": "cwl login name cwl login name name mainform loginname type text id mainform loginname maxlength 8", 
+    "rule": {
+      "id": ["login"], 
+      "name": ["login"]
+    }, 
+    "type": "uname"
+  }
+]

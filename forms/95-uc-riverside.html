@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<TITLE>Online Application for Graduate Admission</TITLE>
+<script language="JavaScript" src="docs/jquery-1.2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="docs/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="docs/staff_menu.css" media="all"  />
+<script language="JavaScript" src="docs/gsisgeneral_jquery.js"></script>
+<script language="JavaScript" src="docs/jquery.tablesorter.min.js"></script>
+<script language="JavaScript" src="docs/gsisgeneral.js?x=290.013083496955786046622814694531050685"></script>
+<script language="JavaScript" src="docs/ajax.js "></script>
+<script language="JavaScript" src="docs/cookies.js"></script>
+<script language="JavaScript" src="docs/formchek.js"></script>
+<script language="JavaScript" src="docs/ts_picker.js"></script>
+<script language="JavaScript" src="docs/gsislogin.js"></script>
+</HEAD>
+<BODY topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" >
+
+                <!-- Begin Top title and graphic -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="86" background="docs/background_topbar.gif">
+                <tr>
+                <td width="205" height="86" align="left"><img src="docs/ucr_logo.gif" alt="UCR" longdesc="http://www.ucr.edu" border="0" /></td>
+                <td width="7" height="86" align="right"><img src="docs/ucr_logo_bar.gif" /></td>
+                <td width="100%" height="86" align="left" nowrap="nowrap" class="topbartrans">
+                <div class="headerText">
+<!--                    Graduate Studies -->
+                    Graduate Division <!-- CHANGED BANNER TEXT -S.B., 10-24-07 -->
+                </div></td>
+                </tr>
+                </table>
+
+                <span class="subtitle" style="position: absolute;top: 55;left: 102;">OFFICIAL APPLICATION</span>
+            <!-- End Top title and graphic -->
+                
+<TABLE  width="744" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD COLSPAN="2" class="app_section_header"><span class="app_section_title">Welcome</span></TD>
+</TR>
+<TR>
+<TD class="app_section_descr" colspan="2">
+<p>Welcome to UCR's Graduate Applicant Login Page.  Once you have logged in, you will be able to complete and submit a UCR Graduate Application, review the status of your application, and view and respond to UCR admission decisions.</p>
+<p>If this is the <em>first time</em> you have visited this web page, please create a UCR Graduate Applicant Identity (a username and password).  Your username must be your e-mail address.  We suggest you create a password that is both hard to guess and easy to remember.  
+<em>Please note that UCR's web-enabled Graduate Application makes extensive use of e-mail, and it is therefore very important you provide an e-mail address that will allow us to communicate with you electronically.</em></p>
+<p>If you have <em>already created</em> a UCR Graduate Applicant Identity, please login to access UCR's application web site.</p>
+<p>Please note that items on this page that are presented in <span class="required">red italics</span> are required fields.</p>
+<p style="color: red; font-style: italic;">Please note that due to budgetary restrictions, some programs are unable to admit new students to mid-year terms (Winter and Spring) with---or possibly even without---any type of financial support. Some programs are recommending that applications be submitted only for Fall. Applications submitted to these programs for Winter and Spring can not be processed for the following Fall term, applicants must reapply. Application processing fees submitted for these mid-year terms will not be refunded. Before you apply for either Winter or Spring, it is recommended that you check the program website or contact that program directly for additional information.<p>
+</TD>
+</TR>
+<TR>
+<TD valign="TOP">
+<FORM ACTION="GSIS_LOGIN.ProcessLogin_Student2" METHOD="POST"  NAME="cform2">
+<INPUT TYPE="hidden" NAME="nCreateId" VALUE="1">
+<INPUT TYPE="hidden" NAME="nLogin" VALUE="1">
+<TABLE >
+<TR>
+<TD class="app_section_header"><span class="app_section_title">Create An Identity</span></TD>
+</TR>
+<TR>
+<TD class="app_section_descr">
+<TABLE  width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#FFFFFF">
+<TR>
+<TD colspan="2">
+Welcome New Applicant
+</TD>
+</TR>
+<TR>
+<TD><span class="required">E-Mail Address</span></TD>
+<TD>
+<input type="E-mail Address"  VALUE="" name="txtUserName" size="27" MAXLENGTH="64"onChange="nChanges++;" onBlur="TrimText(cform2.txtUserName);if (cform2.txtEmailSentTo.value == ''){CopyEmailToEmailSentTo(cform2);}">
+</TD>
+</TR>
+<TR>
+<TD><span class="required">Password</span></TD>
+<TD>
+<input type="Password"  VALUE="" name="txtPassword" size="27" MAXLENGTH="32"onChange="nChanges++;">
+<br><small>For password requirements, click <a class="reverse" href="javascript:void(0)" onclick="alert(DoPasswordOverlay_String())">here</a></small>
+</TD>
+</TR>
+<TR>
+<TD><span class="required">Verify Password</span></TD>
+<TD>
+<input type="Password"  VALUE="" name="txtPasswordAgain" size="27" MAXLENGTH="32"onChange="nChanges++;">
+</TD>
+</TR>
+<TR>
+<TD colspan="2">The following is to be used if you forget your password: </TD>
+</TR>
+<TR>
+<TD><span class="required">City of Birth</span></TD>
+<TD>
+<input type="Text"  VALUE="" name="txtR1" size="27" MAXLENGTH="128"onChange="nChanges++;">
+</TD>
+</TR>
+<TR>
+<TD><span class="required">E-Mails sent to</span></TD>
+<TD>
+<input type="Text"  VALUE="" name="txtEmailSentTo" size="27" MAXLENGTH="64"onChange="nChanges++;" onBlur="TrimText(cform2.txtEmailSentTo);">
+</TD>
+</TR>
+</TABLE>
+<TABLE  BORDER="0">
+<TR>
+<TD align="left" valign="top">
+
+                <script type="text/javascript">
+                function setHiddencform2()
+                {
+                    var currentElement = document.createElement("input");
+                    currentElement.setAttribute("type", "hidden");
+                    currentElement.setAttribute("name", "cmdCreateId");
+                    currentElement.setAttribute("value", "1");
+                    if (document.cform2)
+                        document.cform2.appendChild(currentElement);
+                    else
+                        alert("Cannot find form 'cform2'");
+                }
+                </script>
+                
+
+            <table width="1" cellpadding="0" cellspacing="0" >
+                <tr onClick="setHiddencform2();if (CheckSubmitCreateAnIdentity(document.cform2) == false){return false;}bypassCheck(); document.cform2.submit();" style="cursor: hand; cursor: pointer;"> 
+                    <td><img src="docs/button_left.gif" border="0"></td>
+                    <td class="button" nowrap><input name="cmdCreateId" type="image" src="docs/transparent_pixel.gif" width="0" alt="Sumbit">&nbsp;Create Identity&nbsp;</td>
+                    <td><img src="docs/button_right.gif" border="0"></td>
+                </tr>
+            </table>
+            
+</TD>
+<TD valign="top">
+
+            <table width="1" cellpadding="0" cellspacing="0" >
+                <tr onClick="bypassCheck(); document.cform2.cmdCancel.value=1; document.cform2.submit();" style="cursor: hand; cursor: pointer;"> 
+                    <td><img src="docs/button_left.gif" border="0"></td>
+                    <td class="button" nowrap>&nbsp;Cancel&nbsp;</td>
+                    <td><img src="docs/button_right.gif" border="0"></td>
+                </tr>
+            </table>
+            
+<INPUT TYPE="hidden" NAME="cmdCancel" VALUE="">
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+</TD>
+<TD valign="TOP">
+<FORM ACTION="GSIS_LOGIN.ProcessLogin_Student" METHOD="POST"  NAME="cform">
+<INPUT TYPE="hidden" NAME="sExpress" VALUE="">
+<INPUT TYPE="hidden" NAME="nCreateId" VALUE="1">
+<INPUT TYPE="hidden" NAME="nLogin" VALUE="1">
+<TABLE >
+<TR>
+<TD class="app_section_header"><span class="app_section_title">Login</span></TD>
+</TR>
+<TR>
+<TD class="app_section_descr">
+<TABLE  width="100%" BORDER=0>
+<TR>
+<TD colspan="2">
+Welcome Returning Applicant
+</TD>
+</TR>
+<TR>
+<TD><span class="required">E-mail Address</span></TD>
+<TD>
+<input type="Text"  VALUE="" name="txtUserName" size="27" MAXLENGTH="64"onBlur="TrimText(cform.txtUserName)">
+</TD>
+</TR>
+<TR>
+<TD><span class="required">Password</span></TD>
+<TD><INPUT TYPE="password" NAME="txtPassword" SIZE="27" MAXLENGTH="32"></TD>
+</TR>
+</TABLE>
+<TABLE  BORDER="0">
+<TR>
+<TD align="left" valign="top">
+
+                <script type="text/javascript">
+                function setHiddencform()
+                {
+                    var currentElement = document.createElement("input");
+                    currentElement.setAttribute("type", "hidden");
+                    currentElement.setAttribute("name", "cmdAction");
+                    currentElement.setAttribute("value", "1");
+                    if (document.cform)
+                        document.cform.appendChild(currentElement);
+                    else
+                        alert("Cannot find form 'cform'");
+                }
+                </script>
+                
+
+            <table width="1" cellpadding="0" cellspacing="0" >
+                <tr onClick="setHiddencform();if (CheckSubmitRegularLogin(document.cform) == false){return false;}bypassCheck(); /*document.cform.cmdAction.value=1;*/ document.cform.submit();" style="cursor: hand; cursor: pointer;"> 
+                    <td><img src="docs/button_left.gif" border="0"></td>
+                    <td class="button" nowrap><input name="cmdAction" type="image" src="docs/transparent_pixel.gif" width="0" alt="Sumbit">&nbsp;Login&nbsp;</td>
+                    <td><img src="docs/button_right.gif" border="0"></td>
+                </tr>
+            </table>
+            
+</TD>
+<TD valign="top">
+
+            <table width="1" cellpadding="0" cellspacing="0" >
+                <tr onClick="if (CheckSubmitForgotPassword(document.cform) == false){return false;}bypassCheck(); document.cform.cmdForgot.value=1; document.cform.submit();" style="cursor: hand; cursor: pointer;"> 
+                    <td><img src="docs/button_left.gif" border="0"></td>
+                    <td class="button" nowrap>&nbsp;Forgot My Password&nbsp;</td>
+                    <td><img src="docs/button_right.gif" border="0"></td>
+                </tr>
+            </table>
+            
+<INPUT TYPE="hidden" NAME="cmdForgot" VALUE="">
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+</TD>
+</TR>
+<TR>
+
+                            <td width="100%" align="center" colspan="2">
+                            <a class="reverse" href="https://gradsis.ucr.edu/gradsis/gsis_process.gsis_tech" target="_blank">Technical Considerations</a>
+                            </td>
+                            
+</TR>
+</TABLE>
+<SCRIPT language=JavaScript>
+		if (document.cform) {
+        			document.cform.txtUserName.focus();
+        			document.cform.txtPassword.focus="";
+        		}
+        
+     if (document.cform2) {
+            			document.cform2.txtPassword.focus="";
+			document.cform2.txtPasswordAgain.focus="";
+			document.cform2.txtR1.focus="";
+			document.cform2.txtEmailSentTo.focus="";
+        }
+</SCRIPT>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Register</title>
+<link rel="shortcut icon"
+    href="/idm/static/images/favicon.ico"
+    type="image/x-icon">
+
+
+<meta name="layout" content="client"/>
+
+
+<script src="/idm/static/plugins/jquery-1.7.2/js/jquery/jquery-1.7.2.min.js" type="text/javascript" ></script>
+<link href="/idm/static/plugins/blueprint-1.0.2/css/blueprint/screen.css" type="text/css" rel="stylesheet" media="screen, projection" />
+<!--[if lt IE 8]><link href="/idm/static/plugins/blueprint-1.0.2/css/blueprint/ie.css" type="text/css" rel="stylesheet" media="screen,projection" /><![endif]-->
+<link href="/idm/static/plugins/blueprint-1.0.2/css/blueprint/plugins/buttons/screen.css" type="text/css" rel="stylesheet" media="screen, projection" />
+
+<link rel="stylesheet" href="/idm/static/css/style.css"
+    type="text/css" media="screen" />
+<link rel="stylesheet"
+    href="/idm/static/css/common.css" type="text/css"
+    media="screen" />
+<link rel="stylesheet"
+    href="/idm/static/css/client.css" type="text/css"
+    media="screen" />
+    
+<link rel="stylesheet"
+    href="/idm/static/css/passwordStrength.css" type="text/css"
+    media="screen" />
+    
+    <script type="text/javascript" src="/idm/static/js/application.js"></script>
+    <meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="-1"/>
+
+<link rel="stylesheet" type="text/css" href="/idm/zkau/web/10dbb8f4/zul/css/zk.wcs"/>
+
+<script type="text/javascript" src="/idm/zkau/web/10dbb8f4/js/zk.wpd" charset="UTF-8"></script>
+<script type="text/javascript" src="/idm/zkau/web/10dbb8f4/js/zul.lang.wpd" charset="UTF-8"></script>
+<!-- ZK 6.5.1 2012121012 -->
+<script class="z-runonce" type="text/javascript">//<![CDATA[
+zkopt({kd:1});//]]>
+</script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="span-24">
+
+            <div class="mainBox">
+
+                <div class="headerBox">
+                    <img
+                        src="/idm/static/images/mcgill.png"
+                        alt="McGill Logo" />
+                    <div class="lang">
+                        
+                            <a href="?lang=fr">Français</a>
+                        
+                    </div>
+                </div>
+                <div class="contentBox">
+                    
+
+    <h1>
+        Create Your New Account
+    </h1>
+
+    
+        <h2>
+            If you have an account, please
+            <a href="#" class="login">return to the previous page and log in.</a>
+            <br/>
+           
+        </h2>
+        <h2>
+             If this is your first time entering this site, you need to create a new account. You will then be able to log into this site at any time, using the Username and Password you set up here. If you forget your Username or Password click on the links provided on the login page.
+             <br/>
+        </h2>
+        <h2>
+            <b></b>
+            <br/>
+            <b></b>
+            <br/>
+            <b></b>
+             <br/>
+            <b></b>
+             <br/>
+        </h2>
+    
+
+    
+
+    <form action="/idm/register/register" method="post" name="registerForm" id="registerForm" >
+
+        
+
+            
+
+
+
+<div class="topMargin span-7">
+    <label for="firstname">First Name*</label>
+</div>
+
+<div class="topMargin span-10 last">
+    <input type="text" name="firstname" id="firstname"
+        value="" />
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+</div>
+            
+
+
+
+<div class="span-7">
+    <label for="lastname">Last Name*</label>
+</div>
+
+<div class="span-10 last">
+    <input type="text" name="lastname" id="lastname"
+        value="" />
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+</div>
+            
+
+
+
+<div class="span-7">
+    <label for="username">Choose a Username*</label>
+</div>
+
+<div class="span-13 last">
+    <input type="text" name="username" id="username"
+        value="" />
+        
+        
+        
+        
+        
+        
+        
+           <span id="nameValidation"></span> 
+        
+        
+    
+    
+    
+    
+    
+          
+                <div>
+                    Alpha-numeric characters and dots only; no @ symbol. <BR>Remember this Username to log into this system in the future.
+                </div>
+             
+      <br/>  
+    
+    
+     
+    
+    
+    
+    
+</div>
+            
+
+
+
+<div class="span-7">
+    <label for="email">Email Address*</label>
+</div>
+
+<div class="span-10 last">
+    <input type="text" name="email" id="email"
+        value="" />
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+          
+                <div>
+                    Account notifications (e.g. activation) will be sent to this address.
+                </div>
+             
+      <br/>  
+    
+    
+     
+    
+    
+    
+    
+</div> 
+            
+
+
+
+<div class="span-7">
+    <label for="password">Choose Password*</label>
+</div>
+
+<div class="span-10 last">
+    <input type="password" name="password" id="password"
+        value="" />
+        
+        
+        
+        
+        
+            <div id="passwordCheck">
+                <div id="passwordCheckBar"></div>
+                <div id="passwordCheckText"></div>
+            </div>
+            <div style="clear: both;"></div>
+        
+        
+        
+        
+    
+    
+    
+    
+    
+          
+                <div>
+                    Your password must contain:
+                </div>
+             
+                <div>
+                     - Between 8 and 32 characters
+                </div>
+             
+                <div>
+                    <br />We recommend:<br />- At least one uppercase alphabetic character (A-Z)
+                </div>
+             
+                <div>
+                     - At least one lowercase alphabetic character (a-z)
+                </div>
+             
+                <div>
+                     - At least one number (0-9)
+                </div>
+             
+      <br/>  
+    
+    
+     
+    
+    
+    
+    
+</div>
+            
+
+
+
+<div class="span-7">
+    <label for="password2">Re-enter Password*</label>
+</div>
+
+<div class="span-10 last">
+    <input type="password" name="password2" id="password2"
+        value="" />
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+</div>
+
+            <div class="prepend-7 span-10 last">
+                
+            </div>
+
+            <div class="topMargin prepend-7 span-10 last">
+                <input type='submit' class="mainSubmit"
+                    value='Submit' />
+
+                <div class="mainCancel">
+                    <a href="#" class="login">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+
+            <div style="clear: both"></div>
+
+        
+        
+    </form>
+    
+    <script type="text/javascript" src="/idm/static/js/passwordStrength.js"></script>   
+    <script type="text/javascript">
+         $(document).ready(function() {
+            activateUsernameValidation('/idm/register/checkUserNameAvailability', 'This username is available!', 'This username is already taken!', 'The username cannot contain an "@" sign');
+            activatePasswordStrength('/idm/register/checkPasswordStrength');
+         });
+    </script> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

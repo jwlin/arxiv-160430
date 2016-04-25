@@ -1,0 +1,10 @@
+ type text name t3005 maxlength 100
+ type text name t5111 maxlength 100
+ type text name t5010 maxlength 40
+ type text name t5030 maxlength 50
+ type text name t4050 maxlength 100
+type text name t4055 maxlength 100
+ type text name t4060 maxlength 60
+ type text name t4080 maxlength 20
+ type password name t3010 maxlength 50
+ type password name t3015 maxlength 50

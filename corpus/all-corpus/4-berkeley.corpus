@@ -1,0 +1,8 @@
+first name type text name firstname id firstname
+middle name type text name middlename id middlename
+last name type text name lastname id lastname
+previous name type text name previousname id previousname
+date of birth type text name dateofbirth id dateofbirth
+email address type text name emailaddress id emailaddress
+password type password name password id password
+confirm password type password name confirmpassword id confirmpassword

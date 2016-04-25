@@ -1,0 +1,89 @@
+[
+  {
+    "dom": "<input class=\"input\" id=\"ctl00_cphcontent_tbexistingemail\" name=\"ctl00$cphcontent$tbexistingemail\" tabindex=\"1\" type=\"text\"/>", 
+    "feature": "email required email address type text id ctl00 cphcontent tbexistingemail name ctl00 cphcontent tbexistingemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"ctl00_cphcontent_tbucsbnetid\" name=\"ctl00$cphcontent$tbucsbnetid\" tabindex=\"1\" type=\"text\"/>", 
+    "feature": "ucsb net id required ucsb net id type text id ctl00 cphcontent tbucsbnetid name ctl00 cphcontent tbucsbnetid", 
+    "rule": {
+      "id": ["ucsbnetid"], 
+      "name": ["ucsbnetid"]
+    }, 
+    "type": "special_id"
+  }, 
+  {
+    "dom": "<input class=\"input short\" id=\"ctl00_cphcontent_tbfirstname\" name=\"ctl00$cphcontent$tbfirstname\" type=\"text\"/>", 
+    "feature": "first name required first name id ctl00 cphcontent tbfirstname type text name ctl00 cphcontent tbfirstname", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"input short\" id=\"ctl00_cphcontent_tblastname\" name=\"ctl00$cphcontent$tblastname\" type=\"text\"/>", 
+    "feature": "last name required last name id ctl00 cphcontent tblastname type text name ctl00 cphcontent tblastname", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"input short\" id=\"ctl00_cphcontent_tbnewemail\" name=\"ctl00$cphcontent$tbnewemail\" type=\"text\"/>", 
+    "feature": "email required email format invalid email address id ctl00 cphcontent tbnewemail type text name ctl00 cphcontent tbnewemail", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"ctl00_cphcontent_tbexistingpassword\" name=\"ctl00$cphcontent$tbexistingpassword\" tabindex=\"2\" type=\"password\"/>", 
+    "feature": "password required password type password id ctl00 cphcontent tbexistingpassword name ctl00 cphcontent tbexistingpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"ctl00_cphcontent_tbnetidpassword\" name=\"ctl00$cphcontent$tbnetidpassword\" tabindex=\"2\" type=\"password\"/>", 
+    "feature": "password required password type password id ctl00 cphcontent tbnetidpassword name ctl00 cphcontent tbnetidpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"input short\" id=\"ctl00_cphcontent_tbnewpassword\" name=\"ctl00$cphcontent$tbnewpassword\" type=\"password\"/>", 
+    "feature": "password required password must be at least 8 characters password minimum 8 characters id ctl00 cphcontent tbnewpassword type password name ctl00 cphcontent tbnewpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"input short\" id=\"ctl00_cphcontent_tbconfirmpassword\" name=\"ctl00$cphcontent$tbconfirmpassword\" type=\"password\"/>", 
+    "feature": "confirm password required passwords do not match confirm password id ctl00 cphcontent tbconfirmpassword type password name ctl00 cphcontent tbconfirmpassword", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

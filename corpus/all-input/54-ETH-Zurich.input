@@ -1,0 +1,230 @@
+[
+  {
+    "dom": "<input class=\"w50\" id=\"familyname\" maxlength=\"30\" name=\"familyname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "according to official document name familyname id familyname type text maxlength 30", 
+    "rule": {
+      "id": ["family"], 
+      "name": ["family"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"w50\" id=\"givenname\" maxlength=\"30\" name=\"givenname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "according to official document e g marc peter ralph name givenname id givenname type text maxlength 30", 
+    "rule": {
+      "id": ["given"], 
+      "name": ["given"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"w50\" id=\"preferredgivenname\" maxlength=\"30\" name=\"preferredgivenname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "first name for correspondence e g marc name preferredgivenname id preferredgivenname type text maxlength 30", 
+    "rule": {
+      "id": ["given"], 
+      "name": ["given"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"w50\" id=\"previousname\" maxlength=\"30\" name=\"previousname\" size=\"30\" type=\"text\" value=\"\"/>", 
+    "feature": "if any name previousname id previousname type text maxlength 30", 
+    "rule": {
+      "id": ["previous"], 
+      "name": ["previous"]
+    }, 
+    "type": "full_name"
+  }, 
+  {
+    "dom": "<input class=\"datepicker\" id=\"birthdate\" maxlength=\"10\" name=\"dateofbirth\" size=\"15\" type=\"text\" value=\"\"/>", 
+    "feature": "date format yyyy mm dd name dateofbirth id birthdate type text maxlength 10", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-yyyy-mm-dd"
+  }, 
+  {
+    "dom": "<input class=\"wauto\" disabled=\"disabled\" id=\"socialsecuritynum1\" maxlength=\"3\" name=\"socialsecuritynum1\" size=\"3\" type=\"text\" value=\"756\"/>", 
+    "feature": "swiss social security number name socialsecuritynum1 value 756 type text id socialsecuritynum1 maxlength 3", 
+    "rule": {
+      "id": ["socialsecuritynum1"], 
+      "name": ["socialsecuritynum1"]
+    }, 
+    "type": "ssn-swiss-prefix-3"
+  }, 
+  {
+    "dom": "<input class=\"wauto\" id=\"socialsecuritynum2\" maxlength=\"4\" name=\"socialsecuritynum2\" size=\"4\" type=\"text\" value=\"\"/>", 
+    "feature": "swiss social security number name socialsecuritynum2 id socialsecuritynum2 type text maxlength 4", 
+    "rule": {
+      "id": ["socialsecuritynum2"], 
+      "name": ["socialsecuritynum2"]
+    }, 
+    "type": "ssn-swiss-middle-4"
+  }, 
+  {
+    "dom": "<input class=\"wauto\" id=\"socialsecuritynum3\" maxlength=\"4\" name=\"socialsecuritynum3\" size=\"4\" type=\"text\" value=\"\"/>", 
+    "feature": "swiss social security number name socialsecuritynum3 id socialsecuritynum3 type text maxlength 4", 
+    "rule": {
+      "id": ["socialsecuritynum3"], 
+      "name": ["socialsecuritynum3"]
+    }, 
+    "type": "ssn-swiss-middle-4"
+  }, 
+  {
+    "dom": "<input class=\"wauto\" id=\"socialsecuritynum4\" maxlength=\"2\" name=\"socialsecuritynum4\" size=\"2\" type=\"text\" value=\"\"/>", 
+    "feature": "swiss social security number name socialsecuritynum4 id socialsecuritynum4 type text maxlength 2", 
+    "rule": {
+      "id": ["socialsecuritynum4"], 
+      "name": ["socialsecuritynum4"]
+    }, 
+    "type": "ssn-swiss-postfix-2"
+  }, 
+  {
+    "dom": "<input class=\"w50\" id=\"emailaddress\" maxlength=\"400\" name=\"emailaddress\" size=\"80\" type=\"text\" value=\"\"/>", 
+    "feature": "important note if you change your e mail address your login name will also change name emailaddress id emailaddress type text maxlength 400", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"permanentco\" maxlength=\"34\" name=\"permanentco\" size=\"34\" tabindex=\"1\" type=\"text\" value=\"\"/>", 
+    "feature": "additional e g c o miller name permanentco type text id permanentco maxlength 34", 
+    "rule": {
+      "id": ["permanentco"], 
+      "name": ["permanentco"]
+    }, 
+    "type": "address-additional"
+  }, 
+  {
+    "dom": "<input id=\"studiesco\" maxlength=\"34\" name=\"studiesco\" size=\"34\" tabindex=\"11\" type=\"text\" value=\"\"/>", 
+    "feature": "additional e g c o miller name studiesco type text id studiesco maxlength 34", 
+    "rule": {
+      "id": ["studiesco"], 
+      "name": ["studiesco"]
+    }, 
+    "type": "address-additional"
+  }, 
+  {
+    "dom": "<input id=\"permanentstr\" maxlength=\"34\" name=\"permanentstr\" size=\"34\" tabindex=\"2\" type=\"text\" value=\"\"/>", 
+    "feature": "street and number name permanentstr type text id permanentstr maxlength 34", 
+    "rule": {
+      "id": ["permanentstr"], 
+      "name": ["permanentstr"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input id=\"studiesstr\" maxlength=\"34\" name=\"studiesstr\" size=\"34\" tabindex=\"12\" type=\"text\" value=\"\"/>", 
+    "feature": "street and number name studiesstr type text id studiesstr maxlength 34", 
+    "rule": {
+      "id": ["studiesstr"], 
+      "name": ["studiesstr"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input id=\"permanentadd\" maxlength=\"34\" name=\"permanentadd\" size=\"34\" tabindex=\"3\" type=\"text\" value=\"\"/>", 
+    "feature": "additional name permanentadd type text id permanentadd maxlength 34", 
+    "rule": {
+      "id": ["permanentadd"], 
+      "name": ["permanentadd"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input id=\"studiesadd\" maxlength=\"34\" name=\"studiesadd\" size=\"34\" tabindex=\"13\" type=\"text\" value=\"\"/>", 
+    "feature": "additional name studiesadd type text id studiesadd maxlength 34", 
+    "rule": {
+      "id": ["studiesadd"], 
+      "name": ["studiesadd"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input id=\"permanentpostalcode\" maxlength=\"10\" name=\"permanentpostalcode\" size=\"10\" tabindex=\"5\" type=\"text\" value=\"\"/>", 
+    "feature": "zipcode name permanentpostalcode type text id permanentpostalcode maxlength 10", 
+    "rule": {
+      "id": ["postal"], 
+      "name": ["postal"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"studiespostalcode\" maxlength=\"10\" name=\"studiespostalcode\" size=\"10\" tabindex=\"14\" type=\"text\" value=\"\"/>", 
+    "feature": "zipcode name studiespostalcode type text id studiespostalcode maxlength 10", 
+    "rule": {
+      "id": ["postal"], 
+      "name": ["postal"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input id=\"permanentcity\" maxlength=\"27\" name=\"permanentcity\" size=\"27\" tabindex=\"6\" type=\"text\" value=\"\"/>", 
+    "feature": "town name permanentcity type text id permanentcity maxlength 27", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"studiescity\" maxlength=\"27\" name=\"studiescity\" size=\"27\" tabindex=\"16\" type=\"text\" value=\"\"/>", 
+    "feature": "town name studiescity type text id studiescity maxlength 27", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input id=\"permanenttel\" maxlength=\"20\" name=\"permanenttel\" size=\"20\" tabindex=\"9\" type=\"text\" value=\"\"/>", 
+    "feature": "phone name permanenttel type text id permanenttel maxlength 20", 
+    "rule": {
+      "id": ["tel"], 
+      "name": ["tel"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"studiestel\" maxlength=\"20\" name=\"studiestel\" size=\"20\" tabindex=\"19\" type=\"text\" value=\"\"/>", 
+    "feature": "phone name studiestel type text id studiestel maxlength 20", 
+    "rule": {
+      "id": ["tel"], 
+      "name": ["tel"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input id=\"privatemobile\" maxlength=\"20\" name=\"privatemobile\" size=\"20\" tabindex=\"10\" type=\"text\" value=\"\"/>", 
+    "feature": "mobile phone name privatemobile type text id privatemobile maxlength 20", 
+    "rule": {
+      "id": ["mobile"], 
+      "name": ["mobile"]
+    }, 
+    "type": "phone"
+  }, 
+  {
+    "dom": "<input class=\"w50\" csserrorclass=\"w50 error\" id=\"password\" maxlength=\"32\" name=\"password\" size=\"32\" type=\"password\" value=\"\"/>", 
+    "feature": "password must consist of at least 6 characters plus 2 digits name password type password id password maxlength 32", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "complex_pwd"
+  }, 
+  {
+    "dom": "<input class=\"w50\" csserrorclass=\"w50 error\" id=\"password2\" maxlength=\"32\" name=\"password2\" size=\"32\" type=\"password\" value=\"\"/>", 
+    "feature": "repeat password name password2 type password id password2 maxlength 32", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

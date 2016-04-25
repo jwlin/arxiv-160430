@@ -1,0 +1,120 @@
+[
+  {
+    "dom": "<input alt=\"search box\" class=\"faded\" id=\"metaritsearchbox\" maxlength=\"250\" name=\"q\" onblur=\"blursearch(this)\" onfocus=\"focussearch(this)\" type=\"text\" value=\"search rit\"/>", 
+    "feature": "rit home name q value search rit type text id metaritsearchbox maxlength 250", 
+    "rule": {
+      "id": ["search"], 
+      "name": ["q"]
+    }, 
+    "type": "search_term"
+  }, 
+  {
+    "dom": "<input annrequired=\"true\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"30\" name=\"first$name\" size=\"32\" style=\"margin-left: 89\" type=\"text\" value=\"\"/>", 
+    "feature": "name first name type text maxlength 30", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"30\" name=\"middle$name\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name middle name type text maxlength 30", 
+    "rule": {
+      "id": ["middle"], 
+      "name": ["middle"]
+    }, 
+    "type": "mname"
+  }, 
+  {
+    "dom": "<input annrequired=\"true\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"30\" name=\"last$name\" size=\"32\" style=\"margin-left: 89\" type=\"text\" value=\"\"/>", 
+    "feature": "name last name type text maxlength 30", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"15\" name=\"suffix\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name suffix type text maxlength 15", 
+    "rule": {
+      "id": ["suffix"], 
+      "name": ["suffix"]
+    }, 
+    "type": "suffix"
+  }, 
+  {
+    "dom": "<input annrequired=\"true\" anntype=\"text entry\" annvalidateemail=\"true\" maxlength=\"70\" name=\"email\" onchange=\"return validateemail(this.value, true, true);\" size=\"32\" style=\"margin-left: 64\" type=\"text\" value=\"\"/>", 
+    "feature": "name email type text maxlength 70", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input annformat=\"mm/dd/yyyy\" annrequired=\"true\" anntype=\"date\" annvalidateemail=\"false\" maxlength=\"10\" name=\"birth$date\" onchange=\"return checkdate(this);\" size=\"32\" style=\"margin-left: 64\" type=\"text\" value=\"\"/>", 
+    "feature": "type text name birth date maxlength 10", 
+    "rule": {
+      "id": ["date"], 
+      "name": ["date"]
+    }, 
+    "type": "date-mm/dd/yyyy"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"55\" name=\"address\" size=\"32\" style=\"margin-left: 64\" type=\"text\" value=\"\"/>", 
+    "feature": "name address type text maxlength 55", 
+    "rule": {
+      "id": ["address"], 
+      "name": ["address"]
+    }, 
+    "type": "street-line-1"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"55\" name=\"address1\" size=\"32\" style=\"margin-left: 64\" type=\"text\" value=\"\"/>", 
+    "feature": "name address1 type text maxlength 55", 
+    "rule": {
+      "id": ["address1"], 
+      "name": ["address1"]
+    }, 
+    "type": "street-line-2"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"55\" name=\"address2\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name address2 type text maxlength 55", 
+    "rule": {
+      "id": ["address2"], 
+      "name": ["address2"]
+    }, 
+    "type": "street-line-3"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"30\" name=\"city\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name city type text maxlength 30", 
+    "rule": {
+      "id": ["city"], 
+      "name": ["city"]
+    }, 
+    "type": "city"
+  }, 
+  {
+    "dom": "<input annrequired=\"false\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"12\" name=\"zip$code\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name zip code type text maxlength 12", 
+    "rule": {
+      "id": ["zip"], 
+      "name": ["zip"]
+    }, 
+    "type": "zipcode"
+  }, 
+  {
+    "dom": "<input annrequired=\"true\" anntype=\"text entry\" annvalidateemail=\"false\" maxlength=\"24\" name=\"home$phone\" size=\"32\" type=\"text\" value=\"\"/>", 
+    "feature": "name home phone type text maxlength 24", 
+    "rule": {
+      "id": ["phone"], 
+      "name": ["phone"]
+    }, 
+    "type": "phone"
+  }
+]

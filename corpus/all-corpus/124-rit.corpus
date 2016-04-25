@@ -1,0 +1,13 @@
+rit home name q value search rit type text id metaritsearchbox maxlength 250
+name first name type text maxlength 30
+name middle name type text maxlength 30
+name last name type text maxlength 30
+name suffix type text maxlength 15
+name email type text maxlength 70
+type text name birth date maxlength 10
+name address type text maxlength 55
+name address1 type text maxlength 55
+name address2 type text maxlength 55
+name city type text maxlength 30
+name zip code type text maxlength 12
+name home phone type text maxlength 24

@@ -1,0 +1,12 @@
+last name is required birth month is required birth day is required birth year is required citizenship status is required the native english speaker question is required email is required a valid email address is required confirm email is required the email and confirm email must match do not use or password is required confirm password is required the password and confirmation password must match security question is required security answer is required confirm security answer is required the security answer and confirm security answer must match male female united states citizen united states green card holder united states immigrant visa none of the above yes no not applicable i am a us citizen yes no type text id txtboxfirstname name txtboxfirstname maxlength 22
+last name is required type text id txtboxlastname name txtboxlastname maxlength 22
+type text id txtboxformerlastname1 name txtboxformerlastname1 maxlength 22
+type text id txtboxformerfirstname1 name txtboxformerfirstname1 maxlength 22
+type text id txtboxformerlastname2 name txtboxformerlastname2 maxlength 22
+type text id txtboxformerfirstname2 name txtboxformerfirstname2 maxlength 22
+a valid email address is required type text id txtboxemail name txtboxemail maxlength 50
+the email and confirm email must match type text id txtboxconfirmemail name txtboxconfirmemail maxlength 50
+do not use or password is required type password id txtboxpassword name txtboxpassword maxlength 128
+the password and confirmation password must match type password id txtboxconfirmpassword name txtboxconfirmpassword maxlength 128
+security answer is required type password id txtboxanswer name txtboxanswer maxlength 128
+the security answer and confirm security answer must match type password id txtboxconfirmanswer name txtboxconfirmanswer maxlength 128

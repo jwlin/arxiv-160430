@@ -1,0 +1,80 @@
+[
+  {
+    "dom": "<input class=\"input\" id=\"textboxfirstname\" maxlength=\"25\" name=\"textboxfirstname\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" style=\"width:150px;\" type=\"text\"/>", 
+    "feature": "name textboxfirstname id textboxfirstname type text maxlength 25", 
+    "rule": {
+      "id": ["first"], 
+      "name": ["first"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxlastname\" maxlength=\"25\" name=\"textboxlastname\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" style=\"width:150px;\" type=\"text\"/>", 
+    "feature": "name textboxlastname id textboxlastname type text maxlength 25", 
+    "rule": {
+      "id": ["last"], 
+      "name": ["last"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxemailaddress\" maxlength=\"100\" name=\"textboxemailaddress\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" onpaste=\"return false;\" style=\"width:150px;\" type=\"text\"/>", 
+    "feature": "name textboxemailaddress id textboxemailaddress type text maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxemailaddressretype\" maxlength=\"100\" name=\"textboxemailaddressretype\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" onpaste=\"return false;\" style=\"width:150px;\" type=\"text\"/>", 
+    "feature": "name textboxemailaddressretype id textboxemailaddressretype type text maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"inputemailaddress\" id=\"textboxsigninemailaddress\" maxlength=\"100\" name=\"textboxsigninemailaddress\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '2'); return true;\" style=\"width:158px;\" type=\"text\"/>", 
+    "feature": "name textboxsigninemailaddress id textboxsigninemailaddress type text maxlength 100", 
+    "rule": {
+      "id": ["email"], 
+      "name": ["email"], 
+      "type": ["email"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxpassword\" maxlength=\"100\" name=\"textboxpassword\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" onpaste=\"return false;\" style=\"width:150px;\" type=\"password\"/>", 
+    "feature": "name textboxpassword id textboxpassword type password maxlength 100", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxpasswordretype\" maxlength=\"100\" name=\"textboxpasswordretype\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '1'); return true;\" onpaste=\"return false;\" style=\"width:150px;\" type=\"password\"/>", 
+    "feature": "name textboxpasswordretype id textboxpasswordretype type password maxlength 100", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input class=\"input\" id=\"textboxsigninpassword\" maxlength=\"100\" name=\"textboxsigninpassword\" onblur=\"setelementvalue ('inputtoactivate', '0'); return true;\" onfocus=\"setelementvalue ('inputtoactivate', '2'); return true;\" style=\"width:174px;\" type=\"password\"/>", 
+    "feature": "name textboxsigninpassword id textboxsigninpassword type password maxlength 100", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

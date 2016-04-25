@@ -1,0 +1,753 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=9" /><title>
+	UCSB Graduate Division Electronic Application
+</title><meta name="keywords" content="ucsb" /><meta name="description" content="The UCSB Graduate Division&#39;s Online Graduate Student Application for Admission" /><meta name="robots" content="index,follow" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="styles/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/redmond/jquery-ui.css"
+        media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/jquery.ui.selectmenu.css" media="screen" /><link rel="stylesheet" type="text/css" href="styles/customInput.jquery.css" media="screen" />
+  
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="styles/ie.css" media="screen" />
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="styles/ie7.css" media="screen" />
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" href="styles/ie6.css" media="screen" />
+    <![endif]-->
+    
+    <!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
+      
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+    
+    
+    
+    <script type="text/javascript">
+        if (!window.jQuery) {
+            document.write('<link rel="stylesheet" type="text/css" href="/eapp/styles/ajax.googleapis.com_1.7.0.themes.redmond.jqueryui.css" media="screen" />');
+        }
+    </script>  
+    
+    <script type="text/javascript">
+        if (!window.jQuery) {
+            document.write('<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js"><\/script>');
+            document.write('<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.12/jquery-ui.min.js"><\/script>');
+        }
+    </script>
+    
+    <script type="text/javascript">
+         if (!window.jQuery) {
+             document.write('<script src="https://code.jquery.com/jquery-1.5.2.min.js"><\/script>');
+             document.write('<script src="https://code.jquery.com/ui/1.8.12/jquery-ui.min.js"><\/script>');
+         }
+    </script>
+    
+    <script type="text/javascript">
+          if (!window.jQuery) {
+              document.write('<script type="text/javascript"src="/eapp/js/code.jquery.com.jquery-1.5.2.min.js"><\/script>');
+              document.write('<script type="text/javascript"src="/eapp/js/code.jquery.com_ui_1.8.2_jquery-ui.min.js"><\/script>');
+          }
+    </script>
+    
+
+    <script type="text/javascript">
+        if ($.browser.mozilla == true) {
+            document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/ff.css\" />");
+        }
+    </script>
+    <script type="text/javascript" src="/eapp/js/customInput.jquery.js"></script> 
+    <script type="text/javascript" src="/eapp/js/jquery.ui.selectmenu.js"></script> 
+    <script type="text/javascript" src="/eapp/js/main.js"></script> 
+    
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-45016088-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <style type="text/css">
+        #nav-controls { display: none; }
+
+        #navigation { display: none; }
+    </style>
+<script type="text/javascript">window.server = {'hfOpenBox':'ctl00_cphContent_hfOpenBox','btnLogin':'btnLogin','btnCreateApplication':'btnCreateApplication','btnCurrentStudentLogin':'btnCurrentStudentLogin','lblLoginError':'ctl00_cphContent_lblLoginError'};</script><script type="text/javascript">window.validators = {'rfvNewEmail':'ctl00_cphContent_rfvNewEmail','rfvFirstName':'ctl00_cphContent_rfvFirstName','rfvLastName':'ctl00_cphContent_rfvLastName','rfvNewPassword':'ctl00_cphContent_rfvNewPassword','cmpvConfirmPassword':'ctl00_cphContent_cmpvConfirmPassword','revNewEmail':'ctl00_cphContent_revNewEmail','revNewPassword':'ctl00_cphContent_revNewPassword','rfvExistingEmail':'ctl00_cphContent_rfvExistingEmail','rfvExistingPassword':'ctl00_cphContent_rfvExistingPassword','cvMajor':'ctl00_cphContent_cvMajor','cvProgram':'ctl00_cphContent_cvProgram','rfvUCSB':'ctl00_cphContent_rfvUCSB'};</script><script type="text/javascript" src="js/eapp.login.js"></script></head>
+<body>
+        <noscript><meta http-equiv="refresh" content="0;url=NoScript.aspx" /></noscript>
+
+    <form name="aspnetForm" method="post" action="./login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAyMDA5NTg5MA9kFgJmD2QWBGYPZBYCAggPFQFRaHR0cHM6Ly9hamF4Lmdvb2dsZWFwaXMuY29tL2FqYXgvbGlicy9qcXVlcnl1aS8xLjcuMC90aGVtZXMvcmVkbW9uZC9qcXVlcnktdWkuY3NzZAIBD2QWCGYPFgIeB1Zpc2libGVoFgICAQ8QZGQWAGQCAQ8WAh8AaBYCAgMPZBYCAgUPDxYCHwBoZGQCAg9kFgICFw8WAh4LXyFJdGVtQ291bnQCBBYIZg9kFgRmDxUBHkNvbGxlZ2Ugb2YgTGV0dGVycyBhbmQgU2NpZW5jZWQCAQ8WAh8BAioWVGYPZBYCZg8VAgVBQ1RTQxFBY3R1YXJpYWwgU2NpZW5jZWQCAQ9kFgJmDxUCBUFNQVRIK0FwcGxpZWQgTWF0aGVtYXRpY3MgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgIPZBYCZg8VAgRBTlRIJEFudGhyb3BvbG9neSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCAw9kFgJmDxUCA0FSVBtBcnQgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgQPZBYCZg8VAgVBU05TVA1Bc2lhbiBTdHVkaWVzZAIFD2QWAmYPFQIDQk1CIkJpb2NoZW1pc3RyeSBhbmQgTW9sZWN1bGFyIEJpb2xvZ3lkAgYPZBYCZg8VAgVDSEFTVDNDaGljYW5hIGFuZCBDaGljYW5vIFN0dWRpZXMgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgcPZBYCZg8VAgRDSEVNIUNoZW1pc3RyeSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCCA9kFgJmDxUCBUNMQVNTCENsYXNzaWNzZAIJD2QWAmYPFQIEQ0xJVC5Db21wYXJhdGl2ZSBMaXRlcmF0dXJlIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIKD2QWAmYPFQIEQ09NTSVDb21tdW5pY2F0aW9uIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAILD2QWAmYPFQIERFlOUy5EeW5hbWljYWwgTmV1cm9zY2llbmNlIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIMD2QWAmYPFQIFRUFMQ1MsRWFzdCBBc2lhbiBMYW5ndWFnZXMgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAg0PZBYCZg8VAgVFQVJUSA1FYXJ0aCBTY2llbmNlZAIOD2QWAmYPFQIERUNPTiFFY29ub21pY3MgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAg8PZBYCZg8VAgRFRU1CO0Vjb2xvZ3ksIEV2b2x1dGlvbiAmIE1hcmluZSBCaW9sb2d5IChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIQD2QWAmYPFQIERU5HTB9FbmdsaXNoIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIRD2QWAmYPFQIFRkFNU1QuRmlsbSBhbmQgTWVkaWEgU3R1ZGllcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCEg9kFgJmDxUCBUZFTVNUKEZlbWluaXN0IFN0dWRpZXMgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAhMPZBYCZg8VAgRHRU9HIUdlb2dyYXBoeSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCFA9kFgJmDxUCBUdFT0pUHUdlb2dyYXBoeSwgSm9pbnQgUHJvZ3JhbSBTRFNVZAIVD2QWAmYPFQIFR0xPQkwmR2xvYmFsIFN0dWRpZXMgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAhYPZBYCZg8VAgVISVNKVDNIaXN0b3J5LCBKb2ludCBQcm9ncmFtIENTVVMgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAhcPZBYCZg8VAgRISVNUH0hpc3RvcnkgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAhgPZBYCZg8VAgVIU0FSVDdIaXN0b3J5IG9mIEFydCBhbmQgQXJjaGl0ZWN0dXJlIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIZD2QWAmYPFQIFSFNQTEw6SGlzcGFuaWMgTGFuZ3VhZ2VzIGFuZCBMaXRlcmF0dXJlcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCGg9kFgJmDxUCBExBSVM6TGF0aW4gQW1lcmljYW4gYW5kIEliZXJpYW4gU3R1ZGllcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCGw9kFgJmDxUCBExJTkcjTGluZ3Vpc3RpY3MgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAhwPZBYCZg8VAgVNQVJTQyZNYXJpbmUgU2NpZW5jZSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCHQ9kFgJmDxUCA01BVDFNZWRpYSBBcnRzIGFuZCBUZWNobm9sb2d5IChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIeD2QWAmYPFQIETUFUSCNNYXRoZW1hdGljcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCHw9kFgJmDxUCBE1DREIrTW9sZWN1bGFyLCBDZWxsdWxhciAmIERldmVsb3BtZW50YWwgQmlvbG9neWQCIA9kFgJmDxUCBU1VU0lDBU11c2ljZAIhD2QWAmYPFQIDUEJTNlBzeWNob2xvZ2ljYWwgJiBCcmFpbiBTY2llbmNlcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCIg9kFgJmDxUCBFBISUwiUGhpbG9zb3BoeSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCIw9kFgJmDxUCBFBIWVMfUGh5c2ljcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCJA9kFgJmDxUCBFBPTFMpUG9saXRpY2FsIFNjaWVuY2UgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAiUPZBYCZg8VAgVSR1NURClSZWxpZ2lvdXMgU3R1ZGllcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCJg9kFgJmDxUCA1NPQyFTb2Npb2xvZ3kgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAicPZBYCZg8VAgVTVEFUUyJTdGF0aXN0aWNzIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIoD2QWAmYPFQIFU1RTQVA6U3RhdGlzdGljcyBhbmQgQXBwbGllZCBQcm9iYWJpbGl0eSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCKQ9kFgJmDxUCBVRIRVNUJ1RoZWF0ZXIgU3R1ZGllcyAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCAQ9kFgRmDxUBFkNvbGxlZ2Ugb2YgRW5naW5lZXJpbmdkAgEPFgIfAQIGFgxmD2QWAmYPFQIFQ0hFTUUsQ2hlbWljYWwgRW5naW5lZXJpbmcgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgEPZBYCZg8VAgVDTVBTQxBDb21wdXRlciBTY2llbmNlZAICD2QWAmYPFQIDRUNFIUVsZWN0cmljYWwgJiBDb21wdXRlciBFbmdpbmVlcmluZ2QCAw9kFgJmDxUCBU1BVFJMCU1hdGVyaWFsc2QCBA9kFgJmDxUCAk1FFk1lY2hhbmljYWwgRW5naW5lZXJpbmdkAgUPZBYCZg8VAgJUTRVUZWNobm9sb2d5IE1hbmFnZW1lbnRkAgIPZBYEZg8VASRHZXZpcnR6IEdyYWR1YXRlIFNjaG9vbCBvZiBFZHVjYXRpb25kAgEPFgIfAQIDFgZmD2QWAmYPFQIFQ05DU1BIQ291bnNlbGluZywgQ2xpbmljYWwgJiBTY2hvb2wgUHN5Y2hvbG9neSAtLSBHR1NFIChDbG9zZWQgdG8gQXBwbGljYXRpb24pZAIBD2QWAmYPFQIERURVQylFZHVjYXRpb24gLS0gR0dTRSAoQ2xvc2VkIHRvIEFwcGxpY2F0aW9uKWQCAg9kFgJmDxUCA1RFUEVFZHVjYXRpb24gLSBUZWFjaGVyIEVkdWNhdGlvbiBQcm9ncmFtIC0tIEdHU0UgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgMPZBYEZg8VATNCcmVuIFNjaG9vbCBvZiBFbnZpcm9ubWVudGFsIFNjaWVuY2UgYW5kIE1hbmFnZW1lbnRkAgEPFgIfAQIBFgJmD2QWAmYPFQIDRVNNOkVudmlyb25tZW50YWwgU2NpZW5jZSAmIE1hbmFnZW1lbnQgKENsb3NlZCB0byBBcHBsaWNhdGlvbilkAgQPFgIfAGgWAgIDD2QWAgIFDw8WAh8AaGRkZPNfgEtF+VjJ6FIeTVct2lpzbUpN" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAE5H9FJ1oKdK958d3FPRlKUPw0oS2Hrq1c6DRl87TBSCcyXpUpSKFKkq8scFLpk1iTs4yKJHE0LduknEUNZLUuA9pNZol74nbPNw907r9D73oyr2qsD2J/ybyV15nDYgXmu1aimGStUwaKJiANKeOMhyi5+jfZI/sKoOp2uU4YBWA2WGAGp/LtGd2hOy5iOsCBN2lwWXMhQilrH6SogVluHOTLZhwNaR8KEO8Lnaxw5XSH4YrPMhGaq7kz4T6QmV6QZ1ZSpQCfEVvUfefWk6Qtdlxs4dJBXRciR2AekBL9v6IupPr1Y3Y9J4kjoWT535QU4ug2Xb/3VBBZgrgqw3ddqOujQmBAou3rfZ4OLG6SSmHAtVs+jJOlIl0Ds07PBpR+Qrkvc0mV9oBzvHNqO9Y4YLOS43YI+qcVWRPDm5NfQId8sK91zyEHv77zm3iyHGCCpjBzRd6ny4pk23uTTL9c5HFLBymxBT/agYA3ynV0Cruw6EFr+m9AzxHW4jw/zNnTIOkcpgB1hlmbd7SDNwtTZTIxQzl+su7WRbXLsQOKpvP0Ytf2oo4JEVn2ILwm4R3lL1cH1eK7zk2jLEn80JZm5VrkbK0ZlbBsLWVnR/iSE31027ulrTKwu8ErcNEeveTxuN3kd4CpAVl01N4HI1x89abipwHCFwOtRmHQmpv3qq/eOr1HoJzTAG8TcjdvS902iAPVClNKM0GXmz6oTZvxrbigNBfUoEHJNHiPKeG8taBysjq21Wi3+fydyOATjAZWwxjLYZqXnn17tdQa1mp5YoaoxoPXmSmwL1YqlOaRzVXP1gESvAoCWoBznxws96GKkL6SaahNT0HrEtnJo56bcQ7rhfsClO4jpp+jtIr9RbiwEG++8caKSdq03zEhqZt317VArDy/Fj3ELQTg+4CVxw7JRL2EF5u+cWuumIUT+90xWp+2+J9VgSVCzjwrlCnktvSoMriLgWke6K/h2XLQxIXM6e74rMm87PE1WzkXPR4medrsV07o/0G8fXCjUc+M0I4zChXkx8uBT8xm84AsRhvwHYn+Q3QRquvtCmqEBD4YfGJN/Zt4CTHpuCvUztHGHx713DQZAgm7sGUhJRoLIIEznVwiDdvcGOk52EuZ6WVgX2F1B5+dTUzcDzrXeYWx0x3MCnrqDIGHiEVJdo+VIdyPsiICKlKp1DraxQJL3M1cHLB491FSn828+taM6eO3s5MLpgwUfzSb8FQvkPrGP9/W1iYfjVhPf3jjH5EdaGviSUmDZlgTG1DYz58sAISYthgdkDID+CNoOlmQM/NwwmrFmVLOepvYB0cZp+Rzghs7PRFZKAy1MUTc6EuolpHCpvcqcOxHEj2tRpnjk0J6siAw3mQyWQ092HeBFhEzzo/owl7xD2V1/94cWPMIaPmn5Ocpua82cHWFtT5GhCHrktNhzvJszr1KAq2YAhPiSECGGcbtC17JYW05cOBaVj/gwM8e0G1IUjEeCNBexOj9f4CHVLx0n32OrKVZl0ND6PsabIZy7OxjmwtIFeFV81idqP5arQrBJvqJ9LcQmbhdsE5oArbZvovSthUU5TZxz5I5q/yXZp2j6oirEWFcqOQdXp+StYzp8YlVLBb3w7yW/q5sRRIIkeFsKTDJbJbF0CMd+eq4+aWpXX2diTa86SqhcHJN9hf2qx78J1S4Km1A1kW3wfsg==" />
+
+<div>
+
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/eapp/WebResource.axd?d=87uVCzMfCxQDqr34iFHGzeSx7OSMVWN1VpUMd8HewOEybki84mSao9tp9cHlQZPGs8cVo_vRLMi3I2kz5PcGXEXD-I01&amp;t=635792775671809273" type="text/javascript"></script>
+
+
+<script src="/eapp/WebResource.axd?d=HctNZcQ-ybqfOKiNYgqYxNoJ5Mj6y3qCjzUkT-_EnHC3P8TTnkiCFgUYdTxfK1GjgBIFunopdD4eFC2kwCBTpoZAQmByTaeOQQJ4sHpZ3OJ_eiT70&amp;t=635792775671809273" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+    <div id="root">
+        <a id="ucsb-header" href="http://www.graddiv.ucsb.edu/">University of California, Santa Barbara</a>
+        <div id="main-wrapper">
+            <div id="main">
+                <div id="navigation">
+                    <h1 id="page-title">Application Log-in</h1>
+                    
+                </div>
+                
+                <div id="content">
+                    
+    <input type="hidden" name="ctl00$cphContent$hfScanCodeGroupBitVal" id="hfScanCodeGroupBitVal" value="5" />
+    <input type="hidden" name="ctl00$cphContent$hfNewLoginErrorFlag" id="hfNewLoginErrorFlag" />
+    <input type="hidden" name="ctl00$cphContent$hfCurrentGradStudentLoginErrorFlag" id="hfCurrentGradStudentLoginErrorFlag" />
+
+    
+    
+    
+
+    <!-- BEGIN APPLICATION/LOGIN VERTICAL TABS - LEFT HALF OF SCREEN -->
+    <div class="login-wrapper">
+       
+        <div id="login-tabs">            
+            <p id="ucsb-headline">UC Santa Barbara Graduate Application</p>
+            <ul style="font-size: 18px; margin-right: 3px;">
+                <li id="new-app-li-tab" style="border-bottom-width: 2px !important;"><a id="new-app-tab" href="#new-app"><span>New Applicants</span></a></li>
+                <li id="existing-app-tab" style="border-bottom-width: 2px !important;"><a href="#existing-app"><span>Existing Applicants</span></a></li>
+                <li id="current-student-tab" style="border-bottom-width: 2px !important;"><a href="#current-student"><span>Current UCSB Graduate Students</span></a></li>
+            </ul>
+            <!-- Firefox hack for FAQ anchor placement -->
+            <div id="faq-firefox">
+                <p class="inline-block" id="login-faq">Questions? Please visit our <a href="http://www.graddiv.ucsb.edu/admissions/faq/">Frequently Asked Questions page</a>.</p> 
+            </div>
+            
+            <!-- TAB PANELS - RIGHT HALF OF SCRREEN -->
+            <!---------------------------------------->
+
+              <!-- WELCOME PANEL -->
+             <div id="login-welcome-panel">
+                <div id="login-welcome-arrow"></div>
+                <div id="login-welcome-headers">
+                    <h2>Welcome!</h2>
+                    <h2>Please select from the left menu.</h2>
+                </div>
+            </div>
+            
+             
+
+            <!-- NEW APPLICANT MODAL BUTTON -->
+            <div id="new-app" style="display: none">
+                <h2>New Applicants</h2>             
+                <p class="bottom-padding">Start an application here if you have not applied to UCSB in the past.</p>                      
+                <p id="P1" style="display: none; color: red;">
+                    All application deadlines have passed.  The application will be available in early September.
+                </p>
+                <a href="#" id="btn-new-app" class="btn">Begin New Application</a>
+            </div>
+            
+             <!-- EXISTING APPLICANT LOGIN -->
+            <div id="existing-app">
+                <h2>Existing Applicants</h2>
+                <p>Login with your email address if you have previously logged into this system to submit or start an application.</p>
+                <p>Login with your email address to continue or check the status of an existing application.</p>
+               
+                <div id="divLogin">
+                    <div class="submit-group">
+                        <div id="ctl00_cphContent_vsExistingApp" style="color:Red;display:none;">
+
+</div>    
+                        
+                        <!--email address-->
+                        <div class="input-block">
+                            <span id="ctl00_cphContent_rfvExistingEmail" class="input-validator" style="color:Red;visibility:hidden;">Email Required</span>
+                            <label for="ctl00_cphContent_tbExistingEmail" id="ctl00_cphContent_lblExistingEmail" class="input-label label-required">Email Address</label>
+                            <input name="ctl00$cphContent$tbExistingEmail" type="text" id="ctl00_cphContent_tbExistingEmail" tabindex="1" class="input" />
+                        </div><!--/input-block-->
+    
+                        <!--password-->
+                        <div class="input-block">
+                            <span id="ctl00_cphContent_rfvExistingPassword" class="input-validator" style="color:Red;visibility:hidden;">Password Required</span>
+                            <label for="ctl00_cphContent_tbNewPassword" id="ctl00_cphContent_lblExistingPassword" class="input-label label-required">Password</label>
+                            <input name="ctl00$cphContent$tbExistingPassword" type="password" id="ctl00_cphContent_tbExistingPassword" tabindex="2" class="input" />
+                        </div><!--/input-block-->
+    
+                        <!--buttons-->
+                        <div class="input-block">
+                            <input type="submit" name="ctl00$cphContent$btnLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphContent$btnLogin&quot;, &quot;&quot;, true, &quot;ExistingApp&quot;, &quot;&quot;, false, false))" id="btnLogin" tabindex="3" class="btn submit-btn" />
+                        </div><!--/input-block-->
+                        <p><a href="PasswordReset.aspx" class="font-small" tabindex="4">Forgot your password?</a></p>   
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CURRENT UCSB STUDENT LOGIN -->
+            <div id="current-student">
+                <div id="divCurrentGradStudentLogin">
+                    <h2>Current UCSB Graduate Students</h2>
+                    <p>Login with your UCSB Net ID if you are a current UCSB graduate student applying to add or change to a doctoral (PhD or DMA) degree program.</p>
+                    <p>Login with your Net ID to continue or check the status of an existing application.</p>
+             
+                    <div class="submit-group">
+                        <div id="ctl00_cphContent_vsCurrentStudentLogin" style="color:Red;display:none;">
+
+</div>    
+                        
+                        <!--UCSB NET ID-->
+                        <div class="input-block">
+                            <span id="ctl00_cphContent_rfvCurrentStudentNetId" class="input-validator" style="color:Red;visibility:hidden;">UCSB Net ID Required</span>
+                            <label for="ctl00_cphContent_tbUCSBNetID" id="ctl00_cphContent_lblUCSBNetID" class="input-label label-required">UCSB Net ID</label>
+                            <input name="ctl00$cphContent$tbUCSBNetID" type="text" id="ctl00_cphContent_tbUCSBNetID" tabindex="1" class="input" />
+                        </div><!--/input-block-->
+    
+                        <!--password-->
+                        <div class="input-block">
+                            <span id="ctl00_cphContent_rfvCurrentStudentPw" class="input-validator" style="color:Red;visibility:hidden;">Password Required</span>
+                            <label for="ctl00_cphContent_tbNewPassword" id="ctl00_cphContent_lblNetIDPassword" class="input-label label-required">Password</label>
+                            <input name="ctl00$cphContent$tbNetIDPassword" type="password" id="ctl00_cphContent_tbNetIDPassword" tabindex="2" class="input" />
+                        </div><!--/input-block-->
+    
+                        <!--buttons-->
+                        <div class="input-block">
+                            <input type="submit" name="ctl00$cphContent$btnCurrentStudentLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphContent$btnCurrentStudentLogin&quot;, &quot;&quot;, true, &quot;vgCurrentStudentLogin&quot;, &quot;&quot;, false, false))" id="btnCurrentStudentLogin" tabindex="3" class="btn submit-btn" />
+                        </div><!--/input-block-->
+                        <p><a href="https://secure.identity.ucsb.edu/manager/" class="font-small" tabindex="4">Forgot UCSB Net ID or your password?</a></p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="faq-link">
+            <p class="inline-block" id="login-faq">Questions? Please visit our <a href="http://www.graddiv.ucsb.edu/admissions/faq/">Frequently Asked Questions page</a>.</p> 
+       </div> 
+   </div>  
+    
+     
+    
+    <!-- BEGIN APPLICATION POP UP MODAL WINDOW FOR ANYONE NOT CURRENTLY A UCSB GRAD STUDENT WITH NO EXISTING APPLICATIONS -->
+    <input type="hidden" name="ctl00$cphContent$hfOpenBox" id="ctl00_cphContent_hfOpenBox" />
+
+    <div id="new-app-login" title="Begin New Application">
+        <div id="ctl00_cphContent_vsNewApplication" style="color:Red;display:none;">
+
+</div>
+        
+    
+        <!--major-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_cvMajor" class="input-validator" style="color:Red;visibility:hidden;">Major Required</span>
+            <input type="hidden" name="ctl00$cphContent$hfSelectedMajor" id="hfSelectedMajor" />
+            <label ID="lblMajor" class="input-label label-required" for="ddglMajor">Major</label>
+            <select id="ddglMajor" class="input ddl short">
+                <option value="">--Please Select--</option>
+                
+                        <optgroup label="College of Letters and Science">
+                            
+                                    <option value="ACTSC">
+                                        Actuarial Science
+                                    </option>
+                                
+                                    <option value="AMATH">
+                                        Applied Mathematics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="ANTH">
+                                        Anthropology (Closed to Application)
+                                    </option>
+                                
+                                    <option value="ART">
+                                        Art (Closed to Application)
+                                    </option>
+                                
+                                    <option value="ASNST">
+                                        Asian Studies
+                                    </option>
+                                
+                                    <option value="BMB">
+                                        Biochemistry and Molecular Biology
+                                    </option>
+                                
+                                    <option value="CHAST">
+                                        Chicana and Chicano Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="CHEM">
+                                        Chemistry (Closed to Application)
+                                    </option>
+                                
+                                    <option value="CLASS">
+                                        Classics
+                                    </option>
+                                
+                                    <option value="CLIT">
+                                        Comparative Literature (Closed to Application)
+                                    </option>
+                                
+                                    <option value="COMM">
+                                        Communication (Closed to Application)
+                                    </option>
+                                
+                                    <option value="DYNS">
+                                        Dynamical Neuroscience (Closed to Application)
+                                    </option>
+                                
+                                    <option value="EALCS">
+                                        East Asian Languages (Closed to Application)
+                                    </option>
+                                
+                                    <option value="EARTH">
+                                        Earth Science
+                                    </option>
+                                
+                                    <option value="ECON">
+                                        Economics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="EEMB">
+                                        Ecology, Evolution & Marine Biology (Closed to Application)
+                                    </option>
+                                
+                                    <option value="ENGL">
+                                        English (Closed to Application)
+                                    </option>
+                                
+                                    <option value="FAMST">
+                                        Film and Media Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="FEMST">
+                                        Feminist Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="GEOG">
+                                        Geography (Closed to Application)
+                                    </option>
+                                
+                                    <option value="GEOJT">
+                                        Geography, Joint Program SDSU
+                                    </option>
+                                
+                                    <option value="GLOBL">
+                                        Global Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="HISJT">
+                                        History, Joint Program CSUS (Closed to Application)
+                                    </option>
+                                
+                                    <option value="HIST">
+                                        History (Closed to Application)
+                                    </option>
+                                
+                                    <option value="HSART">
+                                        History of Art and Architecture (Closed to Application)
+                                    </option>
+                                
+                                    <option value="HSPLL">
+                                        Hispanic Languages and Literatures (Closed to Application)
+                                    </option>
+                                
+                                    <option value="LAIS">
+                                        Latin American and Iberian Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="LING">
+                                        Linguistics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="MARSC">
+                                        Marine Science (Closed to Application)
+                                    </option>
+                                
+                                    <option value="MAT">
+                                        Media Arts and Technology (Closed to Application)
+                                    </option>
+                                
+                                    <option value="MATH">
+                                        Mathematics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="MCDB">
+                                        Molecular, Cellular & Developmental Biology
+                                    </option>
+                                
+                                    <option value="MUSIC">
+                                        Music
+                                    </option>
+                                
+                                    <option value="PBS">
+                                        Psychological & Brain Sciences (Closed to Application)
+                                    </option>
+                                
+                                    <option value="PHIL">
+                                        Philosophy (Closed to Application)
+                                    </option>
+                                
+                                    <option value="PHYS">
+                                        Physics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="POLS">
+                                        Political Science (Closed to Application)
+                                    </option>
+                                
+                                    <option value="RGSTD">
+                                        Religious Studies (Closed to Application)
+                                    </option>
+                                
+                                    <option value="SOC">
+                                        Sociology (Closed to Application)
+                                    </option>
+                                
+                                    <option value="STATS">
+                                        Statistics (Closed to Application)
+                                    </option>
+                                
+                                    <option value="STSAP">
+                                        Statistics and Applied Probability (Closed to Application)
+                                    </option>
+                                
+                                    <option value="THEST">
+                                        Theater Studies (Closed to Application)
+                                    </option>
+                                
+                        </optgroup>
+                    
+                        <optgroup label="College of Engineering">
+                            
+                                    <option value="CHEME">
+                                        Chemical Engineering (Closed to Application)
+                                    </option>
+                                
+                                    <option value="CMPSC">
+                                        Computer Science
+                                    </option>
+                                
+                                    <option value="ECE">
+                                        Electrical & Computer Engineering
+                                    </option>
+                                
+                                    <option value="MATRL">
+                                        Materials
+                                    </option>
+                                
+                                    <option value="ME">
+                                        Mechanical Engineering
+                                    </option>
+                                
+                                    <option value="TM">
+                                        Technology Management
+                                    </option>
+                                
+                        </optgroup>
+                    
+                        <optgroup label="Gevirtz Graduate School of Education">
+                            
+                                    <option value="CNCSP">
+                                        Counseling, Clinical & School Psychology -- GGSE (Closed to Application)
+                                    </option>
+                                
+                                    <option value="EDUC">
+                                        Education -- GGSE (Closed to Application)
+                                    </option>
+                                
+                                    <option value="TEP">
+                                        Education - Teacher Education Program -- GGSE (Closed to Application)
+                                    </option>
+                                
+                        </optgroup>
+                    
+                        <optgroup label="Bren School of Environmental Science and Management">
+                            
+                                    <option value="ESM">
+                                        Environmental Science & Management (Closed to Application)
+                                    </option>
+                                
+                        </optgroup>
+                    
+            </select>
+        </div><!--/input-block-->
+    
+        <!--closed major message-->
+        <div id="closed-major" class="hidden" title="Closed Major Notice">
+            <h4 style="color: Red;">Attention</h4>
+            <p>
+                The application deadline has passed for all programs in this major.  Please select a different major.
+            </p>
+            <a href="#">OK</a>
+        </div>
+    
+        <div id="program-block" class="hidden">
+            <!--program-->
+            <div class="input-block">
+                <span id="ctl00_cphContent_cvProgram" class="input-validator" style="color:Red;visibility:hidden;">Degree Objective Required</span>
+                <span id="ctl00_cphContent_lblProgram" class="input-label label-required">Degree Objective</span>
+                <select name="ctl00$cphContent$ddlProgram" id="ddlProgram" class="input ddl short">
+
+</select>
+            </div><!--/input-block-->
+        
+            <!--UCSB undergrad-->
+            <div id="ucsb-question" class="input-block hidden">
+                <span id="ctl00_cphContent_rfvUCSB" class="input-validator" style="color:Red;visibility:hidden;">UCSB Undergrad Info Required</span>
+                <span id="ctl00_cphContent_lblUCSB" class="input-label label-required">Are you a current UCSB undergraduate?</span>
+                <span id="ctl00_cphContent_rblUCSB" class="rbl"><input id="ctl00_cphContent_rblUCSB_0" type="radio" name="ctl00$cphContent$rblUCSB" value="Y" /><label for="ctl00_cphContent_rblUCSB_0">Yes</label><input id="ctl00_cphContent_rblUCSB_1" type="radio" name="ctl00$cphContent$rblUCSB" value="N" /><label for="ctl00_cphContent_rblUCSB_1">No</label></span>
+            </div><!--/input-block-->
+        
+            <!--5 year program message-->
+            <div id="five-year-message" class="hidden" title="5 Year Program Notice">
+                <h4 style="color: Red;">Attention</h4>
+                <p>
+                    Five year programs are only available to currently enrolled UCSB undergrads within eligible areas of study, who have been pre-screened by the program.
+                    Please select a different degree objective if you do not meet these criteria.
+                </p>
+                <a href="#">OK</a>
+            </div>
+        </div>
+
+        <!--first name-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_rfvFirstName" class="input-validator" style="color:Red;visibility:hidden;">First Name Required</span>
+            <label for="ctl00_cphContent_tbFirstName" id="ctl00_cphContent_lblFirstName" class="input-label label-required">First Name</label>
+            <input name="ctl00$cphContent$tbFirstName" type="text" id="ctl00_cphContent_tbFirstName" class="input short" />
+        </div><!--/input-block-->
+    
+        <!--last name-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_rfvLastName" class="input-validator" style="color:Red;visibility:hidden;">Last Name Required</span>
+            <label for="ctl00_cphContent_tbLastName" id="ctl00_cphContent_lblLastName" class="input-label label-required">Last Name</label>
+            <input name="ctl00$cphContent$tbLastName" type="text" id="ctl00_cphContent_tbLastName" class="input short" />
+        </div><!--/input-block-->
+    
+        <!--email address-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_revNewEmail" class="input-validator" style="color:Red;visibility:hidden;">Email Format Invalid</span>
+            <span id="ctl00_cphContent_rfvNewEmail" class="input-validator" style="color:Red;visibility:hidden;">Email Required</span>
+            <label for="ctl00_cphContent_tbNewEmail" id="ctl00_cphContent_lblNewEmail" class="input-label label-required">Email Address</label>
+            <input name="ctl00$cphContent$tbNewEmail" type="text" id="ctl00_cphContent_tbNewEmail" class="input short" />
+        </div><!--/input-block-->
+    
+        <!--password-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_revNewPassword" class="input-validator" style="color:Red;visibility:hidden;">Password must be at least 8 characters</span>
+            <span id="ctl00_cphContent_rfvNewPassword" class="input-validator" style="color:Red;visibility:hidden;">Password Required</span>
+            <label for="ctl00_cphContent_tbNewPassword" id="ctl00_cphContent_lblNewPassword" class="input-label label-required">Password (Minimum 8 Characters)</label>
+            <input name="ctl00$cphContent$tbNewPassword" type="password" id="ctl00_cphContent_tbNewPassword" class="input short" />
+        </div><!--/input-block-->
+    
+        <!--confirm password-->
+        <div class="input-block">
+            <span id="ctl00_cphContent_cmpvConfirmPassword" class="input-validator" style="color:Red;visibility:hidden;">Passwords do not match</span>
+            <span id="ctl00_cphContent_rfvConfirmPassword" class="input-validator" style="color:Red;visibility:hidden;">Confirm Password Required</span>
+            <label for="ctl00_cphContent_tbConfirmPassword" id="ctl00_cphContent_lblConfirmPassword" class="input-label label-required">Confirm Password</label>
+            <input name="ctl00$cphContent$tbConfirmPassword" type="password" id="ctl00_cphContent_tbConfirmPassword" class="input short" />
+        </div><!--/input-block-->
+    
+        <!--buttons-->
+        <div class="input-block">
+            <input type="submit" name="ctl00$cphContent$btnCreateApplication" value="Create Application" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphContent$btnCreateApplication&quot;, &quot;&quot;, true, &quot;NewApp&quot;, &quot;&quot;, false, false))" id="btnCreateApplication" class="btn submit-btn" />
+            <a href="#" id="new-app-cancel" class="btn cancel-btn">Cancel</a>
+        </div><!--/input-block-->
+    </div>
+                
+                </div>
+                
+                
+            </div>
+        </div>
+        <div id="footer">
+            <a href="http://www.ucsb.edu/" id="ucsb-icon" class="footer-icon">UCSB</a>
+            <div id="copyright">
+                Copyright &copy; 2015 The Regents of the University of California, All Rights Reserved
+                / <a href="http://www.policy.ucsb.edu/terms_of_use/">Terms of Use</a> / <a href="http://www.sa.ucsb.edu/Accessibility.aspx">
+                    Accessibility</a>
+                <br />
+                Questions or Comments? Please <a href="mailto:gradadmissions@graddiv.ucsb.edu">contact us</a>.
+            </div>
+        </div>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_cphContent_vsExistingApp"), document.getElementById("ctl00_cphContent_vsCurrentStudentLogin"), document.getElementById("ctl00_cphContent_vsNewApplication"));
+var Page_Validators =  new Array(document.getElementById("ctl00_cphContent_rfvExistingEmail"), document.getElementById("ctl00_cphContent_rfvExistingPassword"), document.getElementById("ctl00_cphContent_rfvCurrentStudentNetId"), document.getElementById("ctl00_cphContent_rfvCurrentStudentPw"), document.getElementById("ctl00_cphContent_cvMajor"), document.getElementById("ctl00_cphContent_cvProgram"), document.getElementById("ctl00_cphContent_rfvUCSB"), document.getElementById("ctl00_cphContent_rfvFirstName"), document.getElementById("ctl00_cphContent_rfvLastName"), document.getElementById("ctl00_cphContent_revNewEmail"), document.getElementById("ctl00_cphContent_rfvNewEmail"), document.getElementById("ctl00_cphContent_revNewPassword"), document.getElementById("ctl00_cphContent_rfvNewPassword"), document.getElementById("ctl00_cphContent_cmpvConfirmPassword"), document.getElementById("ctl00_cphContent_rfvConfirmPassword"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cphContent_vsExistingApp = document.all ? document.all["ctl00_cphContent_vsExistingApp"] : document.getElementById("ctl00_cphContent_vsExistingApp");
+ctl00_cphContent_vsExistingApp.headertext = "Incomplete / Erroneous Fields";
+ctl00_cphContent_vsExistingApp.validationGroup = "ExistingApp";
+var ctl00_cphContent_rfvExistingEmail = document.all ? document.all["ctl00_cphContent_rfvExistingEmail"] : document.getElementById("ctl00_cphContent_rfvExistingEmail");
+ctl00_cphContent_rfvExistingEmail.controltovalidate = "ctl00_cphContent_tbExistingEmail";
+ctl00_cphContent_rfvExistingEmail.errormessage = "Email Required";
+ctl00_cphContent_rfvExistingEmail.validationGroup = "ExistingApp";
+ctl00_cphContent_rfvExistingEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvExistingEmail.initialvalue = "";
+var ctl00_cphContent_rfvExistingPassword = document.all ? document.all["ctl00_cphContent_rfvExistingPassword"] : document.getElementById("ctl00_cphContent_rfvExistingPassword");
+ctl00_cphContent_rfvExistingPassword.controltovalidate = "ctl00_cphContent_tbExistingPassword";
+ctl00_cphContent_rfvExistingPassword.errormessage = "Password Required";
+ctl00_cphContent_rfvExistingPassword.validationGroup = "ExistingApp";
+ctl00_cphContent_rfvExistingPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvExistingPassword.initialvalue = "";
+var ctl00_cphContent_vsCurrentStudentLogin = document.all ? document.all["ctl00_cphContent_vsCurrentStudentLogin"] : document.getElementById("ctl00_cphContent_vsCurrentStudentLogin");
+ctl00_cphContent_vsCurrentStudentLogin.headertext = "Incomplete / Erroneous Fields";
+ctl00_cphContent_vsCurrentStudentLogin.validationGroup = "vgCurrentStudentLogin";
+var ctl00_cphContent_rfvCurrentStudentNetId = document.all ? document.all["ctl00_cphContent_rfvCurrentStudentNetId"] : document.getElementById("ctl00_cphContent_rfvCurrentStudentNetId");
+ctl00_cphContent_rfvCurrentStudentNetId.controltovalidate = "ctl00_cphContent_tbUCSBNetID";
+ctl00_cphContent_rfvCurrentStudentNetId.errormessage = "UCSB Net ID Required";
+ctl00_cphContent_rfvCurrentStudentNetId.validationGroup = "vgCurrentStudentLogin";
+ctl00_cphContent_rfvCurrentStudentNetId.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvCurrentStudentNetId.initialvalue = "";
+var ctl00_cphContent_rfvCurrentStudentPw = document.all ? document.all["ctl00_cphContent_rfvCurrentStudentPw"] : document.getElementById("ctl00_cphContent_rfvCurrentStudentPw");
+ctl00_cphContent_rfvCurrentStudentPw.controltovalidate = "ctl00_cphContent_tbNetIDPassword";
+ctl00_cphContent_rfvCurrentStudentPw.errormessage = "Password Required";
+ctl00_cphContent_rfvCurrentStudentPw.validationGroup = "vgCurrentStudentLogin";
+ctl00_cphContent_rfvCurrentStudentPw.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvCurrentStudentPw.initialvalue = "";
+var ctl00_cphContent_vsNewApplication = document.all ? document.all["ctl00_cphContent_vsNewApplication"] : document.getElementById("ctl00_cphContent_vsNewApplication");
+ctl00_cphContent_vsNewApplication.headertext = "Incomplete / Erroneous Fields";
+ctl00_cphContent_vsNewApplication.validationGroup = "NewApp";
+var ctl00_cphContent_cvMajor = document.all ? document.all["ctl00_cphContent_cvMajor"] : document.getElementById("ctl00_cphContent_cvMajor");
+ctl00_cphContent_cvMajor.errormessage = "Major Required";
+ctl00_cphContent_cvMajor.validationGroup = "NewApp";
+ctl00_cphContent_cvMajor.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_cphContent_cvMajor.clientvalidationfunction = "ValidateMajor";
+ctl00_cphContent_cvMajor.validateemptytext = "true";
+var ctl00_cphContent_cvProgram = document.all ? document.all["ctl00_cphContent_cvProgram"] : document.getElementById("ctl00_cphContent_cvProgram");
+ctl00_cphContent_cvProgram.controltovalidate = "ddlProgram";
+ctl00_cphContent_cvProgram.errormessage = "Degree Objective Required";
+ctl00_cphContent_cvProgram.validationGroup = "NewApp";
+ctl00_cphContent_cvProgram.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_cphContent_cvProgram.clientvalidationfunction = "ValidateProgram";
+ctl00_cphContent_cvProgram.validateemptytext = "true";
+var ctl00_cphContent_rfvUCSB = document.all ? document.all["ctl00_cphContent_rfvUCSB"] : document.getElementById("ctl00_cphContent_rfvUCSB");
+ctl00_cphContent_rfvUCSB.controltovalidate = "ctl00_cphContent_rblUCSB";
+ctl00_cphContent_rfvUCSB.errormessage = "UCSB Undergrad Info Required";
+ctl00_cphContent_rfvUCSB.validationGroup = "NewApp";
+ctl00_cphContent_rfvUCSB.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvUCSB.initialvalue = "";
+var ctl00_cphContent_rfvFirstName = document.all ? document.all["ctl00_cphContent_rfvFirstName"] : document.getElementById("ctl00_cphContent_rfvFirstName");
+ctl00_cphContent_rfvFirstName.controltovalidate = "ctl00_cphContent_tbFirstName";
+ctl00_cphContent_rfvFirstName.errormessage = "First Name Required";
+ctl00_cphContent_rfvFirstName.validationGroup = "NewApp";
+ctl00_cphContent_rfvFirstName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvFirstName.initialvalue = "";
+var ctl00_cphContent_rfvLastName = document.all ? document.all["ctl00_cphContent_rfvLastName"] : document.getElementById("ctl00_cphContent_rfvLastName");
+ctl00_cphContent_rfvLastName.controltovalidate = "ctl00_cphContent_tbLastName";
+ctl00_cphContent_rfvLastName.errormessage = "Last Name Required";
+ctl00_cphContent_rfvLastName.validationGroup = "NewApp";
+ctl00_cphContent_rfvLastName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvLastName.initialvalue = "";
+var ctl00_cphContent_revNewEmail = document.all ? document.all["ctl00_cphContent_revNewEmail"] : document.getElementById("ctl00_cphContent_revNewEmail");
+ctl00_cphContent_revNewEmail.controltovalidate = "ctl00_cphContent_tbNewEmail";
+ctl00_cphContent_revNewEmail.errormessage = "Email Format Invalid";
+ctl00_cphContent_revNewEmail.validationGroup = "NewApp";
+ctl00_cphContent_revNewEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphContent_revNewEmail.validationexpression = "^[a-zA-Z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$";
+var ctl00_cphContent_rfvNewEmail = document.all ? document.all["ctl00_cphContent_rfvNewEmail"] : document.getElementById("ctl00_cphContent_rfvNewEmail");
+ctl00_cphContent_rfvNewEmail.controltovalidate = "ctl00_cphContent_tbNewEmail";
+ctl00_cphContent_rfvNewEmail.errormessage = "Email Required";
+ctl00_cphContent_rfvNewEmail.validationGroup = "NewApp";
+ctl00_cphContent_rfvNewEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvNewEmail.initialvalue = "";
+var ctl00_cphContent_revNewPassword = document.all ? document.all["ctl00_cphContent_revNewPassword"] : document.getElementById("ctl00_cphContent_revNewPassword");
+ctl00_cphContent_revNewPassword.controltovalidate = "ctl00_cphContent_tbNewPassword";
+ctl00_cphContent_revNewPassword.errormessage = "Password must be at least 8 characters";
+ctl00_cphContent_revNewPassword.validationGroup = "NewApp";
+ctl00_cphContent_revNewPassword.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_cphContent_revNewPassword.validationexpression = "^.{8,}$";
+var ctl00_cphContent_rfvNewPassword = document.all ? document.all["ctl00_cphContent_rfvNewPassword"] : document.getElementById("ctl00_cphContent_rfvNewPassword");
+ctl00_cphContent_rfvNewPassword.controltovalidate = "ctl00_cphContent_tbNewPassword";
+ctl00_cphContent_rfvNewPassword.errormessage = "Password Required";
+ctl00_cphContent_rfvNewPassword.validationGroup = "NewApp";
+ctl00_cphContent_rfvNewPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvNewPassword.initialvalue = "";
+var ctl00_cphContent_cmpvConfirmPassword = document.all ? document.all["ctl00_cphContent_cmpvConfirmPassword"] : document.getElementById("ctl00_cphContent_cmpvConfirmPassword");
+ctl00_cphContent_cmpvConfirmPassword.controltovalidate = "ctl00_cphContent_tbConfirmPassword";
+ctl00_cphContent_cmpvConfirmPassword.errormessage = "Passwords do not match";
+ctl00_cphContent_cmpvConfirmPassword.validationGroup = "NewApp";
+ctl00_cphContent_cmpvConfirmPassword.evaluationfunction = "CompareValidatorEvaluateIsValid";
+ctl00_cphContent_cmpvConfirmPassword.controltocompare = "ctl00_cphContent_tbNewPassword";
+ctl00_cphContent_cmpvConfirmPassword.controlhookup = "ctl00_cphContent_tbNewPassword";
+var ctl00_cphContent_rfvConfirmPassword = document.all ? document.all["ctl00_cphContent_rfvConfirmPassword"] : document.getElementById("ctl00_cphContent_rfvConfirmPassword");
+ctl00_cphContent_rfvConfirmPassword.controltovalidate = "ctl00_cphContent_tbConfirmPassword";
+ctl00_cphContent_rfvConfirmPassword.errormessage = "Confirm Password Required";
+ctl00_cphContent_rfvConfirmPassword.validationGroup = "NewApp";
+ctl00_cphContent_rfvConfirmPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphContent_rfvConfirmPassword.initialvalue = "";
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CAB47AEA" />
+	
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+    <script type="text/javascript">
+        $(function(){$('.ui-icon ~ span.ui-button-text').css({ 'position': 'relative', 'top': '-3px' })});
+    </script>
+</body>
+</html>

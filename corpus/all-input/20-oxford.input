@@ -1,0 +1,67 @@
+[
+  {
+    "dom": "<input id=\"ipu_fnm1\" maxlength=\"30\" name=\"ipu_fnm1.ipu.srs.1\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "given name forename name ipu fnm1 ipu srs 1 type text id ipu fnm1 maxlength 30", 
+    "rule": {
+      "id": ["fn"], 
+      "name": ["fn"]
+    }, 
+    "type": "fname"
+  }, 
+  {
+    "dom": "<input id=\"ipu_surn\" maxlength=\"40\" name=\"ipu_surn.ipu.srs.1\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "family name surname name ipu surn ipu srs 1 type text id ipu surn maxlength 40", 
+    "rule": {
+      "id": ["surn"], 
+      "name": ["surn"]
+    }, 
+    "type": "lname"
+  }, 
+  {
+    "dom": "<input id=\"ipu_dob\" maxlength=\"11\" name=\"ipu_dob.ipu.srs.1\" size=\"15\" type=\"text\" value=\"\"/>", 
+    "feature": "date of birth dd mm yyyy name ipu dob ipu srs 1 type text id ipu dob maxlength 11", 
+    "rule": {
+      "id": ["dob"], 
+      "name": ["dob"]
+    }, 
+    "type": "date-dd/mm/yyyy"
+  }, 
+  {
+    "dom": "<input id=\"usercode\" name=\"usercode.ipu.srs.1\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "username email address type text name usercode ipu srs 1 id usercode", 
+    "rule": {
+      "id": ["usercode"], 
+      "name": ["usercode"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"ipu_haem\" maxlength=\"255\" name=\"ipu_haem.ipu.srs.1\" size=\"45\" type=\"text\" value=\"\"/>", 
+    "feature": "confirm username email address name ipu haem ipu srs 1 type text id ipu haem maxlength 255", 
+    "rule": {
+      "id": ["haem"], 
+      "name": ["haem"]
+    }, 
+    "type": "email"
+  }, 
+  {
+    "dom": "<input id=\"password1\" name=\"password1.ipu.srs.1\" size=\"45\" type=\"password\" value=\"\"/>", 
+    "feature": "password type password name password1 ipu srs 1 id password1", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }, 
+  {
+    "dom": "<input id=\"password2\" name=\"password2.ipu.srs.1\" size=\"45\" type=\"password\" value=\"\"/>", 
+    "feature": "confirm password type password name password2 ipu srs 1 id password2", 
+    "rule": {
+      "id": ["password"], 
+      "name": ["password"], 
+      "type": ["password"]
+    }, 
+    "type": "pwd"
+  }
+]

@@ -1,0 +1,7 @@
+ given name forename name ipu fnm1 ipu srs 1 type text id ipu fnm1 maxlength 30
+ family name surname name ipu surn ipu srs 1 type text id ipu surn maxlength 40
+ date of birth dd mm yyyy name ipu dob ipu srs 1 type text id ipu dob maxlength 11
+ username email address type text name usercode ipu srs 1 id usercode
+ confirm username email address name ipu haem ipu srs 1 type text id ipu haem maxlength 255
+ password type password name password1 ipu srs 1 id password1
+ confirm password type password name password2 ipu srs 1 id password2
